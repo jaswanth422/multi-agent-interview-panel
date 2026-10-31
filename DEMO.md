@@ -28,34 +28,95 @@ Open **two browser tabs**, both already loaded:
 
 Zoom the browser to ~125% so the jury can read it.
 
-**Why two tabs:** a full interview takes ~2.5–3.5 minutes. You cannot start a run
-and wait for it inside a 3-minute slot. So you **start the live run first**, and
-while it streams you walk the board. The live run is the proof it's real; the
-board is how you show four different outcomes in the time available.
+## MEASURED TIMELINE — rehearsed on a warm model
+
+A full C01 run at **2 rounds** completes in **2:06**. You can run the whole thing
+live inside the slot. Measured event times:
+
+| Clock | What appears on screen |
+|---|---|
+| 0:02 | first tool call (`resume_db`) + HR's opening question |
+| **0:19** | **first contradiction** — Kafka denial vs. the résumé |
+| 0:22 | Bar-Raiser opens with **[CHALLENGE]** |
+| 0:46 | two more contradictions — team size 4 vs 12, ownership |
+| 0:50 / 0:58 | two more **[CHALLENGE]** questions |
+| 1:20–1:55 | three scorecards |
+| **2:06** | **verdict + human approval box** |
+
+That leaves ~50 seconds. Use it for the reliability line and the approval click.
+
+**Warm the model first** — a cold start adds ~7s to every early call and will
+blow the timing. The curl above is not optional.
 
 ---
 
 ## The 3 minutes
 
-### 0:00 — Start the live run, then stop looking at it
+### 0:00 — Start the live run
 
-Tab 2 → **▶ Start interview**. One sentence while it begins:
+Tab 2 → **▶ Start interview** (C01, 2 rounds). Say while it starts:
 
-> "This is running live on a local model — no API key, no internet. Three agents
-> are interviewing a candidate right now. I'll come back to it."
+> "Running live on a local 3-billion-parameter model — no API key, no internet.
+> Three agents are interviewing a candidate right now."
 
-Switch to Tab 1 immediately. **Do not watch it load.**
-
-### 0:15 — The problem, in one breath (Tab 1: board)
+### 0:05 — The problem, in one breath
 
 > "A single AI interviewer is easy to game. Our panel is three agents — HR,
-> Technical, and a Bar-Raiser whose job is to disagree — and every answer gets
-> broken into atomic claims in a database, then cross-checked against the whole
+> Technical, and a Bar-Raiser whose job is to disagree. Every answer gets broken
+> into atomic claims in a database, then cross-checked against the whole
 > interview *and* the résumé."
 
-### 0:30 — Four different outcomes, one screen (Tab 1)
+Point at the grey trace lines as they scroll: planner decisions, tool calls with
+latencies, the claim ledger growing.
 
-Point at the cards. This is the "multiple outputs" moment:
+### 0:19 — THE MONEY SHOT. Stop and let them read it.
+
+A red card appears. Do not talk over this.
+
+> "There it is. Round 1 he said he has three years of Kafka on his résumé.
+> Just now: 'I have never used Kafka in production.' We quote both, with round
+> numbers, plus the deterministic rule that fired."
+
+Three seconds later the Bar-Raiser's **[CHALLENGE]** question appears:
+
+> "And that's the loop closing — a new contradiction re-plans the next agent,
+> which now confronts it inside the interview instead of just logging it."
+
+At 0:46 two more land: team of four versus twelve, and led-the-project versus
+only-wrote-tests. That second one is the exact example on the problem sheet.
+
+### 1:20 — Scorecards, and the best line in the demo
+
+> "Watch this: all three panelists scored him a **hire** — 3.15, 3.0, 3.5.
+> The verdict is going to be **no hire**. Because evidence gates decide before
+> scores do: three unreconciled contradictions is an integrity failure, and
+> that overrides a favourable impression. That's the whole point of the system."
+
+### 2:06 — Verdict, then the board
+
+Verdict card lands. Then switch to **Tab 1** for ten seconds:
+
+> "Same system, different outcomes. Vikram tried to prompt-inject the panel —
+> gate G1. Harsh is an honest employee #3 who owned the backend *and* ran
+> deploys *and* answered support tickets — an ownership spread of four, the exact
+> signature of inflation, and it's true, so we correctly hire him. The system
+> can say yes."
+
+### 2:35 — Reliability
+
+> "Seventeen evaluation cases, two tracks. Precision and recall 1.0, nine clean
+> controls, zero false positives."
+
+### 2:50 — Approval gate. Click ✓ Approve.
+
+> "No verdict is final until a human signs it. We find the inconsistency and
+> show the evidence. A person decides what it means."
+
+---
+
+## Backup narration — if you need the board instead (Tab 1)
+
+Use this only if the live run stalls. Point at the cards:
 
 | Card | Say this |
 |---|---|
