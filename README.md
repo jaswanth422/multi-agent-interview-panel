@@ -13,6 +13,8 @@ hire / no-hire decision with cited evidence and recorded dissent.
 
 ---
 
+**Repository:** https://github.com/jaswanth422/multi-agent-interview-panel
+
 ## Run it
 
 ```bash
@@ -220,12 +222,14 @@ false positives, which is what makes a tool like this trustworthy or useless:
 **17 cases in two tracks**, scored separately so neither hides behind the other.
 `qwen2.5:3b`, detector mode:
 
-| | core (12) | startup (5) |
-|---|---|---|
-| contradiction precision | **1.00** | **1.00** |
-| contradiction recall | **1.00** (8/8) | **1.00** (6/6) |
-| F1 | **1.00** | **1.00** |
-| clean-case precision | **1.00** (7/7) | **1.00** (2/2) |
+| | all 17 | core (12) | startup (5) |
+|---|---|---|---|
+| contradiction precision | **1.00** | **1.00** | **1.00** |
+| contradiction recall | **1.00** (14/14) | **1.00** (8/8) | **1.00** (6/6) |
+| F1 | **1.00** | **1.00** | **1.00** |
+| clean-case precision | **1.00** (9/9) | **1.00** (7/7) | **1.00** (2/2) |
+
+Full 17-case run: `artifacts/eval_all17.json` (384 s, 246 claims extracted).
 
 All five conflict types detected (ownership, numeric, timeline, polarity,
 exclusivity), zero false positives across all 9 clean controls.

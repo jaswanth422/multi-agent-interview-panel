@@ -1,0 +1,2741 @@
+{
+  "session_id": "s_0ae7ac70d7",
+  "generated_at": 1793432081.111562,
+  "wall_clock_s": 284.1,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 18,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 19063,
+    "completion_tokens": 3133,
+    "total_latency_s": 283.3,
+    "mean_latency_s": 15.739,
+    "calls_by_label": {
+      "adjudicate_contradiction": 1,
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "candidate_improvise": 1,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 1,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 4,
+    "distinct_tools": 3,
+    "success_rate": 0.75,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 2,
+        "ok": 2,
+        "mean_ms": 0.9
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 589.4
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 36.4
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 1,
+    "llm_confirmed": 1,
+    "llm_rejected": 0,
+    "prefilter_rejected": 0,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 18,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 1
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 3,
+      "detail": {
+        "resume_db": {
+          "calls": 2,
+          "ok": 2,
+          "mean_ms": 0.9
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 589.4
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 36.4
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 26,
+      "turns_persisted": 13,
+      "events_persisted": 51,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 1,
+    "by_severity": {
+      "high": 1
+    },
+    "by_type": {
+      "ownership_conflict": 1
+    },
+    "addressed_in_interview": 1,
+    "cross_round": 0
+  },
+  "session": {
+    "id": "s_0ae7ac70d7",
+    "candidate_name": "Fatima Ansari",
+    "role": "Platform Engineer",
+    "seniority": "senior",
+    "status": "awaiting_approval",
+    "created_at": 1793431796.9923751,
+    "updated_at": 1793432081.103598,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.0
+    },
+    "resume": {
+      "name": "Fatima Ansari",
+      "headline": "Platform engineer, 7 years",
+      "total_years": 7,
+      "github": "",
+      "projects": [
+        {
+          "name": "Deploy Pipeline",
+          "role": "Owner",
+          "team_size": 4,
+          "months": 15,
+          "stack": [
+            "Kubernetes",
+            "ArgoCD",
+            "Terraform"
+          ],
+          "impact": "deploy time 40m to 6m"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Kubernetes",
+          "years": 6,
+          "level": "advanced"
+        },
+        {
+          "name": "Terraform",
+          "years": 5,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "Shipfast",
+          "title": "Platform Engineer",
+          "years": 4
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_b8b24ece8e",
+      "session_id": "s_0ae7ac70d7",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Fatima Ansari\", \"headline\": \"Platform engineer, 7 years\", \"total_years\": 7, \"github\": \"\", \"projects\": [{\"name\": \"Deploy Pipeline\", \"role\": \"Owner\", \"team_size\": 4, \"months\": 15, \"stack\": [\"Kubernetes\", \"ArgoCD\", \"Terraform\"], \"impact\": \"deploy time 40m to 6m\"}], \"skills\": [{\"name\": \"Kubernetes\", \"years\": 6, \"level\": \"advanced\"}, {\"name\": \"Terraform\", \"years\": 5, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Shipfast\", \"title\": \"Platform Engineer\", \"years\": 4}]}",
+      "ts": 1793431797.002574,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_e66632db17",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide more details on the impact of deploying with ArgoCD in the 'Deploy Pipeline' project?",
+      "ts": 1793431806.4842188,
+      "meta": {
+        "intent": "Understand specific contributions to team results",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_f8c7cbb86f",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+      "ts": 1793431806.4854221,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_a5103cab47",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Can you demonstrate how you implemented ArgoCD with progressive rollouts using Kubernetes and Terraform in the 'Deploy Pipeline' project?",
+      "ts": 1793431854.031992,
+      "meta": {
+        "intent": "Explain ArgoCD implementation details",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_4f8096a97a",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+      "ts": 1793431854.035517,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_4673d29a27",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide an example of a specific software engineering challenge you faced and how ArgoCD with progressive rollouts helped in that scenario?",
+      "ts": 1793431909.229738,
+      "meta": {
+        "intent": "Test problem-solving skills and specific use cases",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_9deec8f1e2",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Sure, we had an issue where a critical service was taking too long to deploy. By moving to ArgoCD with progressive rollouts, I was able to reduce the deployment time from forty minutes down to six, ensuring minimal downtime and maintaining service availability while rolling out changes in phases. It helped us manage risk effectively.",
+      "ts": 1793431913.319051,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_06e3816a96",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "You said you own the deploy pipeline and also helped manage risk effectively. Could you clarify how these two statements about your role on the 'deploy' project don't contradict each other?",
+      "ts": 1793431928.670036,
+      "meta": {
+        "intent": "Clarify inconsistency in role ownership vs leadership",
+        "action": "challenge_contradiction",
+        "reasoning": "P1 protocol: confront the open contradiction before any new topic",
+        "contradiction_id": "x_e0ed53a37c"
+      }
+    },
+    {
+      "id": "t_4b32ca0e32",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I have evaluated Istio in a sandbox but I have never run a service mesh in production. We decided the operational cost was not worth it for our traffic profile, and I wrote up that decision.",
+      "ts": 1793431928.674289,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_a1b29cdc33",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793431935.922106,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "P3 protocol: set the live coding task",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_5f5631347b",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+      "ts": 1793431935.9250822,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_3c8b95ed40",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you elaborate on the specific challenges you faced when deploying Istio in the 'Deploy Pipeline' project and how managing ArgoCD rollouts was different from that deployment process, despite your role owning the deploy pipeline?",
+      "ts": 1793431956.520066,
+      "meta": {
+        "intent": "Clarify contradictions between roles",
+        "action": "ask_new",
+        "reasoning": "The candidate's statements about deploying Istio and managing ArgoCD rollouts seem contradictory; further clarification is needed to resolve this.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_5e234bfb1c",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+      "ts": 1793431956.5251951,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "deploy",
+      "predicate": "role_on",
+      "object": "Owner",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Deploy Pipeline - Owner",
+      "source": "resume",
+      "id": "c_461cd26b4e",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "deploy",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Deploy Pipeline - team of 4",
+      "source": "resume",
+      "id": "c_8f84bd69fa",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "deploy",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 15.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Deploy Pipeline - 15 months",
+      "source": "resume",
+      "id": "c_99e3d9582f",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Kubernetes",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Kubernetes (6y, advanced)",
+      "source": "resume",
+      "id": "c_b4dbc2e817",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Kubernetes",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 6 years of Kubernetes",
+      "source": "resume",
+      "id": "c_4ce26772ae",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Terraform",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Terraform (5y, advanced)",
+      "source": "resume",
+      "id": "c_d802b8d09f",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Terraform",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 5 years of Terraform",
+      "source": "resume",
+      "id": "c_46d21db01a",
+      "turn_id": "t_b8b24ece8e",
+      "round": 0
+    },
+    {
+      "subject": "deploy",
+      "predicate": "role_on",
+      "object": "deploy pipeline owner",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Understand specific contributions to team results",
+      "confidence": 1.0,
+      "raw_span": "I own the deploy pipeline.",
+      "source": "interview",
+      "id": "c_17bc879b69",
+      "turn_id": "t_f8c7cbb86f",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "ArgoCD",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand specific contributions to team results",
+      "confidence": 1.0,
+      "raw_span": "moving us to ArgoCD with progressive rollouts.",
+      "source": "interview",
+      "id": "c_d3344a4047",
+      "turn_id": "t_f8c7cbb86f",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "outcome",
+      "object": "six minute deploys",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand specific contributions to team results",
+      "confidence": 1.0,
+      "raw_span": "I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts.",
+      "source": "interview",
+      "id": "c_d80c63d854",
+      "turn_id": "t_f8c7cbb86f",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "role_on",
+      "object": "deploy pipeline owner",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Explain ArgoCD implementation details",
+      "confidence": 1.0,
+      "raw_span": "I own the deploy pipeline.",
+      "source": "interview",
+      "id": "c_5339ae6239",
+      "turn_id": "t_4f8096a97a",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "ArgoCD",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Explain ArgoCD implementation details",
+      "confidence": 1.0,
+      "raw_span": "moving us to ArgoCD with progressive rollouts.",
+      "source": "interview",
+      "id": "c_62b42d197c",
+      "turn_id": "t_4f8096a97a",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "outcome",
+      "object": "six minute deploys",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Explain ArgoCD implementation details",
+      "confidence": 1.0,
+      "raw_span": "I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts.",
+      "source": "interview",
+      "id": "c_f424f15c7e",
+      "turn_id": "t_4f8096a97a",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "ArgoCD",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test problem-solving skills and specific use cases",
+      "confidence": 1.0,
+      "raw_span": "By moving to ArgoCD with progressive rollouts",
+      "source": "interview",
+      "id": "c_77202fd172",
+      "turn_id": "t_9deec8f1e2",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "outcome",
+      "object": "reduced deployment time",
+      "polarity": 1,
+      "value_num": -1.0,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test problem-solving skills and specific use cases",
+      "confidence": 1.0,
+      "raw_span": "I was able to reduce the deployment time from forty minutes down to six",
+      "source": "interview",
+      "id": "c_fecd2a1035",
+      "turn_id": "t_9deec8f1e2",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "responsibility",
+      "object": "manage risk effectively",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test problem-solving skills and specific use cases",
+      "confidence": 0.9,
+      "raw_span": "It helped us manage risk effectively",
+      "source": "interview",
+      "id": "c_90565462c3",
+      "turn_id": "t_9deec8f1e2",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "role_on",
+      "object": "helped us manage risk effectively",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 2,
+      "topic": "Test problem-solving skills and specific use cases",
+      "confidence": 0.88,
+      "raw_span": "It helped us manage risk effectively.",
+      "source": "interview",
+      "id": "c_9fc8a1e7ce",
+      "turn_id": "t_9deec8f1e2",
+      "round": 1
+    },
+    {
+      "subject": "deploy",
+      "predicate": "used_tech",
+      "object": "Istio",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify inconsistency in role ownership vs leadership",
+      "confidence": 0.95,
+      "raw_span": "\"I have evaluated Istio in a sandbox\"",
+      "source": "interview",
+      "id": "c_b54cc8816e",
+      "turn_id": "t_4b32ca0e32",
+      "round": 2
+    },
+    {
+      "subject": "deploy",
+      "predicate": "outcome",
+      "object": "decision to not use Istio",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify inconsistency in role ownership vs leadership",
+      "confidence": 0.95,
+      "raw_span": "We decided the operational cost was not worth it for our traffic profile, and I wrote up that decision.",
+      "source": "interview",
+      "id": "c_1a19a6187e",
+      "turn_id": "t_4b32ca0e32",
+      "round": 2
+    },
+    {
+      "subject": "service mesh",
+      "predicate": "role_on",
+      "object": "evaluating Istio in a sandbox",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify inconsistency in role ownership vs leadership",
+      "confidence": 0.95,
+      "raw_span": "\"I have evaluated Istio in a sandbox\"",
+      "source": "interview",
+      "id": "c_f151d9177c",
+      "turn_id": "t_4b32ca0e32",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.95,
+      "raw_span": "\"```python\n# code snippet goes here\n```\"",
+      "source": "interview",
+      "id": "c_0dbb7e2406",
+      "turn_id": "t_5f5631347b",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.95,
+      "raw_span": "\"```python\n# code snippet goes here\n```\"",
+      "source": "interview",
+      "id": "c_05fc6e801a",
+      "turn_id": "t_5f5631347b",
+      "round": 2
+    },
+    {
+      "subject": "deploy",
+      "predicate": "role_on",
+      "object": "deploy pipeline",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Clarify contradictions between roles",
+      "confidence": 0.9,
+      "raw_span": "I own the deploy pipeline.",
+      "source": "interview",
+      "id": "c_bbc11ca505",
+      "turn_id": "t_5e234bfb1c",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "ArgoCD",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify contradictions between roles",
+      "confidence": 0.85,
+      "raw_span": "moved us to ArgoCD with progressive rollouts.",
+      "source": "interview",
+      "id": "c_6a0d02f675",
+      "turn_id": "t_5e234bfb1c",
+      "round": 2
+    },
+    {
+      "subject": "deploy",
+      "predicate": "outcome",
+      "object": "six minute deploys",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify contradictions between roles",
+      "confidence": 0.9,
+      "raw_span": "I took deploys from forty minutes down to six.",
+      "source": "interview",
+      "id": "c_0e95a24f78",
+      "turn_id": "t_5e234bfb1c",
+      "round": 2
+    },
+    {
+      "subject": "deploy",
+      "predicate": "team_size",
+      "object": "four",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify contradictions between roles",
+      "confidence": 0.85,
+      "raw_span": "Team of four.",
+      "source": "interview",
+      "id": "c_18765e48a5",
+      "turn_id": "t_5e234bfb1c",
+      "round": 2
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "c_17bc879b69",
+      "claim_b": "c_9fc8a1e7ce",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.9,
+      "rationale": "The candidate claimed ownership of the deploy pipeline (level 4) and also stated they helped manage risk effectively, which are contradictory roles for the same project 'deploy'.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "addressed",
+      "resolution": "Confronted by HR Panelist in round 2; candidate response recorded in turn t_4b32ca0e32.",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 2 on project 'deploy' ('deploy pipeline owner' = level 4 vs 'helped us manage risk effectively' = level 2)",
+        "rule_score": 0.85,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify how these two statements about your role on the 'deploy' project don't contradict each other?",
+        "claim_a": {
+          "id": "c_17bc879b69",
+          "round": 1,
+          "text": "deploy / role_on / deploy pipeline owner",
+          "span": "I own the deploy pipeline."
+        },
+        "claim_b": {
+          "id": "c_9fc8a1e7ce",
+          "round": 1,
+          "text": "deploy / role_on / helped us manage risk effectively",
+          "span": "It helped us manage risk effectively."
+        }
+      },
+      "id": "x_e0ed53a37c",
+      "claim_a_text": "deploy / role_on / deploy pipeline owner",
+      "claim_b_text": "deploy / role_on / helped us manage risk effectively",
+      "claim_a_span": "I own the deploy pipeline.",
+      "claim_b_span": "It helped us manage risk effectively.",
+      "claim_a_round": 1,
+      "claim_b_round": 1
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "tc_9c2693fe46",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.3159046173095703,
+      "ts": 1793431797.011754,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Deploy Pipeline",
+            "role": "Owner",
+            "team_size": 4,
+            "stack": "Kubernetes, ArgoCD, Terraform",
+            "impact": "deploy time 40m to 6m",
+            "months": 15
+          }
+        ],
+        "skills": [
+          {
+            "name": "Kubernetes",
+            "years": 6.0,
+            "level": "advanced"
+          },
+          {
+            "name": "Terraform",
+            "years": 5.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "Shipfast",
+            "title": "Platform Engineer",
+            "years": 4.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Fatima Ansari"
+          },
+          {
+            "k": "headline",
+            "v": "Platform engineer, 7 years"
+          },
+          {
+            "k": "total_years",
+            "v": "7"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_7458a645b5",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "agent": "tech",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 1.4967918395996094,
+      "ts": 1793431839.502961,
+      "args": {
+        "field": "skills"
+      },
+      "result": {
+        "skills": [
+          {
+            "name": "Kubernetes",
+            "years": 6.0,
+            "level": "advanced"
+          },
+          {
+            "name": "Terraform",
+            "years": 5.0,
+            "level": "advanced"
+          }
+        ],
+        "_sql_executed": "SELECT name,years,level FROM skills"
+      }
+    },
+    {
+      "id": "tc_0e9419c64a",
+      "session_id": "s_0ae7ac70d7",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 589.4129276275635,
+      "ts": 1793431890.6471639,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_c6da068682",
+      "session_id": "s_0ae7ac70d7",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 36.440134048461914,
+      "ts": 1793431935.96415,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 180
+      },
+      "result": {
+        "passed": 4,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              1,
+              2
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              2,
+              3
+            ],
+            "ok": true
+          }
+        ],
+        "verdict": "pass",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_412c358aa2",
+    "session_id": "s_0ae7ac70d7",
+    "decision": "no_hire",
+    "confidence": 0.57,
+    "rationale": "The candidate provided clear examples of reducing deploy time using ArgoCD but exhibited contradictions in their responses regarding their role ownership and risk management within the 'deploy' project. This inconsistency is a high-severity contradiction that remained unreconciled after being put to the candidate, failing the Integrity gate.",
+    "approval_status": "pending",
+    "approved_by": "",
+    "approval_note": "",
+    "approved_at": null,
+    "ts": 1793432081.0982668,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.5,
+          "collaboration & conflict": 3.5,
+          "communication clarity": 4.0,
+          "motivation & role fit": 3.8,
+          "handling failure and feedback": 3.0
+        },
+        "overall": 3.7,
+        "recommendation": "hire",
+        "confidence": 1.0,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+          "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+          "Used specific technical details like Kubernetes, Terraform, and Istio."
+        ],
+        "concerns": [
+          "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+          "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+          "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+        ],
+        "evidence_claim_ids": [
+          "c_17bc879b69",
+          "c_d3344a4047",
+          "c_fecd2a1035",
+          "c_b4dbc2e817",
+          "c_4ce26772ae"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples but also exhibited contradictions in their responses, which is concerning.",
+        "summary": "Candidate demonstrated technical skills and ownership but showed inconsistencies and contradictions in their answers."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "llm_stated_recommendation": "hire",
+        "label_overridden": false,
+        "strengths": [
+          "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+          "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+          "Correctly implemented a simple two-sum function as requested."
+        ],
+        "concerns": [
+          "There were contradictions between statements about role ownership, which need clarification.",
+          "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+        ],
+        "evidence_claim_ids": [
+          "c_17bc879b69",
+          "c_9fc8a1e7ce",
+          "c_b4dbc2e817",
+          "c_d802b8d09f",
+          "c_46d21db01a"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples, but there were contradictions in their role statements.",
+        "summary": "Fatima Ansari demonstrated technical depth on ArgoCD and Istio deployment challenges. However, role ownership inconsistencies need further clarification."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+          "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+        ],
+        "concerns": [
+          "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+          "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+        ],
+        "evidence_claim_ids": [
+          "c_461cd26b4e",
+          "c_8f84bd69fa",
+          "c_99e3d9582f",
+          "c_b4dbc2e817",
+          "c_4ce26772ae"
+        ],
+        "integrity_note": "Failed to reconcile contradictory statements about role ownership, raising doubts on their consistency and integrity.",
+        "summary": "The candidate demonstrated technical skills but failed to address contradictions in their claims and provided insufficient depth for the Istio decision."
+      }
+    },
+    "evidence": [
+      "x_e0ed53a37c"
+    ],
+    "dissent": [
+      {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "position": "hire",
+        "overall": 3.7,
+        "their_concerns": [
+          "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+          "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+          "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+        ],
+        "their_strengths": [
+          "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+          "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+          "Used specific technical details like Kubernetes, Terraform, and Istio."
+        ]
+      },
+      {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "position": "hire",
+        "overall": 3.0,
+        "their_concerns": [
+          "There were contradictions between statements about role ownership, which need clarification.",
+          "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+        ],
+        "their_strengths": [
+          "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+          "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+          "Correctly implemented a simple two-sum function as requested."
+        ]
+      },
+      {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "position": "hire",
+        "overall": 3.0,
+        "their_concerns": [
+          "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+          "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+        ],
+        "their_strengths": [
+          "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+          "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+        ]
+      }
+    ],
+    "debate": [
+      {
+        "round": 1,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "hire",
+            "overall": 3.7
+          },
+          "tech": {
+            "position": "hire",
+            "overall": 3.0
+          },
+          "bar": {
+            "position": "hire",
+            "overall": 3.0
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_19ef3acb0c",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793431797.001299,
+      "payload": {
+        "session_id": "s_0ae7ac70d7",
+        "candidate": "Fatima Ansari",
+        "role": "Platform Engineer",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_99d4d0568b",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793431797.0087569,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "deploy"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_295f61a3f2",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793431797.009322,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_e0321d898a",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793431797.010245,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "(planner skipped)",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_8837d1aef0",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431797.01091,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 0.0
+      }
+    },
+    {
+      "id": "e_1c96751f62",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793431806.482002,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.3,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Deploy Pipeline\", \"role\": \"Owner\", \"team_size\": 4, \"stack\": \"Kubernetes, ArgoCD, Terraform\", \"impact\": \"deploy time 40m to 6m\", \"months\": 15}], \"skills\": [{\"name\": \"Kubernetes\", \"years\": 6.0, \"level\": \"advanced\"}, {\"name\": \"Terraform\", \"years\": 5.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Shipfast\", \"title\": \"Platform Engineer\", \"years\": 4.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Fatima Ansari\"}, {\"k\": \"headline\", \"v\": \"Platform engineer, 7 years\"}, {\"k\": \"total_years\", \"v\": \"7\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_2de429b919",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431806.484906,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide more details on the impact of deploying with ArgoCD in the 'Deploy Pipeline' project?",
+        "intent": "Understand specific contributions to team results",
+        "action": "verify_with_tool",
+        "turn_id": "t_e66632db17",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_473da3c09f",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431806.485727,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+        "turn_id": "t_f8c7cbb86f",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_25cb007470",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431839.497962,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_17bc879b69",
+            "text": "deploy / role_on / deploy pipeline owner",
+            "span": "I own the deploy pipeline.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_d3344a4047",
+            "text": "self / used_tech / ArgoCD",
+            "span": "moving us to ArgoCD with progressive rollouts.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_d80c63d854",
+            "text": "deploy / outcome / six minute deploys",
+            "span": "I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts.",
+            "predicate": "outcome",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 10
+      }
+    },
+    {
+      "id": "e_cbe86050de",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793431839.49983,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "(planner skipped)",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_a4c129f248",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431839.50057,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 0.0
+      }
+    },
+    {
+      "id": "e_b383083019",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793431854.0291579,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "skills"
+        },
+        "latency_ms": 1.5,
+        "error": "",
+        "result_preview": "{\"skills\": [{\"name\": \"Kubernetes\", \"years\": 6.0, \"level\": \"advanced\"}, {\"name\": \"Terraform\", \"years\": 5.0, \"level\": \"advanced\"}], \"_sql_executed\": \"SELECT name,years,level FROM skills\"}"
+      }
+    },
+    {
+      "id": "e_10e60cbca0",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431854.033382,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Can you demonstrate how you implemented ArgoCD with progressive rollouts using Kubernetes and Terraform in the 'Deploy Pipeline' project?",
+        "intent": "Explain ArgoCD implementation details",
+        "action": "verify_with_tool",
+        "turn_id": "t_a5103cab47",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_687218a92f",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431854.036701,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+        "turn_id": "t_4f8096a97a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_1a3383d4e9",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431890.052015,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_5339ae6239",
+            "text": "deploy / role_on / deploy pipeline owner",
+            "span": "I own the deploy pipeline.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_62b42d197c",
+            "text": "self / used_tech / ArgoCD",
+            "span": "moving us to ArgoCD with progressive rollouts.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_f424f15c7e",
+            "text": "deploy / outcome / six minute deploys",
+            "span": "I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts.",
+            "predicate": "outcome",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 13
+      }
+    },
+    {
+      "id": "e_82b07e627e",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793431890.054705,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "(planner skipped)",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_4e08c2dd0a",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431890.056149,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "P2 protocol: ground this question in tool evidence",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 0.0
+      }
+    },
+    {
+      "id": "e_b6bf148e00",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793431909.224916,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 589.4,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_9c50c97f97",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431909.232095,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide an example of a specific software engineering challenge you faced and how ArgoCD with progressive rollouts helped in that scenario?",
+        "intent": "Test problem-solving skills and specific use cases",
+        "action": "verify_with_tool",
+        "turn_id": "t_4673d29a27",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_e189a8bfbf",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431913.320854,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Sure, we had an issue where a critical service was taking too long to deploy. By moving to ArgoCD with progressive rollouts, I was able to reduce the deployment time from forty minutes down to six, ensuring minimal downtime and maintaining service availability while rolling out changes in phases. It helped us manage risk effectively.",
+        "turn_id": "t_9deec8f1e2",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_a153fd8f8c",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431920.052893,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_77202fd172",
+            "text": "self / used_tech / ArgoCD",
+            "span": "By moving to ArgoCD with progressive rollouts",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_fecd2a1035",
+            "text": "deploy / outcome / reduced deployment time / -1",
+            "span": "I was able to reduce the deployment time from forty minutes down to six",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_90565462c3",
+            "text": "deploy / responsibility / manage risk effectively",
+            "span": "It helped us manage risk effectively",
+            "predicate": "responsibility",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_9fc8a1e7ce",
+            "text": "deploy / role_on / helped us manage risk effectively",
+            "span": "It helped us manage risk effectively.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 17
+      }
+    },
+    {
+      "id": "e_1b7e0a206b",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793431924.171447,
+      "payload": {
+        "round": 1,
+        "id": "x_e0ed53a37c",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.9,
+        "rationale": "The candidate claimed ownership of the deploy pipeline (level 4) and also stated they helped manage risk effectively, which are contradictory roles for the same project 'deploy'.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 2 on project 'deploy' ('deploy pipeline owner' = level 4 vs 'helped us manage risk effectively' = level 2)",
+          "rule_score": 0.85,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify how these two statements about your role on the 'deploy' project don't contradict each other?",
+          "claim_a": {
+            "id": "c_17bc879b69",
+            "round": 1,
+            "text": "deploy / role_on / deploy pipeline owner",
+            "span": "I own the deploy pipeline."
+          },
+          "claim_b": {
+            "id": "c_9fc8a1e7ce",
+            "round": 1,
+            "text": "deploy / role_on / helped us manage risk effectively",
+            "span": "It helped us manage risk effectively."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_1b990de8a9",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793431924.17417,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_e0ed53a37c"
+      }
+    },
+    {
+      "id": "e_6803d791c7",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793431924.175991,
+      "payload": {
+        "round": 1,
+        "claims": 17,
+        "contradictions": 1
+      }
+    },
+    {
+      "id": "e_25bb09ed89",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793431924.176938,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_6840319647",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793431924.179373,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "(planner skipped)",
+        "to_action": "challenge_contradiction",
+        "reason": "P1 protocol: an unaddressed contradiction outranks opening a new topic"
+      }
+    },
+    {
+      "id": "e_841ecb6f4b",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431924.1805398,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "challenge_contradiction",
+        "reasoning": "P1 protocol: confront the open contradiction before any new topic",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "x_e0ed53a37c",
+        "latency_s": 0.0
+      }
+    },
+    {
+      "id": "e_45e315b587",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431928.672672,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "You said you own the deploy pipeline and also helped manage risk effectively. Could you clarify how these two statements about your role on the 'deploy' project don't contradict each other?",
+        "intent": "Clarify inconsistency in role ownership vs leadership",
+        "action": "challenge_contradiction",
+        "turn_id": "t_06e3816a96",
+        "is_challenge": true,
+        "contradiction_id": "x_e0ed53a37c"
+      }
+    },
+    {
+      "id": "e_d315b34ba4",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431928.675343,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I have evaluated Istio in a sandbox but I have never run a service mesh in production. We decided the operational cost was not worth it for our traffic profile, and I wrote up that decision.",
+        "turn_id": "t_4b32ca0e32",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_d1ad19e480",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431935.913333,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_b54cc8816e",
+            "text": "deploy / used_tech / Istio",
+            "span": "\"I have evaluated Istio in a sandbox\"",
+            "predicate": "used_tech",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_1a19a6187e",
+            "text": "deploy / outcome / decision to not use Istio",
+            "span": "We decided the operational cost was not worth it for our traffic profile, and I wrote up that decision.",
+            "predicate": "outcome",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_f151d9177c",
+            "text": "service mesh / role_on / evaluating Istio in a sandbox",
+            "span": "\"I have evaluated Istio in a sandbox\"",
+            "predicate": "role_on",
+            "confidence": 0.95
+          }
+        ],
+        "ledger_size": 20
+      }
+    },
+    {
+      "id": "e_d2b4f3fc40",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "contradiction_addressed",
+      "ts": 1793431935.916762,
+      "payload": {
+        "round": 2,
+        "id": "x_e0ed53a37c",
+        "by": "hr",
+        "answer_turn": "t_4b32ca0e32"
+      }
+    },
+    {
+      "id": "e_dace8931bf",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793431935.918827,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "(planner skipped)",
+        "to_action": "request_code",
+        "reason": "P3 protocol: technical screen requires a live coding task by round 2"
+      }
+    },
+    {
+      "id": "e_e2f05bb9a2",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431935.919969,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "P3 protocol: set the live coding task",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 0.0
+      }
+    },
+    {
+      "id": "e_f4ab075c15",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431935.923135,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_a1b29cdc33",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_3b4b2ad534",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431935.926125,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+        "turn_id": "t_5f5631347b",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_7a2e99eea2",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793431935.965214,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 36.4,
+        "result": {
+          "passed": 4,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                1,
+                2
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                2,
+                3
+              ],
+              "ok": true
+            }
+          ],
+          "verdict": "pass",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n"
+      }
+    },
+    {
+      "id": "e_3897785684",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431946.1506891,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_0dbb7e2406",
+            "text": "self / used_tech / Python",
+            "span": "\"```python\n# code snippet goes here\n```\"",
+            "predicate": "used_tech",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_05fc6e801a",
+            "text": "self / years_exp",
+            "span": "\"```python\n# code snippet goes here\n```\"",
+            "predicate": "years_exp",
+            "confidence": 0.95
+          }
+        ],
+        "ledger_size": 22
+      }
+    },
+    {
+      "id": "e_db8076e6ef",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793431951.09846,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "ask_new",
+        "reasoning": "The candidate's statements about deploying Istio and managing ArgoCD rollouts seem contradictory; further clarification is needed to resolve this.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.94
+      }
+    },
+    {
+      "id": "e_c76ea1a08f",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793431956.52295,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you elaborate on the specific challenges you faced when deploying Istio in the 'Deploy Pipeline' project and how managing ArgoCD rollouts was different from that deployment process, despite your role owning the deploy pipeline?",
+        "intent": "Clarify contradictions between roles",
+        "action": "ask_new",
+        "turn_id": "t_3c8b95ed40",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_2e99bb3b58",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793431956.526287,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "I own the deploy pipeline. I took deploys from forty minutes down to six by moving us to ArgoCD with progressive rollouts. Team of four.",
+        "turn_id": "t_5e234bfb1c",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_501c9088b5",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793431965.29862,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_bbc11ca505",
+            "text": "deploy / role_on / deploy pipeline",
+            "span": "I own the deploy pipeline.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_6a0d02f675",
+            "text": "self / used_tech / ArgoCD",
+            "span": "moved us to ArgoCD with progressive rollouts.",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_0e95a24f78",
+            "text": "deploy / outcome / six minute deploys",
+            "span": "I took deploys from forty minutes down to six.",
+            "predicate": "outcome",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_18765e48a5",
+            "text": "deploy / team_size / four / 4people",
+            "span": "Team of four.",
+            "predicate": "team_size",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 26
+      }
+    },
+    {
+      "id": "e_85f464883b",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793431965.301307,
+      "payload": {
+        "round": 2,
+        "claims": 26,
+        "contradictions": 1
+      }
+    },
+    {
+      "id": "e_6c3a5d7e35",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793431965.303953,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_4d92e0555c",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793431995.700454,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.5,
+          "collaboration & conflict": 3.5,
+          "communication clarity": 4.0,
+          "motivation & role fit": 3.8,
+          "handling failure and feedback": 3.0
+        },
+        "overall": 3.7,
+        "recommendation": "hire",
+        "confidence": 1.0,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+          "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+          "Used specific technical details like Kubernetes, Terraform, and Istio."
+        ],
+        "concerns": [
+          "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+          "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+          "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+        ],
+        "evidence_claim_ids": [
+          "c_17bc879b69",
+          "c_d3344a4047",
+          "c_fecd2a1035",
+          "c_b4dbc2e817",
+          "c_4ce26772ae"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples but also exhibited contradictions in their responses, which is concerning.",
+        "summary": "Candidate demonstrated technical skills and ownership but showed inconsistencies and contradictions in their answers."
+      }
+    },
+    {
+      "id": "e_400c5541c7",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793432029.601714,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "llm_stated_recommendation": "hire",
+        "label_overridden": false,
+        "strengths": [
+          "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+          "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+          "Correctly implemented a simple two-sum function as requested."
+        ],
+        "concerns": [
+          "There were contradictions between statements about role ownership, which need clarification.",
+          "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+        ],
+        "evidence_claim_ids": [
+          "c_17bc879b69",
+          "c_9fc8a1e7ce",
+          "c_b4dbc2e817",
+          "c_d802b8d09f",
+          "c_46d21db01a"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples, but there were contradictions in their role statements.",
+        "summary": "Fatima Ansari demonstrated technical depth on ArgoCD and Istio deployment challenges. However, role ownership inconsistencies need further clarification."
+      }
+    },
+    {
+      "id": "e_5a61d8b7f1",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793432060.1582668,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+          "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+        ],
+        "concerns": [
+          "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+          "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+        ],
+        "evidence_claim_ids": [
+          "c_461cd26b4e",
+          "c_8f84bd69fa",
+          "c_99e3d9582f",
+          "c_b4dbc2e817",
+          "c_4ce26772ae"
+        ],
+        "integrity_note": "Failed to reconcile contradictory statements about role ownership, raising doubts on their consistency and integrity.",
+        "summary": "The candidate demonstrated technical skills but failed to address contradictions in their claims and provided insufficient depth for the Istio decision."
+      }
+    },
+    {
+      "id": "e_8dad577802",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793432060.1613681,
+      "payload": {
+        "initial_positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_9368dcca6d",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793432060.163025,
+      "payload": {
+        "round": 1,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        }
+      }
+    },
+    {
+      "id": "e_809a06afa7",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793432060.1650932,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 3,
+        "weighted_score": 3.19,
+        "threshold": 3.0,
+        "rules_fired": [
+          "G2 Integrity gate: 1 unresolved high-severity contradiction(s) (ownership_conflict) remained unreconciled after being put to the candidate. A screen cannot pass an unexplained inconsistency in the candidate's own account."
+        ],
+        "dissent": [
+          {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "position": "hire",
+            "overall": 3.7,
+            "their_concerns": [
+              "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+              "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+              "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+            ],
+            "their_strengths": [
+              "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+              "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+              "Used specific technical details like Kubernetes, Terraform, and Istio."
+            ]
+          },
+          {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "position": "hire",
+            "overall": 3.0,
+            "their_concerns": [
+              "There were contradictions between statements about role ownership, which need clarification.",
+              "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+            ],
+            "their_strengths": [
+              "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+              "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+              "Correctly implemented a simple two-sum function as requested."
+            ]
+          },
+          {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "position": "hire",
+            "overall": 3.0,
+            "their_concerns": [
+              "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+              "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+            ],
+            "their_strengths": [
+              "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+              "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+            ]
+          }
+        ],
+        "unanimous": false,
+        "score_spread": 0.7,
+        "panel_agreement": 0.82,
+        "confidence": 0.57,
+        "votes": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        }
+      }
+    },
+    {
+      "id": "e_e6cece0497",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793432081.10189,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.57,
+        "rationale": "The candidate provided clear examples of reducing deploy time using ArgoCD but exhibited contradictions in their responses regarding their role ownership and risk management within the 'deploy' project. This inconsistency is a high-severity contradiction that remained unreconciled after being put to the candidate, failing the Integrity gate.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 4.5,
+              "collaboration & conflict": 3.5,
+              "communication clarity": 4.0,
+              "motivation & role fit": 3.8,
+              "handling failure and feedback": 3.0
+            },
+            "overall": 3.7,
+            "recommendation": "hire",
+            "confidence": 1.0,
+            "llm_stated_recommendation": "no_hire",
+            "label_overridden": true,
+            "strengths": [
+              "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+              "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+              "Used specific technical details like Kubernetes, Terraform, and Istio."
+            ],
+            "concerns": [
+              "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+              "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+              "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+            ],
+            "evidence_claim_ids": [
+              "c_17bc879b69",
+              "c_d3344a4047",
+              "c_fecd2a1035",
+              "c_b4dbc2e817",
+              "c_4ce26772ae"
+            ],
+            "integrity_note": "The candidate provided clear and specific examples but also exhibited contradictions in their responses, which is concerning.",
+            "summary": "Candidate demonstrated technical skills and ownership but showed inconsistencies and contradictions in their answers."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 3.0,
+              "debugging_root_cause_depth": 2.0,
+              "data_modelling_correctness": 1.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 2.0
+            },
+            "overall": 3.0,
+            "recommendation": "hire",
+            "confidence": 0.95,
+            "llm_stated_recommendation": "hire",
+            "label_overridden": false,
+            "strengths": [
+              "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+              "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+              "Correctly implemented a simple two-sum function as requested."
+            ],
+            "concerns": [
+              "There were contradictions between statements about role ownership, which need clarification.",
+              "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+            ],
+            "evidence_claim_ids": [
+              "c_17bc879b69",
+              "c_9fc8a1e7ce",
+              "c_b4dbc2e817",
+              "c_d802b8d09f",
+              "c_46d21db01a"
+            ],
+            "integrity_note": "The candidate provided clear and specific examples, but there were contradictions in their role statements.",
+            "summary": "Fatima Ansari demonstrated technical depth on ArgoCD and Istio deployment challenges. However, role ownership inconsistencies need further clarification."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 4.0,
+              "claim_consistency_integrity": 2.0,
+              "scope_and_impact_calibration": 3.0,
+              "ambiguity_handling": 3.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 3.0,
+            "recommendation": "hire",
+            "confidence": 0.85,
+            "llm_stated_recommendation": "no_hire",
+            "label_overridden": true,
+            "strengths": [
+              "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+              "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+            ],
+            "concerns": [
+              "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+              "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+            ],
+            "evidence_claim_ids": [
+              "c_461cd26b4e",
+              "c_8f84bd69fa",
+              "c_99e3d9582f",
+              "c_b4dbc2e817",
+              "c_4ce26772ae"
+            ],
+            "integrity_note": "Failed to reconcile contradictory statements about role ownership, raising doubts on their consistency and integrity.",
+            "summary": "The candidate demonstrated technical skills but failed to address contradictions in their claims and provided insufficient depth for the Istio decision."
+          }
+        },
+        "evidence": [
+          "x_e0ed53a37c"
+        ],
+        "dissent": [
+          {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "position": "hire",
+            "overall": 3.7,
+            "their_concerns": [
+              "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+              "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+              "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+            ],
+            "their_strengths": [
+              "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+              "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+              "Used specific technical details like Kubernetes, Terraform, and Istio."
+            ]
+          },
+          {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "position": "hire",
+            "overall": 3.0,
+            "their_concerns": [
+              "There were contradictions between statements about role ownership, which need clarification.",
+              "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+            ],
+            "their_strengths": [
+              "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+              "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+              "Correctly implemented a simple two-sum function as requested."
+            ]
+          },
+          {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "position": "hire",
+            "overall": 3.0,
+            "their_concerns": [
+              "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+              "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+            ],
+            "their_strengths": [
+              "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+              "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+            ]
+          }
+        ],
+        "debate": [
+          {
+            "round": 1,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "hire",
+                "overall": 3.7
+              },
+              "tech": {
+                "position": "hire",
+                "overall": 3.0
+              },
+              "bar": {
+                "position": "hire",
+                "overall": 3.0
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 3,
+          "weighted_score": 3.19,
+          "threshold": 3.0,
+          "rules_fired": [
+            "G2 Integrity gate: 1 unresolved high-severity contradiction(s) (ownership_conflict) remained unreconciled after being put to the candidate. A screen cannot pass an unexplained inconsistency in the candidate's own account."
+          ],
+          "dissent": [
+            {
+              "agent": "hr",
+              "display": "HR Panelist",
+              "position": "hire",
+              "overall": 3.7,
+              "their_concerns": [
+                "Detected contradictions between owning the deploy pipeline and helping manage risk effectively. The candidate's response to this question was not clear or consistent.",
+                "Lack of specific examples about managing risk with ArgoCD during deployment challenges.",
+                "Unclear on how the candidate handled failure in deploying Istio, despite their role owning the deploy pipeline."
+              ],
+              "their_strengths": [
+                "Candidate provided clear examples of reducing deploy time from 40 minutes to 6 minutes using ArgoCD.",
+                "Demonstrated ownership and leadership in the 'Deploy Pipeline' project.",
+                "Used specific technical details like Kubernetes, Terraform, and Istio."
+              ]
+            },
+            {
+              "agent": "tech",
+              "display": "Technical Panelist",
+              "position": "hire",
+              "overall": 3.0,
+              "their_concerns": [
+                "There were contradictions between statements about role ownership, which need clarification.",
+                "The candidate's explanation for deploying Istio was brief and lacked depth regarding challenges faced."
+              ],
+              "their_strengths": [
+                "Demonstrated clear understanding of ArgoCD and its benefits in reducing deployment time.",
+                "Provided specific examples to explain the impact of ArgoCD on their deploy pipeline.",
+                "Correctly implemented a simple two-sum function as requested."
+              ]
+            },
+            {
+              "agent": "bar",
+              "display": "Bar-Raiser",
+              "position": "hire",
+              "overall": 3.0,
+              "their_concerns": [
+                "Contradictory statements about role ownership on the 'deploy' project, which are not reconciled.",
+                "Lack of depth in explaining Istio decision-making process despite owning the deploy pipeline."
+              ],
+              "their_strengths": [
+                "Demonstrated technical skills in deploying with ArgoCD and managing deployment timelines effectively.",
+                "Provided specific examples of challenges faced and how ArgoCD helped mitigate risks."
+              ]
+            }
+          ],
+          "unanimous": false,
+          "score_spread": 0.7,
+          "panel_agreement": 0.82,
+          "confidence": 0.57,
+          "votes": {
+            "hr": "hire",
+            "tech": "hire",
+            "bar": "hire"
+          }
+        },
+        "decision_drivers": [
+          "Integrity Gate",
+          "HR Panelist Concerns",
+          "Technical Panelist Concerns"
+        ],
+        "risk_if_hired": "There is a risk that the candidate may not effectively manage their roles and responsibilities, leading to potential conflicts or inefficiencies in their work.",
+        "recommended_next_step": "Further clarification on the candidate's role ownership and risk management practices is recommended before making a hiring decision.",
+        "verdict_id": "v_412c358aa2",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_c598c94deb",
+      "session_id": "s_0ae7ac70d7",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793432081.104458,
+      "payload": {
+        "verdict_id": "v_412c358aa2",
+        "decision": "no_hire",
+        "confidence": 0.57,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

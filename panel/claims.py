@@ -117,6 +117,15 @@ _TEAM_SIZE_RE = re.compile(
 # Predicates whose subject should be a project/system, not the person.
 PROJECT_SCOPED = {"role_on", "team_size", "timeline", "outcome", "responsibility"}
 
+# A clause subject that is not the candidate. If one of these sits immediately
+# before an ownership verb, the verb is not an ownership claim.
+_NON_PERSONAL_SUBJ = re.compile(
+    r"\b(it|this|that|which|they|there|everything|nothing|"
+    r"the\s+\w+(?:\s+\w+)?)\s+$", re.I)
+
+# First-person evidence that the sentence is about the candidate's own work.
+_FIRST_PERSON = re.compile(r"\b(i|i'?(?:ve|d|m|ll)|me|my|myself|we|we'?(?:ve|d|re)|our)\b", re.I)
+
 STOP_SUBJECTS = {
     "", "self", "i", "me", "candidate", "unspecified", "it", "this", "that",
     "them", "they", "we", "us", "team", "project", "work", "thing", "role",
@@ -249,6 +258,17 @@ def extract_ownership_phrases(text: str, lexicon: list[str] | None = None
         verb = re.sub(r"\s+", " ", m.group(1).lower())
         level = ownership_of(verb)
         if level is None:
+            continue
+
+        # The verb must describe what the CANDIDATE did. "It helped us manage
+        # risk" scored level 2 ("helped") even though the subject is a process,
+        # which then manufactured a ladder gap against a genuine "I own the
+        # deploy pipeline". Two guards: no non-personal clause subject directly
+        # before the verb, and first-person evidence in the same sentence.
+        before = t[max(0, m.start() - 28):m.start()]
+        if _NON_PERSONAL_SUBJ.search(before):
+            continue
+        if not _FIRST_PERSON.search(_sentence_around(t, m.group(0))):
             continue
         tail = normalize_project(m.group(2) or "")
         proj = ""

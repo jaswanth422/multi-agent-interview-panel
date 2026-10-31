@@ -1,0 +1,174 @@
+{
+  "mode": "full",
+  "cases_run": 2,
+  "contradiction_detection": {
+    "true_positives": 2,
+    "false_positives": 1,
+    "false_negatives": 0,
+    "precision": 0.667,
+    "recall": 1.0,
+    "f1": 0.8,
+    "planted_total": 2,
+    "detected_total": 3
+  },
+  "false_positive_control": {
+    "clean_cases": 1,
+    "clean_cases_with_a_false_positive": 1,
+    "false_positives_on_clean_cases": 1,
+    "clean_case_precision": 0.0
+  },
+  "recall_on_cases_with_contradictions": {
+    "cases": 1,
+    "planted": 2,
+    "found": 2,
+    "recall": 1.0
+  },
+  "latency": {
+    "total_s": 681.0,
+    "mean_per_case_s": 340.5
+  },
+  "by_track": {
+    "core": {
+      "cases": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "planted": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "startup": {
+      "cases": 1,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "planted": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "decision_accuracy": {
+    "correct": 1,
+    "total": 2,
+    "accuracy": 0.5,
+    "errors": [
+      {
+        "case": "C12-clean-tech-scoped",
+        "expected": "hire",
+        "got": "no_hire"
+      }
+    ]
+  },
+  "operational": {
+    "mean_llm_calls_per_interview": 19.5,
+    "min_distinct_tools_used": 3,
+    "mean_tool_success_rate": 0.709,
+    "total_handled_tool_failures": 2,
+    "total_injections_neutralized": 0,
+    "total_prohibited_questions_blocked": 0,
+    "contradictions_confronted_live": 3
+  },
+  "wall_clock_s": 681.0,
+  "case_results": [
+    {
+      "case": "C12-clean-tech-scoped",
+      "name": "Fatima Ansari",
+      "track": "core",
+      "clean": true,
+      "planted": 0,
+      "detected": 1,
+      "expected_decision": "hire",
+      "decided": "no_hire",
+      "decision_correct": false,
+      "confronted_live": 1,
+      "llm_calls": 18,
+      "distinct_tools": 3,
+      "tool_success_rate": 0.75,
+      "handled_tool_failures": 1,
+      "refusals": 0,
+      "injections": 0,
+      "claims_extracted": 26,
+      "session_id": "s_0ae7ac70d7",
+      "elapsed_s": 284.2,
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [
+        {
+          "ctype": "ownership_conflict",
+          "rationale": "The candidate claimed ownership of the deploy pipeline (level 4) and also stated they helped manage risk effectively, which are contradictory roles for the same",
+          "severity": "high"
+        }
+      ],
+      "fn_detail": []
+    },
+    {
+      "case": "C17-growth-compression",
+      "name": "Rohan Malhotra",
+      "track": "startup",
+      "clean": false,
+      "planted": 2,
+      "detected": 2,
+      "expected_decision": "no_hire",
+      "decided": "no_hire",
+      "decision_correct": true,
+      "confronted_live": 2,
+      "llm_calls": 21,
+      "distinct_tools": 3,
+      "tool_success_rate": 0.667,
+      "handled_tool_failures": 1,
+      "refusals": 0,
+      "injections": 0,
+      "claims_extracted": 22,
+      "session_id": "s_622621d667",
+      "elapsed_s": 396.8,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "numeric_conflict",
+          "matched_truth": "team stated as three engineers, later as twelve",
+          "severity": "high"
+        },
+        {
+          "ctype": "timeline_conflict",
+          "matched_truth": "delivery stated as 4 months, later as closer to 18 months",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    }
+  ],
+  "case_mix": {
+    "total_cases": 17,
+    "by_track": {
+      "core": {
+        "cases": 12,
+        "planted": 8,
+        "clean": 7
+      },
+      "startup": {
+        "cases": 5,
+        "planted": 6,
+        "clean": 2
+      }
+    },
+    "cases_with_contradictions": 8,
+    "clean_cases": 9,
+    "total_planted_contradictions": 14,
+    "expected_hire": 6,
+    "expected_no_hire": 11,
+    "contradiction_types_covered": [
+      "exclusivity_conflict",
+      "numeric_conflict",
+      "ownership_conflict",
+      "polarity_conflict",
+      "timeline_conflict"
+    ]
+  }
+}
