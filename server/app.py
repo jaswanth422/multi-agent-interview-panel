@@ -178,6 +178,95 @@ def approve(req: ApproveReq):
             "approval_status": report["verdict"]["approval_status"]}
 
 
+@app.get("/compare")
+def compare():
+    return FileResponse(STATIC / "board.html")
+
+
+@app.get("/api/board")
+def board():
+    """Hiring-manager view: every completed screen, newest per candidate.
+
+    Reads real sessions straight out of SQLite - nothing precomputed and
+    nothing staged. The gate label is re-derived from the stored evidence
+    using the same precedence as the consensus rules, so what you see is
+    why the decision actually happened.
+    """
+    db = MEM.db
+    out: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    rows = MEM._q(
+        "SELECT s.id sid, s.candidate_name n, s.role, s.seniority, "
+        "v.decision, v.confidence, v.rationale, v.approval_status, "
+        "v.approved_by, v.per_agent_json, v.ts "
+        "FROM verdicts v JOIN sessions s ON s.id = v.session_id "
+        "ORDER BY v.ts DESC")
+    for r in rows:
+        if r["n"] in seen:
+            continue
+        seen.add(r["n"])
+        sid = r["sid"]
+
+        contras = MEM.contradictions(sid)
+        cm = MEM.claim_map(sid)
+        high = [x for x in contras if x.severity == "high" and x.status != "resolved"]
+        guard = MEM.guardrail_events(sid)
+        inj = [g for g in guard if g["kind"] == "prompt_injection"]
+        refus = [g for g in guard if g["kind"] == "prohibited_question"]
+
+        code_verdict = ""
+        for tc in MEM.tool_calls(sid):
+            if tc["tool"] == "code_exec" and isinstance(tc.get("result"), dict):
+                code_verdict = str(tc["result"].get("verdict", ""))
+
+        # Same precedence as VerdictEngine.consensus()
+        if inj:
+            gate, why = "G1", f"{len(inj)} attempt(s) to manipulate the evaluators"
+        elif high:
+            types = ", ".join(sorted({x.ctype for x in high}))
+            gate, why = "G2", f"{len(high)} unresolved high-severity contradiction(s): {types}"
+        elif code_verdict in ("refused_unsafe_code", "fail"):
+            gate, why = "G3", ("submitted code refused by the sandbox as unsafe"
+                               if code_verdict == "refused_unsafe_code"
+                               else "submitted code failed every hidden test")
+        elif r["decision"] == "hire":
+            gate, why = "S1", "clean record, panel scores cleared the bar"
+        else:
+            gate, why = "S2", "clean record but below the seniority bar"
+
+        headline = None
+        if contras:
+            top = max(contras, key=lambda x: x.score)
+            a, b = cm.get(top.claim_a), cm.get(top.claim_b)
+            headline = {
+                "type": top.ctype, "severity": top.severity,
+                "rationale": top.rationale,
+                "said_first": (b.raw_span if b else ""), "first_round": (b.round if b else None),
+                "said_later": (a.raw_span if a else ""), "later_round": (a.round if a else None),
+            }
+
+        per_agent = json.loads(r["per_agent_json"] or "{}")
+        out.append({
+            "session_id": sid, "candidate": r["n"], "role": r["role"],
+            "seniority": r["seniority"], "decision": r["decision"],
+            "confidence": r["confidence"], "rationale": r["rationale"],
+            "approval_status": r["approval_status"], "approved_by": r["approved_by"],
+            "gate": gate, "gate_reason": why,
+            "contradictions": len(contras), "high_severity": len(high),
+            "confronted_live": len([x for x in contras if x.status == "addressed"]),
+            "injections": len(inj), "refusals": len(refus),
+            "code_verdict": code_verdict,
+            "claims": len(cm), "turns": len(MEM.transcript(sid)),
+            "distinct_tools": len({t["tool"] for t in MEM.tool_calls(sid)}),
+            "headline_contradiction": headline,
+            "panel": {k: {"overall": v.get("overall"),
+                          "recommendation": v.get("recommendation"),
+                          "label_overridden": v.get("label_overridden", False)}
+                      for k, v in per_agent.items()},
+        })
+    return out
+
+
 @app.get("/api/report/{sid}")
 def report(sid: str):
     run = RUNS.get(sid)

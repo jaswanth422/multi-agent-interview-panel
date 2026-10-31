@@ -19,6 +19,7 @@ import re
 from typing import Any, Iterable
 
 from .claims import ATTRIBUTION, DENIAL
+from .config import SETTINGS
 from .llm import LLM
 from .memory import Claim, Contradiction
 
@@ -343,7 +344,7 @@ CLAIM B (interview round {hit.b.round}):
 Is this a real contradiction?"""
 
         d = self.llm.json(ADJUDICATE_SYSTEM, user, label="adjudicate_contradiction",
-                          max_tokens=320, temperature=0.1,
+                          max_tokens=SETTINGS.tok(320), temperature=0.1,
                           fallback={"is_contradiction": True,
                                     "severity": SEVERITY_BY_TYPE.get(hit.ctype, "medium"),
                                     "confidence": hit.score, "rationale": hit.detail,

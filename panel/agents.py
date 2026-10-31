@@ -27,6 +27,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from .claims import Claim
+from .config import SETTINGS
 from .guardrails import Guardrails
 from .llm import LLM
 from .memory import Contradiction, Memory
@@ -199,7 +200,7 @@ Choose your next action."""
                     "reasoning": "heuristic fallback (planner JSON unavailable)"}
 
         d = self.llm.json(PLAN_SYSTEM, user, label=f"plan_{self.spec.key}",
-                          max_tokens=320, temperature=0.3, fallback=fallback)
+                          max_tokens=SETTINGS.tok(320), temperature=0.3, fallback=fallback)
         if not isinstance(d, dict):
             d = fallback
 
@@ -289,14 +290,15 @@ Be respectful and non-accusatory, but do not let them off the hook."""
             context_block += (f"\nESCALATION LEVEL {self.escalation}: make this question harder "
                               "than the panel's previous ones. Target the weakest claim.")
 
+        cx = SETTINGS.ctx
         user = f"""INTERVIEW SO FAR (most recent last):
-{state['recent_transcript'][:2600]}
+{state['recent_transcript'][:cx(2600)]}
 
 CANDIDATE RESUME SUMMARY:
-{json.dumps(state['resume_summary'], indent=1)[:700]}
+{json.dumps(state['resume_summary'], indent=1)[:cx(700)]}
 
 QUESTIONS ALREADY ASKED BY THE WHOLE PANEL (never repeat these):
-{json.dumps(state['all_questions'], indent=1)[:1400]}
+{json.dumps(state['all_questions'], indent=1)[:cx(1400)]}
 
 YOUR PLANNED ACTION: {action}
 TARGET COMPETENCY: {plan.get('target_competency') or 'your choice'}
@@ -309,7 +311,7 @@ Ask your single question now."""
             display=self.spec.display, emoji=self.spec.emoji, mandate=self.spec.mandate)
 
         d = self.llm.json(sys_prompt, user, label=f"ask_{self.spec.key}",
-                          max_tokens=260, temperature=0.55,
+                          max_tokens=SETTINGS.tok(260), temperature=0.55,
                           fallback={"question": "", "intent": plan.get("target_competency", "")})
         q = ""
         intent = plan.get("target_competency", "")
@@ -400,11 +402,12 @@ Return JSON ONLY:
   "integrity_note": "<how the candidate handled inconsistencies, <=30 words>",
   "summary": "<<=60 words>"}}"""
 
+        cx = SETTINGS.ctx
         user = f"""ROLE: {state['role']} ({state['seniority']})
 COMPETENCIES YOU MUST SCORE: {', '.join(self.spec.competencies)}
 
 FULL TRANSCRIPT:
-{state['full_transcript'][:6000]}
+{state['full_transcript'][:cx(6000)]}
 
 CONTRADICTIONS THE PANEL DETECTED:
 {json.dumps(state['contradictions_brief'], indent=1)[:1600] if state['contradictions_brief'] else 'none detected'}
@@ -429,7 +432,7 @@ Write your scorecard."""
               "summary": "Scorecard unavailable; conservative default applied."}
 
         d = self.llm.json(system, user, label=f"score_{self.spec.key}",
-                          max_tokens=900, temperature=0.2, fallback=fb)
+                          max_tokens=SETTINGS.tok(900), temperature=0.2, fallback=fb)
         if not isinstance(d, dict):
             d = fb
         return self._clean_score(d, fb)

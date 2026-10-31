@@ -1,0 +1,2617 @@
+{
+  "session_id": "s_245f5cf8e1",
+  "generated_at": 1793430273.94879,
+  "wall_clock_s": 330.1,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 21,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 20648,
+    "completion_tokens": 3401,
+    "total_latency_s": 328.98,
+    "mean_latency_s": 15.666,
+    "calls_by_label": {
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 4,
+    "distinct_tools": 3,
+    "success_rate": 0.75,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 2,
+        "ok": 2,
+        "mean_ms": 1.1
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 885.7
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 36.7
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 6,
+    "llm_confirmed": 0,
+    "llm_rejected": 0,
+    "prefilter_rejected": 6,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 21,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 0
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 3,
+      "detail": {
+        "resume_db": {
+          "calls": 2,
+          "ok": 2,
+          "mean_ms": 1.1
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 885.7
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 36.7
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 34,
+      "turns_persisted": 13,
+      "events_persisted": 46,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "addressed_in_interview": 0,
+    "cross_round": 0
+  },
+  "session": {
+    "id": "s_245f5cf8e1",
+    "candidate_name": "Harsh Bhatia",
+    "role": "Senior Backend Engineer",
+    "seniority": "senior",
+    "status": "awaiting_approval",
+    "created_at": 1793429943.86925,
+    "updated_at": 1793430273.940873,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.0
+    },
+    "resume": {
+      "name": "Harsh Bhatia",
+      "headline": "Employee #3, seed-stage SaaS, 7 years",
+      "total_years": 7,
+      "github": "",
+      "projects": [
+        {
+          "name": "Core Backend",
+          "role": "Owner",
+          "team_size": 3,
+          "months": 20,
+          "stack": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Heroku"
+          ],
+          "impact": "0 to 400 paying customers"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Python",
+          "years": 7,
+          "level": "advanced"
+        },
+        {
+          "name": "PostgreSQL",
+          "years": 6,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "Flowdesk",
+          "title": "Senior Engineer",
+          "years": 3
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_2dfe70f58f",
+      "session_id": "s_245f5cf8e1",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Harsh Bhatia\", \"headline\": \"Employee #3, seed-stage SaaS, 7 years\", \"total_years\": 7, \"github\": \"\", \"projects\": [{\"name\": \"Core Backend\", \"role\": \"Owner\", \"team_size\": 3, \"months\": 20, \"stack\": [\"Python\", \"Django\", \"PostgreSQL\", \"Heroku\"], \"impact\": \"0 to 400 paying customers\"}], \"skills\": [{\"name\": \"Python\", \"years\": 7, \"level\": \"advanced\"}, {\"name\": \"PostgreSQL\", \"years\": 6, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Flowdesk\", \"title\": \"Senior Engineer\", \"years\": 3}]}",
+      "ts": 1793429943.876627,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_942779863e",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide an example of a project where you were the sole owner and describe the technology stack used?",
+      "ts": 1793429971.544323,
+      "meta": {
+        "intent": "Understand technical ownership and skills depth",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_9ee7e64d2a",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I was employee number three, so I owned the core backend outright. I also ran our deploys and I personally answered support tickets on weekends myself because there was nobody else to do it. Three of us took it from zero to 400 paying customers.",
+      "ts": 1793429971.546496,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_36c29bf2b7",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you elaborate on the specific Python and PostgreSQL technologies used in the core backend of your project?",
+      "ts": 1793429999.862814,
+      "meta": {
+        "intent": "elaborate on technical details",
+        "action": "verify_with_tool",
+        "reasoning": "To better understand the candidate's claim, I need more context on their role and responsibilities in the core backend. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_38fab2c643",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+      "ts": 1793429999.865793,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_baab2f7a99",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide more details about the specific challenges and solutions you implemented in the core backend, particularly regarding multi-tenancy using Django middleware with a row-level filter?",
+      "ts": 1793430027.206008,
+      "meta": {
+        "intent": "Understand the implementation depth and challenges",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer about their role as sole owner of the core backend is vague and could benefit from further clarification. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_302d41de3c",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+      "ts": 1793430027.208147,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_7f527fab71",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "You mentioned implementing a row-level filter in Django middleware to handle multi-tenancy. Can you walk us through how this implementation worked in more detail?",
+      "ts": 1793430057.955168,
+      "meta": {
+        "intent": "Examine specific problem-solving approach",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer about multi-tenancy implementation was vague and could benefit from more detail.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_2732be9477",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+      "ts": 1793430057.9625332,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_b0b0721191",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793430079.182643,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "The candidate has provided some details about their implementation but lacks concrete code examples to demonstrate their claims.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_07910b9e5a",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+      "ts": 1793430079.185936,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_d9fbd5327c",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide an example of a specific tenant or scenario where multi-tenancy was particularly challenging in your implementation, and how did the row-level filter address that issue?",
+      "ts": 1793430109.885828,
+      "meta": {
+        "intent": "Prove specific challenges and solutions with examples",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague and used 'we' to hide personal ownership, warranting further clarification.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_4056af3118",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+      "ts": 1793430109.88941,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "Owner",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Core Backend - Owner",
+      "source": "resume",
+      "id": "c_9d83cea0be",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "core backend",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 3.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Core Backend - team of 3",
+      "source": "resume",
+      "id": "c_d8b7197b22",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "core backend",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 20.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Core Backend - 20 months",
+      "source": "resume",
+      "id": "c_ea3b010fcb",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Python (7y, advanced)",
+      "source": "resume",
+      "id": "c_8b4af884b9",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": 7.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 7 years of Python",
+      "source": "resume",
+      "id": "c_59ae7b74a6",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "PostgreSQL",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: PostgreSQL (6y, advanced)",
+      "source": "resume",
+      "id": "c_c7ca11b253",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "PostgreSQL",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 6 years of PostgreSQL",
+      "source": "resume",
+      "id": "c_1afc3d6e62",
+      "turn_id": "t_2dfe70f58f",
+      "round": 0
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "core backend developer",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Understand technical ownership and skills depth",
+      "confidence": 0.8,
+      "raw_span": "I was employee number three, so I owned the core backend outright.",
+      "source": "interview",
+      "id": "c_e3166e7a63",
+      "turn_id": "t_9ee7e64d2a",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "core backend",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand technical ownership and skills depth",
+      "confidence": 0.8,
+      "raw_span": "I was employee number three, so I owned the core backend outright.",
+      "source": "interview",
+      "id": "c_54588a7a6b",
+      "turn_id": "t_9ee7e64d2a",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "outcome",
+      "object": "400 paying customers",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand technical ownership and skills depth",
+      "confidence": 0.8,
+      "raw_span": "Three of us took it from zero to 400 paying customers.",
+      "source": "interview",
+      "id": "c_1ab36e8136",
+      "turn_id": "t_9ee7e64d2a",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "responsibility",
+      "object": "support tickets",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand technical ownership and skills depth",
+      "confidence": 0.8,
+      "raw_span": "I personally answered support tickets on weekends myself because there was nobody else to do it.",
+      "source": "interview",
+      "id": "c_a185c17ef5",
+      "turn_id": "t_9ee7e64d2a",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "answered support tickets on weekends myself",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Understand technical ownership and skills depth",
+      "confidence": 0.88,
+      "raw_span": "I also ran our deploys and I personally answered support tickets on weekends myself because there was nobody else to do it.",
+      "source": "interview",
+      "id": "c_b0cc4be1b9",
+      "turn_id": "t_9ee7e64d2a",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "Django middleware",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "elaborate on technical details",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_5ae5c9de90",
+      "turn_id": "t_38fab2c643",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "row-level filter",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "elaborate on technical details",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_b11767adb7",
+      "turn_id": "t_38fab2c643",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "QA process",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "elaborate on technical details",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_48b97869dc",
+      "turn_id": "t_38fab2c643",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "outcome",
+      "object": "no leaks across tenants",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "elaborate on technical details",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_2f3268a28a",
+      "turn_id": "t_38fab2c643",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "wrote all the tests for that myself since we had",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "elaborate on technical details",
+      "confidence": 0.88,
+      "raw_span": "I also wrote all the tests for that myself since we had no QA.",
+      "source": "interview",
+      "id": "c_4edc0bb5aa",
+      "turn_id": "t_38fab2c643",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "Django middleware",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand the implementation depth and challenges",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_bcf1c360c3",
+      "turn_id": "t_302d41de3c",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "row-level filter",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand the implementation depth and challenges",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_e2165b178c",
+      "turn_id": "t_302d41de3c",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "QA process",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand the implementation depth and challenges",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_9b9a0c5ed7",
+      "turn_id": "t_302d41de3c",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "outcome",
+      "object": "no leaks across tenants",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand the implementation depth and challenges",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_4b990a1a0a",
+      "turn_id": "t_302d41de3c",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "wrote all the tests for that myself since we had",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Understand the implementation depth and challenges",
+      "confidence": 0.88,
+      "raw_span": "I also wrote all the tests for that myself since we had no QA.",
+      "source": "interview",
+      "id": "c_5efed14386",
+      "turn_id": "t_302d41de3c",
+      "round": 1
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "Django middleware",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Examine specific problem-solving approach",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_989b519502",
+      "turn_id": "t_2732be9477",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "row-level filter",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Examine specific problem-solving approach",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_dcb8182eb1",
+      "turn_id": "t_2732be9477",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "QA process",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Examine specific problem-solving approach",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_c5839b81b8",
+      "turn_id": "t_2732be9477",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "outcome",
+      "object": "no leaks across tenants",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Examine specific problem-solving approach",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_ac64b5a28d",
+      "turn_id": "t_2732be9477",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "wrote all the tests for that myself since we had",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Examine specific problem-solving approach",
+      "confidence": 0.88,
+      "raw_span": "I also wrote all the tests for that myself since we had no QA.",
+      "source": "interview",
+      "id": "c_ed7182395e",
+      "turn_id": "t_2732be9477",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.95,
+      "raw_span": "\"def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\"",
+      "source": "interview",
+      "id": "c_015faa53f6",
+      "turn_id": "t_07910b9e5a",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "```python\n# code snippet from a known project named core backend\n```\nKnown project names so far (reuse these exact names when the answer refers to them): core backend",
+      "source": "interview",
+      "id": "c_51c29a0db0",
+      "turn_id": "t_07910b9e5a",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "Django middleware",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove specific challenges and solutions with examples",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_51eec616ec",
+      "turn_id": "t_4056af3118",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "row-level filter",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove specific challenges and solutions with examples",
+      "confidence": 1.0,
+      "raw_span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+      "source": "interview",
+      "id": "c_6ec4113f45",
+      "turn_id": "t_4056af3118",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "used_tech",
+      "object": "QA process",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove specific challenges and solutions with examples",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_60b08d6cee",
+      "turn_id": "t_4056af3118",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "outcome",
+      "object": "no leaks across tenants",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove specific challenges and solutions with examples",
+      "confidence": 1.0,
+      "raw_span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+      "source": "interview",
+      "id": "c_597d21bea0",
+      "turn_id": "t_4056af3118",
+      "round": 2
+    },
+    {
+      "subject": "core backend",
+      "predicate": "role_on",
+      "object": "wrote all the tests for that myself since we had",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Prove specific challenges and solutions with examples",
+      "confidence": 0.88,
+      "raw_span": "I also wrote all the tests for that myself since we had no QA.",
+      "source": "interview",
+      "id": "c_42e6d30459",
+      "turn_id": "t_4056af3118",
+      "round": 2
+    }
+  ],
+  "contradictions": [],
+  "tool_calls": [
+    {
+      "id": "tc_025ce911c2",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.885009765625,
+      "ts": 1793429955.463695,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Core Backend",
+            "role": "Owner",
+            "team_size": 3,
+            "stack": "Python, Django, PostgreSQL, Heroku",
+            "impact": "0 to 400 paying customers",
+            "months": 20
+          }
+        ],
+        "skills": [
+          {
+            "name": "Python",
+            "years": 7.0,
+            "level": "advanced"
+          },
+          {
+            "name": "PostgreSQL",
+            "years": 6.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "Flowdesk",
+            "title": "Senior Engineer",
+            "years": 3.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Harsh Bhatia"
+          },
+          {
+            "k": "headline",
+            "v": "Employee #3, seed-stage SaaS, 7 years"
+          },
+          {
+            "k": "total_years",
+            "v": "7"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_56799133f8",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "agent": "tech",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 1.275777816772461,
+      "ts": 1793429985.806883,
+      "args": {
+        "field": "skills"
+      },
+      "result": {
+        "skills": [
+          {
+            "name": "Python",
+            "years": 7.0,
+            "level": "advanced"
+          },
+          {
+            "name": "PostgreSQL",
+            "years": 6.0,
+            "level": "advanced"
+          }
+        ],
+        "_sql_executed": "SELECT name,years,level FROM skills"
+      }
+    },
+    {
+      "id": "tc_a699e3ec51",
+      "session_id": "s_245f5cf8e1",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 885.7080936431885,
+      "ts": 1793430017.599586,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_3c30dd1c48",
+      "session_id": "s_245f5cf8e1",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 36.720991134643555,
+      "ts": 1793430079.224919,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 180
+      },
+      "result": {
+        "passed": 4,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              1,
+              2
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              2,
+              3
+            ],
+            "ok": true
+          }
+        ],
+        "verdict": "pass",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_43a6820b75",
+    "session_id": "s_245f5cf8e1",
+    "decision": "hire",
+    "confidence": 0.8,
+    "rationale": "The panel unanimously recommended hiring Harsh Bhatia with a weighted score of 3.29, meeting or exceeding the bar set at 3.0. Both HR and Technical Panelists agreed on recommending a strong hire. There were no contradictions detected in the candidate's responses across different rounds of questioning. The primary factors that decided the recommendation were ownership & accountability, collaboration & conflict, communication clarity, and handling failure and feedback.",
+    "approval_status": "pending",
+    "approved_by": "",
+    "approval_note": "",
+    "approved_at": null,
+    "ts": 1793430273.936882,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.5,
+          "collaboration & conflict": 3.8,
+          "communication clarity": 4.2,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 3.7
+        },
+        "overall": 4.1,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "llm_stated_recommendation": "strong_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Demonstrated ownership of core backend development, including multi-tenancy implementation.",
+          "Specific and detailed account of challenges and solutions implemented in the project.",
+          "Clear communication about specific technologies used and their role in the solution."
+        ],
+        "concerns": [
+          "Some inconsistencies in the timeline and team size mentioned across different sources.",
+          "Lack of explicit accountability for failures or shortcomings, though these were not explicitly asked about."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed information throughout the interview, with no apparent inconsistencies or contradictions.",
+        "summary": "Harsh Bhatia demonstrated strong ownership of core backend development and clear communication about specific technologies used. However, some inconsistencies in timeline and team size were noted."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "hire",
+        "label_overridden": false,
+        "strengths": [
+          "Demonstrated experience with multi-tenancy in a Django middleware with row-level filter.",
+          "Wrote comprehensive tests for the core backend, including those for multi-tenancy.",
+          "Capable of writing and explaining code solutions to problems."
+        ],
+        "concerns": [
+          "Limited depth on system design trade-offs and operational maturity aspects.",
+          "Some inconsistencies in details provided during different rounds of questioning."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed information across different aspects of the technical interview, though some details varied slightly.",
+        "summary": "Harsh Bhatia demonstrated solid experience with multi-tenancy in a Django middleware but showed room for improvement in system design trade-offs and operational maturity."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 3.0,
+          "scope_and_impact_calibration": 2.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Provided specific examples and technical details about the core backend project.",
+          "Demonstrated a strong understanding of multi-tenancy challenges in Django middleware."
+        ],
+        "concerns": [
+          "Lack of depth under pressure, particularly in addressing inconsistencies directly.",
+          "Inconsistent claims regarding the scope of responsibilities and technology used.",
+          "Difficulty handling ambiguity and providing specific examples for all questions."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent answers but struggled to reconcile inconsistencies and provide specific examples for all questions.",
+        "summary": "While the candidate demonstrated technical knowledge, they failed to address inconsistencies directly or provide comprehensive depth under pressure. Their responses were generally clear but lacked specificity."
+      }
+    },
+    "evidence": [
+      "c_9d83cea0be",
+      "c_d8b7197b22",
+      "c_ea3b010fcb",
+      "c_8b4af884b9",
+      "c_59ae7b74a6"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "hire",
+            "overall": 4.1
+          },
+          "tech": {
+            "position": "hire",
+            "overall": 3.0
+          },
+          "bar": {
+            "position": "hire",
+            "overall": 3.0
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_4ead15bcb4",
+      "session_id": "s_245f5cf8e1",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793429943.875753,
+      "payload": {
+        "session_id": "s_245f5cf8e1",
+        "candidate": "Harsh Bhatia",
+        "role": "Senior Backend Engineer",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_9882652933",
+      "session_id": "s_245f5cf8e1",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793429943.880198,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "core backend"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_2030dc42de",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793429943.88059,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_f567952b73",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793429955.4592671,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_fb921cc18a",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793429955.461827,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 11.58
+      }
+    },
+    {
+      "id": "e_4daa9a4893",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793429971.5407412,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.9,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Core Backend\", \"role\": \"Owner\", \"team_size\": 3, \"stack\": \"Python, Django, PostgreSQL, Heroku\", \"impact\": \"0 to 400 paying customers\", \"months\": 20}], \"skills\": [{\"name\": \"Python\", \"years\": 7.0, \"level\": \"advanced\"}, {\"name\": \"PostgreSQL\", \"years\": 6.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Flowdesk\", \"title\": \"Senior Engineer\", \"years\": 3.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Harsh Bhatia\"}, {\"k\": \"headline\", \"v\": \"Employee #3, seed-stage SaaS, 7 years\"}, {\"k\": \"total_years\", \"v\": \"7\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_183577e9fe",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793429971.5452821,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide an example of a project where you were the sole owner and describe the technology stack used?",
+        "intent": "Understand technical ownership and skills depth",
+        "action": "verify_with_tool",
+        "turn_id": "t_942779863e",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_6c247dcd24",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793429971.5478551,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I was employee number three, so I owned the core backend outright. I also ran our deploys and I personally answered support tickets on weekends myself because there was nobody else to do it. Three of us took it from zero to 400 paying customers.",
+        "turn_id": "t_9ee7e64d2a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_666fbc4089",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793429979.685432,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_e3166e7a63",
+            "text": "core backend / role_on / core backend developer",
+            "span": "I was employee number three, so I owned the core backend outright.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_54588a7a6b",
+            "text": "self / used_tech / core backend",
+            "span": "I was employee number three, so I owned the core backend outright.",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_1ab36e8136",
+            "text": "core backend / outcome / 400 paying customers",
+            "span": "Three of us took it from zero to 400 paying customers.",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_a185c17ef5",
+            "text": "core backend / responsibility / support tickets",
+            "span": "I personally answered support tickets on weekends myself because there was nobody else to do it.",
+            "predicate": "responsibility",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_b0cc4be1b9",
+            "text": "core backend / role_on / answered support tickets on weekends myself",
+            "span": "I also ran our deploys and I personally answered support tickets on weekends myself because there was nobody else to do it.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 12
+      }
+    },
+    {
+      "id": "e_dcebba1764",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793429985.802547,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_54e45988d6",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793429985.8044312,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "To better understand the candidate's claim, I need more context on their role and responsibilities in the core backend. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 6.12
+      }
+    },
+    {
+      "id": "e_f506e19e48",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793429999.8593469,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "skills"
+        },
+        "latency_ms": 1.3,
+        "error": "",
+        "result_preview": "{\"skills\": [{\"name\": \"Python\", \"years\": 7.0, \"level\": \"advanced\"}, {\"name\": \"PostgreSQL\", \"years\": 6.0, \"level\": \"advanced\"}], \"_sql_executed\": \"SELECT name,years,level FROM skills\"}"
+      }
+    },
+    {
+      "id": "e_e0df763dea",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793429999.864089,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you elaborate on the specific Python and PostgreSQL technologies used in the core backend of your project?",
+        "intent": "elaborate on technical details",
+        "action": "verify_with_tool",
+        "turn_id": "t_36c29bf2b7",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_9d6aa81fc3",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793429999.866799,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+        "turn_id": "t_38fab2c643",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_ece170cb06",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793430010.317535,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_5ae5c9de90",
+            "text": "core backend / used_tech / Django middleware",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_b11767adb7",
+            "text": "core backend / used_tech / row-level filter",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_48b97869dc",
+            "text": "core backend / used_tech / QA process",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_2f3268a28a",
+            "text": "core backend / outcome / no leaks across tenants",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_4edc0bb5aa",
+            "text": "core backend / role_on / wrote all the tests for that myself since we had",
+            "span": "I also wrote all the tests for that myself since we had no QA.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 17
+      }
+    },
+    {
+      "id": "e_1cfc3469be",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793430016.710413,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_35343e1140",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793430016.7127838,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer about their role as sole owner of the core backend is vague and could benefit from further clarification. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 6.39
+      }
+    },
+    {
+      "id": "e_40faf91e2b",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793430027.204108,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 885.7,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_39ce0e55a5",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793430027.207029,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide more details about the specific challenges and solutions you implemented in the core backend, particularly regarding multi-tenancy using Django middleware with a row-level filter?",
+        "intent": "Understand the implementation depth and challenges",
+        "action": "verify_with_tool",
+        "turn_id": "t_baab2f7a99",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_00f8513acf",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793430027.208939,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+        "turn_id": "t_302d41de3c",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_b6a1f4adb8",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793430040.338478,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_bcf1c360c3",
+            "text": "core backend / used_tech / Django middleware",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_e2165b178c",
+            "text": "core backend / used_tech / row-level filter",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_9b9a0c5ed7",
+            "text": "core backend / used_tech / QA process",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_4b990a1a0a",
+            "text": "core backend / outcome / no leaks across tenants",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_5efed14386",
+            "text": "core backend / role_on / wrote all the tests for that myself since we had",
+            "span": "I also wrote all the tests for that myself since we had no QA.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 22
+      }
+    },
+    {
+      "id": "e_bc2a7d95a5",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793430040.340587,
+      "payload": {
+        "round": 1,
+        "claims": 22,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_ade553df82",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793430040.3417978,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_ff0848959c",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793430048.988959,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer about multi-tenancy implementation was vague and could benefit from more detail.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 8.65
+      }
+    },
+    {
+      "id": "e_f74bca9177",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793430057.9578629,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "You mentioned implementing a row-level filter in Django middleware to handle multi-tenancy. Can you walk us through how this implementation worked in more detail?",
+        "intent": "Examine specific problem-solving approach",
+        "action": "probe_prior",
+        "turn_id": "t_7f527fab71",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_2ea4512690",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793430057.963627,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+        "turn_id": "t_2732be9477",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_e7ad94b91e",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793430071.1296809,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_989b519502",
+            "text": "core backend / used_tech / Django middleware",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_dcb8182eb1",
+            "text": "core backend / used_tech / row-level filter",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_c5839b81b8",
+            "text": "core backend / used_tech / QA process",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_ac64b5a28d",
+            "text": "core backend / outcome / no leaks across tenants",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_ed7182395e",
+            "text": "core backend / role_on / wrote all the tests for that myself since we had",
+            "span": "I also wrote all the tests for that myself since we had no QA.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 27
+      }
+    },
+    {
+      "id": "e_827e3e5d91",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793430079.1803951,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "The candidate has provided some details about their implementation but lacks concrete code examples to demonstrate their claims.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 8.05
+      }
+    },
+    {
+      "id": "e_c0d5b94661",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793430079.183711,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_b0b0721191",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_4218591460",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793430079.1871629,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+        "turn_id": "t_07910b9e5a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_aa08457cb9",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793430079.2257369,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 36.7,
+        "result": {
+          "passed": 4,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                1,
+                2
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                2,
+                3
+              ],
+              "ok": true
+            }
+          ],
+          "verdict": "pass",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n"
+      }
+    },
+    {
+      "id": "e_2239bb12d8",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793430091.249409,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_015faa53f6",
+            "text": "core backend / used_tech / Python",
+            "span": "\"def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - ",
+            "predicate": "used_tech",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_51c29a0db0",
+            "text": "NOT core backend / years_exp",
+            "span": "```python\n# code snippet from a known project named core backend\n```\nKnown project names so far (reuse these exact names when the answer ref",
+            "predicate": "years_exp",
+            "confidence": 0.9
+          }
+        ],
+        "ledger_size": 29
+      }
+    },
+    {
+      "id": "e_e8fb4f11b6",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793430101.221385,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague and used 'we' to hide personal ownership, warranting further clarification.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 9.97
+      }
+    },
+    {
+      "id": "e_648353266c",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793430109.887327,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide an example of a specific tenant or scenario where multi-tenancy was particularly challenging in your implementation, and how did the row-level filter address that issue?",
+        "intent": "Prove specific challenges and solutions with examples",
+        "action": "probe_prior",
+        "turn_id": "t_d9fbd5327c",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_9efe1f4126",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793430109.8904471,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "The hardest part of the core backend was multi-tenancy. I put tenant scoping in a Django middleware with a row-level filter, because doing it per-query was already leaking across tenants in two endpoints. I also wrote all the tests for that myself since we had no QA.",
+        "turn_id": "t_4056af3118",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_c68e986f1f",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793430122.588507,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_51eec616ec",
+            "text": "core backend / used_tech / Django middleware",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_6ec4113f45",
+            "text": "core backend / used_tech / row-level filter",
+            "span": "\"I put tenant scoping in a Django middleware with a row-level filter\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_60b08d6cee",
+            "text": "core backend / used_tech / QA process",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_597d21bea0",
+            "text": "core backend / outcome / no leaks across tenants",
+            "span": "\"I also wrote all the tests for that myself since we had no QA.\".",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_42e6d30459",
+            "text": "core backend / role_on / wrote all the tests for that myself since we had",
+            "span": "I also wrote all the tests for that myself since we had no QA.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 34
+      }
+    },
+    {
+      "id": "e_2adab301d4",
+      "session_id": "s_245f5cf8e1",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793430122.5911958,
+      "payload": {
+        "round": 2,
+        "claims": 34,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_f009e2976b",
+      "session_id": "s_245f5cf8e1",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793430122.593478,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_12557b435d",
+      "session_id": "s_245f5cf8e1",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793430153.867096,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.5,
+          "collaboration & conflict": 3.8,
+          "communication clarity": 4.2,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 3.7
+        },
+        "overall": 4.1,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "llm_stated_recommendation": "strong_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Demonstrated ownership of core backend development, including multi-tenancy implementation.",
+          "Specific and detailed account of challenges and solutions implemented in the project.",
+          "Clear communication about specific technologies used and their role in the solution."
+        ],
+        "concerns": [
+          "Some inconsistencies in the timeline and team size mentioned across different sources.",
+          "Lack of explicit accountability for failures or shortcomings, though these were not explicitly asked about."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed information throughout the interview, with no apparent inconsistencies or contradictions.",
+        "summary": "Harsh Bhatia demonstrated strong ownership of core backend development and clear communication about specific technologies used. However, some inconsistencies in timeline and team size were noted."
+      }
+    },
+    {
+      "id": "e_bc39eb1299",
+      "session_id": "s_245f5cf8e1",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793430183.8210921,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "hire",
+        "label_overridden": false,
+        "strengths": [
+          "Demonstrated experience with multi-tenancy in a Django middleware with row-level filter.",
+          "Wrote comprehensive tests for the core backend, including those for multi-tenancy.",
+          "Capable of writing and explaining code solutions to problems."
+        ],
+        "concerns": [
+          "Limited depth on system design trade-offs and operational maturity aspects.",
+          "Some inconsistencies in details provided during different rounds of questioning."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed information across different aspects of the technical interview, though some details varied slightly.",
+        "summary": "Harsh Bhatia demonstrated solid experience with multi-tenancy in a Django middleware but showed room for improvement in system design trade-offs and operational maturity."
+      }
+    },
+    {
+      "id": "e_2c883055a9",
+      "session_id": "s_245f5cf8e1",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793430236.9505432,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 3.0,
+          "scope_and_impact_calibration": 2.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "llm_stated_recommendation": "no_hire",
+        "label_overridden": true,
+        "strengths": [
+          "Provided specific examples and technical details about the core backend project.",
+          "Demonstrated a strong understanding of multi-tenancy challenges in Django middleware."
+        ],
+        "concerns": [
+          "Lack of depth under pressure, particularly in addressing inconsistencies directly.",
+          "Inconsistent claims regarding the scope of responsibilities and technology used.",
+          "Difficulty handling ambiguity and providing specific examples for all questions."
+        ],
+        "evidence_claim_ids": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "integrity_note": "The candidate provided consistent answers but struggled to reconcile inconsistencies and provide specific examples for all questions.",
+        "summary": "While the candidate demonstrated technical knowledge, they failed to address inconsistencies directly or provide comprehensive depth under pressure. Their responses were generally clear but lacked specificity."
+      }
+    },
+    {
+      "id": "e_36d6b6283d",
+      "session_id": "s_245f5cf8e1",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793430236.9532008,
+      "payload": {
+        "initial_positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_59d4e2fb5d",
+      "session_id": "s_245f5cf8e1",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793430236.95441,
+      "payload": {
+        "round": 1,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        }
+      }
+    },
+    {
+      "id": "e_9fe6b105f0",
+      "session_id": "s_245f5cf8e1",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793430236.9556851,
+      "payload": {
+        "decision": "hire",
+        "hire_votes": 3,
+        "weighted_score": 3.29,
+        "threshold": 3.0,
+        "rules_fired": [
+          "S1 Clean record + bar cleared: no unresolved contradictions, 3/3 panelists at or above the bar, weighted score 3.29 >= 3.0 (rubric: 3 = meets the bar)."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 1.1,
+        "panel_agreement": 0.73,
+        "confidence": 0.8,
+        "votes": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "hire"
+        }
+      }
+    },
+    {
+      "id": "e_6b4142ded8",
+      "session_id": "s_245f5cf8e1",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793430273.939281,
+      "payload": {
+        "decision": "hire",
+        "confidence": 0.8,
+        "rationale": "The panel unanimously recommended hiring Harsh Bhatia with a weighted score of 3.29, meeting or exceeding the bar set at 3.0. Both HR and Technical Panelists agreed on recommending a strong hire. There were no contradictions detected in the candidate's responses across different rounds of questioning. The primary factors that decided the recommendation were ownership & accountability, collaboration & conflict, communication clarity, and handling failure and feedback.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 4.5,
+              "collaboration & conflict": 3.8,
+              "communication clarity": 4.2,
+              "motivation & role fit": 4.0,
+              "handling failure and feedback": 3.7
+            },
+            "overall": 4.1,
+            "recommendation": "hire",
+            "confidence": 0.95,
+            "llm_stated_recommendation": "strong_hire",
+            "label_overridden": true,
+            "strengths": [
+              "Demonstrated ownership of core backend development, including multi-tenancy implementation.",
+              "Specific and detailed account of challenges and solutions implemented in the project.",
+              "Clear communication about specific technologies used and their role in the solution."
+            ],
+            "concerns": [
+              "Some inconsistencies in the timeline and team size mentioned across different sources.",
+              "Lack of explicit accountability for failures or shortcomings, though these were not explicitly asked about."
+            ],
+            "evidence_claim_ids": [
+              "c_9d83cea0be",
+              "c_d8b7197b22",
+              "c_ea3b010fcb",
+              "c_8b4af884b9",
+              "c_59ae7b74a6"
+            ],
+            "integrity_note": "The candidate provided consistent and detailed information throughout the interview, with no apparent inconsistencies or contradictions.",
+            "summary": "Harsh Bhatia demonstrated strong ownership of core backend development and clear communication about specific technologies used. However, some inconsistencies in timeline and team size were noted."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 3.0,
+              "debugging_depth": 2.0,
+              "data_modelling_correctness": 1.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 2.0
+            },
+            "overall": 3.0,
+            "recommendation": "hire",
+            "confidence": 0.85,
+            "llm_stated_recommendation": "hire",
+            "label_overridden": false,
+            "strengths": [
+              "Demonstrated experience with multi-tenancy in a Django middleware with row-level filter.",
+              "Wrote comprehensive tests for the core backend, including those for multi-tenancy.",
+              "Capable of writing and explaining code solutions to problems."
+            ],
+            "concerns": [
+              "Limited depth on system design trade-offs and operational maturity aspects.",
+              "Some inconsistencies in details provided during different rounds of questioning."
+            ],
+            "evidence_claim_ids": [
+              "c_9d83cea0be",
+              "c_d8b7197b22",
+              "c_ea3b010fcb",
+              "c_8b4af884b9",
+              "c_59ae7b74a6"
+            ],
+            "integrity_note": "The candidate provided consistent and detailed information across different aspects of the technical interview, though some details varied slightly.",
+            "summary": "Harsh Bhatia demonstrated solid experience with multi-tenancy in a Django middleware but showed room for improvement in system design trade-offs and operational maturity."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 4.0,
+              "claim_consistency_and_integrity": 3.0,
+              "scope_and_impact_calibration": 2.0,
+              "ambiguity_handling": 3.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 3.0,
+            "recommendation": "hire",
+            "confidence": 0.85,
+            "llm_stated_recommendation": "no_hire",
+            "label_overridden": true,
+            "strengths": [
+              "Provided specific examples and technical details about the core backend project.",
+              "Demonstrated a strong understanding of multi-tenancy challenges in Django middleware."
+            ],
+            "concerns": [
+              "Lack of depth under pressure, particularly in addressing inconsistencies directly.",
+              "Inconsistent claims regarding the scope of responsibilities and technology used.",
+              "Difficulty handling ambiguity and providing specific examples for all questions."
+            ],
+            "evidence_claim_ids": [
+              "c_9d83cea0be",
+              "c_d8b7197b22",
+              "c_ea3b010fcb",
+              "c_8b4af884b9",
+              "c_59ae7b74a6"
+            ],
+            "integrity_note": "The candidate provided consistent answers but struggled to reconcile inconsistencies and provide specific examples for all questions.",
+            "summary": "While the candidate demonstrated technical knowledge, they failed to address inconsistencies directly or provide comprehensive depth under pressure. Their responses were generally clear but lacked specificity."
+          }
+        },
+        "evidence": [
+          "c_9d83cea0be",
+          "c_d8b7197b22",
+          "c_ea3b010fcb",
+          "c_8b4af884b9",
+          "c_59ae7b74a6"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "hire",
+                "overall": 4.1
+              },
+              "tech": {
+                "position": "hire",
+                "overall": 3.0
+              },
+              "bar": {
+                "position": "hire",
+                "overall": 3.0
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "hire",
+          "hire_votes": 3,
+          "weighted_score": 3.29,
+          "threshold": 3.0,
+          "rules_fired": [
+            "S1 Clean record + bar cleared: no unresolved contradictions, 3/3 panelists at or above the bar, weighted score 3.29 >= 3.0 (rubric: 3 = meets the bar)."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 1.1,
+          "panel_agreement": 0.73,
+          "confidence": 0.8,
+          "votes": {
+            "hr": "hire",
+            "tech": "hire",
+            "bar": "hire"
+          }
+        },
+        "decision_drivers": [
+          "ownership & accountability",
+          "communication clarity",
+          "handling failure and feedback",
+          "motivation & role fit"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_43a6820b75",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_fe93795d18",
+      "session_id": "s_245f5cf8e1",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793430273.942162,
+      "payload": {
+        "verdict_id": "v_43a6820b75",
+        "decision": "hire",
+        "confidence": 0.8,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,3607 @@
+{
+  "session_id": "s_5feb86bc09",
+  "generated_at": 1793425471.341137,
+  "wall_clock_s": 229.1,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 36,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 38995,
+    "completion_tokens": 4895,
+    "total_latency_s": 227.99,
+    "mean_latency_s": 6.333,
+    "calls_by_label": {
+      "adjudicate_contradiction": 3,
+      "ask_bar": 3,
+      "ask_hr": 3,
+      "ask_tech": 2,
+      "debate_bar": 1,
+      "debate_hr": 1,
+      "debate_tech": 1,
+      "extract_claims": 9,
+      "moderator_narrate": 1,
+      "plan_bar": 3,
+      "plan_hr": 3,
+      "plan_tech": 3,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 4,
+    "distinct_tools": 4,
+    "success_rate": 0.75,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 0.7
+      },
+      "github_verify": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 404.8
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 38.8
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 421.9
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 3,
+    "llm_confirmed": 3,
+    "llm_rejected": 0,
+    "prefilter_rejected": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 36,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 3
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 4,
+      "detail": {
+        "resume_db": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 0.7
+        },
+        "github_verify": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 404.8
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 38.8
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 421.9
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 40,
+      "turns_persisted": 19,
+      "events_persisted": 75,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 3,
+    "by_severity": {
+      "high": 3
+    },
+    "by_type": {
+      "polarity_conflict": 1,
+      "numeric_conflict": 1,
+      "ownership_conflict": 1
+    },
+    "addressed_in_interview": 3,
+    "cross_round": 3
+  },
+  "session": {
+    "id": "s_5feb86bc09",
+    "candidate_name": "Rahul Menon",
+    "role": "Senior Backend Engineer",
+    "seniority": "senior",
+    "status": "awaiting_approval",
+    "created_at": 1793425242.205753,
+    "updated_at": 1793425471.331839,
+    "config": {
+      "rounds": 3,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Rahul Menon",
+      "headline": "Backend engineer, 6 years",
+      "total_years": 6,
+      "github": "torvalds",
+      "projects": [
+        {
+          "name": "Billing Migration",
+          "role": "Project Lead",
+          "team_size": 4,
+          "months": 6,
+          "stack": [
+            "Python",
+            "PostgreSQL",
+            "Kafka"
+          ],
+          "impact": "cut invoice errors 30%"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Python",
+          "years": 6,
+          "level": "advanced"
+        },
+        {
+          "name": "Kafka",
+          "years": 3,
+          "level": "intermediate"
+        }
+      ],
+      "roles": [
+        {
+          "company": "FinServe",
+          "title": "Senior Engineer",
+          "years": 3
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_bc06902a58",
+      "session_id": "s_5feb86bc09",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Rahul Menon\", \"headline\": \"Backend engineer, 6 years\", \"total_years\": 6, \"github\": \"torvalds\", \"projects\": [{\"name\": \"Billing Migration\", \"role\": \"Project Lead\", \"team_size\": 4, \"months\": 6, \"stack\": [\"Python\", \"PostgreSQL\", \"Kafka\"], \"impact\": \"cut invoice errors 30%\"}], \"skills\": [{\"name\": \"Python\", \"years\": 6, \"level\": \"advanced\"}, {\"name\": \"Kafka\", \"years\": 3, \"level\": \"intermediate\"}], \"roles\": [{\"company\": \"FinServe\", \"title\": \"Senior Engineer\", \"years\": 3}]}",
+      "ts": 1793425242.219532,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_176cbaa025",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide an example of a time when you led a project and what specific Python or Kafka skills were crucial for its success?",
+      "ts": 1793425245.061332,
+      "meta": {
+        "intent": "Leadership and technical expertise in Python and Kafka",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_5a94c27352",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793425245.063926,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_f909c73fa1",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you describe how Python and Kafka were specifically utilized in the billing migration project?",
+      "ts": 1793425258.138295,
+      "meta": {
+        "intent": "understand specific implementation details",
+        "action": "verify_with_tool",
+        "reasoning": "To better understand the candidate's role in leading the billing migration project, I need to probe their specific Python or Kafka skills used. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_63039e3fa3",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Honestly I have never used Kafka in production myself. I have read a lot about it and I understand the consumer group model conceptually.",
+      "ts": 1793425258.1410089,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_052c3195fa",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "You mentioned that you have never used Kafka in production yourself. However, on your resume, it states a 3-year experience at an intermediate level with Kafka. Could you please clarify if this means you have never used Kafka in production or just not personally?",
+      "ts": 1793425270.143363,
+      "meta": {
+        "intent": "Clarify the inconsistency between resume and recent statement",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's recent answer regarding Kafka is vague and evasive, requiring further clarification to ensure consistency in their responses. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "contradiction_id": "x_1d1430b4bf"
+      }
+    },
+    {
+      "id": "t_2fe1bc3bff",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793425270.146723,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_db3cb2ebe1",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "You mentioned 'I have never used Kafka in production myself.' Could you provide more details on this? Specifically, what did you mean by this statement?",
+      "ts": 1793425284.2891269,
+      "meta": {
+        "intent": "Clarify usage of Kafka in a project",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer regarding Kafka usage is vague and inconsistent with their resume, requiring further clarification.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_608b36bf18",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793425284.2922041,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_05019a313d",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793425296.703939,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "The candidate's statement about never using Kafka in production contradicts their resume experience, requiring clarification. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_af81998f30",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "```python\ndef two_sum(nums, target):\n    # quadratic and returns the values, not the indices\n    for a in nums:\n        for b in nums:\n            if a + b == target:\n                return [a, b]\n    return []\n```",
+      "ts": 1793425296.707169,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_4f0c9ec500",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "You mentioned that you led a team of four engineers during the billing migration project and also said that the team was around twelve people, so many design calls happened above you. Could you please clarify how these two statements reconcile with each other? Please provide more details on your role and responsibilities in both scenarios.",
+      "ts": 1793425311.556927,
+      "meta": {
+        "intent": "Reconcile conflicting claims about team size",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate mentioned they have never used Kafka in production, but their resume indicates 3 years of intermediate experience. This inconsistency needs further clarification. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "contradiction_id": "x_e26f82d569"
+      }
+    },
+    {
+      "id": "t_e9c1dfb534",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793425311.559753,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_d299439b8f",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 14,
+      "agent": "hr",
+      "kind": "question",
+      "text": "You mentioned 'I have never used Kafka in production myself.' Could you provide more details on this? Specifically, what did you mean by this statement?\n\nAnd earlier, you said 'Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.' How does your role as a Project Lead differ from primarily writing tests for the same project?",
+      "ts": 1793425324.9695182,
+      "meta": {
+        "intent": "Clarify contradiction between roles",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's statements about the billing migration project contradict each other; clarifying this will help resolve the contradiction.",
+        "contradiction_id": "x_0cc709bff7"
+      }
+    },
+    {
+      "id": "t_c844863f84",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 15,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793425324.97344,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_5d2a25d660",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 16,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you elaborate on a particular design call that happened above you during the billing migration project, including the context and outcome?",
+      "ts": 1793425336.050794,
+      "meta": {
+        "intent": "clarify role and responsibilities in team",
+        "action": "probe_prior",
+        "reasoning": "Need more clarification on the candidate's role in the billing migration project and how it aligns with their statement about team size.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_74869eb532",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 17,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793425336.055742,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_ae3358a0b6",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 18,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide more detail on a specific design call that happened above you during the billing migration project, including who participated and what the outcome was?",
+      "ts": 1793425352.545013,
+      "meta": {
+        "intent": "Clarify role hierarchy and impact of design calls",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer was vague regarding their role and responsibilities, which needs further clarification to ensure consistency and integrity. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_ca726adc9a",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "seq": 19,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793425352.548365,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Project Lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - Project Lead",
+      "source": "resume",
+      "id": "c_dcdb90cbe4",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - team of 4",
+      "source": "resume",
+      "id": "c_d886e2e2c6",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - 6 months",
+      "source": "resume",
+      "id": "c_52cb703fc7",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Python (6y, advanced)",
+      "source": "resume",
+      "id": "c_8e8a47c2e3",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 6 years of Python",
+      "source": "resume",
+      "id": "c_4247b9dcf5",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Kafka",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Kafka (3y, intermediate)",
+      "source": "resume",
+      "id": "c_aaa1bde2a0",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Kafka",
+      "polarity": 1,
+      "value_num": 3.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 3 years of Kafka",
+      "source": "resume",
+      "id": "c_637ca8bd6b",
+      "turn_id": "t_bc06902a58",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Leadership and technical expertise in Python and Kafka",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_26e78bc3a1",
+      "turn_id": "t_5a94c27352",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Leadership and technical expertise in Python and Kafka",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_eb64d45256",
+      "turn_id": "t_5a94c27352",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Leadership and technical expertise in Python and Kafka",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_6c02852c3f",
+      "turn_id": "t_5a94c27352",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Leadership and technical expertise in Python and Kafka",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_66c29e5ad1",
+      "turn_id": "t_5a94c27352",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Leadership and technical expertise in Python and Kafka",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_6a62eae442",
+      "turn_id": "t_5a94c27352",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Kafka",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "understand specific implementation details",
+      "confidence": 1.0,
+      "raw_span": "Honestly I have never used Kafka in production myself.",
+      "source": "interview",
+      "id": "c_137921e617",
+      "turn_id": "t_63039e3fa3",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Clarify the inconsistency between resume and recent statement",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_da9e90019e",
+      "turn_id": "t_2fe1bc3bff",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify the inconsistency between resume and recent statement",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_8b1c56d29a",
+      "turn_id": "t_2fe1bc3bff",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify the inconsistency between resume and recent statement",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_78309d41d1",
+      "turn_id": "t_2fe1bc3bff",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify the inconsistency between resume and recent statement",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_bde522a8dc",
+      "turn_id": "t_2fe1bc3bff",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify the inconsistency between resume and recent statement",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_762a103b9a",
+      "turn_id": "t_2fe1bc3bff",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify usage of Kafka in a project",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_8442b2697a",
+      "turn_id": "t_608b36bf18",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify usage of Kafka in a project",
+      "confidence": 0.9,
+      "raw_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_21b5e0b02c",
+      "turn_id": "t_608b36bf18",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Clarify usage of Kafka in a project",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_4ea2ce00f7",
+      "turn_id": "t_608b36bf18",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.95,
+      "raw_span": "\"```python\n# ...\\n```\ndef two_sum(nums, target):\n    # quadratic and returns the values, not the indices\n    for a in nums:\n        for b in nums:\n            if a + b == target:\n                return [a, b]\n    return []\n```\"",
+      "source": "interview",
+      "id": "c_f892cd0c14",
+      "turn_id": "t_af81998f30",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"# quadratic and returns the values, not the indices\"",
+      "source": "interview",
+      "id": "c_68172b2d1e",
+      "turn_id": "t_af81998f30",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Reconcile conflicting claims about team size",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_010cdb6a72",
+      "turn_id": "t_e9c1dfb534",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Reconcile conflicting claims about team size",
+      "confidence": 0.95,
+      "raw_span": "\"The team was around twelve people\",",
+      "source": "interview",
+      "id": "c_5f8946d4f2",
+      "turn_id": "t_e9c1dfb534",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Reconcile conflicting claims about team size",
+      "confidence": 1.0,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_0a53abfb05",
+      "turn_id": "t_e9c1dfb534",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Reconcile conflicting claims about team size",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_b4e2133ca9",
+      "turn_id": "t_e9c1dfb534",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify contradiction between roles",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_ed406bfdba",
+      "turn_id": "t_c844863f84",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify contradiction between roles",
+      "confidence": 0.95,
+      "raw_span": "\"The team was around twelve people\",",
+      "source": "interview",
+      "id": "c_bd5d8adf3c",
+      "turn_id": "t_c844863f84",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Clarify contradiction between roles",
+      "confidence": 1.0,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_bf5fd601fe",
+      "turn_id": "t_c844863f84",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Clarify contradiction between roles",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_83a4f044c5",
+      "turn_id": "t_c844863f84",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "clarify role and responsibilities in team",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_49838685ae",
+      "turn_id": "t_74869eb532",
+      "round": 3
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "clarify role and responsibilities in team",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_141387f102",
+      "turn_id": "t_74869eb532",
+      "round": 3
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "clarify role and responsibilities in team",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_dc0e4424b9",
+      "turn_id": "t_74869eb532",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "clarify role and responsibilities in team",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_ea449b9d65",
+      "turn_id": "t_74869eb532",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "clarify role and responsibilities in team",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_2746ead47c",
+      "turn_id": "t_74869eb532",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role hierarchy and impact of design calls",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_484e7a940c",
+      "turn_id": "t_ca726adc9a",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify role hierarchy and impact of design calls",
+      "confidence": 0.95,
+      "raw_span": "\"The team was around twelve people\",",
+      "source": "interview",
+      "id": "c_df7253501f",
+      "turn_id": "t_ca726adc9a",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Clarify role hierarchy and impact of design calls",
+      "confidence": 1.0,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_8273a08291",
+      "turn_id": "t_ca726adc9a",
+      "round": 3
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Clarify role hierarchy and impact of design calls",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_2822722f9c",
+      "turn_id": "t_ca726adc9a",
+      "round": 3
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "c_aaa1bde2a0",
+      "claim_b": "c_137921e617",
+      "ctype": "polarity_conflict",
+      "severity": "high",
+      "score": 0.875,
+      "rationale": "The candidate claims to have used Kafka for 3 years at an intermediate level on their resume, but then denies ever using it themselves.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "addressed",
+      "resolution": "Confronted by Bar-Raiser in round 1; candidate response recorded in turn t_2fe1bc3bff.",
+      "evidence": {
+        "rule_detail": "'Kafka' is both asserted and denied for 'self'",
+        "rule_score": 0.9,
+        "llm_confidence": 0.85,
+        "challenge_question": "Can you clarify if you mean that you never used Kafka in production or just not personally?",
+        "claim_a": {
+          "id": "c_aaa1bde2a0",
+          "round": 0,
+          "text": "self / used_tech / Kafka",
+          "span": "Resume skill: Kafka (3y, intermediate)"
+        },
+        "claim_b": {
+          "id": "c_137921e617",
+          "round": 1,
+          "text": "NOT self / used_tech / Kafka",
+          "span": "Honestly I have never used Kafka in production myself."
+        }
+      },
+      "id": "x_1d1430b4bf",
+      "claim_a_text": "self / used_tech / Kafka",
+      "claim_b_text": "NOT self / used_tech / Kafka",
+      "claim_a_span": "Resume skill: Kafka (3y, intermediate)",
+      "claim_b_span": "Honestly I have never used Kafka in production myself.",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_66c29e5ad1",
+      "claim_b": "c_21b5e0b02c",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "CLAIM A states a team size of 4 people, while CLAIM B claims the team was around 12 people.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "addressed",
+      "resolution": "Confronted by Bar-Raiser in round 2; candidate response recorded in turn t_e9c1dfb534.",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify if the billing migration project had a team size of four engineers or approximately twelve people? Please provide more details on your role and responsibilities.",
+        "claim_a": {
+          "id": "c_66c29e5ad1",
+          "round": 1,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_21b5e0b02c",
+          "round": 2,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_e26f82d569",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_dcdb90cbe4",
+      "claim_b": "c_4ea2ce00f7",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "CLAIM A states 'Project Lead' while CLAIM B describes 'wrote tests and validated the reconciliation'. These roles are incompatible for the same project.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "addressed",
+      "resolution": "Confronted by HR Panelist in round 3; candidate response recorded in turn t_c844863f84.",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify how your role on the billing migration project differed between being a Project Lead and primarily writing tests? ",
+        "claim_a": {
+          "id": "c_dcdb90cbe4",
+          "round": 0,
+          "text": "billing migration / role_on / Project Lead",
+          "span": "Resume: Billing Migration - Project Lead"
+        },
+        "claim_b": {
+          "id": "c_4ea2ce00f7",
+          "round": 2,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_0cc709bff7",
+      "claim_a_text": "billing migration / role_on / Project Lead",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "Resume: Billing Migration - Project Lead",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 0,
+      "claim_b_round": 2
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "tc_98926a10be",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.7472038269042969,
+      "ts": 1793425243.0247622,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Billing Migration",
+            "role": "Project Lead",
+            "team_size": 4,
+            "stack": "Python, PostgreSQL, Kafka",
+            "impact": "cut invoice errors 30%",
+            "months": 6
+          }
+        ],
+        "skills": [
+          {
+            "name": "Python",
+            "years": 6.0,
+            "level": "advanced"
+          },
+          {
+            "name": "Kafka",
+            "years": 3.0,
+            "level": "intermediate"
+          }
+        ],
+        "roles": [
+          {
+            "company": "FinServe",
+            "title": "Senior Engineer",
+            "years": 3.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Rahul Menon"
+          },
+          {
+            "k": "headline",
+            "v": "Backend engineer, 6 years"
+          },
+          {
+            "k": "total_years",
+            "v": "6"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_f2d02a34c9",
+      "session_id": "s_5feb86bc09",
+      "round": 1,
+      "agent": "tech",
+      "tool": "github_verify",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 404.8352241516113,
+      "ts": 1793425256.290019,
+      "args": {
+        "user": "torvalds",
+        "repo": ""
+      },
+      "result": {
+        "user": "torvalds",
+        "exists": true,
+        "public_repos": 12,
+        "followers": 329909,
+        "created_at": "2011-09-03T15:26:22Z",
+        "name": "Linus Torvalds"
+      }
+    },
+    {
+      "id": "tc_60800afb35",
+      "session_id": "s_5feb86bc09",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 38.812875747680664,
+      "ts": 1793425296.748849,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 201
+      },
+      "result": {
+        "passed": 0,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              2,
+              7
+            ],
+            "ok": false
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              3,
+              3
+            ],
+            "ok": false
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              3,
+              3
+            ],
+            "ok": false
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              -3,
+              -4
+            ],
+            "ok": false
+          }
+        ],
+        "verdict": "fail",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    },
+    {
+      "id": "tc_fac76b5781",
+      "session_id": "s_5feb86bc09",
+      "round": 3,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 421.85401916503906,
+      "ts": 1793425348.520779,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_929dcc2d20",
+    "session_id": "s_5feb86bc09",
+    "decision": "no_hire",
+    "confidence": 0.87,
+    "rationale": "The candidate was unanimously rejected (NO_HIRE) with a weighted score of 2.72 out of 3.2, driven by high-severity contradictions regarding Kafka usage and team size claims. The HR panelist provided a strong_no_hire recommendation based on inconsistencies in self-reported details about their use of Kafka and team size across different interview stages. The Technical Panelist also recommended no_hire due to similar concerns over the candidate's reliability and accuracy, despite acknowledging relevant experience and technical depth.",
+    "approval_status": "pending",
+    "approved_by": "",
+    "approval_note": "",
+    "approved_at": null,
+    "ts": 1793425471.32707,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 3.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 4.0,
+          "motivation & role fit": 3.0,
+          "handling failure and feedback": 2.0
+        },
+        "overall": 3.25,
+        "recommendation": "strong_no_hire",
+        "confidence": 0.97,
+        "strengths": [
+          "Demonstrated leadership in a significant project with measurable impact.",
+          "Clear understanding of Python and its application in the context of billing migration.",
+          "Shows ability to handle ambiguity by taking ownership and driving projects forward."
+        ],
+        "concerns": [
+          "Inconsistent team size claims during different parts of the interview.",
+          "Limited specific examples provided for Kafka usage, despite mentioning it on resume."
+        ],
+        "evidence_claim_ids": [
+          "c_dcdb90cbe4",
+          "c_d886e2e2c6",
+          "c_52cb703fc7",
+          "c_8e8a47c2e3",
+          "c_4247b9dcf5"
+        ],
+        "integrity_note": "The candidate provided clear and consistent answers, though with some inconsistencies in team size claims.",
+        "summary": "Strong candidate with leadership experience and technical depth, but inconsistent details on Kafka usage."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 1.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 2.57,
+        "recommendation": "no_hire",
+        "confidence": 0.9,
+        "strengths": [
+          "Demonstrated experience leading a project with clear architecture and rollout plan.",
+          "Capable of writing tests for the billing migration project.",
+          "Understood the concept of Kafka but did not use it in production."
+        ],
+        "concerns": [
+          "Inconsistent statements about team size and role responsibilities during different rounds of interviews.",
+          "Lack of specific details on design calls made above them during the billing migration project.",
+          "Code execution failed, indicating issues with understanding or implementation of the task."
+        ],
+        "evidence_claim_ids": [
+          "c_137921e617",
+          "c_da9e90019e",
+          "c_8b1c56d29a"
+        ],
+        "integrity_note": "The candidate provided inconsistent information about their team size and role responsibilities, raising concerns about the reliability of their claims.",
+        "summary": "While the candidate has relevant experience in project leadership and testing, inconsistencies in their responses raise significant doubts about their honesty and consistency. The code execution failure also indicates potential issues with understanding or implementation."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 2.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 2.5,
+        "recommendation": "no_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated experience in leading a project with clear outcomes.",
+          "Provided specific examples of technical contributions and leadership roles."
+        ],
+        "concerns": [
+          "Inconsistent claims about Kafka usage and team size, raising doubts about the candidate's reliability and accuracy.",
+          "Lack of depth under pressure and ambiguity handling, which could be a concern for a senior role."
+        ],
+        "evidence_claim_ids": [
+          "c_dcdb90cbe4",
+          "c_d886e2e2c6",
+          "c_52cb703fc7",
+          "c_8e8a47c2e3",
+          "c_4247b9dcf5"
+        ],
+        "integrity_note": "The candidate provided inconsistent and unclear explanations, raising significant doubts about their reliability.",
+        "summary": "While the candidate has relevant experience, inconsistencies in claims regarding Kafka usage and team size raise concerns about their integrity and accuracy."
+      }
+    },
+    "evidence": [
+      "x_1d1430b4bf",
+      "x_e26f82d569"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "positions": {
+          "hr": {
+            "position": "strong_no_hire",
+            "overall": 3.25
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 2.57
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.5
+          }
+        },
+        "turns": [
+          {
+            "round": 1,
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "from": "hire",
+            "position": "strong_no_hire",
+            "overall": 3.25,
+            "changed": true,
+            "change_reason": "Detected contradictions regarding Kafka usage and team size claims, raising significant doubts about the candidate's honesty and consistency.",
+            "argument": "The candidate provided inconsistent statements during different rounds of interviews regarding their experience with Kafka (used in production vs not used) and team size. These inconsistencies suggest potential issues with their reliability and accuracy.",
+            "concession": "While the candidate has relevant experience, their responses raise significant doubts about their honesty and consistency.",
+            "responds_to": [
+              "hr",
+              "tech"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 2.57,
+            "changed": false,
+            "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant concerns about their reliability and accuracy, which are addressed by the other panelists.",
+            "argument": "Despite strong technical skills and leadership experience, the candidate's inconsistencies in self-reported details regarding their use of Kafka and team size during different interview stages indicate a lack of integrity. This raises serious doubts about their ability to provide accurate and consistent information, essential for building trust with colleagues and stakeholders.",
+            "concession": "While the candidate demonstrates relevant experience and technical depth, these are outweighed by concerns over their reliability and accuracy in self-reported details.",
+            "responds_to": [
+              "hr",
+              "bar"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 2.5,
+            "changed": false,
+            "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant doubts about their reliability and accuracy.",
+            "argument": "Despite the candidate's experience in project leadership and technical depth, they provided inconsistent details on Kafka usage during different parts of the interview. This raises concerns about their honesty and integrity.",
+            "concession": "The candidate's demonstrated technical skills and leadership experience outweigh inconsistencies.",
+            "responds_to": [
+              "tech"
+            ]
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "strong_no_hire",
+            "overall": 3.25
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 2.57
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.5
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_697bbc2401",
+      "session_id": "s_5feb86bc09",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793425242.2183812,
+      "payload": {
+        "session_id": "s_5feb86bc09",
+        "candidate": "Rahul Menon",
+        "role": "Senior Backend Engineer",
+        "seniority": "senior",
+        "rounds": 3,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_232de9173e",
+      "session_id": "s_5feb86bc09",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793425242.225931,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "billing migration"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_4df2175c4b",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793425242.226878,
+      "payload": {
+        "round": 1,
+        "of": 3
+      }
+    },
+    {
+      "id": "e_5fed66b44a",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425243.021628,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_5265d9c4eb",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425243.02303,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 0.79
+      }
+    },
+    {
+      "id": "e_e99cd20d45",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793425245.0596611,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.7,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Billing Migration\", \"role\": \"Project Lead\", \"team_size\": 4, \"stack\": \"Python, PostgreSQL, Kafka\", \"impact\": \"cut invoice errors 30%\", \"months\": 6}], \"skills\": [{\"name\": \"Python\", \"years\": 6.0, \"level\": \"advanced\"}, {\"name\": \"Kafka\", \"years\": 3.0, \"level\": \"intermediate\"}], \"roles\": [{\"company\": \"FinServe\", \"title\": \"Senior Engineer\", \"years\": 3.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Rahul Menon\"}, {\"k\": \"headline\", \"v\": \"Backend engineer, 6 years\"}, {\"k\": \"total_years\", \"v\": \"6\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_a9ba2795d2",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425245.062403,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide an example of a time when you led a project and what specific Python or Kafka skills were crucial for its success?",
+        "intent": "Leadership and technical expertise in Python and Kafka",
+        "action": "verify_with_tool",
+        "turn_id": "t_176cbaa025",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_3efec9f2ad",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425245.064887,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_5a94c27352",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_31924159ee",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425253.876377,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_26e78bc3a1",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_eb64d45256",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_6c02852c3f",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_66c29e5ad1",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_6a62eae442",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 12
+      }
+    },
+    {
+      "id": "e_1e766baa38",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425255.881548,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_794a215d07",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425255.8838248,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "To better understand the candidate's role in leading the billing migration project, I need to probe their specific Python or Kafka skills used. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 2.0
+      }
+    },
+    {
+      "id": "e_085d2e2f64",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793425258.1359968,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "github_verify",
+        "ok": true,
+        "args": {
+          "user": "torvalds",
+          "repo": ""
+        },
+        "latency_ms": 404.8,
+        "error": "",
+        "result_preview": "{\"user\": \"torvalds\", \"exists\": true, \"public_repos\": 12, \"followers\": 329909, \"created_at\": \"2011-09-03T15:26:22Z\", \"name\": \"Linus Torvalds\"}"
+      }
+    },
+    {
+      "id": "e_2d20d9e379",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425258.139345,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you describe how Python and Kafka were specifically utilized in the billing migration project?",
+        "intent": "understand specific implementation details",
+        "action": "verify_with_tool",
+        "turn_id": "t_f909c73fa1",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_09d7a1e6d1",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425258.14192,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "Honestly I have never used Kafka in production myself. I have read a lot about it and I understand the consumer group model conceptually.",
+        "turn_id": "t_63039e3fa3",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_62cb82db3d",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425261.897799,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 1,
+        "claims": [
+          {
+            "id": "c_137921e617",
+            "text": "NOT self / used_tech / Kafka",
+            "span": "Honestly I have never used Kafka in production myself.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 13
+      }
+    },
+    {
+      "id": "e_f37b3f7e3c",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793425264.153823,
+      "payload": {
+        "round": 1,
+        "id": "x_1d1430b4bf",
+        "type": "polarity_conflict",
+        "severity": "high",
+        "score": 0.875,
+        "rationale": "The candidate claims to have used Kafka for 3 years at an intermediate level on their resume, but then denies ever using it themselves.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "'Kafka' is both asserted and denied for 'self'",
+          "rule_score": 0.9,
+          "llm_confidence": 0.85,
+          "challenge_question": "Can you clarify if you mean that you never used Kafka in production or just not personally?",
+          "claim_a": {
+            "id": "c_aaa1bde2a0",
+            "round": 0,
+            "text": "self / used_tech / Kafka",
+            "span": "Resume skill: Kafka (3y, intermediate)"
+          },
+          "claim_b": {
+            "id": "c_137921e617",
+            "round": 1,
+            "text": "NOT self / used_tech / Kafka",
+            "span": "Honestly I have never used Kafka in production myself."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_bb4086bc72",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793425264.155083,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity polarity_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_1d1430b4bf"
+      }
+    },
+    {
+      "id": "e_000259e449",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425267.121153,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "challenge_contradiction",
+        "reason": "P1 protocol: an unaddressed contradiction outranks opening a new topic"
+      }
+    },
+    {
+      "id": "e_8f337d1555",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425267.1239538,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's recent answer regarding Kafka is vague and evasive, requiring further clarification to ensure consistency in their responses. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "x_1d1430b4bf",
+        "latency_s": 2.97
+      }
+    },
+    {
+      "id": "e_979a37ff8f",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425270.145143,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "You mentioned that you have never used Kafka in production yourself. However, on your resume, it states a 3-year experience at an intermediate level with Kafka. Could you please clarify if this means you have never used Kafka in production or just not personally?",
+        "intent": "Clarify the inconsistency between resume and recent statement",
+        "action": "challenge_contradiction",
+        "turn_id": "t_052c3195fa",
+        "is_challenge": true,
+        "contradiction_id": "x_1d1430b4bf"
+      }
+    },
+    {
+      "id": "e_b99c50aee0",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425270.147779,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_2fe1bc3bff",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_e808cfa04f",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425278.884148,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_da9e90019e",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_8b1c56d29a",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_78309d41d1",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_bde522a8dc",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_762a103b9a",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 18
+      }
+    },
+    {
+      "id": "e_8070d6cf38",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_addressed",
+      "ts": 1793425278.886785,
+      "payload": {
+        "round": 1,
+        "id": "x_1d1430b4bf",
+        "by": "bar",
+        "answer_turn": "t_2fe1bc3bff"
+      }
+    },
+    {
+      "id": "e_e231cc68bc",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793425278.888673,
+      "payload": {
+        "round": 1,
+        "claims": 18,
+        "contradictions": 1
+      }
+    },
+    {
+      "id": "e_4abb1815b1",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793425278.889739,
+      "payload": {
+        "round": 2,
+        "of": 3
+      }
+    },
+    {
+      "id": "e_e07552c94f",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425281.637509,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer regarding Kafka usage is vague and inconsistent with their resume, requiring further clarification.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 2.75
+      }
+    },
+    {
+      "id": "e_ee3c9e24dc",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425284.2908921,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "You mentioned 'I have never used Kafka in production myself.' Could you provide more details on this? Specifically, what did you mean by this statement?",
+        "intent": "Clarify usage of Kafka in a project",
+        "action": "probe_prior",
+        "turn_id": "t_db3cb2ebe1",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_738452ce32",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425284.293254,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_608b36bf18",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_93b4039ade",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425287.456052,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_8442b2697a",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_21b5e0b02c",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_4ea2ce00f7",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 21
+      }
+    },
+    {
+      "id": "e_aa37ca29d2",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793425292.779692,
+      "payload": {
+        "round": 2,
+        "id": "x_e26f82d569",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "CLAIM A states a team size of 4 people, while CLAIM B claims the team was around 12 people.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify if the billing migration project had a team size of four engineers or approximately twelve people? Please provide more details on your role and responsibilities.",
+          "claim_a": {
+            "id": "c_66c29e5ad1",
+            "round": 1,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_21b5e0b02c",
+            "round": 2,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_a76761efa2",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793425292.7807622,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_e26f82d569"
+      }
+    },
+    {
+      "id": "e_81ad1f2426",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793425292.783371,
+      "payload": {
+        "round": 2,
+        "id": "x_0cc709bff7",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "CLAIM A states 'Project Lead' while CLAIM B describes 'wrote tests and validated the reconciliation'. These roles are incompatible for the same project.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify how your role on the billing migration project differed between being a Project Lead and primarily writing tests? ",
+          "claim_a": {
+            "id": "c_dcdb90cbe4",
+            "round": 0,
+            "text": "billing migration / role_on / Project Lead",
+            "span": "Resume: Billing Migration - Project Lead"
+          },
+          "claim_b": {
+            "id": "c_4ea2ce00f7",
+            "round": 2,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_c4c97ea8b7",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793425292.7846432,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_0cc709bff7"
+      }
+    },
+    {
+      "id": "e_56edee47df",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425296.6996322,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "challenge_contradiction",
+        "to_action": "request_code",
+        "reason": "P3 protocol: technical screen requires a live coding task by round 2"
+      }
+    },
+    {
+      "id": "e_6a4f7d8727",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425296.702317,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "The candidate's statement about never using Kafka in production contradicts their resume experience, requiring clarification. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 3.91
+      }
+    },
+    {
+      "id": "e_3140e7086b",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425296.7052438,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_05019a313d",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_f4d47665e7",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425296.708446,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "```python\ndef two_sum(nums, target):\n    # quadratic and returns the values, not the indices\n    for a in nums:\n        for b in nums:\n            if a + b == target:\n                return [a, b]\n    return []\n```",
+        "turn_id": "t_af81998f30",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_e3ff30cc12",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793425296.7495282,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 38.8,
+        "result": {
+          "passed": 0,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                2,
+                7
+              ],
+              "ok": false
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                3,
+                3
+              ],
+              "ok": false
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                3,
+                3
+              ],
+              "ok": false
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                -3,
+                -4
+              ],
+              "ok": false
+            }
+          ],
+          "verdict": "fail",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums, target):\n    # quadratic and returns the values, not the indices\n    for a in nums:\n        for b in nums:\n            if a + b == target:\n                return [a, b]\n    return []\n"
+      }
+    },
+    {
+      "id": "e_9ded7e6d25",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425302.087023,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_f892cd0c14",
+            "text": "NOT self / used_tech / Python",
+            "span": "\"```python\n# ...\\n```\ndef two_sum(nums, target):\n    # quadratic and returns the values, not the indices\n    for a in nums:\n        for b in",
+            "predicate": "used_tech",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_68172b2d1e",
+            "text": "self / years_exp",
+            "span": "\"# quadratic and returns the values, not the indices\"",
+            "predicate": "years_exp",
+            "confidence": 0.9
+          }
+        ],
+        "ledger_size": 23
+      }
+    },
+    {
+      "id": "e_d516c65813",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425307.41215,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "challenge_contradiction",
+        "reason": "P1 protocol: an unaddressed contradiction outranks opening a new topic"
+      }
+    },
+    {
+      "id": "e_b04ffcb17d",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425307.414448,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate mentioned they have never used Kafka in production, but their resume indicates 3 years of intermediate experience. This inconsistency needs further clarification. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "x_e26f82d569",
+        "latency_s": 5.32
+      }
+    },
+    {
+      "id": "e_1014bdc87d",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425311.55817,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "You mentioned that you led a team of four engineers during the billing migration project and also said that the team was around twelve people, so many design calls happened above you. Could you please clarify how these two statements reconcile with each other? Please provide more details on your role and responsibilities in both scenarios.",
+        "intent": "Reconcile conflicting claims about team size",
+        "action": "challenge_contradiction",
+        "turn_id": "t_4f0c9ec500",
+        "is_challenge": true,
+        "contradiction_id": "x_e26f82d569"
+      }
+    },
+    {
+      "id": "e_5277d3093c",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425311.560748,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_e9c1dfb534",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_50c9088eff",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425315.5332758,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_010cdb6a72",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_5f8946d4f2",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\",",
+            "predicate": "team_size",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_0a53abfb05",
+            "text": "billing migration / years_exp / 12years",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lo",
+            "predicate": "years_exp",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_b4e2133ca9",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 27
+      }
+    },
+    {
+      "id": "e_c8518346ba",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_addressed",
+      "ts": 1793425315.536333,
+      "payload": {
+        "round": 2,
+        "id": "x_e26f82d569",
+        "by": "bar",
+        "answer_turn": "t_e9c1dfb534"
+      }
+    },
+    {
+      "id": "e_826f03e0fc",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793425315.538236,
+      "payload": {
+        "round": 2,
+        "claims": 27,
+        "contradictions": 3
+      }
+    },
+    {
+      "id": "e_cd270dc0b9",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793425315.539354,
+      "payload": {
+        "round": 3,
+        "of": 3
+      }
+    },
+    {
+      "id": "e_4d425c1086",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425320.2587461,
+      "payload": {
+        "round": 3,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's statements about the billing migration project contradict each other; clarifying this will help resolve the contradiction.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.72
+      }
+    },
+    {
+      "id": "e_65c2e3bab0",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425324.971626,
+      "payload": {
+        "round": 3,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "You mentioned 'I have never used Kafka in production myself.' Could you provide more details on this? Specifically, what did you mean by this statement?\n\nAnd earlier, you said 'Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.' How does your role as a Project Lead differ from primarily writing tests for the same project?",
+        "intent": "Clarify contradiction between roles",
+        "action": "challenge_contradiction",
+        "turn_id": "t_d299439b8f",
+        "is_challenge": true,
+        "contradiction_id": "x_0cc709bff7"
+      }
+    },
+    {
+      "id": "e_0c1db054e7",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425324.9744809,
+      "payload": {
+        "round": 3,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_c844863f84",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_184e93a965",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425328.911532,
+      "payload": {
+        "round": 3,
+        "from_agent": "hr",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_ed406bfdba",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_bd5d8adf3c",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\",",
+            "predicate": "team_size",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_bf5fd601fe",
+            "text": "billing migration / years_exp / 12years",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lo",
+            "predicate": "years_exp",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_83a4f044c5",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 31
+      }
+    },
+    {
+      "id": "e_8a38396a5a",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "contradiction_addressed",
+      "ts": 1793425328.9148018,
+      "payload": {
+        "round": 3,
+        "id": "x_0cc709bff7",
+        "by": "hr",
+        "answer_turn": "t_c844863f84"
+      }
+    },
+    {
+      "id": "e_7b202e146f",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425332.7518568,
+      "payload": {
+        "round": 3,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "probe_prior",
+        "reasoning": "Need more clarification on the candidate's role in the billing migration project and how it aligns with their statement about team size.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 3.83
+      }
+    },
+    {
+      "id": "e_233c89405a",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425336.053443,
+      "payload": {
+        "round": 3,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you elaborate on a particular design call that happened above you during the billing migration project, including the context and outcome?",
+        "intent": "clarify role and responsibilities in team",
+        "action": "probe_prior",
+        "turn_id": "t_5d2a25d660",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_05156c1aef",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425336.056777,
+      "payload": {
+        "round": 3,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_74869eb532",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_28d44a437a",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425344.7904131,
+      "payload": {
+        "round": 3,
+        "from_agent": "tech",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_49838685ae",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_141387f102",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_dc0e4424b9",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_ea449b9d65",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_2746ead47c",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 36
+      }
+    },
+    {
+      "id": "e_8aebbaac07",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793425348.095572,
+      "payload": {
+        "round": 3,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_17493f7c43",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793425348.097706,
+      "payload": {
+        "round": 3,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer was vague regarding their role and responsibilities, which needs further clarification to ensure consistency and integrity. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 3.3
+      }
+    },
+    {
+      "id": "e_08d0ecc368",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793425352.5428019,
+      "payload": {
+        "round": 3,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 421.9,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_3b87e047c7",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793425352.5464509,
+      "payload": {
+        "round": 3,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide more detail on a specific design call that happened above you during the billing migration project, including who participated and what the outcome was?",
+        "intent": "Clarify role hierarchy and impact of design calls",
+        "action": "verify_with_tool",
+        "turn_id": "t_ae3358a0b6",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_92d4b695f2",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793425352.5496042,
+      "payload": {
+        "round": 3,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_ca726adc9a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_f4c035b2e0",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793425356.5388942,
+      "payload": {
+        "round": 3,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_484e7a940c",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_df7253501f",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\",",
+            "predicate": "team_size",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_8273a08291",
+            "text": "billing migration / years_exp / 12years",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lo",
+            "predicate": "years_exp",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_2822722f9c",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 40
+      }
+    },
+    {
+      "id": "e_f5881350ae",
+      "session_id": "s_5feb86bc09",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793425356.541804,
+      "payload": {
+        "round": 3,
+        "claims": 40,
+        "contradictions": 3
+      }
+    },
+    {
+      "id": "e_97963b0346",
+      "session_id": "s_5feb86bc09",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793425356.544704,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_b7d76d21c8",
+      "session_id": "s_5feb86bc09",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793425381.015861,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 3.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 4.0,
+          "motivation & role fit": 3.0,
+          "handling failure and feedback": 2.0
+        },
+        "overall": 3.5,
+        "recommendation": "hire",
+        "confidence": 0.97,
+        "strengths": [
+          "Demonstrated leadership in a significant project with measurable impact.",
+          "Clear understanding of Python and its application in the context of billing migration.",
+          "Shows ability to handle ambiguity by taking ownership and driving projects forward."
+        ],
+        "concerns": [
+          "Inconsistent team size claims during different parts of the interview.",
+          "Limited specific examples provided for Kafka usage, despite mentioning it on resume."
+        ],
+        "evidence_claim_ids": [
+          "c_dcdb90cbe4",
+          "c_d886e2e2c6",
+          "c_52cb703fc7",
+          "c_8e8a47c2e3",
+          "c_4247b9dcf5"
+        ],
+        "integrity_note": "The candidate provided clear and consistent answers, though with some inconsistencies in team size claims.",
+        "summary": "Strong candidate with leadership experience and technical depth, but inconsistent details on Kafka usage."
+      }
+    },
+    {
+      "id": "e_274aaa6cee",
+      "session_id": "s_5feb86bc09",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793425403.362466,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 1.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 2.57,
+        "recommendation": "no_hire",
+        "confidence": 0.9,
+        "strengths": [
+          "Demonstrated experience leading a project with clear architecture and rollout plan.",
+          "Capable of writing tests for the billing migration project.",
+          "Understood the concept of Kafka but did not use it in production."
+        ],
+        "concerns": [
+          "Inconsistent statements about team size and role responsibilities during different rounds of interviews.",
+          "Lack of specific details on design calls made above them during the billing migration project.",
+          "Code execution failed, indicating issues with understanding or implementation of the task."
+        ],
+        "evidence_claim_ids": [
+          "c_137921e617",
+          "c_da9e90019e",
+          "c_8b1c56d29a"
+        ],
+        "integrity_note": "The candidate provided inconsistent information about their team size and role responsibilities, raising concerns about the reliability of their claims.",
+        "summary": "While the candidate has relevant experience in project leadership and testing, inconsistencies in their responses raise significant doubts about their honesty and consistency. The code execution failure also indicates potential issues with understanding or implementation."
+      }
+    },
+    {
+      "id": "e_b35428e193",
+      "session_id": "s_5feb86bc09",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793425428.9435022,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 2.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated experience in leading a project with clear outcomes.",
+          "Provided specific examples of technical contributions and leadership roles."
+        ],
+        "concerns": [
+          "Inconsistent claims about Kafka usage and team size, raising doubts about the candidate's reliability and accuracy.",
+          "Lack of depth under pressure and ambiguity handling, which could be a concern for a senior role."
+        ],
+        "evidence_claim_ids": [
+          "c_dcdb90cbe4",
+          "c_d886e2e2c6",
+          "c_52cb703fc7",
+          "c_8e8a47c2e3",
+          "c_4247b9dcf5"
+        ],
+        "integrity_note": "The candidate provided inconsistent and unclear explanations, raising significant doubts about their reliability.",
+        "summary": "While the candidate has relevant experience, inconsistencies in claims regarding Kafka usage and team size raise concerns about their integrity and accuracy."
+      }
+    },
+    {
+      "id": "e_6f7d91a1cc",
+      "session_id": "s_5feb86bc09",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793425428.9460638,
+      "payload": {
+        "initial_positions": {
+          "hr": "hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_9aaa798080",
+      "session_id": "s_5feb86bc09",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793425438.8880022,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "from": "hire",
+        "position": "strong_no_hire",
+        "overall": 3.25,
+        "changed": true,
+        "change_reason": "Detected contradictions regarding Kafka usage and team size claims, raising significant doubts about the candidate's honesty and consistency.",
+        "argument": "The candidate provided inconsistent statements during different rounds of interviews regarding their experience with Kafka (used in production vs not used) and team size. These inconsistencies suggest potential issues with their reliability and accuracy.",
+        "concession": "While the candidate has relevant experience, their responses raise significant doubts about their honesty and consistency.",
+        "responds_to": [
+          "hr",
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_e1413df669",
+      "session_id": "s_5feb86bc09",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793425448.729267,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 2.57,
+        "changed": false,
+        "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant concerns about their reliability and accuracy, which are addressed by the other panelists.",
+        "argument": "Despite strong technical skills and leadership experience, the candidate's inconsistencies in self-reported details regarding their use of Kafka and team size during different interview stages indicate a lack of integrity. This raises serious doubts about their ability to provide accurate and consistent information, essential for building trust with colleagues and stakeholders.",
+        "concession": "While the candidate demonstrates relevant experience and technical depth, these are outweighed by concerns over their reliability and accuracy in self-reported details.",
+        "responds_to": [
+          "hr",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_9ac85217de",
+      "session_id": "s_5feb86bc09",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793425457.10348,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 2.5,
+        "changed": false,
+        "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant doubts about their reliability and accuracy.",
+        "argument": "Despite the candidate's experience in project leadership and technical depth, they provided inconsistent details on Kafka usage during different parts of the interview. This raises concerns about their honesty and integrity.",
+        "concession": "The candidate's demonstrated technical skills and leadership experience outweigh inconsistencies.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_c2d4d8034d",
+      "session_id": "s_5feb86bc09",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793425457.105827,
+      "payload": {
+        "round": 2,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "strong_no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_cd641a8a79",
+      "session_id": "s_5feb86bc09",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793425457.107417,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 0,
+        "weighted_score": 2.72,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 3 unresolved high-severity contradiction(s) (numeric_conflict, ownership_conflict, polarity_conflict). The Bar-Raiser's integrity objection is dispositive."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 0.75,
+        "panel_agreement": 0.81,
+        "confidence": 0.87,
+        "votes": {
+          "hr": "strong_no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_b5d2112b54",
+      "session_id": "s_5feb86bc09",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793425471.33071,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.87,
+        "rationale": "The candidate was unanimously rejected (NO_HIRE) with a weighted score of 2.72 out of 3.2, driven by high-severity contradictions regarding Kafka usage and team size claims. The HR panelist provided a strong_no_hire recommendation based on inconsistencies in self-reported details about their use of Kafka and team size across different interview stages. The Technical Panelist also recommended no_hire due to similar concerns over the candidate's reliability and accuracy, despite acknowledging relevant experience and technical depth.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 3.0,
+              "collaboration & conflict": 2.0,
+              "communication clarity": 4.0,
+              "motivation & role fit": 3.0,
+              "handling failure and feedback": 2.0
+            },
+            "overall": 3.25,
+            "recommendation": "strong_no_hire",
+            "confidence": 0.97,
+            "strengths": [
+              "Demonstrated leadership in a significant project with measurable impact.",
+              "Clear understanding of Python and its application in the context of billing migration.",
+              "Shows ability to handle ambiguity by taking ownership and driving projects forward."
+            ],
+            "concerns": [
+              "Inconsistent team size claims during different parts of the interview.",
+              "Limited specific examples provided for Kafka usage, despite mentioning it on resume."
+            ],
+            "evidence_claim_ids": [
+              "c_dcdb90cbe4",
+              "c_d886e2e2c6",
+              "c_52cb703fc7",
+              "c_8e8a47c2e3",
+              "c_4247b9dcf5"
+            ],
+            "integrity_note": "The candidate provided clear and consistent answers, though with some inconsistencies in team size claims.",
+            "summary": "Strong candidate with leadership experience and technical depth, but inconsistent details on Kafka usage."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 1.0,
+              "debugging_root_cause_depth": 2.0,
+              "data_modelling_correctness": 3.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 2.0
+            },
+            "overall": 2.57,
+            "recommendation": "no_hire",
+            "confidence": 0.9,
+            "strengths": [
+              "Demonstrated experience leading a project with clear architecture and rollout plan.",
+              "Capable of writing tests for the billing migration project.",
+              "Understood the concept of Kafka but did not use it in production."
+            ],
+            "concerns": [
+              "Inconsistent statements about team size and role responsibilities during different rounds of interviews.",
+              "Lack of specific details on design calls made above them during the billing migration project.",
+              "Code execution failed, indicating issues with understanding or implementation of the task."
+            ],
+            "evidence_claim_ids": [
+              "c_137921e617",
+              "c_da9e90019e",
+              "c_8b1c56d29a"
+            ],
+            "integrity_note": "The candidate provided inconsistent information about their team size and role responsibilities, raising concerns about the reliability of their claims.",
+            "summary": "While the candidate has relevant experience in project leadership and testing, inconsistencies in their responses raise significant doubts about their honesty and consistency. The code execution failure also indicates potential issues with understanding or implementation."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 4.0,
+              "claim_consistency_and_integrity": 2.0,
+              "scope_and_impact_calibration": 3.0,
+              "ambiguity_handling": 2.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 2.5,
+            "recommendation": "no_hire",
+            "confidence": 0.95,
+            "strengths": [
+              "Demonstrated experience in leading a project with clear outcomes.",
+              "Provided specific examples of technical contributions and leadership roles."
+            ],
+            "concerns": [
+              "Inconsistent claims about Kafka usage and team size, raising doubts about the candidate's reliability and accuracy.",
+              "Lack of depth under pressure and ambiguity handling, which could be a concern for a senior role."
+            ],
+            "evidence_claim_ids": [
+              "c_dcdb90cbe4",
+              "c_d886e2e2c6",
+              "c_52cb703fc7",
+              "c_8e8a47c2e3",
+              "c_4247b9dcf5"
+            ],
+            "integrity_note": "The candidate provided inconsistent and unclear explanations, raising significant doubts about their reliability.",
+            "summary": "While the candidate has relevant experience, inconsistencies in claims regarding Kafka usage and team size raise concerns about their integrity and accuracy."
+          }
+        },
+        "evidence": [
+          "x_1d1430b4bf",
+          "x_e26f82d569"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "positions": {
+              "hr": {
+                "position": "strong_no_hire",
+                "overall": 3.25
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 2.57
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.5
+              }
+            },
+            "turns": [
+              {
+                "round": 1,
+                "agent": "hr",
+                "display": "HR Panelist",
+                "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+                "from": "hire",
+                "position": "strong_no_hire",
+                "overall": 3.25,
+                "changed": true,
+                "change_reason": "Detected contradictions regarding Kafka usage and team size claims, raising significant doubts about the candidate's honesty and consistency.",
+                "argument": "The candidate provided inconsistent statements during different rounds of interviews regarding their experience with Kafka (used in production vs not used) and team size. These inconsistencies suggest potential issues with their reliability and accuracy.",
+                "concession": "While the candidate has relevant experience, their responses raise significant doubts about their honesty and consistency.",
+                "responds_to": [
+                  "hr",
+                  "tech"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "tech",
+                "display": "Technical Panelist",
+                "emoji": "\ud83d\udee0\ufe0f",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 2.57,
+                "changed": false,
+                "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant concerns about their reliability and accuracy, which are addressed by the other panelists.",
+                "argument": "Despite strong technical skills and leadership experience, the candidate's inconsistencies in self-reported details regarding their use of Kafka and team size during different interview stages indicate a lack of integrity. This raises serious doubts about their ability to provide accurate and consistent information, essential for building trust with colleagues and stakeholders.",
+                "concession": "While the candidate demonstrates relevant experience and technical depth, these are outweighed by concerns over their reliability and accuracy in self-reported details.",
+                "responds_to": [
+                  "hr",
+                  "bar"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "bar",
+                "display": "Bar-Raiser",
+                "emoji": "\ud83c\udfaf",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 2.5,
+                "changed": false,
+                "change_reason": "The candidate's inconsistent claims about Kafka usage and team size raise significant doubts about their reliability and accuracy.",
+                "argument": "Despite the candidate's experience in project leadership and technical depth, they provided inconsistent details on Kafka usage during different parts of the interview. This raises concerns about their honesty and integrity.",
+                "concession": "The candidate's demonstrated technical skills and leadership experience outweigh inconsistencies.",
+                "responds_to": [
+                  "tech"
+                ]
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "strong_no_hire",
+                "overall": 3.25
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 2.57
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.5
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 0,
+          "weighted_score": 2.72,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 3 unresolved high-severity contradiction(s) (numeric_conflict, ownership_conflict, polarity_conflict). The Bar-Raiser's integrity objection is dispositive."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 0.75,
+          "panel_agreement": 0.81,
+          "confidence": 0.87,
+          "votes": {
+            "hr": "strong_no_hire",
+            "tech": "no_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "inconsistencies in self-reported details",
+          "reliability concerns",
+          "technical depth",
+          "relevant experience"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_929dcc2d20",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_ded6d4d48d",
+      "session_id": "s_5feb86bc09",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793425471.3327858,
+      "payload": {
+        "verdict_id": "v_929dcc2d20",
+        "decision": "no_hire",
+        "confidence": 0.87,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

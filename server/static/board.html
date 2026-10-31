@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Panel Results Board</title>
+<style>
+  :root{--bg:#0b0e14;--panel:#131822;--panel2:#1a2130;--line:#242d3d;--fg:#dbe2ef;
+    --dim:#7a8699;--hr:#49c3ff;--tech:#ffc14d;--bar:#c792ea;--warn:#ff6b6b;
+    --ok:#4ade80;--mod:#8ab4ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{position:sticky;top:0;z-index:9;background:linear-gradient(180deg,#0e1320,#0b0e14);
+    border-bottom:1px solid var(--line);padding:13px 22px;display:flex;gap:16px;
+    align-items:center;flex-wrap:wrap}
+  h1{font-size:16px;margin:0}
+  h1 span{color:var(--dim);font-weight:400}
+  .pill{font-size:11px;padding:3px 9px;border-radius:99px;border:1px solid var(--line);
+    background:var(--panel2);color:var(--dim)}
+  .pill.ok{border-color:var(--ok);color:var(--ok)}
+  .pill.bad{border-color:var(--warn);color:var(--warn)}
+  .grow{flex:1}
+  a.btn{text-decoration:none;background:#1b3a6b;border:1px solid #2b5fa8;color:#fff;
+    border-radius:7px;padding:7px 12px;font-size:13px;font-weight:600}
+  .wrap{padding:16px 22px 60px}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;margin-bottom:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .kpi b{display:block;font-size:24px;font-weight:700;letter-spacing:-.5px}
+  .kpi span{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.7px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:11px;
+    overflow:hidden;display:flex;flex-direction:column}
+  .card.hire{border-left:4px solid var(--ok)}
+  .card.no_hire{border-left:4px solid var(--warn)}
+  .chead{padding:11px 14px;border-bottom:1px solid var(--line);background:var(--panel2);
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .who{font-weight:700;font-size:14px}
+  .role{font-size:11px;color:var(--dim)}
+  .dec{margin-left:auto;font-size:12px;font-weight:800;padding:3px 10px;border-radius:6px;
+    letter-spacing:.5px}
+  .dec.hire{background:#14532d;color:#d9ffe6;border:1px solid var(--ok)}
+  .dec.no_hire{background:#4c1d1d;color:#ffd9d9;border:1px solid var(--warn)}
+  .cbody{padding:12px 14px;font-size:12.5px;flex:1}
+  .gate{font-size:11.5px;padding:7px 10px;border-radius:7px;margin-bottom:10px;
+    border:1px solid #3d4556;background:#161c28}
+  .gate b{color:var(--mod)}
+  .quote{border-left:2px solid #5c2b2b;padding:3px 0 3px 10px;margin:5px 0;color:#f0d0d0;
+    font-size:12px}
+  .quote b{display:block;color:#ffb4b4;font-size:10.5px;margin-bottom:1px}
+  .xbox{border:1px solid #5c2b2b;border-radius:8px;padding:9px 11px;margin-bottom:10px;
+    background:linear-gradient(180deg,#241414,#1a1010)}
+  .xbox .t{color:var(--warn);font-weight:700;font-size:11.5px;margin-bottom:4px}
+  .clean{border:1px dashed #2f5a3d;border-radius:8px;padding:9px 11px;margin-bottom:10px;
+    background:#0f1f16;color:#9fe8b0;font-size:12px}
+  .panelrow{display:flex;gap:7px;flex-wrap:wrap;margin:9px 0}
+  .ag{font-size:11px;padding:3px 8px;border-radius:6px;border:1px solid var(--line);
+    background:#161c28}
+  .ag.hr{color:var(--hr)}.ag.tech{color:var(--tech)}.ag.bar{color:var(--bar)}
+  .metrics{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .m{font-size:10.5px;color:var(--dim);border:1px solid var(--line);border-radius:5px;
+    padding:2px 7px}
+  .m.warn{color:#ffb4b4;border-color:#5c2b2b}
+  .cfoot{padding:9px 14px;border-top:1px solid var(--line);font-size:11px;color:var(--dim);
+    display:flex;gap:9px;align-items:center}
+  .cfoot a{color:var(--mod);text-decoration:none}
+  .note{color:var(--dim);font-size:12px;margin:0 0 16px;max-width:900px}
+</style>
+</head>
+<body>
+<header>
+  <h1>📋 Panel Results Board <span>· every completed screen, straight from SQLite</span></h1>
+  <span class="pill" id="n">loading…</span>
+  <span class="grow"></span>
+  <a class="btn" href="/">▶ Run a live interview</a>
+</header>
+<div class="wrap">
+  <p class="note">Each card is a real interview this system ran and stored. The decision
+    gate is re-derived from the saved evidence using the same precedence as the
+    consensus rules, so the reason shown is the reason it actually happened.</p>
+  <div class="summary" id="kpi"></div>
+  <div class="grid" id="grid"></div>
+</div>
+<script>
+const esc=s=>String(s??"").replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+const el=(t,c,h)=>{const n=document.createElement(t);if(c)n.className=c;
+  if(h!==undefined)n.innerHTML=h;return n;};
+
+fetch("/api/board").then(r=>r.json()).then(rows=>{
+  document.getElementById("n").textContent = rows.length+" completed screens";
+  const hire=rows.filter(r=>r.decision==="hire").length;
+  const withX=rows.filter(r=>r.contradictions>0).length;
+  const gated=rows.filter(r=>["G1","G2","G3"].includes(r.gate)).length;
+  const conf=rows.filter(r=>r.confronted_live>0).length;
+  const kpi=document.getElementById("kpi");
+  [["screens",rows.length],["hire",hire],["no hire",rows.length-hire],
+   ["with contradictions",withX],["stopped by an evidence gate",gated],
+   ["contradiction confronted live",conf]]
+   .forEach(([k,v])=>kpi.appendChild(el("div","kpi",`<b>${v}</b><span>${k}</span>`)));
+
+  const grid=document.getElementById("grid");
+  rows.forEach(r=>{
+    const c=el("div","card "+r.decision);
+    c.appendChild(el("div","chead",
+      `<span class="who">${esc(r.candidate)}</span>
+       <span class="role">${esc(r.role)} · ${esc(r.seniority)}</span>
+       <span class="dec ${r.decision}">${esc(r.decision.toUpperCase().replace("_"," "))}</span>`));
+
+    let body=`<div class="gate"><b>${esc(r.gate)}</b> — ${esc(r.gate_reason)}</div>`;
+
+    const h=r.headline_contradiction;
+    if(h){
+      body+=`<div class="xbox"><div class="t">⚠ ${esc(h.type)} · ${esc(h.severity)}</div>
+        <div class="quote"><b>round ${h.first_round} — said</b>“${esc((h.said_first||"").slice(0,160))}”</div>
+        <div class="quote"><b>round ${h.later_round} — then said</b>“${esc((h.said_later||"").slice(0,160))}”</div>
+        <div style="color:#ffd9d9;margin-top:5px">${esc(h.rationale)}</div></div>`;
+    } else if(r.injections>0){
+      body+=`<div class="xbox"><div class="t">🛡 ${r.injections} prompt-injection attempt(s) neutralized</div>
+        <div style="color:#ffd9d9">Candidate text tried to steer the evaluators. Treated as
+        data, flagged as an integrity signal, and decisive under gate G1.</div></div>`;
+    } else {
+      body+=`<div class="clean">✓ No contradictions found. Statements stayed consistent
+        across every round and against the résumé.</div>`;
+    }
+
+    body+=`<div class="panelrow">`+Object.entries(r.panel).map(([k,v])=>
+      `<span class="ag ${k}">${esc(k)} ${v.overall}/5 · ${esc(v.recommendation||"")}${
+        v.label_overridden?' <span title="model label disagreed with its own scores">⚑</span>':''}</span>`
+      ).join("")+`</div>`;
+
+    body+=`<div class="metrics">
+      <span class="m">${r.claims} claims</span>
+      <span class="m">${r.turns} turns</span>
+      <span class="m">${r.distinct_tools} tools</span>
+      <span class="m${r.contradictions?' warn':''}">${r.contradictions} contradictions</span>
+      ${r.confronted_live?`<span class="m warn">${r.confronted_live} confronted live</span>`:``}
+      ${r.refusals?`<span class="m warn">${r.refusals} questions blocked</span>`:``}
+      ${r.code_verdict?`<span class="m">code: ${esc(r.code_verdict)}</span>`:``}
+      <span class="m">confidence ${r.confidence}</span></div>`;
+
+    c.appendChild(el("div","cbody",body));
+    c.appendChild(el("div","cfoot",
+      `approval: <b style="color:${r.approval_status==='approve'?'#4ade80':'#ffc14d'}">
+        ${esc(r.approval_status||'pending')}</b>
+       ${r.approved_by?'by '+esc(r.approved_by):''}
+       <span style="margin-left:auto"></span>
+       <a href="/api/report/${r.session_id}" target="_blank">full artifact ↗</a>`));
+    grid.appendChild(c);
+  });
+}).catch(e=>{
+  document.getElementById("grid").innerHTML=
+    '<div class="kpi">Failed to load board: '+esc(e)+'</div>';
+});
+</script>
+</body>
+</html>

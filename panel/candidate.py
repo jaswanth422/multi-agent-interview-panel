@@ -21,6 +21,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
+from .config import SETTINGS
 from .llm import LLM
 
 
@@ -129,7 +130,7 @@ Rules:
         return self.llm.text(
             system,
             f"Recent conversation:\n{hist}\n\nInterviewer ({asked_by}) asks: \"{q}\"\n\nYour answer:",
-            label="candidate_improvise", max_tokens=260, temperature=0.65).strip()
+            label="candidate_improvise", max_tokens=SETTINGS.tok(260), temperature=0.65).strip()
 
 
 @dataclass

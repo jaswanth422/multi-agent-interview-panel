@@ -190,7 +190,7 @@ class Orchestrator:
         convo = [t for t in turns if t["kind"] in ("question", "answer")]
         recent = "\n".join(
             f"[R{t['round']}] {t['agent'].upper()} ({t['kind']}): {t['text']}"
-            for t in convo[-6:])
+            for t in convo[-(4 if self.settings.fast else 6):])
         full = "\n".join(
             f"[R{t['round']}] {t['agent'].upper()} ({t['kind']}): {t['text']}"
             for t in convo)
@@ -225,7 +225,8 @@ class Orchestrator:
                         "object": c.object, "round": c.round, "raw_span": c.raw_span,
                         "source": c.source} for c in claims],
             "claims_brief": [{"id": c.id, "text": c.short(), "round": c.round,
-                              "source": c.source} for c in claims][:60],
+                              "source": c.source}
+                             for c in claims][:25 if self.settings.fast else 60],
             "contradictions": [brief(x) for x in contras],
             "contradictions_brief": [brief(x) for x in contras],
             "covered": self.covered, "all_questions": self.all_questions,
@@ -255,6 +256,39 @@ class Orchestrator:
                 "contradictions": len(self.memory.contradictions(self.session_id))})
 
         return self.finalize()
+
+    def _forced_action(self, p: Panelist, rnd: int,
+                       state: dict[str, Any]) -> dict[str, Any] | None:
+        """Return a ready-made plan when panel protocol dictates the action.
+
+        Same three protocol rules as before (P1 confront, P3 code task, P2 tool
+        grounding) - just evaluated BEFORE the planner call instead of after,
+        so a discarded plan costs nothing.
+        """
+        open_x = [x for x in state["contradictions"] if x["status"] == "open"]
+        base = {"target_competency": "", "target_claim_id": "",
+                "target_contradiction_id": "", "tool": "", "tool_args": {},
+                "agent": p.spec.key}
+
+        if open_x:
+            return {**base, "action": "challenge_contradiction",
+                    "target_contradiction_id": open_x[0]["id"],
+                    "policy_reason": ("P1 protocol: an unaddressed contradiction "
+                                      "outranks opening a new topic"),
+                    "reasoning": ("P1 protocol: confront the open contradiction "
+                                  "before any new topic")}
+        if p.spec.can_code and rnd >= 2 and not state["code_ran"]:
+            return {**base, "action": "request_code",
+                    "policy_reason": ("P3 protocol: technical screen requires a live "
+                                      "coding task by round 2"),
+                    "reasoning": "P3 protocol: set the live coding task"}
+        if p.spec.tools and not p.used_tool:
+            return {**base, "action": "verify_with_tool",
+                    "tool": self._pick_tool(p, state),
+                    "policy_reason": (f"P2 protocol: {p.spec.display} has not yet "
+                                      "grounded a question in tool evidence"),
+                    "reasoning": "P2 protocol: ground this question in tool evidence"}
+        return None
 
     def _apply_policy(self, plan: dict[str, Any], p: Panelist, rnd: int,
                       state: dict[str, Any]) -> dict[str, Any]:
@@ -320,9 +354,19 @@ class Orchestrator:
         state = self._state(rnd)
 
         # --- PLAN -------------------------------------------------------
+        # If panel protocol already dictates this turn's action, we do not pay
+        # for an LLM plan we would immediately discard. The agent still plans
+        # freely whenever it has a genuine choice.
         t0 = time.time()
-        plan = p.plan(state)
-        plan = self._apply_policy(plan, p, rnd, state)
+        forced = self._forced_action(p, rnd, state)
+        if forced is not None:
+            plan = forced
+            self.emit("interview", "policy_override", {
+                "round": rnd, "agent": p.spec.key, "display": p.spec.display,
+                "from_action": "(planner skipped)", "to_action": plan["action"],
+                "reason": plan["policy_reason"]})
+        else:
+            plan = p.plan(state)
         self.emit("interview", "agent_plan", {
             "round": rnd, "agent": spec.key, "display": spec.display,
             "emoji": spec.emoji, "action": plan["action"],

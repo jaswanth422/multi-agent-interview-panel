@@ -65,6 +65,23 @@ class Settings:
         default_factory=lambda: _env("PANEL_REQUIRE_APPROVAL", "1") == "1"
     )
 
+    # ---- demo preset --------------------------------------------------
+    # PANEL_FAST=1 trims how much transcript/ledger context each prompt
+    # carries. Same loop, same tools, same rules, same gates - only the
+    # context windows shrink, which cuts prompt-eval time on a local model.
+    # Off by default so the evaluated configuration is the honest one.
+    fast: bool = field(default_factory=lambda: _env("PANEL_FAST", "0") == "1")
+
+    def ctx(self, normal: int) -> int:
+        """Context budget in characters, halved in fast mode."""
+        return max(400, normal // 2) if self.fast else normal
+
+    def tok(self, normal: int) -> int:
+        """Output-token budget. Generation, not prompt size, dominates
+        latency on a small local model, so fast mode caps what each call is
+        allowed to write. Shorter scorecards and arguments, identical logic."""
+        return max(96, int(normal * 0.45)) if self.fast else normal
+
     def resolved(self) -> tuple[str, str]:
         """Return (provider, model) after auto-detection."""
         p = self.provider

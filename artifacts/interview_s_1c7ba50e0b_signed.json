@@ -1,0 +1,3105 @@
+{
+  "session_id": "s_1c7ba50e0b",
+  "generated_at": 1793427549.316881,
+  "wall_clock_s": 247.3,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 27,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 30207,
+    "completion_tokens": 4364,
+    "total_latency_s": 246.07,
+    "mean_latency_s": 9.114,
+    "calls_by_label": {
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "debate_bar": 2,
+      "debate_hr": 2,
+      "debate_tech": 2,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 5,
+    "distinct_tools": 5,
+    "success_rate": 0.8,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 0.3
+      },
+      "github_verify": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 471.6
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 555.6
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 42.9
+      },
+      "export_report": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 4.8
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 0,
+    "llm_confirmed": 0,
+    "llm_rejected": 0,
+    "prefilter_rejected": 0,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 27,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 0
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 5,
+      "detail": {
+        "resume_db": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 0.3
+        },
+        "github_verify": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 471.6
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 555.6
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 42.9
+        },
+        "export_report": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 4.8
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 35,
+      "turns_persisted": 13,
+      "events_persisted": 53,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "addressed_in_interview": 0,
+    "cross_round": 0
+  },
+  "session": {
+    "id": "s_1c7ba50e0b",
+    "candidate_name": "Ananya Iyer",
+    "role": "Senior Backend Engineer",
+    "seniority": "senior",
+    "status": "completed",
+    "created_at": 1793427301.974852,
+    "updated_at": 1793427549.3137631,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Ananya Iyer",
+      "headline": "Senior backend engineer, 8 years",
+      "total_years": 8,
+      "github": "gvanrossum",
+      "projects": [
+        {
+          "name": "Payments Gateway",
+          "role": "Tech Lead",
+          "team_size": 5,
+          "months": 18,
+          "stack": [
+            "Python",
+            "PostgreSQL",
+            "Kafka"
+          ],
+          "impact": "99.99% success rate, p99 120ms"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Python",
+          "years": 8,
+          "level": "expert"
+        },
+        {
+          "name": "PostgreSQL",
+          "years": 7,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "PayLayer",
+          "title": "Staff Engineer",
+          "years": 4
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_d48661e092",
+      "session_id": "s_1c7ba50e0b",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Ananya Iyer\", \"headline\": \"Senior backend engineer, 8 years\", \"total_years\": 8, \"github\": \"gvanrossum\", \"projects\": [{\"name\": \"Payments Gateway\", \"role\": \"Tech Lead\", \"team_size\": 5, \"months\": 18, \"stack\": [\"Python\", \"PostgreSQL\", \"Kafka\"], \"impact\": \"99.99% success rate, p99 120ms\"}], \"skills\": [{\"name\": \"Python\", \"years\": 8, \"level\": \"expert\"}, {\"name\": \"PostgreSQL\", \"years\": 7, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"PayLayer\", \"title\": \"Staff Engineer\", \"years\": 4}]}",
+      "ts": 1793427301.987034,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_1f068eae99",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide more details on the Python and PostgreSQL skills you mentioned, including specific projects where you demonstrated expertise in these languages?",
+      "ts": 1793427305.9321668,
+      "meta": {
+        "intent": "Understand project-specific skill application",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_29fe170d8f",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the payments gateway rebuild with a team of five over about eighteen months. I owned the idempotency design and the reconciliation ledger. We held a 99.99 percent success rate at p99 of 120 milliseconds.",
+      "ts": 1793427305.9340632,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_e63f541e22",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you provide an example of a specific Python function or SQL query from the Payments Gateway project that demonstrates your idempotency design and reconciliation ledger mechanism?",
+      "ts": 1793427324.464758,
+      "meta": {
+        "intent": "demonstrate understanding of technical details",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate used 'we' to describe the idempotency design and reconciliation ledger, which may indicate a lack of specific details. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_a745e0b6ad",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "ts": 1793427324.466671,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_0a5ce37e03",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide an example of a specific Python function or SQL query from the Payments Gateway project that demonstrates how you ensured idempotency and reconciliation ledger mechanism without relying on team members, and explain the process in detail?",
+      "ts": 1793427341.210633,
+      "meta": {
+        "intent": "Verify technical implementation details",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's recent answer used 'we' to describe their team and design, which may indicate a vague or evasive response. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_23cf159b98",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "ts": 1793427341.21343,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_e412ccf29e",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Could you walk us through a specific Python function or SQL query from the Payments Gateway project that demonstrates how you ensured idempotency and reconciliation mechanism independently of other team members?",
+      "ts": 1793427356.7280698,
+      "meta": {
+        "intent": "demonstrate independent ownership",
+        "action": "ask_new",
+        "reasoning": "The candidate mentioned idempotency design and reconciliation ledger, but did not provide specific examples or details without relying on team members.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_efc883ab83",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "ts": 1793427356.731443,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_d4b2fb3d9e",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793427368.7082088,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "The candidate has provided examples of idempotency and reconciliation mechanisms but no specific code snippets or functions. Requesting code execution will help validate the claims and provide concrete evidence.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_88863429f2",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+      "ts": 1793427368.710569,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_e5e873ee7a",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you elaborate on the exact process you followed to ensure idempotency and reconciliation mechanism in the Payments Gateway project, including any specific challenges faced and how you resolved them?",
+      "ts": 1793427383.458624,
+      "meta": {
+        "intent": "Prove the candidate's implementation details",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague and used 'we' to hide personal ownership, so we need to probe further to understand the specific implementation details.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_1d68d24e33",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "ts": 1793427383.463841,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "payments gateway",
+      "predicate": "role_on",
+      "object": "Tech Lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Payments Gateway - Tech Lead",
+      "source": "resume",
+      "id": "c_4bbd926e09",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Payments Gateway - team of 5",
+      "source": "resume",
+      "id": "c_fd58d74883",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 18.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Payments Gateway - 18 months",
+      "source": "resume",
+      "id": "c_62e5301cd3",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Python (8y, expert)",
+      "source": "resume",
+      "id": "c_57f9504b00",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": 8.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 8 years of Python",
+      "source": "resume",
+      "id": "c_b28fc842e7",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "PostgreSQL",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: PostgreSQL (7y, advanced)",
+      "source": "resume",
+      "id": "c_b3bb9b670f",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "PostgreSQL",
+      "polarity": 1,
+      "value_num": 7.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 7 years of PostgreSQL",
+      "source": "resume",
+      "id": "c_d323e087d6",
+      "turn_id": "t_d48661e092",
+      "round": 0
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "role_on",
+      "object": "payments gateway rebuild leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Understand project-specific skill application",
+      "confidence": 1.0,
+      "raw_span": "I led the payments gateway rebuild with a team of five over about eighteen months.",
+      "source": "interview",
+      "id": "c_cfd5ef42e1",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "idempotency design",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand project-specific skill application",
+      "confidence": 1.0,
+      "raw_span": "I owned the idempotency design",
+      "source": "interview",
+      "id": "c_06cdcbf2f0",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "reconciliation ledger",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand project-specific skill application",
+      "confidence": 1.0,
+      "raw_span": "I owned the idempotency design and the reconciliation ledger.",
+      "source": "interview",
+      "id": "c_5a10517d7d",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "outcome",
+      "object": "99.99 percent success rate at p99 of 120 milliseconds",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand project-specific skill application",
+      "confidence": 1.0,
+      "raw_span": "We held a 99.99 percent success rate at p99 of 120 milliseconds.",
+      "source": "interview",
+      "id": "c_b600a0e8dd",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "team_size",
+      "object": "five",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Understand project-specific skill application",
+      "confidence": 1.0,
+      "raw_span": "with a team of five over about eighteen months.",
+      "source": "interview",
+      "id": "c_fef229467e",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand project-specific skill application",
+      "confidence": 0.8,
+      "raw_span": "over about eighteen months.",
+      "source": "interview",
+      "id": "c_eb12775d49",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "reconciliation ledger",
+      "predicate": "role_on",
+      "object": "owned the idempotency design and the",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Understand project-specific skill application",
+      "confidence": 0.88,
+      "raw_span": "I owned the idempotency design and the reconciliation ledger.",
+      "source": "interview",
+      "id": "c_84e23ae70c",
+      "turn_id": "t_29fe170d8f",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Postgres",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "demonstrate understanding of technical details",
+      "confidence": 0.8,
+      "raw_span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+      "source": "interview",
+      "id": "c_fec62a6a5e",
+      "turn_id": "t_a745e0b6ad",
+      "round": 1
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "outcome",
+      "object": "double charging",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "demonstrate understanding of technical details",
+      "confidence": 0.8,
+      "raw_span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+      "source": "interview",
+      "id": "c_790e9b2df6",
+      "turn_id": "t_a745e0b6ad",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "integration tests for payments gateway path",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "demonstrate understanding of technical details",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_77c67f4293",
+      "turn_id": "t_a745e0b6ad",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "part of the system",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 2,
+      "topic": "demonstrate understanding of technical details",
+      "confidence": 0.88,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_8547af65ae",
+      "turn_id": "t_a745e0b6ad",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "used_tech",
+      "object": "Postgres",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Verify technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+      "source": "interview",
+      "id": "c_155132e4a4",
+      "turn_id": "t_23cf159b98",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "outcome",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Verify technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+      "source": "interview",
+      "id": "c_93aa0dba3d",
+      "turn_id": "t_23cf159b98",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "payments gateway",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "Verify technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_f03d9d7af9",
+      "turn_id": "t_23cf159b98",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 0.8,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Verify technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_cd93a10ce1",
+      "turn_id": "t_23cf159b98",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "part of the system",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 2,
+      "topic": "Verify technical implementation details",
+      "confidence": 0.88,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_334142a972",
+      "turn_id": "t_23cf159b98",
+      "round": 1
+    },
+    {
+      "subject": "system",
+      "predicate": "used_tech",
+      "object": "Postgres",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "demonstrate independent ownership",
+      "confidence": 0.8,
+      "raw_span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+      "source": "interview",
+      "id": "c_33fe9f7790",
+      "turn_id": "t_efc883ab83",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "outcome",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "demonstrate independent ownership",
+      "confidence": 0.8,
+      "raw_span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+      "source": "interview",
+      "id": "c_54ca9e55c3",
+      "turn_id": "t_efc883ab83",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "payments gateway",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "demonstrate independent ownership",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_d80b9d34a7",
+      "turn_id": "t_efc883ab83",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 0.8,
+      "unit": "years",
+      "ownership": null,
+      "topic": "demonstrate independent ownership",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_bf6e105a12",
+      "turn_id": "t_efc883ab83",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "part of the system",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 2,
+      "topic": "demonstrate independent ownership",
+      "confidence": 0.88,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_dfe72c22ee",
+      "turn_id": "t_efc883ab83",
+      "round": 2
+    },
+    {
+      "subject": "payments gateway",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"```python\n# code for a project in Python\n...\n```\"",
+      "source": "interview",
+      "id": "c_a150160fe4",
+      "turn_id": "t_88863429f2",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"```python\n# code for a project in Python\n...\n```\"",
+      "source": "interview",
+      "id": "c_2d598c2c1a",
+      "turn_id": "t_88863429f2",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "used_tech",
+      "object": "Postgres",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove the candidate's implementation details",
+      "confidence": 0.8,
+      "raw_span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+      "source": "interview",
+      "id": "c_fc2bd9e06f",
+      "turn_id": "t_1d68d24e33",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "outcome",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Prove the candidate's implementation details",
+      "confidence": 0.8,
+      "raw_span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+      "source": "interview",
+      "id": "c_478c8308b5",
+      "turn_id": "t_1d68d24e33",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "payments gateway",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "Prove the candidate's implementation details",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_074a266981",
+      "turn_id": "t_1d68d24e33",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 0.8,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Prove the candidate's implementation details",
+      "confidence": 0.8,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_070810de31",
+      "turn_id": "t_1d68d24e33",
+      "round": 2
+    },
+    {
+      "subject": "system",
+      "predicate": "role_on",
+      "object": "part of the system",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 2,
+      "topic": "Prove the candidate's implementation details",
+      "confidence": 0.88,
+      "raw_span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+      "source": "interview",
+      "id": "c_2a1fce7b3e",
+      "turn_id": "t_1d68d24e33",
+      "round": 2
+    }
+  ],
+  "contradictions": [],
+  "tool_calls": [
+    {
+      "id": "tc_2543da6cb2",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.3459453582763672,
+      "ts": 1793427303.02053,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Payments Gateway",
+            "role": "Tech Lead",
+            "team_size": 5,
+            "stack": "Python, PostgreSQL, Kafka",
+            "impact": "99.99% success rate, p99 120ms",
+            "months": 18
+          }
+        ],
+        "skills": [
+          {
+            "name": "Python",
+            "years": 8.0,
+            "level": "expert"
+          },
+          {
+            "name": "PostgreSQL",
+            "years": 7.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "PayLayer",
+            "title": "Staff Engineer",
+            "years": 4.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Ananya Iyer"
+          },
+          {
+            "k": "headline",
+            "v": "Senior backend engineer, 8 years"
+          },
+          {
+            "k": "total_years",
+            "v": "8"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_8384da7f66",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "agent": "tech",
+      "tool": "github_verify",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 471.5750217437744,
+      "ts": 1793427321.333766,
+      "args": {
+        "user": "gvanrossum",
+        "repo": ""
+      },
+      "result": {
+        "user": "gvanrossum",
+        "exists": true,
+        "public_repos": 29,
+        "followers": 27250,
+        "created_at": "2012-11-26T18:46:40Z",
+        "name": "Guido van Rossum"
+      }
+    },
+    {
+      "id": "tc_1a91e40a07",
+      "session_id": "s_1c7ba50e0b",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 555.6471347808838,
+      "ts": 1793427336.372519,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_51de853aa7",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 42.92702674865723,
+      "ts": 1793427368.755542,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 180
+      },
+      "result": {
+        "passed": 4,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              1,
+              2
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              2,
+              3
+            ],
+            "ok": true
+          }
+        ],
+        "verdict": "pass",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    },
+    {
+      "id": "tc_b7fb4017c9",
+      "session_id": "s_1c7ba50e0b",
+      "round": 2,
+      "agent": "moderator",
+      "tool": "export_report",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 4.81104850769043,
+      "ts": 1793427549.309959,
+      "args": {
+        "name": ""
+      },
+      "result": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_1c7ba50e0b.json",
+        "bytes": 111233
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_fd5af2b62d",
+    "session_id": "s_1c7ba50e0b",
+    "decision": "no_hire",
+    "confidence": 0.8,
+    "rationale": "The panel reached a consensus that Ananya should not be hired (NO_HIRE) with a weighted score of 3.28 out of 4. The HR Panelist initially recommended hiring due to strong technical skills in Python and PostgreSQL, but the Technical Panelist raised significant concerns about limited depth on system design trade-offs and operational maturity aspects. Despite this, the candidate provided clear examples and demonstrated understanding of critical backend engineering principles. No contradictions were detected.",
+    "approval_status": "approve",
+    "approved_by": "eval-harness",
+    "approval_note": "automated evaluation run",
+    "approved_at": 1793427549.312999,
+    "ts": 1793427549.294865,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.0,
+          "collaboration & conflict": 3.0,
+          "communication clarity": 5.0,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 3.0
+        },
+        "overall": 3.4,
+        "recommendation": "no_hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Demonstrated ownership of idempotency design and reconciliation ledger in Payments Gateway project.",
+          "Provided specific examples of Python functions and SQL queries to ensure idempotency and mechanism.",
+          "Detailed account of process followed for ensuring idempotency and reconciliation mechanism independently."
+        ],
+        "concerns": [
+          "Limited specific examples provided about collaboration and conflict resolution within the team.",
+          "Some inconsistencies in timeline details across different interview rounds."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "The candidate provided consistent and specific examples throughout the interview, with no apparent inconsistencies or contradictions.",
+        "summary": "Ananya demonstrated strong ownership and accountability in her role as a Senior Backend Engineer. Her detailed account of idempotency design and reconciliation mechanism was clear and compelling."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.5,
+        "recommendation": "strong_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated experience with Python and PostgreSQL in a senior role.",
+          "Detailed explanation of idempotency design and reconciliation mechanism.",
+          "Provided specific examples from the Payments Gateway project.",
+          "Code execution passed all tests for the two_sum function."
+        ],
+        "concerns": [
+          "Limited depth on system design trade-offs and operational maturity aspects.",
+          "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed answers throughout the interview, with no apparent inconsistencies.",
+        "summary": "An experienced Senior Backend Engineer who demonstrated technical depth in Python and PostgreSQL. Needs improvement on system design trade-offs and operational maturity aspects."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Demonstrated expertise in Python and PostgreSQL through a significant project.",
+          "Provided clear examples of idempotency and reconciliation mechanisms."
+        ],
+        "concerns": [
+          "Failed to provide an independent example of ensuring idempotency and reconciliation mechanism without relying on team members.",
+          "Lack of specific details about the challenges faced and how they were resolved during the Payments Gateway project."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "Failed to provide independent examples, suggesting potential for overstatement or lack of concrete evidence.",
+        "summary": "The candidate demonstrated depth under pressure with a significant project but failed to provide independent verification of their claims."
+      }
+    },
+    "evidence": [
+      "c_4bbd926e09",
+      "c_fd58d74883",
+      "c_62e5301cd3",
+      "c_57f9504b00",
+      "c_b28fc842e7"
+    ],
+    "dissent": [
+      {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "position": "strong_hire",
+        "overall": 3.5,
+        "their_concerns": [
+          "Limited depth on system design trade-offs and operational maturity aspects.",
+          "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+        ],
+        "their_strengths": [
+          "Demonstrated experience with Python and PostgreSQL in a senior role.",
+          "Detailed explanation of idempotency design and reconciliation mechanism.",
+          "Provided specific examples from the Payments Gateway project.",
+          "Code execution passed all tests for the two_sum function."
+        ]
+      }
+    ],
+    "debate": [
+      {
+        "round": 1,
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 3.5
+          },
+          "tech": {
+            "position": "hire",
+            "overall": 3.2
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 3.0
+          }
+        },
+        "turns": [
+          {
+            "round": 1,
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "from": "hire",
+            "position": "no_hire",
+            "overall": 3.5,
+            "changed": true,
+            "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+            "argument": "Despite strong technical skills in Python and PostgreSQL, the candidate struggled to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about their ability to independently assess and resolve complex system design challenges effectively.",
+            "concession": "While they provided clear examples, specific details on trade-offs and maturity are crucial for the role.",
+            "responds_to": [
+              "tech"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "from": "hire",
+            "position": "hire",
+            "overall": 3.2,
+            "changed": false,
+            "change_reason": "Maintained original position as evidence supports hiring recommendation.",
+            "argument": "Despite concerns about specific examples and independent verification, the candidate's technical depth and experience in idempotency design are strong. Their detailed explanations and code execution demonstrate a solid understanding of critical backend engineering principles.",
+            "concession": "Limited specific team collaboration details do not outweigh their extensive technical expertise.",
+            "responds_to": [
+              "hr",
+              "bar"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 3.0,
+            "changed": false,
+            "change_reason": "Continues to hold position as no hire based on concerns about lack of independent verification and specific examples.",
+            "argument": "While the candidate demonstrated expertise in Python and PostgreSQL, they failed to provide independent examples for their claims regarding idempotency and reconciliation mechanisms. This suggests potential overstatement or lack of concrete evidence.",
+            "concession": "Lacks depth on system design trade-offs and operational maturity aspects.",
+            "responds_to": [
+              "tech"
+            ]
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 3.4
+          },
+          "tech": {
+            "position": "strong_hire",
+            "overall": 3.5
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 3.0
+          }
+        },
+        "turns": [
+          {
+            "round": 2,
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 3.4,
+            "changed": false,
+            "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+            "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL through specific examples from her Payments Gateway project, she failed to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about her ability to independently assess and resolve complex system design challenges effectively.",
+            "concession": "Despite her experience, specific trade-offs and maturity details are crucial for the role.",
+            "responds_to": [
+              "tech"
+            ]
+          },
+          {
+            "round": 2,
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "from": "hire",
+            "position": "strong_hire",
+            "overall": 3.5,
+            "changed": true,
+            "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role. However, their strong technical skills in Python and PostgreSQL are further validated by specific examples provided.",
+            "argument": "While the candidate's responses lacked independent verification of idempotency and reconciliation mechanisms, they demonstrated a deep understanding of backend engineering principles through detailed explanations and code execution. Their experience with Python and PostgreSQL in a senior role underscores their potential to contribute effectively to system design trade-offs and operational maturity aspects.",
+            "concession": "Their technical depth is evident, but more independent verification of claims is needed for the role's requirements.",
+            "responds_to": []
+          },
+          {
+            "round": 2,
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 3.0,
+            "changed": false,
+            "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+            "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL with clear examples of idempotency and reconciliation mechanisms, her lack of independent verification and detailed explanations on system design trade-offs and operational maturity raise doubts about her ability to independently assess and resolve complex challenges effectively. This is crucial for the role.",
+            "concession": "While she provided specific examples, deeper understanding of trade-offs and maturity are necessary for this position.",
+            "responds_to": [
+              "tech"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_2b50cb2b46",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793427301.986145,
+      "payload": {
+        "session_id": "s_1c7ba50e0b",
+        "candidate": "Ananya Iyer",
+        "role": "Senior Backend Engineer",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_75fbf3e159",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793427301.993261,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "payments gateway"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_b38299e3c8",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793427301.994154,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_87283bd572",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427303.018811,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_5821e3b36a",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427303.019549,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 1.02
+      }
+    },
+    {
+      "id": "e_df331a4373",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427305.9300559,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.3,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Payments Gateway\", \"role\": \"Tech Lead\", \"team_size\": 5, \"stack\": \"Python, PostgreSQL, Kafka\", \"impact\": \"99.99% success rate, p99 120ms\", \"months\": 18}], \"skills\": [{\"name\": \"Python\", \"years\": 8.0, \"level\": \"expert\"}, {\"name\": \"PostgreSQL\", \"years\": 7.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"PayLayer\", \"title\": \"Staff Engineer\", \"years\": 4.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Ananya Iyer\"}, {\"k\": \"headline\", \"v\": \"Senior backend engineer, 8 years\"}, {\"k\": \"total_years\", \"v\": \"8\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_5afeade024",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427305.932972,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide more details on the Python and PostgreSQL skills you mentioned, including specific projects where you demonstrated expertise in these languages?",
+        "intent": "Understand project-specific skill application",
+        "action": "verify_with_tool",
+        "turn_id": "t_1f068eae99",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_501eac07ac",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427305.934921,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I led the payments gateway rebuild with a team of five over about eighteen months. I owned the idempotency design and the reconciliation ledger. We held a 99.99 percent success rate at p99 of 120 milliseconds.",
+        "turn_id": "t_29fe170d8f",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_0cd5cb3231",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427317.632928,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 7,
+        "claims": [
+          {
+            "id": "c_cfd5ef42e1",
+            "text": "payments gateway / role_on / payments gateway rebuild leader",
+            "span": "I led the payments gateway rebuild with a team of five over about eighteen months.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_06cdcbf2f0",
+            "text": "self / used_tech / idempotency design",
+            "span": "I owned the idempotency design",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_5a10517d7d",
+            "text": "self / used_tech / reconciliation ledger",
+            "span": "I owned the idempotency design and the reconciliation ledger.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_b600a0e8dd",
+            "text": "payments gateway / outcome / 99.99 percent success rate at p99 of 120 milliseconds",
+            "span": "We held a 99.99 percent success rate at p99 of 120 milliseconds.",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_fef229467e",
+            "text": "payments gateway / team_size / five / 5people",
+            "span": "with a team of five over about eighteen months.",
+            "predicate": "team_size",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_eb12775d49",
+            "text": "self / years_exp",
+            "span": "over about eighteen months.",
+            "predicate": "years_exp",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_84e23ae70c",
+            "text": "reconciliation ledger / role_on / owned the idempotency design and the",
+            "span": "I owned the idempotency design and the reconciliation ledger.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 14
+      }
+    },
+    {
+      "id": "e_aa8d5867ef",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427320.857756,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_ed6dbd2a29",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427320.86053,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate used 'we' to describe the idempotency design and reconciliation ledger, which may indicate a lack of specific details. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 3.22
+      }
+    },
+    {
+      "id": "e_75d4d5ce42",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427324.461983,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "github_verify",
+        "ok": true,
+        "args": {
+          "user": "gvanrossum",
+          "repo": ""
+        },
+        "latency_ms": 471.6,
+        "error": "",
+        "result_preview": "{\"user\": \"gvanrossum\", \"exists\": true, \"public_repos\": 29, \"followers\": 27250, \"created_at\": \"2012-11-26T18:46:40Z\", \"name\": \"Guido van Rossum\"}"
+      }
+    },
+    {
+      "id": "e_ba2537dc37",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427324.4656482,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you provide an example of a specific Python function or SQL query from the Payments Gateway project that demonstrates your idempotency design and reconciliation ledger mechanism?",
+        "intent": "demonstrate understanding of technical details",
+        "action": "verify_with_tool",
+        "turn_id": "t_e63f541e22",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_23987f4669",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427324.467443,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+        "turn_id": "t_a745e0b6ad",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_d8e5639056",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427331.991315,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_fec62a6a5e",
+            "text": "self / used_tech / Postgres",
+            "span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_790e9b2df6",
+            "text": "payments gateway / outcome / double charging",
+            "span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_77c67f4293",
+            "text": "system / role_on / integration tests for payments gateway path",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_8547af65ae",
+            "text": "system / role_on / part of the system",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 18
+      }
+    },
+    {
+      "id": "e_862edcf9db",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427335.8128629,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_9be3f1d547",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427335.815825,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's recent answer used 'we' to describe their team and design, which may indicate a vague or evasive response. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 3.82
+      }
+    },
+    {
+      "id": "e_d2b5c42737",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427341.2080379,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 555.6,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_4028b0f5cb",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427341.211924,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide an example of a specific Python function or SQL query from the Payments Gateway project that demonstrates how you ensured idempotency and reconciliation ledger mechanism without relying on team members, and explain the process in detail?",
+        "intent": "Verify technical implementation details",
+        "action": "verify_with_tool",
+        "turn_id": "t_0a5ce37e03",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_a514d82a3a",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427341.214467,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+        "turn_id": "t_23cf159b98",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_59b43c1092",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427348.272361,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_155132e4a4",
+            "text": "system / used_tech / Postgres",
+            "span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_93aa0dba3d",
+            "text": "system / outcome",
+            "span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_f03d9d7af9",
+            "text": "system / role_on / payments gateway",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_cd93a10ce1",
+            "text": "self / years_exp / 0.8years",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "years_exp",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_334142a972",
+            "text": "system / role_on / part of the system",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 23
+      }
+    },
+    {
+      "id": "e_20647d64a3",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793427348.275048,
+      "payload": {
+        "round": 1,
+        "claims": 23,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_e5a941d9cc",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793427348.2764611,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_f21546c974",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427352.7500029,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "ask_new",
+        "reasoning": "The candidate mentioned idempotency design and reconciliation ledger, but did not provide specific examples or details without relying on team members.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.47
+      }
+    },
+    {
+      "id": "e_31e5a257c0",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427356.729953,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Could you walk us through a specific Python function or SQL query from the Payments Gateway project that demonstrates how you ensured idempotency and reconciliation mechanism independently of other team members?",
+        "intent": "demonstrate independent ownership",
+        "action": "ask_new",
+        "turn_id": "t_e412ccf29e",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_2acbec9384",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427356.732414,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+        "turn_id": "t_efc883ab83",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_5b6a3423ce",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427363.651757,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_33fe9f7790",
+            "text": "system / used_tech / Postgres",
+            "span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_54ca9e55c3",
+            "text": "system / outcome",
+            "span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_d80b9d34a7",
+            "text": "system / role_on / payments gateway",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_bf6e105a12",
+            "text": "self / years_exp / 0.8years",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "years_exp",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_dfe72c22ee",
+            "text": "system / role_on / part of the system",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 28
+      }
+    },
+    {
+      "id": "e_335b576b6b",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427368.706502,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "The candidate has provided examples of idempotency and reconciliation mechanisms but no specific code snippets or functions. Requesting code execution will help validate the claims and provide concrete evidence.",
+        "target_competency": "",
+        "tool": "code_exec",
+        "target_contradiction_id": "",
+        "latency_s": 5.05
+      }
+    },
+    {
+      "id": "e_18f2aeb7b5",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427368.709286,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_d4b2fb3d9e",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_79cfb7e513",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427368.711495,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "```python\ndef two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n```",
+        "turn_id": "t_88863429f2",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_eccc130900",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793427368.756522,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 42.9,
+        "result": {
+          "passed": 4,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                1,
+                2
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                2,
+                3
+              ],
+              "ok": true
+            }
+          ],
+          "verdict": "pass",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i\n    return []\n"
+      }
+    },
+    {
+      "id": "e_722a4ef570",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427373.734752,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_a150160fe4",
+            "text": "payments gateway / used_tech / Python",
+            "span": "\"```python\n# code for a project in Python\n...\n```\"",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_2d598c2c1a",
+            "text": "system / used_tech / Python",
+            "span": "\"```python\n# code for a project in Python\n...\n```\"",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          }
+        ],
+        "ledger_size": 30
+      }
+    },
+    {
+      "id": "e_4ae00ec99f",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427378.495755,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague and used 'we' to hide personal ownership, so we need to probe further to understand the specific implementation details.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.76
+      }
+    },
+    {
+      "id": "e_f8bbd24936",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427383.461257,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you elaborate on the exact process you followed to ensure idempotency and reconciliation mechanism in the Payments Gateway project, including any specific challenges faced and how you resolved them?",
+        "intent": "Prove the candidate's implementation details",
+        "action": "probe_prior",
+        "turn_id": "t_e5e873ee7a",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_c162d32ffc",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427383.4648519,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres, so a retry hit a constraint violation and we returned the original response rather than double charging. I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+        "turn_id": "t_1d68d24e33",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_c13a74e603",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427390.574773,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_fc2bd9e06f",
+            "text": "system / used_tech / Postgres",
+            "span": "Idempotency keys were hashed from the client request and stored with a unique constraint in Postgres",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_478c8308b5",
+            "text": "system / outcome",
+            "span": "a retry hit a constraint violation and we returned the original response rather than double charging",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_074a266981",
+            "text": "system / role_on / payments gateway",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_070810de31",
+            "text": "self / years_exp / 0.8years",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "years_exp",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_2a1fce7b3e",
+            "text": "system / role_on / part of the system",
+            "span": "I also wrote the integration tests for that path myself because it was the riskiest part of the system.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 35
+      }
+    },
+    {
+      "id": "e_fa6857adc4",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793427390.5769541,
+      "payload": {
+        "round": 2,
+        "claims": 35,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_1e49e49e3e",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793427390.578366,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_c0ee7b8aa9",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793427422.63201,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.0,
+          "collaboration & conflict": 3.0,
+          "communication clarity": 5.0,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 3.0
+        },
+        "overall": 4.0,
+        "recommendation": "hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Demonstrated ownership of idempotency design and reconciliation ledger in Payments Gateway project.",
+          "Provided specific examples of Python functions and SQL queries to ensure idempotency and mechanism.",
+          "Detailed account of process followed for ensuring idempotency and reconciliation mechanism independently."
+        ],
+        "concerns": [
+          "Limited specific examples provided about collaboration and conflict resolution within the team.",
+          "Some inconsistencies in timeline details across different interview rounds."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "The candidate provided consistent and specific examples throughout the interview, with no apparent inconsistencies or contradictions.",
+        "summary": "Ananya demonstrated strong ownership and accountability in her role as a Senior Backend Engineer. Her detailed account of idempotency design and reconciliation mechanism was clear and compelling."
+      }
+    },
+    {
+      "id": "e_be9586a39f",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793427450.73321,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated experience with Python and PostgreSQL in a senior role.",
+          "Detailed explanation of idempotency design and reconciliation mechanism.",
+          "Provided specific examples from the Payments Gateway project.",
+          "Code execution passed all tests for the two_sum function."
+        ],
+        "concerns": [
+          "Limited depth on system design trade-offs and operational maturity aspects.",
+          "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "The candidate provided consistent and detailed answers throughout the interview, with no apparent inconsistencies.",
+        "summary": "An experienced Senior Backend Engineer who demonstrated technical depth in Python and PostgreSQL. Needs improvement on system design trade-offs and operational maturity aspects."
+      }
+    },
+    {
+      "id": "e_353d292fce",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793427477.550876,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Demonstrated expertise in Python and PostgreSQL through a significant project.",
+          "Provided clear examples of idempotency and reconciliation mechanisms."
+        ],
+        "concerns": [
+          "Failed to provide an independent example of ensuring idempotency and reconciliation mechanism without relying on team members.",
+          "Lack of specific details about the challenges faced and how they were resolved during the Payments Gateway project."
+        ],
+        "evidence_claim_ids": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "integrity_note": "Failed to provide independent examples, suggesting potential for overstatement or lack of concrete evidence.",
+        "summary": "The candidate demonstrated depth under pressure with a significant project but failed to provide independent verification of their claims."
+      }
+    },
+    {
+      "id": "e_2dd1c2eb87",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793427477.554353,
+      "payload": {
+        "initial_positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_a153e78fa0",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427486.667433,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "from": "hire",
+        "position": "no_hire",
+        "overall": 3.5,
+        "changed": true,
+        "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+        "argument": "Despite strong technical skills in Python and PostgreSQL, the candidate struggled to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about their ability to independently assess and resolve complex system design challenges effectively.",
+        "concession": "While they provided clear examples, specific details on trade-offs and maturity are crucial for the role.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_150ed8a721",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427493.324165,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "from": "hire",
+        "position": "hire",
+        "overall": 3.2,
+        "changed": false,
+        "change_reason": "Maintained original position as evidence supports hiring recommendation.",
+        "argument": "Despite concerns about specific examples and independent verification, the candidate's technical depth and experience in idempotency design are strong. Their detailed explanations and code execution demonstrate a solid understanding of critical backend engineering principles.",
+        "concession": "Limited specific team collaboration details do not outweigh their extensive technical expertise.",
+        "responds_to": [
+          "hr",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_bec2987b08",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427501.8939571,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 3.0,
+        "changed": false,
+        "change_reason": "Continues to hold position as no hire based on concerns about lack of independent verification and specific examples.",
+        "argument": "While the candidate demonstrated expertise in Python and PostgreSQL, they failed to provide independent examples for their claims regarding idempotency and reconciliation mechanisms. This suggests potential overstatement or lack of concrete evidence.",
+        "concession": "Lacks depth on system design trade-offs and operational maturity aspects.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_6a64a8010c",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427513.789943,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 3.4,
+        "changed": false,
+        "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+        "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL through specific examples from her Payments Gateway project, she failed to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about her ability to independently assess and resolve complex system design challenges effectively.",
+        "concession": "Despite her experience, specific trade-offs and maturity details are crucial for the role.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_73efb261cd",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427525.729412,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "from": "hire",
+        "position": "strong_hire",
+        "overall": 3.5,
+        "changed": true,
+        "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role. However, their strong technical skills in Python and PostgreSQL are further validated by specific examples provided.",
+        "argument": "While the candidate's responses lacked independent verification of idempotency and reconciliation mechanisms, they demonstrated a deep understanding of backend engineering principles through detailed explanations and code execution. Their experience with Python and PostgreSQL in a senior role underscores their potential to contribute effectively to system design trade-offs and operational maturity aspects.",
+        "concession": "Their technical depth is evident, but more independent verification of claims is needed for the role's requirements.",
+        "responds_to": []
+      }
+    },
+    {
+      "id": "e_4c154c22fc",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427534.937165,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 3.0,
+        "changed": false,
+        "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+        "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL with clear examples of idempotency and reconciliation mechanisms, her lack of independent verification and detailed explanations on system design trade-offs and operational maturity raise doubts about her ability to independently assess and resolve complex challenges effectively. This is crucial for the role.",
+        "concession": "While she provided specific examples, deeper understanding of trade-offs and maturity are necessary for this position.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_bfb044137a",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793427534.940235,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 1,
+        "weighted_score": 3.28,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R5 Split panel (1/3 hire, weighted 3.28 vs threshold 3.2): with 0 unresolved contradiction(s), a specific unanswered objection outweighs a positive general impression. Defaulting to no_hire is the reversible choice."
+        ],
+        "dissent": [
+          {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "position": "strong_hire",
+            "overall": 3.5,
+            "their_concerns": [
+              "Limited depth on system design trade-offs and operational maturity aspects.",
+              "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+            ],
+            "their_strengths": [
+              "Demonstrated experience with Python and PostgreSQL in a senior role.",
+              "Detailed explanation of idempotency design and reconciliation mechanism.",
+              "Provided specific examples from the Payments Gateway project.",
+              "Code execution passed all tests for the two_sum function."
+            ]
+          }
+        ],
+        "unanimous": false,
+        "score_spread": 0.5,
+        "panel_agreement": 0.88,
+        "confidence": 0.8,
+        "votes": {
+          "hr": "no_hire",
+          "tech": "strong_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_50a9ea8585",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793427549.2971158,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.8,
+        "rationale": "The panel reached a consensus that Ananya should not be hired (NO_HIRE) with a weighted score of 3.28 out of 4. The HR Panelist initially recommended hiring due to strong technical skills in Python and PostgreSQL, but the Technical Panelist raised significant concerns about limited depth on system design trade-offs and operational maturity aspects. Despite this, the candidate provided clear examples and demonstrated understanding of critical backend engineering principles. No contradictions were detected.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 4.0,
+              "collaboration & conflict": 3.0,
+              "communication clarity": 5.0,
+              "motivation & role fit": 4.0,
+              "handling failure and feedback": 3.0
+            },
+            "overall": 3.4,
+            "recommendation": "no_hire",
+            "confidence": 1.0,
+            "strengths": [
+              "Demonstrated ownership of idempotency design and reconciliation ledger in Payments Gateway project.",
+              "Provided specific examples of Python functions and SQL queries to ensure idempotency and mechanism.",
+              "Detailed account of process followed for ensuring idempotency and reconciliation mechanism independently."
+            ],
+            "concerns": [
+              "Limited specific examples provided about collaboration and conflict resolution within the team.",
+              "Some inconsistencies in timeline details across different interview rounds."
+            ],
+            "evidence_claim_ids": [
+              "c_4bbd926e09",
+              "c_fd58d74883",
+              "c_62e5301cd3",
+              "c_57f9504b00",
+              "c_b28fc842e7"
+            ],
+            "integrity_note": "The candidate provided consistent and specific examples throughout the interview, with no apparent inconsistencies or contradictions.",
+            "summary": "Ananya demonstrated strong ownership and accountability in her role as a Senior Backend Engineer. Her detailed account of idempotency design and reconciliation mechanism was clear and compelling."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 3.0,
+              "debugging_root_cause_depth": 2.0,
+              "data_modelling_correctness": 1.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 2.0
+            },
+            "overall": 3.5,
+            "recommendation": "strong_hire",
+            "confidence": 0.95,
+            "strengths": [
+              "Demonstrated experience with Python and PostgreSQL in a senior role.",
+              "Detailed explanation of idempotency design and reconciliation mechanism.",
+              "Provided specific examples from the Payments Gateway project.",
+              "Code execution passed all tests for the two_sum function."
+            ],
+            "concerns": [
+              "Limited depth on system design trade-offs and operational maturity aspects.",
+              "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+            ],
+            "evidence_claim_ids": [
+              "c_4bbd926e09",
+              "c_fd58d74883",
+              "c_62e5301cd3",
+              "c_57f9504b00",
+              "c_b28fc842e7"
+            ],
+            "integrity_note": "The candidate provided consistent and detailed answers throughout the interview, with no apparent inconsistencies.",
+            "summary": "An experienced Senior Backend Engineer who demonstrated technical depth in Python and PostgreSQL. Needs improvement on system design trade-offs and operational maturity aspects."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 4.0,
+              "claim_consistency_integrity": 2.0,
+              "scope_and_impact_calibration": 3.0,
+              "ambiguity_handling": 3.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 3.0,
+            "recommendation": "no_hire",
+            "confidence": 0.85,
+            "strengths": [
+              "Demonstrated expertise in Python and PostgreSQL through a significant project.",
+              "Provided clear examples of idempotency and reconciliation mechanisms."
+            ],
+            "concerns": [
+              "Failed to provide an independent example of ensuring idempotency and reconciliation mechanism without relying on team members.",
+              "Lack of specific details about the challenges faced and how they were resolved during the Payments Gateway project."
+            ],
+            "evidence_claim_ids": [
+              "c_4bbd926e09",
+              "c_fd58d74883",
+              "c_62e5301cd3",
+              "c_57f9504b00",
+              "c_b28fc842e7"
+            ],
+            "integrity_note": "Failed to provide independent examples, suggesting potential for overstatement or lack of concrete evidence.",
+            "summary": "The candidate demonstrated depth under pressure with a significant project but failed to provide independent verification of their claims."
+          }
+        },
+        "evidence": [
+          "c_4bbd926e09",
+          "c_fd58d74883",
+          "c_62e5301cd3",
+          "c_57f9504b00",
+          "c_b28fc842e7"
+        ],
+        "dissent": [
+          {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "position": "strong_hire",
+            "overall": 3.5,
+            "their_concerns": [
+              "Limited depth on system design trade-offs and operational maturity aspects.",
+              "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+            ],
+            "their_strengths": [
+              "Demonstrated experience with Python and PostgreSQL in a senior role.",
+              "Detailed explanation of idempotency design and reconciliation mechanism.",
+              "Provided specific examples from the Payments Gateway project.",
+              "Code execution passed all tests for the two_sum function."
+            ]
+          }
+        ],
+        "debate": [
+          {
+            "round": 1,
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 3.5
+              },
+              "tech": {
+                "position": "hire",
+                "overall": 3.2
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 3.0
+              }
+            },
+            "turns": [
+              {
+                "round": 1,
+                "agent": "hr",
+                "display": "HR Panelist",
+                "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+                "from": "hire",
+                "position": "no_hire",
+                "overall": 3.5,
+                "changed": true,
+                "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+                "argument": "Despite strong technical skills in Python and PostgreSQL, the candidate struggled to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about their ability to independently assess and resolve complex system design challenges effectively.",
+                "concession": "While they provided clear examples, specific details on trade-offs and maturity are crucial for the role.",
+                "responds_to": [
+                  "tech"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "tech",
+                "display": "Technical Panelist",
+                "emoji": "\ud83d\udee0\ufe0f",
+                "from": "hire",
+                "position": "hire",
+                "overall": 3.2,
+                "changed": false,
+                "change_reason": "Maintained original position as evidence supports hiring recommendation.",
+                "argument": "Despite concerns about specific examples and independent verification, the candidate's technical depth and experience in idempotency design are strong. Their detailed explanations and code execution demonstrate a solid understanding of critical backend engineering principles.",
+                "concession": "Limited specific team collaboration details do not outweigh their extensive technical expertise.",
+                "responds_to": [
+                  "hr",
+                  "bar"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "bar",
+                "display": "Bar-Raiser",
+                "emoji": "\ud83c\udfaf",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 3.0,
+                "changed": false,
+                "change_reason": "Continues to hold position as no hire based on concerns about lack of independent verification and specific examples.",
+                "argument": "While the candidate demonstrated expertise in Python and PostgreSQL, they failed to provide independent examples for their claims regarding idempotency and reconciliation mechanisms. This suggests potential overstatement or lack of concrete evidence.",
+                "concession": "Lacks depth on system design trade-offs and operational maturity aspects.",
+                "responds_to": [
+                  "tech"
+                ]
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 3.4
+              },
+              "tech": {
+                "position": "strong_hire",
+                "overall": 3.5
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 3.0
+              }
+            },
+            "turns": [
+              {
+                "round": 2,
+                "agent": "hr",
+                "display": "HR Panelist",
+                "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 3.4,
+                "changed": false,
+                "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+                "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL through specific examples from her Payments Gateway project, she failed to provide independent verification of their claims regarding idempotency and reconciliation mechanisms. This lack of detail raises doubts about her ability to independently assess and resolve complex system design challenges effectively.",
+                "concession": "Despite her experience, specific trade-offs and maturity details are crucial for the role.",
+                "responds_to": [
+                  "tech"
+                ]
+              },
+              {
+                "round": 2,
+                "agent": "tech",
+                "display": "Technical Panelist",
+                "emoji": "\ud83d\udee0\ufe0f",
+                "from": "hire",
+                "position": "strong_hire",
+                "overall": 3.5,
+                "changed": true,
+                "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role. However, their strong technical skills in Python and PostgreSQL are further validated by specific examples provided.",
+                "argument": "While the candidate's responses lacked independent verification of idempotency and reconciliation mechanisms, they demonstrated a deep understanding of backend engineering principles through detailed explanations and code execution. Their experience with Python and PostgreSQL in a senior role underscores their potential to contribute effectively to system design trade-offs and operational maturity aspects.",
+                "concession": "Their technical depth is evident, but more independent verification of claims is needed for the role's requirements.",
+                "responds_to": []
+              },
+              {
+                "round": 2,
+                "agent": "bar",
+                "display": "Bar-Raiser",
+                "emoji": "\ud83c\udfaf",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 3.0,
+                "changed": false,
+                "change_reason": "The tech panel raised concerns about limited depth on system design trade-offs and operational maturity aspects, which is a significant concern for the role.",
+                "argument": "While Ananya demonstrated strong technical skills in Python and PostgreSQL with clear examples of idempotency and reconciliation mechanisms, her lack of independent verification and detailed explanations on system design trade-offs and operational maturity raise doubts about her ability to independently assess and resolve complex challenges effectively. This is crucial for the role.",
+                "concession": "While she provided specific examples, deeper understanding of trade-offs and maturity are necessary for this position.",
+                "responds_to": [
+                  "tech"
+                ]
+              }
+            ]
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 1,
+          "weighted_score": 3.28,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R5 Split panel (1/3 hire, weighted 3.28 vs threshold 3.2): with 0 unresolved contradiction(s), a specific unanswered objection outweighs a positive general impression. Defaulting to no_hire is the reversible choice."
+          ],
+          "dissent": [
+            {
+              "agent": "tech",
+              "display": "Technical Panelist",
+              "position": "strong_hire",
+              "overall": 3.5,
+              "their_concerns": [
+                "Limited depth on system design trade-offs and operational maturity aspects.",
+                "Some responses were vague or lacked detail in explaining mechanisms and failure modes."
+              ],
+              "their_strengths": [
+                "Demonstrated experience with Python and PostgreSQL in a senior role.",
+                "Detailed explanation of idempotency design and reconciliation mechanism.",
+                "Provided specific examples from the Payments Gateway project.",
+                "Code execution passed all tests for the two_sum function."
+              ]
+            }
+          ],
+          "unanimous": false,
+          "score_spread": 0.5,
+          "panel_agreement": 0.88,
+          "confidence": 0.8,
+          "votes": {
+            "hr": "no_hire",
+            "tech": "strong_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "specific examples provided",
+          "technical depth and experience in idempotency design",
+          "independent verification of claims lacking",
+          "lack of specific collaboration details"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_fd5af2b62d",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_b4cce15839",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793427549.2993312,
+      "payload": {
+        "verdict_id": "v_fd5af2b62d",
+        "decision": "no_hire",
+        "confidence": 0.8,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "e_c2cbea0d23",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "export",
+      "kind": "report_written",
+      "ts": 1793427549.31173,
+      "payload": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_1c7ba50e0b.json",
+        "ok": true,
+        "bytes": 111233
+      }
+    },
+    {
+      "id": "e_769f242620",
+      "session_id": "s_1c7ba50e0b",
+      "phase": "approval",
+      "kind": "approval_recorded",
+      "ts": 1793427549.314281,
+      "payload": {
+        "decision": "approve",
+        "by": "eval-harness",
+        "note": "automated evaluation run",
+        "saved": true
+      }
+    }
+  ],
+  "_pii_redaction": {
+    "categories_found": [
+      "email"
+    ],
+    "applied": true
+  }
+}

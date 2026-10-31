@@ -10,6 +10,7 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from .config import SETTINGS
 from .llm import LLM
 from .memory import Claim
 
@@ -317,7 +318,7 @@ class ClaimExtractor:
             EXTRACT_SYSTEM,
             f"Interview answer to decompose:\n\"\"\"\n{answer.strip()}\n\"\"\"{hint}",
             label="extract_claims",
-            max_tokens=900,
+            max_tokens=SETTINGS.tok(900),
             temperature=0.1,
             fallback={"claims": []},
         )

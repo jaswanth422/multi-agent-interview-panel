@@ -1,0 +1,2721 @@
+{
+  "session_id": "s_73a65b8d73",
+  "generated_at": 1793427092.6497102,
+  "wall_clock_s": 202.2,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 26,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 28037,
+    "completion_tokens": 3717,
+    "total_latency_s": 201.4,
+    "mean_latency_s": 7.746,
+    "calls_by_label": {
+      "adjudicate_contradiction": 1,
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "candidate_improvise": 1,
+      "debate_bar": 1,
+      "debate_hr": 1,
+      "debate_tech": 1,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 5,
+    "distinct_tools": 4,
+    "success_rate": 0.8,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 2,
+        "ok": 2,
+        "mean_ms": 0.5
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 517.0
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 42.4
+      },
+      "export_report": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 4.2
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 1,
+    "llm_confirmed": 1,
+    "llm_rejected": 0,
+    "prefilter_rejected": 0,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 26,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 1
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 4,
+      "detail": {
+        "resume_db": {
+          "calls": 2,
+          "ok": 2,
+          "mean_ms": 0.5
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 517.0
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 42.4
+        },
+        "export_report": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 4.2
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 22,
+      "turns_persisted": 13,
+      "events_persisted": 56,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 1,
+    "by_severity": {
+      "high": 1
+    },
+    "by_type": {
+      "ownership_conflict": 1
+    },
+    "addressed_in_interview": 1,
+    "cross_round": 1
+  },
+  "session": {
+    "id": "s_73a65b8d73",
+    "candidate_name": "Kavya Reddy",
+    "role": "Engineering Manager",
+    "seniority": "senior",
+    "status": "completed",
+    "created_at": 1793426890.4947772,
+    "updated_at": 1793427092.646486,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Kavya Reddy",
+      "headline": "Engineering lead, 8 years",
+      "total_years": 8,
+      "github": "",
+      "projects": [
+        {
+          "name": "Platform Rewrite",
+          "role": "Tech Lead",
+          "team_size": 9,
+          "months": 14,
+          "stack": [
+            "Go",
+            "gRPC"
+          ],
+          "impact": "halved deploy time"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Go",
+          "years": 4,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "Scaleworks",
+          "title": "Tech Lead",
+          "years": 3
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_f0355a9437",
+      "session_id": "s_73a65b8d73",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Kavya Reddy\", \"headline\": \"Engineering lead, 8 years\", \"total_years\": 8, \"github\": \"\", \"projects\": [{\"name\": \"Platform Rewrite\", \"role\": \"Tech Lead\", \"team_size\": 9, \"months\": 14, \"stack\": [\"Go\", \"gRPC\"], \"impact\": \"halved deploy time\"}], \"skills\": [{\"name\": \"Go\", \"years\": 4, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Scaleworks\", \"title\": \"Tech Lead\", \"years\": 3}]}",
+      "ts": 1793426890.5044942,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_a393fffd8c",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Could you provide more details about the 'Platform Rewrite' project where you were a Tech Lead and how Go contributed to halving deploy time?",
+      "ts": 1793426894.522785,
+      "meta": {
+        "intent": "Examine technical leadership and impact",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_a8ab5525f6",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+      "ts": 1793426894.524863,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_e122b74a44",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you walk me through how the use of Go specifically contributed to halving our deploy time in the Platform Rewrite project?",
+      "ts": 1793426904.343392,
+      "meta": {
+        "intent": "Technical details about Go's impact",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate provided a high-level overview of their role in the Platform Rewrite project, but no specific details about Go's contribution or technical aspects were given. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_aaaa4f92f0",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it. I sat in on the design reviews and learned a lot, but I did not make the calls.",
+      "ts": 1793426904.346434,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_3484cca80a",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you elaborate on whether you were actively making technical decisions or solely observing during the design reviews for the Platform Rewrite project, and how that influenced the use of Go?",
+      "ts": 1793426923.26829,
+      "meta": {
+        "intent": "Clarify role in decision-making",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's claims about their role as Tech Lead are contradictory; they need to clarify if they made key decisions or were solely an observer. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_ccfa190b7f",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+      "ts": 1793426923.2707431,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_33e1b6ded7",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "You said you were the tech lead on the platform rewrite and headed the technical direction... yet in your resume summary you mentioned that during design reviews you 'sat in on the design reviews and learned a lot, but I did not make the calls.' Can you clarify if you were solely an observer or made key decisions during your time on the platform rewrite project?",
+      "ts": 1793426937.287773,
+      "meta": {
+        "intent": "Clarify role and decision-making responsibilities",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's prior answer was vague by using 'we' to describe their role, which could indicate a lack of clear ownership. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "contradiction_id": "x_3790da2d76"
+      }
+    },
+    {
+      "id": "t_3987c94e32",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+      "ts": 1793426937.291672,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_2f68d05552",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793426944.203574,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "To clarify if the candidate made key decisions or just observed during design reviews, as this could affect their role in the project. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_d7ba133345",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Sure, I'll give it a shot. Here's how I'd approach it:\n\n```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index\n```\n\nThis solution uses a dictionary to map each number to its index, allowing us to find the pair that sums up to the target with O(n) time complexity.",
+      "ts": 1793426949.5230029,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_47784885c8",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide an example of a design decision made during the Platform Rewrite project where you, as the tech lead, took ownership and influenced the use of Go specifically?",
+      "ts": 1793426965.418887,
+      "meta": {
+        "intent": "Clarify specific technical decisions made by candidate",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer about being solely an observer during design reviews contradicts their current statement as tech lead, warranting further clarification.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_ca92e4c67a",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it. I sat in on the design reviews and learned a lot, but I did not make the calls.",
+      "ts": 1793426965.4224808,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "Tech Lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Platform Rewrite - Tech Lead",
+      "source": "resume",
+      "id": "c_d23304ff72",
+      "turn_id": "t_f0355a9437",
+      "round": 0
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 9.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Platform Rewrite - team of 9",
+      "source": "resume",
+      "id": "c_6a24fda896",
+      "turn_id": "t_f0355a9437",
+      "round": 0
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 14.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Platform Rewrite - 14 months",
+      "source": "resume",
+      "id": "c_6fd59292af",
+      "turn_id": "t_f0355a9437",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Go",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Go (4y, advanced)",
+      "source": "resume",
+      "id": "c_1a2d9e3cc1",
+      "turn_id": "t_f0355a9437",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Go",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 4 years of Go",
+      "source": "resume",
+      "id": "c_46a9ca58f2",
+      "turn_id": "t_f0355a9437",
+      "round": 0
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Examine technical leadership and impact",
+      "confidence": 1.0,
+      "raw_span": "I was the tech lead on the platform rewrite.",
+      "source": "interview",
+      "id": "c_b678ccd258",
+      "turn_id": "t_a8ab5525f6",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "responsibility",
+      "object": "technical direction and managed delivery",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Examine technical leadership and impact",
+      "confidence": 1.0,
+      "raw_span": "headed the technical direction and managed the delivery across nine engineers.",
+      "source": "interview",
+      "id": "c_3daa3f0604",
+      "turn_id": "t_a8ab5525f6",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "principal engineer on platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Technical details about Go's impact",
+      "confidence": 1.0,
+      "raw_span": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it.",
+      "source": "interview",
+      "id": "c_43adfd4a30",
+      "turn_id": "t_aaaa4f92f0",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Technical details about Go's impact",
+      "confidence": 1.0,
+      "raw_span": "I sat in on the design reviews and learned a lot.",
+      "source": "interview",
+      "id": "c_2d59a64992",
+      "turn_id": "t_aaaa4f92f0",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "responsibility",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Technical details about Go's impact",
+      "confidence": 1.0,
+      "raw_span": "but I did not make the calls.",
+      "source": "interview",
+      "id": "c_94a787d3ee",
+      "turn_id": "t_aaaa4f92f0",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "sat in on the design reviews and learned",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 0,
+      "topic": "Technical details about Go's impact",
+      "confidence": 0.88,
+      "raw_span": "I sat in on the design reviews and learned a lot, but I did not make the calls.",
+      "source": "interview",
+      "id": "c_d7eb1ead06",
+      "turn_id": "t_aaaa4f92f0",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Clarify role in decision-making",
+      "confidence": 1.0,
+      "raw_span": "I was the tech lead on the platform rewrite.",
+      "source": "interview",
+      "id": "c_75e245af94",
+      "turn_id": "t_ccfa190b7f",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "responsibility",
+      "object": "technical direction and managed delivery",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role in decision-making",
+      "confidence": 1.0,
+      "raw_span": "headed the technical direction and managed the delivery across nine engineers.",
+      "source": "interview",
+      "id": "c_92cf2e762c",
+      "turn_id": "t_ccfa190b7f",
+      "round": 1
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Clarify role and decision-making responsibilities",
+      "confidence": 1.0,
+      "raw_span": "I was the tech lead on the platform rewrite.",
+      "source": "interview",
+      "id": "c_46e3fd8163",
+      "turn_id": "t_3987c94e32",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "responsibility",
+      "object": "technical direction and managed delivery",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role and decision-making responsibilities",
+      "confidence": 1.0,
+      "raw_span": "headed the technical direction and managed the delivery across nine engineers.",
+      "source": "interview",
+      "id": "c_a60dae7461",
+      "turn_id": "t_3987c94e32",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"def two_sum(nums: list[int], target: int) -> list[int]:\"",
+      "source": "interview",
+      "id": "c_9bb4c106d4",
+      "turn_id": "t_d7ba133345",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "used_tech",
+      "object": "dictionary",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"num_to_index = {}\"",
+      "source": "interview",
+      "id": "c_c475561f60",
+      "turn_id": "t_d7ba133345",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "used_tech",
+      "object": "enumerate",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.9,
+      "raw_span": "\"for index, num in enumerate(nums):\"",
+      "source": "interview",
+      "id": "c_2cdc410c6a",
+      "turn_id": "t_d7ba133345",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "principal engineer on platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify specific technical decisions made by candidate",
+      "confidence": 1.0,
+      "raw_span": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it.",
+      "source": "interview",
+      "id": "c_17ab8d5b43",
+      "turn_id": "t_ca92e4c67a",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "platform rewrite",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify specific technical decisions made by candidate",
+      "confidence": 1.0,
+      "raw_span": "I sat in on the design reviews and learned a lot.",
+      "source": "interview",
+      "id": "c_e12143a7b9",
+      "turn_id": "t_ca92e4c67a",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "outcome",
+      "object": "",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify specific technical decisions made by candidate",
+      "confidence": 1.0,
+      "raw_span": "but I did not make the calls.",
+      "source": "interview",
+      "id": "c_[phone redacted]",
+      "turn_id": "t_ca92e4c67a",
+      "round": 2
+    },
+    {
+      "subject": "platform rewrite",
+      "predicate": "role_on",
+      "object": "sat in on the design reviews and learned",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 0,
+      "topic": "Clarify specific technical decisions made by candidate",
+      "confidence": 0.88,
+      "raw_span": "I sat in on the design reviews and learned a lot, but I did not make the calls.",
+      "source": "interview",
+      "id": "c_96443efc64",
+      "turn_id": "t_ca92e4c67a",
+      "round": 2
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "c_d23304ff72",
+      "claim_b": "c_d7eb1ead06",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have been a Tech Lead on the platform rewrite project (CLAIM A) but also stated they only sat in on design reviews and learned without making calls (CLAIM B). These claims are contradictory as being a Tech Lead involves making decisions, not just observing.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "addressed",
+      "resolution": "Confronted by HR Panelist in round 2; candidate response recorded in turn t_3987c94e32.",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 4 on project 'platform rewrite' ('Tech Lead' = level 4 vs 'sat in on the design reviews and learned' = level 0)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Can you clarify if you were solely an observer or made key decisions during your time on the platform rewrite project?",
+        "claim_a": {
+          "id": "c_d23304ff72",
+          "round": 0,
+          "text": "platform rewrite / role_on / Tech Lead",
+          "span": "Resume: Platform Rewrite - Tech Lead"
+        },
+        "claim_b": {
+          "id": "c_d7eb1ead06",
+          "round": 1,
+          "text": "platform rewrite / role_on / sat in on the design reviews and learned",
+          "span": "I sat in on the design reviews and learned a lot, but I did not make the calls."
+        }
+      },
+      "id": "x_3790da2d76",
+      "claim_a_text": "platform rewrite / role_on / Tech Lead",
+      "claim_b_text": "platform rewrite / role_on / sat in on the design reviews and learned",
+      "claim_a_span": "Resume: Platform Rewrite - Tech Lead",
+      "claim_b_span": "I sat in on the design reviews and learned a lot, but I did not make the calls.",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "tc_5b28b84302",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.4279613494873047,
+      "ts": 1793426891.507425,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Platform Rewrite",
+            "role": "Tech Lead",
+            "team_size": 9,
+            "stack": "Go, gRPC",
+            "impact": "halved deploy time",
+            "months": 14
+          }
+        ],
+        "skills": [
+          {
+            "name": "Go",
+            "years": 4.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "Scaleworks",
+            "title": "Tech Lead",
+            "years": 3.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Kavya Reddy"
+          },
+          {
+            "k": "headline",
+            "v": "Engineering lead, 8 years"
+          },
+          {
+            "k": "total_years",
+            "v": "8"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_a63822adf4",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "agent": "tech",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.6222724914550781,
+      "ts": 1793426901.486461,
+      "args": {
+        "field": "skills"
+      },
+      "result": {
+        "skills": [
+          {
+            "name": "Go",
+            "years": 4.0,
+            "level": "advanced"
+          }
+        ],
+        "_sql_executed": "SELECT name,years,level FROM skills"
+      }
+    },
+    {
+      "id": "tc_9bdfcb9215",
+      "session_id": "s_73a65b8d73",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 516.9820785522461,
+      "ts": 1793426919.810451,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_fbc24d8c26",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 42.40012168884277,
+      "ts": 1793426949.568802,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 277
+      },
+      "result": {
+        "passed": 4,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              1,
+              2
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              2,
+              3
+            ],
+            "ok": true
+          }
+        ],
+        "verdict": "pass",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    },
+    {
+      "id": "tc_d0a5672fd6",
+      "session_id": "s_73a65b8d73",
+      "round": 2,
+      "agent": "moderator",
+      "tool": "export_report",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 4.203081130981445,
+      "ts": 1793427092.643141,
+      "args": {
+        "name": ""
+      },
+      "result": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_73a65b8d73.json",
+        "bytes": 94024
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_88e2d3ff84",
+    "session_id": "s_73a65b8d73",
+    "decision": "no_hire",
+    "confidence": 0.92,
+    "rationale": "The candidate provided clear technical contributions but faced significant contradictions regarding their role as a Tech Lead during the Platform Rewrite project. The Bar-Raiser detected high-severity contradictions (ownership_conflict) that were not addressed, leading to a no_hire recommendation with 97.5% confidence.",
+    "approval_status": "approve",
+    "approved_by": "eval-harness",
+    "approval_note": "automated evaluation run",
+    "approved_at": 1793427092.645702,
+    "ts": 1793427092.627933,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Candidate provided specific examples of their technical contributions during the Platform Rewrite project.",
+          "The candidate's code execution was correct and efficient, demonstrating understanding of the problem."
+        ],
+        "concerns": [
+          "There are contradictions in the candidate's account regarding their role on the platform rewrite project. The candidate claimed to be a Tech Lead but also stated they were only observing design review",
+          "The candidate did not take full ownership and accountability for their actions during the Platform Rewrite project."
+        ],
+        "evidence_claim_ids": [
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1",
+          "c_46a9ca58f2"
+        ],
+        "integrity_note": "The candidate provided inconsistent accounts of their role and actions during the Platform Rewrite project, raising concerns about their honesty and reliability.",
+        "summary": "Candidate demonstrated technical skills but failed to provide clear and consistent evidence of ownership and accountability for their contributions. This raises significant concerns about their integrity and ability to be fully responsible in a leadership position."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design": 1.0,
+          "tradeoffs_and_failure_modes": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity": 2.0
+        },
+        "overall": 2.8,
+        "recommendation": "no_hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Explain the use of Go in halving deploy time during Platform Rewrite project.",
+          "Demonstrated understanding of design decisions and ownership during technical direction.",
+          "Provided a clear implementation for the two_sum function with O(n) complexity."
+        ],
+        "concerns": [
+          "Conflicting statements about role on Platform Rewrite project (observed vs. made calls).",
+          "Limited depth in explaining trade-offs and failure modes related to Go use case."
+        ],
+        "evidence_claim_ids": [
+          "x_3790da2d76",
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1"
+        ],
+        "integrity_note": "The candidate provided clear and consistent explanations during the interview, though there were conflicting statements about their role in the Platform Rewrite project.",
+        "summary": "Candidate demonstrated technical depth but had inconsistent claims regarding their role. Strong coding ability and understanding of design decisions."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 2.0,
+          "raising_the_hiring_bar": 4.0
+        },
+        "overall": 2.5,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Provided a clear and concise example of the `two_sum` function implementation.",
+          "Calibrated their scope to include Go's contribution to deploy time reduction in the Platform Rewrite project."
+        ],
+        "concerns": [
+          "The candidate struggled with inconsistencies regarding their role during the Platform Rewrite project. They provided contradictory statements about whether they were a Tech Lead or an observer.",
+          "Their self-reported experience and technical skills did not align perfectly with the evidence from the resume database, raising doubts about the accuracy of their claims."
+        ],
+        "evidence_claim_ids": [
+          "x_3790da2d76",
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1"
+        ],
+        "integrity_note": "The candidate did not reconcile inconsistencies directly but instead provided explanations that were somewhat inconsistent.",
+        "summary": "While the candidate demonstrated technical skills and experience, their role claims during the Platform Rewrite project raised significant concerns about their integrity and consistency."
+      }
+    },
+    "evidence": [
+      "x_3790da2d76",
+      "c_d23304ff72",
+      "c_d7eb1ead06"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 2.4
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 2.8
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.5
+          }
+        },
+        "turns": [
+          {
+            "round": 1,
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 2.4,
+            "changed": false,
+            "change_reason": "The candidate's inconsistent account of their role during the Platform Rewrite project raises significant concerns about integrity and consistency.",
+            "argument": "While the candidate demonstrated technical skills, they provided contradictory statements regarding their role as a Tech Lead versus an observer in design reviews. This inconsistency undermines their credibility and suggests potential gaps in their professional history.",
+            "concession": "The candidate's self-reported experience aligns with the evidence from the resume database, but the contradictions regarding their role raise significant integrity concerns.",
+            "responds_to": [
+              "tech",
+              "bar"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "from": "hire",
+            "position": "no_hire",
+            "overall": 2.8,
+            "changed": true,
+            "change_reason": "Detected contradictions in the candidate's account regarding their role on the Platform Rewrite project, which outweighs any strengths demonstrated.",
+            "argument": "The candidate claimed to be a Tech Lead but also stated they were only observing design reviews and learning without making decisions. These claims are contradictory as being a Tech Lead involves making key decisions, not just observing. The evidence from CLAIM A (Tech Lead) is inconsistent with CLAIM B (observer). This raises significant concerns about the candidate's integrity and ability to be fully responsible in a leadership position.",
+            "concession": "The candidate provided clear examples of technical contributions, but the inconsistencies regarding their role during the Platform Rewrite project raise doubts about their consistency and reliability.",
+            "responds_to": [
+              "hr",
+              "bar"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 2.5,
+            "changed": false,
+            "change_reason": "Detected contradictions regarding role on Platform Rewrite project and inconsistent ownership claims.",
+            "argument": "The candidate's account of their role during the Platform Rewrite project is contradictory. They claimed to be a Tech Lead but also stated they only sat in on design reviews and learned without making calls. This raises significant concerns about their integrity and ability to take full responsibility for their contributions.",
+            "concession": "The candidate provided specific examples of technical contributions, mitigating the role inconsistency.",
+            "responds_to": [
+              "hr",
+              "tech"
+            ]
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 2.4
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 2.8
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.5
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_c140c6f2f9",
+      "session_id": "s_73a65b8d73",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793426890.5036979,
+      "payload": {
+        "session_id": "s_73a65b8d73",
+        "candidate": "Kavya Reddy",
+        "role": "Engineering Manager",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_24560ced71",
+      "session_id": "s_73a65b8d73",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793426890.509481,
+      "payload": {
+        "claims_seeded": 5,
+        "projects": [
+          "platform rewrite"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_4f2d12a6c6",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793426890.509879,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_a7308ba79d",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793426891.505179,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_e2b5a5dab5",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426891.506272,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 1.0
+      }
+    },
+    {
+      "id": "e_fffdf64b17",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793426894.520597,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.4,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Platform Rewrite\", \"role\": \"Tech Lead\", \"team_size\": 9, \"stack\": \"Go, gRPC\", \"impact\": \"halved deploy time\", \"months\": 14}], \"skills\": [{\"name\": \"Go\", \"years\": 4.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Scaleworks\", \"title\": \"Tech Lead\", \"years\": 3.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Kavya Reddy\"}, {\"k\": \"headline\", \"v\": \"Engineering lead, 8 years\"}, {\"k\": \"total_years\", \"v\": \"8\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_b054da22d0",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426894.5238771,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Could you provide more details about the 'Platform Rewrite' project where you were a Tech Lead and how Go contributed to halving deploy time?",
+        "intent": "Examine technical leadership and impact",
+        "action": "verify_with_tool",
+        "turn_id": "t_a393fffd8c",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_81eab97a9b",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426894.525743,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+        "turn_id": "t_a8ab5525f6",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_28548e49cb",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426899.164691,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_b678ccd258",
+            "text": "platform rewrite / role_on / platform rewrite",
+            "span": "I was the tech lead on the platform rewrite.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_3daa3f0604",
+            "text": "platform rewrite / responsibility / technical direction and managed delivery",
+            "span": "headed the technical direction and managed the delivery across nine engineers.",
+            "predicate": "responsibility",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 7
+      }
+    },
+    {
+      "id": "e_d85e05f4a3",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793426901.482777,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_88e88e4266",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426901.484721,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate provided a high-level overview of their role in the Platform Rewrite project, but no specific details about Go's contribution or technical aspects were given. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 2.32
+      }
+    },
+    {
+      "id": "e_9ad6b6ad05",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793426904.3417118,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "skills"
+        },
+        "latency_ms": 0.6,
+        "error": "",
+        "result_preview": "{\"skills\": [{\"name\": \"Go\", \"years\": 4.0, \"level\": \"advanced\"}], \"_sql_executed\": \"SELECT name,years,level FROM skills\"}"
+      }
+    },
+    {
+      "id": "e_386b1026d9",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426904.345088,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you walk me through how the use of Go specifically contributed to halving our deploy time in the Platform Rewrite project?",
+        "intent": "Technical details about Go's impact",
+        "action": "verify_with_tool",
+        "turn_id": "t_e122b74a44",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_31d2ed2eb4",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426904.347384,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it. I sat in on the design reviews and learned a lot, but I did not make the calls.",
+        "turn_id": "t_aaaa4f92f0",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_1a84e853ed",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426910.4781382,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_43adfd4a30",
+            "text": "platform rewrite / role_on / principal engineer on platform rewrite",
+            "span": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_2d59a64992",
+            "text": "self / used_tech / platform rewrite",
+            "span": "I sat in on the design reviews and learned a lot.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_94a787d3ee",
+            "text": "platform rewrite / responsibility",
+            "span": "but I did not make the calls.",
+            "predicate": "responsibility",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_d7eb1ead06",
+            "text": "platform rewrite / role_on / sat in on the design reviews and learned",
+            "span": "I sat in on the design reviews and learned a lot, but I did not make the calls.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 11
+      }
+    },
+    {
+      "id": "e_379edcff04",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793426915.033889,
+      "payload": {
+        "round": 1,
+        "id": "x_3790da2d76",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have been a Tech Lead on the platform rewrite project (CLAIM A) but also stated they only sat in on design reviews and learned without making calls (CLAIM B). These claims are contradictory as being a Tech Lead involves making decisions, not just observing.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 4 on project 'platform rewrite' ('Tech Lead' = level 4 vs 'sat in on the design reviews and learned' = level 0)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Can you clarify if you were solely an observer or made key decisions during your time on the platform rewrite project?",
+          "claim_a": {
+            "id": "c_d23304ff72",
+            "round": 0,
+            "text": "platform rewrite / role_on / Tech Lead",
+            "span": "Resume: Platform Rewrite - Tech Lead"
+          },
+          "claim_b": {
+            "id": "c_d7eb1ead06",
+            "round": 1,
+            "text": "platform rewrite / role_on / sat in on the design reviews and learned",
+            "span": "I sat in on the design reviews and learned a lot, but I did not make the calls."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_704a763bf6",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793426915.034925,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_3790da2d76"
+      }
+    },
+    {
+      "id": "e_6c133a26fa",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793426919.289248,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "challenge_contradiction",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_7dc2978a95",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426919.292146,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's claims about their role as Tech Lead are contradictory; they need to clarify if they made key decisions or were solely an observer. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 4.26
+      }
+    },
+    {
+      "id": "e_e88656b068",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793426923.265928,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 517.0,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_26d39ee2d3",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426923.269501,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you elaborate on whether you were actively making technical decisions or solely observing during the design reviews for the Platform Rewrite project, and how that influenced the use of Go?",
+        "intent": "Clarify role in decision-making",
+        "action": "verify_with_tool",
+        "turn_id": "t_3484cca80a",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_553dd084c1",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426923.271698,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+        "turn_id": "t_ccfa190b7f",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_87e0087d38",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426927.273036,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_75e245af94",
+            "text": "platform rewrite / role_on / platform rewrite",
+            "span": "I was the tech lead on the platform rewrite.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_92cf2e762c",
+            "text": "platform rewrite / responsibility / technical direction and managed delivery",
+            "span": "headed the technical direction and managed the delivery across nine engineers.",
+            "predicate": "responsibility",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 13
+      }
+    },
+    {
+      "id": "e_[phone redacted]",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793426927.274484,
+      "payload": {
+        "round": 1,
+        "claims": 13,
+        "contradictions": 1
+      }
+    },
+    {
+      "id": "e_ea25eedb9b",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793426927.275365,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_7ac8165ae7",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793426931.8841548,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "probe_prior",
+        "to_action": "challenge_contradiction",
+        "reason": "P1 protocol: an unaddressed contradiction outranks opening a new topic"
+      }
+    },
+    {
+      "id": "e_846ae69b6f",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426931.88664,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "challenge_contradiction",
+        "reasoning": "The candidate's prior answer was vague by using 'we' to describe their role, which could indicate a lack of clear ownership. [P1 protocol: an unaddressed contradiction outranks opening a new topic]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "x_3790da2d76",
+        "latency_s": 4.61
+      }
+    },
+    {
+      "id": "e_706cc10184",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426937.2902222,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "You said you were the tech lead on the platform rewrite and headed the technical direction... yet in your resume summary you mentioned that during design reviews you 'sat in on the design reviews and learned a lot, but I did not make the calls.' Can you clarify if you were solely an observer or made key decisions during your time on the platform rewrite project?",
+        "intent": "Clarify role and decision-making responsibilities",
+        "action": "challenge_contradiction",
+        "turn_id": "t_33e1b6ded7",
+        "is_challenge": true,
+        "contradiction_id": "x_3790da2d76"
+      }
+    },
+    {
+      "id": "e_4c1d54b639",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426937.292625,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I was the tech lead on the platform rewrite. I headed the technical direction and managed the delivery across nine engineers.",
+        "turn_id": "t_3987c94e32",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_814e073dad",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426941.263031,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_46e3fd8163",
+            "text": "platform rewrite / role_on / platform rewrite",
+            "span": "I was the tech lead on the platform rewrite.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_a60dae7461",
+            "text": "platform rewrite / responsibility / technical direction and managed delivery",
+            "span": "headed the technical direction and managed the delivery across nine engineers.",
+            "predicate": "responsibility",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 15
+      }
+    },
+    {
+      "id": "e_eb81ea6160",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "contradiction_addressed",
+      "ts": 1793426941.265236,
+      "payload": {
+        "round": 2,
+        "id": "x_3790da2d76",
+        "by": "hr",
+        "answer_turn": "t_3987c94e32"
+      }
+    },
+    {
+      "id": "e_f4477dd670",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793426944.199541,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "request_code",
+        "reason": "P3 protocol: technical screen requires a live coding task by round 2"
+      }
+    },
+    {
+      "id": "e_463b0b11e9",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426944.202392,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "To clarify if the candidate made key decisions or just observed during design reviews, as this could affect their role in the project. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 2.94
+      }
+    },
+    {
+      "id": "e_02c7b69ae2",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426944.204614,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_2f68d05552",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_dd83b64e1a",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426949.5251882,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "Sure, I'll give it a shot. Here's how I'd approach it:\n\n```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index\n```\n\nThis solution uses a dictionary to map each number to its index, allowing us to find the pair that sums up to the target with O(n) time complexity.",
+        "turn_id": "t_d7ba133345",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_22e8780b21",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793426949.569771,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 42.4,
+        "result": {
+          "passed": 4,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                1,
+                2
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                2,
+                3
+              ],
+              "ok": true
+            }
+          ],
+          "verdict": "pass",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums: list[int], target: int) -> list[int]:\n    num_to_index = {}\n    for index, num in enumerate(nums):\n        complement = target - num\n        if complement in num_to_index:\n            return [num_to_index[complement], index]\n        num_to_index[num] = index\n"
+      }
+    },
+    {
+      "id": "e_e3c23816cb",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426956.6479099,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_9bb4c106d4",
+            "text": "platform rewrite / used_tech / Python",
+            "span": "\"def two_sum(nums: list[int], target: int) -> list[int]:\"",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_c475561f60",
+            "text": "platform rewrite / used_tech / dictionary",
+            "span": "\"num_to_index = {}\"",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_2cdc410c6a",
+            "text": "platform rewrite / used_tech / enumerate",
+            "span": "\"for index, num in enumerate(nums):\"",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          }
+        ],
+        "ledger_size": 18
+      }
+    },
+    {
+      "id": "e_bb1c322f54",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793426960.611063,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer about being solely an observer during design reviews contradicts their current statement as tech lead, warranting further clarification.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 3.96
+      }
+    },
+    {
+      "id": "e_fb777aea17",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793426965.421094,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide an example of a design decision made during the Platform Rewrite project where you, as the tech lead, took ownership and influenced the use of Go specifically?",
+        "intent": "Clarify specific technical decisions made by candidate",
+        "action": "probe_prior",
+        "turn_id": "t_47784885c8",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_843e52d667",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793426965.4233751,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it. I sat in on the design reviews and learned a lot, but I did not make the calls.",
+        "turn_id": "t_ca92e4c67a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_d155650c21",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793426970.414351,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_17ab8d5b43",
+            "text": "platform rewrite / role_on / principal engineer on platform rewrite",
+            "span": "To be straight with you, on the platform rewrite I was shadowing the principal engineer for most of it.",
+            "predicate": "role_on",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_e12143a7b9",
+            "text": "self / used_tech / platform rewrite",
+            "span": "I sat in on the design reviews and learned a lot.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_[phone redacted]",
+            "text": "platform rewrite / outcome",
+            "span": "but I did not make the calls.",
+            "predicate": "outcome",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_96443efc64",
+            "text": "platform rewrite / role_on / sat in on the design reviews and learned",
+            "span": "I sat in on the design reviews and learned a lot, but I did not make the calls.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 22
+      }
+    },
+    {
+      "id": "e_5aaea5c14f",
+      "session_id": "s_73a65b8d73",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793426970.4162729,
+      "payload": {
+        "round": 2,
+        "claims": 22,
+        "contradictions": 1
+      }
+    },
+    {
+      "id": "e_97aad1a70e",
+      "session_id": "s_73a65b8d73",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793426970.4186082,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_d5f6086b85",
+      "session_id": "s_73a65b8d73",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793426995.086506,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Candidate provided specific examples of their technical contributions during the Platform Rewrite project.",
+          "The candidate's code execution was correct and efficient, demonstrating understanding of the problem."
+        ],
+        "concerns": [
+          "There are contradictions in the candidate's account regarding their role on the platform rewrite project. The candidate claimed to be a Tech Lead but also stated they were only observing design review",
+          "The candidate did not take full ownership and accountability for their actions during the Platform Rewrite project."
+        ],
+        "evidence_claim_ids": [
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1",
+          "c_46a9ca58f2"
+        ],
+        "integrity_note": "The candidate provided inconsistent accounts of their role and actions during the Platform Rewrite project, raising concerns about their honesty and reliability.",
+        "summary": "Candidate demonstrated technical skills but failed to provide clear and consistent evidence of ownership and accountability for their contributions. This raises significant concerns about their integrity and ability to be fully responsible in a leadership position."
+      }
+    },
+    {
+      "id": "e_aaee2e9e03",
+      "session_id": "s_73a65b8d73",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793427021.837218,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design": 1.0,
+          "tradeoffs_and_failure_modes": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Explain the use of Go in halving deploy time during Platform Rewrite project.",
+          "Demonstrated understanding of design decisions and ownership during technical direction.",
+          "Provided a clear implementation for the two_sum function with O(n) complexity."
+        ],
+        "concerns": [
+          "Conflicting statements about role on Platform Rewrite project (observed vs. made calls).",
+          "Limited depth in explaining trade-offs and failure modes related to Go use case."
+        ],
+        "evidence_claim_ids": [
+          "x_3790da2d76",
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1"
+        ],
+        "integrity_note": "The candidate provided clear and consistent explanations during the interview, though there were conflicting statements about their role in the Platform Rewrite project.",
+        "summary": "Candidate demonstrated technical depth but had inconsistent claims regarding their role. Strong coding ability and understanding of design decisions."
+      }
+    },
+    {
+      "id": "e_69f541866c",
+      "session_id": "s_73a65b8d73",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793427048.222616,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 2.0,
+          "raising_the_hiring_bar": 4.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Provided a clear and concise example of the `two_sum` function implementation.",
+          "Calibrated their scope to include Go's contribution to deploy time reduction in the Platform Rewrite project."
+        ],
+        "concerns": [
+          "The candidate struggled with inconsistencies regarding their role during the Platform Rewrite project. They provided contradictory statements about whether they were a Tech Lead or an observer.",
+          "Their self-reported experience and technical skills did not align perfectly with the evidence from the resume database, raising doubts about the accuracy of their claims."
+        ],
+        "evidence_claim_ids": [
+          "x_3790da2d76",
+          "c_d23304ff72",
+          "c_6a24fda896",
+          "c_6fd59292af",
+          "c_1a2d9e3cc1"
+        ],
+        "integrity_note": "The candidate did not reconcile inconsistencies directly but instead provided explanations that were somewhat inconsistent.",
+        "summary": "While the candidate demonstrated technical skills and experience, their role claims during the Platform Rewrite project raised significant concerns about their integrity and consistency."
+      }
+    },
+    {
+      "id": "e_5515d60ae4",
+      "session_id": "s_73a65b8d73",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793427048.2269812,
+      "payload": {
+        "initial_positions": {
+          "hr": "no_hire",
+          "tech": "hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_6faf684cbc",
+      "session_id": "s_73a65b8d73",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427056.9202209,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 2.4,
+        "changed": false,
+        "change_reason": "The candidate's inconsistent account of their role during the Platform Rewrite project raises significant concerns about integrity and consistency.",
+        "argument": "While the candidate demonstrated technical skills, they provided contradictory statements regarding their role as a Tech Lead versus an observer in design reviews. This inconsistency undermines their credibility and suggests potential gaps in their professional history.",
+        "concession": "The candidate's self-reported experience aligns with the evidence from the resume database, but the contradictions regarding their role raise significant integrity concerns.",
+        "responds_to": [
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_8c2e282f21",
+      "session_id": "s_73a65b8d73",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427069.0339332,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "from": "hire",
+        "position": "no_hire",
+        "overall": 2.8,
+        "changed": true,
+        "change_reason": "Detected contradictions in the candidate's account regarding their role on the Platform Rewrite project, which outweighs any strengths demonstrated.",
+        "argument": "The candidate claimed to be a Tech Lead but also stated they were only observing design reviews and learning without making decisions. These claims are contradictory as being a Tech Lead involves making key decisions, not just observing. The evidence from CLAIM A (Tech Lead) is inconsistent with CLAIM B (observer). This raises significant concerns about the candidate's integrity and ability to be fully responsible in a leadership position.",
+        "concession": "The candidate provided clear examples of technical contributions, but the inconsistencies regarding their role during the Platform Rewrite project raise doubts about their consistency and reliability.",
+        "responds_to": [
+          "hr",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_09cde85248",
+      "session_id": "s_73a65b8d73",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793427078.89822,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 2.5,
+        "changed": false,
+        "change_reason": "Detected contradictions regarding role on Platform Rewrite project and inconsistent ownership claims.",
+        "argument": "The candidate's account of their role during the Platform Rewrite project is contradictory. They claimed to be a Tech Lead but also stated they only sat in on design reviews and learned without making calls. This raises significant concerns about their integrity and ability to take full responsibility for their contributions.",
+        "concession": "The candidate provided specific examples of technical contributions, mitigating the role inconsistency.",
+        "responds_to": [
+          "hr",
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_b16b01ca80",
+      "session_id": "s_73a65b8d73",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793427078.900643,
+      "payload": {
+        "round": 2,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_6e05800316",
+      "session_id": "s_73a65b8d73",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793427078.90208,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 0,
+        "weighted_score": 2.58,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 1 unresolved high-severity contradiction(s) (ownership_conflict). The Bar-Raiser's integrity objection is dispositive."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 0.4,
+        "panel_agreement": 0.9,
+        "confidence": 0.92,
+        "votes": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_d42afa4594",
+      "session_id": "s_73a65b8d73",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793427092.631403,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.92,
+        "rationale": "The candidate provided clear technical contributions but faced significant contradictions regarding their role as a Tech Lead during the Platform Rewrite project. The Bar-Raiser detected high-severity contradictions (ownership_conflict) that were not addressed, leading to a no_hire recommendation with 97.5% confidence.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 1.0,
+              "collaboration & conflict": 2.0,
+              "communication clarity": 3.0,
+              "motivation & role fit": 2.0,
+              "handling failure and feedback": 1.0
+            },
+            "overall": 2.4,
+            "recommendation": "no_hire",
+            "confidence": 0.95,
+            "strengths": [
+              "Candidate provided specific examples of their technical contributions during the Platform Rewrite project.",
+              "The candidate's code execution was correct and efficient, demonstrating understanding of the problem."
+            ],
+            "concerns": [
+              "There are contradictions in the candidate's account regarding their role on the platform rewrite project. The candidate claimed to be a Tech Lead but also stated they were only observing design review",
+              "The candidate did not take full ownership and accountability for their actions during the Platform Rewrite project."
+            ],
+            "evidence_claim_ids": [
+              "c_d23304ff72",
+              "c_6a24fda896",
+              "c_6fd59292af",
+              "c_1a2d9e3cc1",
+              "c_46a9ca58f2"
+            ],
+            "integrity_note": "The candidate provided inconsistent accounts of their role and actions during the Platform Rewrite project, raising concerns about their honesty and reliability.",
+            "summary": "Candidate demonstrated technical skills but failed to provide clear and consistent evidence of ownership and accountability for their contributions. This raises significant concerns about their integrity and ability to be fully responsible in a leadership position."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design": 1.0,
+              "tradeoffs_and_failure_modes": 2.0,
+              "data_modelling_correctness": 3.0,
+              "coding_ability": 4.0,
+              "operational_maturity": 2.0
+            },
+            "overall": 2.8,
+            "recommendation": "no_hire",
+            "confidence": 1.0,
+            "strengths": [
+              "Explain the use of Go in halving deploy time during Platform Rewrite project.",
+              "Demonstrated understanding of design decisions and ownership during technical direction.",
+              "Provided a clear implementation for the two_sum function with O(n) complexity."
+            ],
+            "concerns": [
+              "Conflicting statements about role on Platform Rewrite project (observed vs. made calls).",
+              "Limited depth in explaining trade-offs and failure modes related to Go use case."
+            ],
+            "evidence_claim_ids": [
+              "x_3790da2d76",
+              "c_d23304ff72",
+              "c_6a24fda896",
+              "c_6fd59292af",
+              "c_1a2d9e3cc1"
+            ],
+            "integrity_note": "The candidate provided clear and consistent explanations during the interview, though there were conflicting statements about their role in the Platform Rewrite project.",
+            "summary": "Candidate demonstrated technical depth but had inconsistent claims regarding their role. Strong coding ability and understanding of design decisions."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 1.0,
+              "claim_consistency_integrity": 2.0,
+              "scope_and_impact_calibration": 3.0,
+              "ambiguity_handling": 2.0,
+              "raising_the_hiring_bar": 4.0
+            },
+            "overall": 2.5,
+            "recommendation": "no_hire",
+            "confidence": 0.85,
+            "strengths": [
+              "Provided a clear and concise example of the `two_sum` function implementation.",
+              "Calibrated their scope to include Go's contribution to deploy time reduction in the Platform Rewrite project."
+            ],
+            "concerns": [
+              "The candidate struggled with inconsistencies regarding their role during the Platform Rewrite project. They provided contradictory statements about whether they were a Tech Lead or an observer.",
+              "Their self-reported experience and technical skills did not align perfectly with the evidence from the resume database, raising doubts about the accuracy of their claims."
+            ],
+            "evidence_claim_ids": [
+              "x_3790da2d76",
+              "c_d23304ff72",
+              "c_6a24fda896",
+              "c_6fd59292af",
+              "c_1a2d9e3cc1"
+            ],
+            "integrity_note": "The candidate did not reconcile inconsistencies directly but instead provided explanations that were somewhat inconsistent.",
+            "summary": "While the candidate demonstrated technical skills and experience, their role claims during the Platform Rewrite project raised significant concerns about their integrity and consistency."
+          }
+        },
+        "evidence": [
+          "x_3790da2d76",
+          "c_d23304ff72",
+          "c_d7eb1ead06"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 2.4
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 2.8
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.5
+              }
+            },
+            "turns": [
+              {
+                "round": 1,
+                "agent": "hr",
+                "display": "HR Panelist",
+                "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 2.4,
+                "changed": false,
+                "change_reason": "The candidate's inconsistent account of their role during the Platform Rewrite project raises significant concerns about integrity and consistency.",
+                "argument": "While the candidate demonstrated technical skills, they provided contradictory statements regarding their role as a Tech Lead versus an observer in design reviews. This inconsistency undermines their credibility and suggests potential gaps in their professional history.",
+                "concession": "The candidate's self-reported experience aligns with the evidence from the resume database, but the contradictions regarding their role raise significant integrity concerns.",
+                "responds_to": [
+                  "tech",
+                  "bar"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "tech",
+                "display": "Technical Panelist",
+                "emoji": "\ud83d\udee0\ufe0f",
+                "from": "hire",
+                "position": "no_hire",
+                "overall": 2.8,
+                "changed": true,
+                "change_reason": "Detected contradictions in the candidate's account regarding their role on the Platform Rewrite project, which outweighs any strengths demonstrated.",
+                "argument": "The candidate claimed to be a Tech Lead but also stated they were only observing design reviews and learning without making decisions. These claims are contradictory as being a Tech Lead involves making key decisions, not just observing. The evidence from CLAIM A (Tech Lead) is inconsistent with CLAIM B (observer). This raises significant concerns about the candidate's integrity and ability to be fully responsible in a leadership position.",
+                "concession": "The candidate provided clear examples of technical contributions, but the inconsistencies regarding their role during the Platform Rewrite project raise doubts about their consistency and reliability.",
+                "responds_to": [
+                  "hr",
+                  "bar"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "bar",
+                "display": "Bar-Raiser",
+                "emoji": "\ud83c\udfaf",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 2.5,
+                "changed": false,
+                "change_reason": "Detected contradictions regarding role on Platform Rewrite project and inconsistent ownership claims.",
+                "argument": "The candidate's account of their role during the Platform Rewrite project is contradictory. They claimed to be a Tech Lead but also stated they only sat in on design reviews and learned without making calls. This raises significant concerns about their integrity and ability to take full responsibility for their contributions.",
+                "concession": "The candidate provided specific examples of technical contributions, mitigating the role inconsistency.",
+                "responds_to": [
+                  "hr",
+                  "tech"
+                ]
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 2.4
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 2.8
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.5
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 0,
+          "weighted_score": 2.58,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 1 unresolved high-severity contradiction(s) (ownership_conflict). The Bar-Raiser's integrity objection is dispositive."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 0.4,
+          "panel_agreement": 0.9,
+          "confidence": 0.92,
+          "votes": {
+            "hr": "no_hire",
+            "tech": "no_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "Consistency of evidence regarding role and contributions",
+          "Integrity concerns due to contradictory statements",
+          "Bar-Raiser's veto with unresolved contradictions",
+          "Technical skills demonstrated"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_88e2d3ff84",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_1c80fa9e87",
+      "session_id": "s_73a65b8d73",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793427092.6335402,
+      "payload": {
+        "verdict_id": "v_88e2d3ff84",
+        "decision": "no_hire",
+        "confidence": 0.92,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "e_f083c9179a",
+      "session_id": "s_73a65b8d73",
+      "phase": "export",
+      "kind": "report_written",
+      "ts": 1793427092.644276,
+      "payload": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_73a65b8d73.json",
+        "ok": true,
+        "bytes": 94024
+      }
+    },
+    {
+      "id": "e_d53da9439e",
+      "session_id": "s_73a65b8d73",
+      "phase": "approval",
+      "kind": "approval_recorded",
+      "ts": 1793427092.647131,
+      "payload": {
+        "decision": "approve",
+        "by": "eval-harness",
+        "note": "automated evaluation run",
+        "saved": true
+      }
+    }
+  ],
+  "_pii_redaction": {
+    "categories_found": [
+      "email",
+      "phone"
+    ],
+    "applied": true
+  }
+}

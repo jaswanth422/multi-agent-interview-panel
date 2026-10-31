@@ -1,0 +1,2795 @@
+{
+  "session_id": "s_9643277d37",
+  "generated_at": 1793428208.893197,
+  "wall_clock_s": 425.9,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 26,
+    "failures": 0,
+    "json_repairs": 1,
+    "prompt_tokens": 25781,
+    "completion_tokens": 5348,
+    "total_latency_s": 425.01,
+    "mean_latency_s": 16.347,
+    "calls_by_label": {
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "candidate_improvise": 1,
+      "debate_bar": 1,
+      "debate_hr": 1,
+      "debate_tech": 1,
+      "extract_claims": 7,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 5,
+    "distinct_tools": 4,
+    "success_rate": 0.8,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 2,
+        "ok": 2,
+        "mean_ms": 1.0
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 489.9
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 41.9
+      },
+      "export_report": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 4.6
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 6,
+    "llm_confirmed": 0,
+    "llm_rejected": 0,
+    "prefilter_rejected": 6,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 26,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 0
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 4,
+      "detail": {
+        "resume_db": {
+          "calls": 2,
+          "ok": 2,
+          "mean_ms": 1.0
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 489.9
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 41.9
+        },
+        "export_report": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 4.6
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 31,
+      "turns_persisted": 13,
+      "events_persisted": 51,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "addressed_in_interview": 0,
+    "cross_round": 0
+  },
+  "session": {
+    "id": "s_9643277d37",
+    "candidate_name": "Meera Krishnan",
+    "role": "Senior Data Engineer",
+    "seniority": "senior",
+    "status": "completed",
+    "created_at": 1793427782.949731,
+    "updated_at": 1793428208.889615,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Meera Krishnan",
+      "headline": "Senior data engineer, 9 years",
+      "total_years": 9,
+      "github": "",
+      "projects": [
+        {
+          "name": "Warehouse Migration",
+          "role": "Lead",
+          "team_size": 7,
+          "months": 24,
+          "stack": [
+            "Snowflake",
+            "dbt",
+            "Airflow"
+          ],
+          "impact": "query cost down 45%"
+        }
+      ],
+      "skills": [
+        {
+          "name": "SQL",
+          "years": 9,
+          "level": "expert"
+        },
+        {
+          "name": "dbt",
+          "years": 4,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "Insightly",
+          "title": "Lead Data Engineer",
+          "years": 5
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_f1cb15e378",
+      "session_id": "s_9643277d37",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Meera Krishnan\", \"headline\": \"Senior data engineer, 9 years\", \"total_years\": 9, \"github\": \"\", \"projects\": [{\"name\": \"Warehouse Migration\", \"role\": \"Lead\", \"team_size\": 7, \"months\": 24, \"stack\": [\"Snowflake\", \"dbt\", \"Airflow\"], \"impact\": \"query cost down 45%\"}], \"skills\": [{\"name\": \"SQL\", \"years\": 9, \"level\": \"expert\"}, {\"name\": \"dbt\", \"years\": 4, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Insightly\", \"title\": \"Lead Data Engineer\", \"years\": 5}]}",
+      "ts": 1793427782.959399,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_059ce6b816",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide an example of a time when you led a project involving multiple tools like Snowflake, dbt, and Airflow?",
+      "ts": 1793427789.509197,
+      "meta": {
+        "intent": "Understand your leadership in tool integration and impact",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_41eed2dc81",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+      "ts": 1793427789.511522,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_9773fcc1c3",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you elaborate on your role in dbt models during the warehouse migration project and how you ensured ownership over them?",
+      "ts": 1793427831.7796621,
+      "meta": {
+        "intent": "Clarify role and leadership in dbt models",
+        "action": "verify_with_tool",
+        "reasoning": "To ensure clarity on the candidate's role and ownership in dbt models, probing their answer is crucial. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_f2bc46f2de",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer. I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+      "ts": 1793427831.7822158,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_fddf9035c0",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide more specific examples of dbt models you created during the warehouse migration project and how they contributed to improving query performance?",
+      "ts": 1793427884.252767,
+      "meta": {
+        "intent": "Test understanding and detail in dbt model contributions",
+        "action": "verify_with_tool",
+        "reasoning": "To ensure the candidate's claim about dbt models is accurate and consistent with other statements. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_90622f50d9",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+      "ts": 1793427884.2564301,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_84e7f00d1d",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Could you provide one specific example of a dbt model you created during the warehouse migration project and explain how it improved query performance?",
+      "ts": 1793427948.589961,
+      "meta": {
+        "intent": "Explain contribution to query optimization",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague about specific dbt models and their contributions, prompting a more detailed inquiry.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_39a7816df7",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+      "ts": 1793427948.593835,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_1223f6b2d4",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793427991.427957,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "The candidate has provided some context about their role in dbt models but lacks specific code examples to demonstrate ownership and improvements.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_b5448553ba",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Sure, here's a simple and efficient approach using a dictionary to keep track of the values we've seen so far:\n\n```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    index_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in index_map:\n            return [index_map[complement], i]\n        index_map[num] = i\n```\n\nThis solution iterates through the list once (O(n) time complexity), and uses a dictionary to store each number's index, which allows us to find the complement of each number quickly.",
+      "ts": 1793428004.397493,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_11be4873de",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide one specific dbt model created during the warehouse migration project and explain in more detail how its implementation differed from other models you worked on?",
+      "ts": 1793428068.549201,
+      "meta": {
+        "intent": "Test specificity and depth of understanding",
+        "action": "probe_prior",
+        "reasoning": "The candidate's answer was vague about specific dbt models created during the warehouse migration project.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_d31d2ba70f",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer. I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+      "ts": 1793428068.5530229,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "warehouse migration",
+      "predicate": "role_on",
+      "object": "Lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Warehouse Migration - Lead",
+      "source": "resume",
+      "id": "c_767a91a669",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 7.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Warehouse Migration - team of 7",
+      "source": "resume",
+      "id": "c_aab5e418e3",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 24.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Warehouse Migration - 24 months",
+      "source": "resume",
+      "id": "c_d37c2d5160",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "SQL",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: SQL (9y, expert)",
+      "source": "resume",
+      "id": "c_5b9e150153",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "SQL",
+      "polarity": 1,
+      "value_num": 9.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 9 years of SQL",
+      "source": "resume",
+      "id": "c_2f3a6656ba",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: dbt (4y, advanced)",
+      "source": "resume",
+      "id": "c_b4497a73aa",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "dbt",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 4 years of dbt",
+      "source": "resume",
+      "id": "c_fdb6be037f",
+      "turn_id": "t_f1cb15e378",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand your leadership in tool integration and impact",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_6a2282fda9",
+      "turn_id": "t_41eed2dc81",
+      "round": 1
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "role_on",
+      "object": "lead for the second year",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Understand your leadership in tool integration and impact",
+      "confidence": 0.8,
+      "raw_span": "then took over as lead for the second year once the original lead moved teams",
+      "source": "interview",
+      "id": "c_a41cae5d83",
+      "turn_id": "t_41eed2dc81",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand your leadership in tool integration and impact",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_46921aa613",
+      "turn_id": "t_41eed2dc81",
+      "round": 1
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "outcome",
+      "object": "whole migration plan",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand your leadership in tool integration and impact",
+      "confidence": 0.8,
+      "raw_span": "By the end I owned the whole migration plan.",
+      "source": "interview",
+      "id": "c_6036d13a9a",
+      "turn_id": "t_41eed2dc81",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "clustering",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role and leadership in dbt models",
+      "confidence": 0.8,
+      "raw_span": "cut query cost about 45 percent, mostly by clustering the big fact tables",
+      "source": "interview",
+      "id": "c_b93583efbc",
+      "turn_id": "t_f2bc46f2de",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "full table scans",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role and leadership in dbt models",
+      "confidence": 0.8,
+      "raw_span": "mostly by clustering the big fact tables and killing full table scans in the BI layer",
+      "source": "interview",
+      "id": "c_f11a1c7de3",
+      "turn_id": "t_f2bc46f2de",
+      "round": 1
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "outcome",
+      "object": "45 percent reduction",
+      "polarity": 1,
+      "value_num": 45.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "Clarify role and leadership in dbt models",
+      "confidence": 0.8,
+      "raw_span": "cut query cost about 45 percent",
+      "source": "interview",
+      "id": "c_57e65dcaf1",
+      "turn_id": "t_f2bc46f2de",
+      "round": 1
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "role_on",
+      "object": "cost attribution dashboard builder and tester",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "Clarify role and leadership in dbt models",
+      "confidence": 0.8,
+      "raw_span": "I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+      "source": "interview",
+      "id": "c_11b74ae428",
+      "turn_id": "t_f2bc46f2de",
+      "round": 1
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "responsibility",
+      "object": "writing and testing individual models",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role and leadership in dbt models",
+      "confidence": 0.8,
+      "raw_span": "and early on I was the one writing and testing the individual models.",
+      "source": "interview",
+      "id": "c_129d42043d",
+      "turn_id": "t_f2bc46f2de",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test understanding and detail in dbt model contributions",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_b51f587fc8",
+      "turn_id": "t_90622f50d9",
+      "round": 1
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "role_on",
+      "object": "lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Test understanding and detail in dbt model contributions",
+      "confidence": 0.8,
+      "raw_span": "then took over as lead for the second year once the original lead moved teams",
+      "source": "interview",
+      "id": "c_a839294d1b",
+      "turn_id": "t_90622f50d9",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test understanding and detail in dbt model contributions",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_[phone redacted]",
+      "turn_id": "t_90622f50d9",
+      "round": 1
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "outcome",
+      "object": "whole migration plan",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test understanding and detail in dbt model contributions",
+      "confidence": 0.8,
+      "raw_span": "By the end I owned the whole migration plan",
+      "source": "interview",
+      "id": "c_e87520510f",
+      "turn_id": "t_90622f50d9",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Explain contribution to query optimization",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_816931d84a",
+      "turn_id": "t_39a7816df7",
+      "round": 2
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "role_on",
+      "object": "lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Explain contribution to query optimization",
+      "confidence": 0.8,
+      "raw_span": "then took over as lead for the second year once the original lead moved teams",
+      "source": "interview",
+      "id": "c_a1a9a2ee38",
+      "turn_id": "t_39a7816df7",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "dbt models",
+      "polarity": -1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Explain contribution to query optimization",
+      "confidence": 0.8,
+      "raw_span": "I started as a contributor writing dbt models",
+      "source": "interview",
+      "id": "c_9e0938923c",
+      "turn_id": "t_39a7816df7",
+      "round": 2
+    },
+    {
+      "subject": "warehouse migration",
+      "predicate": "outcome",
+      "object": "whole migration plan",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Explain contribution to query optimization",
+      "confidence": 0.8,
+      "raw_span": "By the end I owned the whole migration plan",
+      "source": "interview",
+      "id": "c_32f9f6b4ea",
+      "turn_id": "t_39a7816df7",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 1.0,
+      "raw_span": "\"Sure, here's a simple and efficient approach using a dictionary to keep track of the values we've seen so far:\\n```python\\ndef two_sum(nums: list[int], target: int) -> list[int]:\\n    index_map = {}\\n    for i, num in enumerate(nums):\\n        complement = target - num\\n        if complement in index_map:\\n            return [index_map[complement], i]\\n        index_map[num] = i\\n```",
+      "source": "interview",
+      "id": "c_736aa7c056",
+      "turn_id": "t_b5448553ba",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "clustering",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+      "source": "interview",
+      "id": "c_af617d3f75",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "full table scans",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+      "source": "interview",
+      "id": "c_536af41239",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "modeling",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+      "source": "interview",
+      "id": "c_[phone redacted]",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "outcome",
+      "object": "45 percent reduction in query cost",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+      "source": "interview",
+      "id": "c_eb6f7e47fb",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "role_on",
+      "object": "cost attribution dashboard",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "I built the cost attribution dashboard that let us find them",
+      "source": "interview",
+      "id": "c_264e4357b9",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    },
+    {
+      "subject": "cost attribution dashboard",
+      "predicate": "timeline",
+      "object": "early on",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test specificity and depth of understanding",
+      "confidence": 0.8,
+      "raw_span": "I was the one writing and testing the individual models, early on",
+      "source": "interview",
+      "id": "c_d79f89c771",
+      "turn_id": "t_d31d2ba70f",
+      "round": 2
+    }
+  ],
+  "contradictions": [],
+  "tool_calls": [
+    {
+      "id": "tc_a93e75ffaa",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.6620883941650391,
+      "ts": 1793427785.4155369,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Warehouse Migration",
+            "role": "Lead",
+            "team_size": 7,
+            "stack": "Snowflake, dbt, Airflow",
+            "impact": "query cost down 45%",
+            "months": 24
+          }
+        ],
+        "skills": [
+          {
+            "name": "SQL",
+            "years": 9.0,
+            "level": "expert"
+          },
+          {
+            "name": "dbt",
+            "years": 4.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "Insightly",
+            "title": "Lead Data Engineer",
+            "years": 5.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Meera Krishnan"
+          },
+          {
+            "k": "headline",
+            "v": "Senior data engineer, 9 years"
+          },
+          {
+            "k": "total_years",
+            "v": "9"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_7f8790495b",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "agent": "tech",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 1.252889633178711,
+      "ts": 1793427817.798157,
+      "args": {
+        "field": "skills"
+      },
+      "result": {
+        "skills": [
+          {
+            "name": "SQL",
+            "years": 9.0,
+            "level": "expert"
+          },
+          {
+            "name": "dbt",
+            "years": 4.0,
+            "level": "advanced"
+          }
+        ],
+        "_sql_executed": "SELECT name,years,level FROM skills"
+      }
+    },
+    {
+      "id": "tc_4f6ba5f03c",
+      "session_id": "s_9643277d37",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 489.93921279907227,
+      "ts": 1793427868.5353322,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_edd340574e",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 41.940927505493164,
+      "ts": 1793428004.4429498,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 253
+      },
+      "result": {
+        "passed": 4,
+        "total": 4,
+        "cases": [
+          {
+            "args": [
+              [
+                2,
+                7,
+                11,
+                15
+              ],
+              9
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                2,
+                4
+              ],
+              6
+            ],
+            "expect": [
+              1,
+              2
+            ],
+            "got": [
+              1,
+              2
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                3,
+                3
+              ],
+              6
+            ],
+            "expect": [
+              0,
+              1
+            ],
+            "got": [
+              0,
+              1
+            ],
+            "ok": true
+          },
+          {
+            "args": [
+              [
+                -1,
+                -2,
+                -3,
+                -4
+              ],
+              -7
+            ],
+            "expect": [
+              2,
+              3
+            ],
+            "got": [
+              2,
+              3
+            ],
+            "ok": true
+          }
+        ],
+        "verdict": "pass",
+        "task": "two_sum",
+        "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+      }
+    },
+    {
+      "id": "tc_9972d9ab57",
+      "session_id": "s_9643277d37",
+      "round": 2,
+      "agent": "moderator",
+      "tool": "export_report",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 4.5871734619140625,
+      "ts": 1793428208.885064,
+      "args": {
+        "name": ""
+      },
+      "result": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_9643277d37.json",
+        "bytes": 93949
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_a338b759b0",
+    "session_id": "s_9643277d37",
+    "decision": "no_hire",
+    "confidence": 0.91,
+    "rationale": "The panel reached a consensus that no candidate should be hired based on unanimous recommendation from both HR and Technical Panelists. The HR Panelist initially recommended hiring but changed their position due to concerns about specific examples of dbt model creation during the warehouse migration project, as well as inconsistencies in the candidate's account across different interview rounds. The Technical Panelist also changed their initial recommendation to no hire, citing gaps and inconsistencies in the candidate's explanations regarding their role on the team and timeline details. Despite strong technical skills demonstrated by specific examples of dbt models and SQL, both panelists felt that more specific evidence was needed for a full understanding of the candidate's experience and reliability.",
+    "approval_status": "approve",
+    "approved_by": "eval-harness",
+    "approval_note": "automated evaluation run",
+    "approved_at": 1793428208.887928,
+    "ts": 1793428208.869247,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.0,
+          "collaboration & conflict": 3.0,
+          "communication clarity": 5.0,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated ownership of dbt models during warehouse migration project.",
+          "Provided specific examples of dbt model creation and impact on query performance.",
+          "Detailed explanation of cost attribution dashboard role and contributions."
+        ],
+        "concerns": [
+          "Limited evidence of collaboration and conflict resolution skills in the provided transcript.",
+          "Some inconsistencies in the candidate's account across different interview rounds."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "The candidate provided consistent and specific examples across different interview rounds, indicating a high level of integrity.",
+        "summary": "Strong candidate with clear ownership and accountability for dbt models. Needs further evidence of collaboration and conflict resolution skills."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.2,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Demonstrated experience with dbt models and their impact on query performance.",
+          "Detailed explanation of the cost attribution dashboard's role in identifying full table scans.",
+          "Provided a clear implementation for the two_sum function, showing understanding of O(n) complexity."
+        ],
+        "concerns": [
+          "Limited examples provided about specific dbt models created during the warehouse migration project.",
+          "Some inconsistencies and gaps in the candidate\u2019s explanation regarding their role on the team and timeline details."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "The candidate provided clear and consistent answers, but some details were vague or inconsistent.",
+        "summary": "Strong technical skills with dbt models and SQL, but limited specific examples of their implementation during the warehouse migration project."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.2,
+        "recommendation": "no_hire",
+        "confidence": 0.75,
+        "strengths": [
+          "Demonstrated experience with dbt models and SQL.",
+          "Detailed explanation of cost attribution dashboard improvements."
+        ],
+        "concerns": [
+          "Inconsistent claims about the role in dbt model creation.",
+          "Lack of specific examples or code implementation during the warehouse migration project."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "Failed to provide specific examples of dbt models and inconsistencies in role descriptions.",
+        "summary": "The candidate has relevant experience but lacks specificity and consistency, raising doubts about their depth under pressure."
+      }
+    },
+    "evidence": [
+      "c_767a91a669",
+      "c_aab5e418e3",
+      "c_d37c2d5160",
+      "c_5b9e150153",
+      "c_2f3a6656ba"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 3.0
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 3.2
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 3.2
+          }
+        },
+        "turns": [
+          {
+            "round": 1,
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "from": "hire",
+            "position": "no_hire",
+            "overall": 3.0,
+            "changed": true,
+            "change_reason": "The other panelists raise valid concerns about limited specific examples of dbt model creation and inconsistencies in the candidate's account, which I cannot address with my evidence.",
+            "argument": "Despite strong technical skills as evidenced by their detailed explanations of dbt models and SQL, the candidate lacks specific examples from their own experience during the warehouse migration project. This raises questions about their depth under pressure.",
+            "concession": "Strong candidates with clear ownership but need more specific evidence.",
+            "responds_to": [
+              "tech",
+              "bar"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "from": "hire",
+            "position": "no_hire",
+            "overall": 3.2,
+            "changed": true,
+            "change_reason": "The other panelists highlighted inconsistencies and gaps in the candidate's account, particularly regarding their role on the team and timeline details. The technical strengths are strong but need to be backed by more specific examples and consistent timelines.",
+            "argument": "Despite strong technical skills, the candidate provided vague or inconsistent answers for certain aspects of their experience. This raises doubts about their depth under pressure and the reliability of their claims in a professional setting.",
+            "concession": "While specific examples are lacking, clear technical understanding is evident.",
+            "responds_to": [
+              "tech"
+            ]
+          },
+          {
+            "round": 1,
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "from": "no_hire",
+            "position": "no_hire",
+            "overall": 3.2,
+            "changed": false,
+            "change_reason": "The candidate's concerns about inconsistencies and gaps in their explanations are valid but do not outweigh the strengths demonstrated, particularly in dbt models and SQL.",
+            "argument": "While the candidate shows strong technical skills with dbt models and SQL, they lack specific examples of their implementation during the warehouse migration project. This raises doubts about their depth under pressure and consistency in their claims.",
+            "concession": "Detailed explanations are more important than specific examples for this role.",
+            "responds_to": [
+              "tech"
+            ]
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 3.0
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 3.2
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 3.2
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_7011e2bcfe",
+      "session_id": "s_9643277d37",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793427782.958538,
+      "payload": {
+        "session_id": "s_9643277d37",
+        "candidate": "Meera Krishnan",
+        "role": "Senior Data Engineer",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_a3eda2daad",
+      "session_id": "s_9643277d37",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793427782.964969,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "warehouse migration"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_4c1c11d8e7",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793427782.9661639,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_2eb3c07155",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427785.409722,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_6c2339baa4",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427785.413964,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 2.45
+      }
+    },
+    {
+      "id": "e_3a02544c6b",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427789.507301,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.7,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Warehouse Migration\", \"role\": \"Lead\", \"team_size\": 7, \"stack\": \"Snowflake, dbt, Airflow\", \"impact\": \"query cost down 45%\", \"months\": 24}], \"skills\": [{\"name\": \"SQL\", \"years\": 9.0, \"level\": \"expert\"}, {\"name\": \"dbt\", \"years\": 4.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Insightly\", \"title\": \"Lead Data Engineer\", \"years\": 5.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Meera Krishnan\"}, {\"k\": \"headline\", \"v\": \"Senior data engineer, 9 years\"}, {\"k\": \"total_years\", \"v\": \"9\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_7b0f60124e",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427789.51053,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide an example of a time when you led a project involving multiple tools like Snowflake, dbt, and Airflow?",
+        "intent": "Understand your leadership in tool integration and impact",
+        "action": "verify_with_tool",
+        "turn_id": "t_059ce6b816",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_13d0a2c605",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427789.512291,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+        "turn_id": "t_41eed2dc81",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_e6e744443b",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427797.68215,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_6a2282fda9",
+            "text": "self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_a41cae5d83",
+            "text": "warehouse migration / role_on / lead for the second year",
+            "span": "then took over as lead for the second year once the original lead moved teams",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_46921aa613",
+            "text": "NOT self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_6036d13a9a",
+            "text": "warehouse migration / outcome / whole migration plan",
+            "span": "By the end I owned the whole migration plan.",
+            "predicate": "outcome",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 11
+      }
+    },
+    {
+      "id": "e_2c587082c1",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427817.792184,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_efcab22fc8",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427817.794531,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "To ensure clarity on the candidate's role and ownership in dbt models, probing their answer is crucial. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 20.11
+      }
+    },
+    {
+      "id": "e_7db7ac29a4",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427831.777718,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "skills"
+        },
+        "latency_ms": 1.3,
+        "error": "",
+        "result_preview": "{\"skills\": [{\"name\": \"SQL\", \"years\": 9.0, \"level\": \"expert\"}, {\"name\": \"dbt\", \"years\": 4.0, \"level\": \"advanced\"}], \"_sql_executed\": \"SELECT name,years,level FROM skills\"}"
+      }
+    },
+    {
+      "id": "e_192e39721b",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427831.780928,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you elaborate on your role in dbt models during the warehouse migration project and how you ensured ownership over them?",
+        "intent": "Clarify role and leadership in dbt models",
+        "action": "verify_with_tool",
+        "turn_id": "t_9773fcc1c3",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_6cdd79919d",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427831.783071,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer. I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+        "turn_id": "t_f2bc46f2de",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_ae27a711c0",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427854.531862,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_b93583efbc",
+            "text": "self / used_tech / clustering",
+            "span": "cut query cost about 45 percent, mostly by clustering the big fact tables",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_f11a1c7de3",
+            "text": "self / used_tech / full table scans",
+            "span": "mostly by clustering the big fact tables and killing full table scans in the BI layer",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_57e65dcaf1",
+            "text": "cost attribution dashboard / outcome / 45 percent reduction / 45%",
+            "span": "cut query cost about 45 percent",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_11b74ae428",
+            "text": "cost attribution dashboard / role_on / cost attribution dashboard builder and tester",
+            "span": "I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_129d42043d",
+            "text": "cost attribution dashboard / responsibility / writing and testing individual models",
+            "span": "and early on I was the one writing and testing the individual models.",
+            "predicate": "responsibility",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 16
+      }
+    },
+    {
+      "id": "e_581ebce103",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793427868.042117,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_a52f7f89ab",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427868.044329,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "To ensure the candidate's claim about dbt models is accurate and consistent with other statements. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 13.51
+      }
+    },
+    {
+      "id": "e_cd38a1212b",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793427884.2501912,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 489.9,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact [email redacted] (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_69af1d666f",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427884.254529,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide more specific examples of dbt models you created during the warehouse migration project and how they contributed to improving query performance?",
+        "intent": "Test understanding and detail in dbt model contributions",
+        "action": "verify_with_tool",
+        "turn_id": "t_fddf9035c0",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_0b28dd85de",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427884.2575428,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+        "turn_id": "t_90622f50d9",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_636e52d6ab",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427916.700713,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_b51f587fc8",
+            "text": "self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_a839294d1b",
+            "text": "warehouse migration / role_on / lead",
+            "span": "then took over as lead for the second year once the original lead moved teams",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_[phone redacted]",
+            "text": "NOT self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_e87520510f",
+            "text": "warehouse migration / outcome / whole migration plan",
+            "span": "By the end I owned the whole migration plan",
+            "predicate": "outcome",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 20
+      }
+    },
+    {
+      "id": "e_d3242d87de",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793427916.702294,
+      "payload": {
+        "round": 1,
+        "claims": 20,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_eced604c7a",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793427916.703732,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_294f0d5f4c",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427928.2235038,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "probe_prior",
+        "reasoning": "The candidate's prior answer was vague about specific dbt models and their contributions, prompting a more detailed inquiry.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 11.52
+      }
+    },
+    {
+      "id": "e_c2d05763f1",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427948.591768,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Could you provide one specific example of a dbt model you created during the warehouse migration project and explain how it improved query performance?",
+        "intent": "Explain contribution to query optimization",
+        "action": "probe_prior",
+        "turn_id": "t_84e7f00d1d",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_ecb9f7fdca",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793427948.594889,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "The warehouse migration ran about two years. I started as a contributor writing dbt models, then took over as lead for the second year once the original lead moved teams. By the end I owned the whole migration plan.",
+        "turn_id": "t_39a7816df7",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_ccd9478d84",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793427968.068338,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_816931d84a",
+            "text": "self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_a1a9a2ee38",
+            "text": "warehouse migration / role_on / lead",
+            "span": "then took over as lead for the second year once the original lead moved teams",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_9e0938923c",
+            "text": "NOT self / used_tech / dbt models",
+            "span": "I started as a contributor writing dbt models",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_32f9f6b4ea",
+            "text": "warehouse migration / outcome / whole migration plan",
+            "span": "By the end I owned the whole migration plan",
+            "predicate": "outcome",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 24
+      }
+    },
+    {
+      "id": "e_608e6dbfe0",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793427991.425241,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "The candidate has provided some context about their role in dbt models but lacks specific code examples to demonstrate ownership and improvements.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 23.36
+      }
+    },
+    {
+      "id": "e_c3b4cfde8c",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793427991.428996,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_1223f6b2d4",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_fef220628a",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428004.399603,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "Sure, here's a simple and efficient approach using a dictionary to keep track of the values we've seen so far:\n\n```python\ndef two_sum(nums: list[int], target: int) -> list[int]:\n    index_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in index_map:\n            return [index_map[complement], i]\n        index_map[num] = i\n```\n\nThis solution iterates through the list once (O(n) time complexity), and uses a dictionary to store each number's index, which allows us to find the complement of each number quickly.",
+        "turn_id": "t_b5448553ba",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_f9de10ed5f",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793428004.44397,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 41.9,
+        "result": {
+          "passed": 4,
+          "total": 4,
+          "cases": [
+            {
+              "args": [
+                [
+                  2,
+                  7,
+                  11,
+                  15
+                ],
+                9
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  2,
+                  4
+                ],
+                6
+              ],
+              "expect": [
+                1,
+                2
+              ],
+              "got": [
+                1,
+                2
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  3,
+                  3
+                ],
+                6
+              ],
+              "expect": [
+                0,
+                1
+              ],
+              "got": [
+                0,
+                1
+              ],
+              "ok": true
+            },
+            {
+              "args": [
+                [
+                  -1,
+                  -2,
+                  -3,
+                  -4
+                ],
+                -7
+              ],
+              "expect": [
+                2,
+                3
+              ],
+              "got": [
+                2,
+                3
+              ],
+              "ok": true
+            }
+          ],
+          "verdict": "pass",
+          "task": "two_sum",
+          "prompt": "Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n)."
+        },
+        "code_excerpt": "def two_sum(nums: list[int], target: int) -> list[int]:\n    index_map = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in index_map:\n            return [index_map[complement], i]\n        index_map[num] = i\n"
+      }
+    },
+    {
+      "id": "e_53184231b6",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428053.626965,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 1,
+        "claims": [
+          {
+            "id": "c_736aa7c056",
+            "text": "self / used_tech / Python",
+            "span": "\"Sure, here's a simple and efficient approach using a dictionary to keep track of the values we've seen so far:\\n```python\\ndef two_sum(nums",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          }
+        ],
+        "ledger_size": 25
+      }
+    },
+    {
+      "id": "e_16520381b8",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428063.973971,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's answer was vague about specific dbt models created during the warehouse migration project.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 10.34
+      }
+    },
+    {
+      "id": "e_1bf17d3098",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428068.551488,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide one specific dbt model created during the warehouse migration project and explain in more detail how its implementation differed from other models you worked on?",
+        "intent": "Test specificity and depth of understanding",
+        "action": "probe_prior",
+        "turn_id": "t_11be4873de",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_d317a70662",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428068.554056,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer. I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+        "turn_id": "t_d31d2ba70f",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_93f7cc179d",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428080.762939,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 6,
+        "claims": [
+          {
+            "id": "c_af617d3f75",
+            "text": "self / used_tech / clustering",
+            "span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_536af41239",
+            "text": "self / used_tech / full table scans",
+            "span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_[phone redacted]",
+            "text": "self / used_tech / modeling",
+            "span": "I built the cost attribution dashboard that let us find them, and early on I was the one writing and testing the individual models.",
+            "predicate": "used_tech",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_eb6f7e47fb",
+            "text": "cost attribution dashboard / outcome / 45 percent reduction in query cost",
+            "span": "We cut query cost about 45 percent, mostly by clustering the big fact tables and killing full table scans in the BI layer.",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_264e4357b9",
+            "text": "cost attribution dashboard / role_on / cost attribution dashboard",
+            "span": "I built the cost attribution dashboard that let us find them",
+            "predicate": "role_on",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_d79f89c771",
+            "text": "cost attribution dashboard / timeline / early on",
+            "span": "I was the one writing and testing the individual models, early on",
+            "predicate": "timeline",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 31
+      }
+    },
+    {
+      "id": "e_ad83b0f84f",
+      "session_id": "s_9643277d37",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793428080.7657092,
+      "payload": {
+        "round": 2,
+        "claims": 31,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_5ffcf9709f",
+      "session_id": "s_9643277d37",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793428080.767692,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_868dd98053",
+      "session_id": "s_9643277d37",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428105.380434,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 4.0,
+          "collaboration & conflict": 3.0,
+          "communication clarity": 5.0,
+          "motivation & role fit": 4.0,
+          "handling failure and feedback": 2.0
+        },
+        "overall": 3.67,
+        "recommendation": "hire",
+        "confidence": 0.95,
+        "strengths": [
+          "Demonstrated ownership of dbt models during warehouse migration project.",
+          "Provided specific examples of dbt model creation and impact on query performance.",
+          "Detailed explanation of cost attribution dashboard role and contributions."
+        ],
+        "concerns": [
+          "Limited evidence of collaboration and conflict resolution skills in the provided transcript.",
+          "Some inconsistencies in the candidate's account across different interview rounds."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "The candidate provided consistent and specific examples across different interview rounds, indicating a high level of integrity.",
+        "summary": "Strong candidate with clear ownership and accountability for dbt models. Needs further evidence of collaboration and conflict resolution skills."
+      }
+    },
+    {
+      "id": "e_83329846a3",
+      "session_id": "s_9643277d37",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428131.0903199,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 3.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 2.0
+        },
+        "overall": 3.0,
+        "recommendation": "hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Demonstrated experience with dbt models and their impact on query performance.",
+          "Detailed explanation of the cost attribution dashboard's role in identifying full table scans.",
+          "Provided a clear implementation for the two_sum function, showing understanding of O(n) complexity."
+        ],
+        "concerns": [
+          "Limited examples provided about specific dbt models created during the warehouse migration project.",
+          "Some inconsistencies and gaps in the candidate\u2019s explanation regarding their role on the team and timeline details."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "The candidate provided clear and consistent answers, but some details were vague or inconsistent.",
+        "summary": "Strong technical skills with dbt models and SQL, but limited specific examples of their implementation during the warehouse migration project."
+      }
+    },
+    {
+      "id": "e_eccbbc15e1",
+      "session_id": "s_9643277d37",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428163.02795,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 4.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 3.0,
+          "ambiguity_handling": 3.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 0.75,
+        "strengths": [
+          "Demonstrated experience with dbt models and SQL.",
+          "Detailed explanation of cost attribution dashboard improvements."
+        ],
+        "concerns": [
+          "Inconsistent claims about the role in dbt model creation.",
+          "Lack of specific examples or code implementation during the warehouse migration project."
+        ],
+        "evidence_claim_ids": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "integrity_note": "Failed to provide specific examples of dbt models and inconsistencies in role descriptions.",
+        "summary": "The candidate has relevant experience but lacks specificity and consistency, raising doubts about their depth under pressure."
+      }
+    },
+    {
+      "id": "e_3531a1b054",
+      "session_id": "s_9643277d37",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793428163.0304031,
+      "payload": {
+        "initial_positions": {
+          "hr": "hire",
+          "tech": "hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_93fe4ede33",
+      "session_id": "s_9643277d37",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793428178.3442829,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "from": "hire",
+        "position": "no_hire",
+        "overall": 3.0,
+        "changed": true,
+        "change_reason": "The other panelists raise valid concerns about limited specific examples of dbt model creation and inconsistencies in the candidate's account, which I cannot address with my evidence.",
+        "argument": "Despite strong technical skills as evidenced by their detailed explanations of dbt models and SQL, the candidate lacks specific examples from their own experience during the warehouse migration project. This raises questions about their depth under pressure.",
+        "concession": "Strong candidates with clear ownership but need more specific evidence.",
+        "responds_to": [
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_06c675261b",
+      "session_id": "s_9643277d37",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793428185.7811,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "from": "hire",
+        "position": "no_hire",
+        "overall": 3.2,
+        "changed": true,
+        "change_reason": "The other panelists highlighted inconsistencies and gaps in the candidate's account, particularly regarding their role on the team and timeline details. The technical strengths are strong but need to be backed by more specific examples and consistent timelines.",
+        "argument": "Despite strong technical skills, the candidate provided vague or inconsistent answers for certain aspects of their experience. This raises doubts about their depth under pressure and the reliability of their claims in a professional setting.",
+        "concession": "While specific examples are lacking, clear technical understanding is evident.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_30f1aeab7f",
+      "session_id": "s_9643277d37",
+      "phase": "debate",
+      "kind": "debate_turn",
+      "ts": 1793428193.9793868,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "from": "no_hire",
+        "position": "no_hire",
+        "overall": 3.2,
+        "changed": false,
+        "change_reason": "The candidate's concerns about inconsistencies and gaps in their explanations are valid but do not outweigh the strengths demonstrated, particularly in dbt models and SQL.",
+        "argument": "While the candidate shows strong technical skills with dbt models and SQL, they lack specific examples of their implementation during the warehouse migration project. This raises doubts about their depth under pressure and consistency in their claims.",
+        "concession": "Detailed explanations are more important than specific examples for this role.",
+        "responds_to": [
+          "tech"
+        ]
+      }
+    },
+    {
+      "id": "e_55434a8891",
+      "session_id": "s_9643277d37",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793428193.98177,
+      "payload": {
+        "round": 2,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_bee56898eb",
+      "session_id": "s_9643277d37",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793428193.982859,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 0,
+        "weighted_score": 3.15,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R4 Unanimous: no panelist recommended hire."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 0.2,
+        "panel_agreement": 0.95,
+        "confidence": 0.91,
+        "votes": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_5048e3fc21",
+      "session_id": "s_9643277d37",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793428208.872225,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.91,
+        "rationale": "The panel reached a consensus that no candidate should be hired based on unanimous recommendation from both HR and Technical Panelists. The HR Panelist initially recommended hiring but changed their position due to concerns about specific examples of dbt model creation during the warehouse migration project, as well as inconsistencies in the candidate's account across different interview rounds. The Technical Panelist also changed their initial recommendation to no hire, citing gaps and inconsistencies in the candidate's explanations regarding their role on the team and timeline details. Despite strong technical skills demonstrated by specific examples of dbt models and SQL, both panelists felt that more specific evidence was needed for a full understanding of the candidate's experience and reliability.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 4.0,
+              "collaboration & conflict": 3.0,
+              "communication clarity": 5.0,
+              "motivation & role fit": 4.0,
+              "handling failure and feedback": 2.0
+            },
+            "overall": 3.0,
+            "recommendation": "no_hire",
+            "confidence": 0.95,
+            "strengths": [
+              "Demonstrated ownership of dbt models during warehouse migration project.",
+              "Provided specific examples of dbt model creation and impact on query performance.",
+              "Detailed explanation of cost attribution dashboard role and contributions."
+            ],
+            "concerns": [
+              "Limited evidence of collaboration and conflict resolution skills in the provided transcript.",
+              "Some inconsistencies in the candidate's account across different interview rounds."
+            ],
+            "evidence_claim_ids": [
+              "c_767a91a669",
+              "c_aab5e418e3",
+              "c_d37c2d5160",
+              "c_5b9e150153",
+              "c_2f3a6656ba"
+            ],
+            "integrity_note": "The candidate provided consistent and specific examples across different interview rounds, indicating a high level of integrity.",
+            "summary": "Strong candidate with clear ownership and accountability for dbt models. Needs further evidence of collaboration and conflict resolution skills."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 3.0,
+              "debugging_root_cause_depth": 2.0,
+              "data_modelling_correctness": 1.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 2.0
+            },
+            "overall": 3.2,
+            "recommendation": "no_hire",
+            "confidence": 0.85,
+            "strengths": [
+              "Demonstrated experience with dbt models and their impact on query performance.",
+              "Detailed explanation of the cost attribution dashboard's role in identifying full table scans.",
+              "Provided a clear implementation for the two_sum function, showing understanding of O(n) complexity."
+            ],
+            "concerns": [
+              "Limited examples provided about specific dbt models created during the warehouse migration project.",
+              "Some inconsistencies and gaps in the candidate\u2019s explanation regarding their role on the team and timeline details."
+            ],
+            "evidence_claim_ids": [
+              "c_767a91a669",
+              "c_aab5e418e3",
+              "c_d37c2d5160",
+              "c_5b9e150153",
+              "c_2f3a6656ba"
+            ],
+            "integrity_note": "The candidate provided clear and consistent answers, but some details were vague or inconsistent.",
+            "summary": "Strong technical skills with dbt models and SQL, but limited specific examples of their implementation during the warehouse migration project."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 4.0,
+              "claim_consistency_and_integrity": 2.0,
+              "scope_and_impact_calibration": 3.0,
+              "ambiguity_handling": 3.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 3.2,
+            "recommendation": "no_hire",
+            "confidence": 0.75,
+            "strengths": [
+              "Demonstrated experience with dbt models and SQL.",
+              "Detailed explanation of cost attribution dashboard improvements."
+            ],
+            "concerns": [
+              "Inconsistent claims about the role in dbt model creation.",
+              "Lack of specific examples or code implementation during the warehouse migration project."
+            ],
+            "evidence_claim_ids": [
+              "c_767a91a669",
+              "c_aab5e418e3",
+              "c_d37c2d5160",
+              "c_5b9e150153",
+              "c_2f3a6656ba"
+            ],
+            "integrity_note": "Failed to provide specific examples of dbt models and inconsistencies in role descriptions.",
+            "summary": "The candidate has relevant experience but lacks specificity and consistency, raising doubts about their depth under pressure."
+          }
+        },
+        "evidence": [
+          "c_767a91a669",
+          "c_aab5e418e3",
+          "c_d37c2d5160",
+          "c_5b9e150153",
+          "c_2f3a6656ba"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 3.0
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 3.2
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 3.2
+              }
+            },
+            "turns": [
+              {
+                "round": 1,
+                "agent": "hr",
+                "display": "HR Panelist",
+                "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+                "from": "hire",
+                "position": "no_hire",
+                "overall": 3.0,
+                "changed": true,
+                "change_reason": "The other panelists raise valid concerns about limited specific examples of dbt model creation and inconsistencies in the candidate's account, which I cannot address with my evidence.",
+                "argument": "Despite strong technical skills as evidenced by their detailed explanations of dbt models and SQL, the candidate lacks specific examples from their own experience during the warehouse migration project. This raises questions about their depth under pressure.",
+                "concession": "Strong candidates with clear ownership but need more specific evidence.",
+                "responds_to": [
+                  "tech",
+                  "bar"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "tech",
+                "display": "Technical Panelist",
+                "emoji": "\ud83d\udee0\ufe0f",
+                "from": "hire",
+                "position": "no_hire",
+                "overall": 3.2,
+                "changed": true,
+                "change_reason": "The other panelists highlighted inconsistencies and gaps in the candidate's account, particularly regarding their role on the team and timeline details. The technical strengths are strong but need to be backed by more specific examples and consistent timelines.",
+                "argument": "Despite strong technical skills, the candidate provided vague or inconsistent answers for certain aspects of their experience. This raises doubts about their depth under pressure and the reliability of their claims in a professional setting.",
+                "concession": "While specific examples are lacking, clear technical understanding is evident.",
+                "responds_to": [
+                  "tech"
+                ]
+              },
+              {
+                "round": 1,
+                "agent": "bar",
+                "display": "Bar-Raiser",
+                "emoji": "\ud83c\udfaf",
+                "from": "no_hire",
+                "position": "no_hire",
+                "overall": 3.2,
+                "changed": false,
+                "change_reason": "The candidate's concerns about inconsistencies and gaps in their explanations are valid but do not outweigh the strengths demonstrated, particularly in dbt models and SQL.",
+                "argument": "While the candidate shows strong technical skills with dbt models and SQL, they lack specific examples of their implementation during the warehouse migration project. This raises doubts about their depth under pressure and consistency in their claims.",
+                "concession": "Detailed explanations are more important than specific examples for this role.",
+                "responds_to": [
+                  "tech"
+                ]
+              }
+            ]
+          },
+          {
+            "round": 2,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 3.0
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 3.2
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 3.2
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 0,
+          "weighted_score": 3.15,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R4 Unanimous: no panelist recommended hire."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 0.2,
+          "panel_agreement": 0.95,
+          "confidence": 0.91,
+          "votes": {
+            "hr": "no_hire",
+            "tech": "no_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "specific examples of dbt model creation and consistency in explanations",
+          "inconsistencies in the candidate's account across different interview rounds",
+          "gaps in the candidate's role on the team and timeline details"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_a338b759b0",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_dfe36067b3",
+      "session_id": "s_9643277d37",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793428208.8750699,
+      "payload": {
+        "verdict_id": "v_a338b759b0",
+        "decision": "no_hire",
+        "confidence": 0.91,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "e_275567a995",
+      "session_id": "s_9643277d37",
+      "phase": "export",
+      "kind": "report_written",
+      "ts": 1793428208.886513,
+      "payload": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_9643277d37.json",
+        "ok": true,
+        "bytes": 93949
+      }
+    },
+    {
+      "id": "e_7a54104d34",
+      "session_id": "s_9643277d37",
+      "phase": "approval",
+      "kind": "approval_recorded",
+      "ts": 1793428208.890465,
+      "payload": {
+        "decision": "approve",
+        "by": "eval-harness",
+        "note": "automated evaluation run",
+        "saved": true
+      }
+    }
+  ],
+  "_pii_redaction": {
+    "categories_found": [
+      "email",
+      "phone"
+    ],
+    "applied": true
+  }
+}

@@ -21,6 +21,7 @@ import json
 from typing import Any
 
 from .agents import BY_KEY, Panelist
+from .config import SETTINGS
 from .llm import LLM
 
 REC_VALUE = {"strong_no_hire": 1.0, "no_hire": 2.0, "hire": 4.0, "strong_hire": 5.0}
@@ -127,7 +128,7 @@ Debate round {rnd}. Respond."""
                       "argument": "(no argument generated)", "concession": ""}
                 d = self.llm.json(
                     DEBATE_SYSTEM.format(display=p.spec.display), user,
-                    label=f"debate_{k}", max_tokens=420, temperature=0.4, fallback=fb)
+                    label=f"debate_{k}", max_tokens=SETTINGS.tok(420), temperature=0.4, fallback=fb)
                 if not isinstance(d, dict):
                     d = fb
 
@@ -299,7 +300,7 @@ Write the decision record."""
               "key_evidence": [], "decision_drivers": cons["rules_fired"][:3],
               "risk_if_hired": "", "recommended_next_step": ""}
         d = self.llm.json(MODERATOR_SYSTEM, user, label="moderator_narrate",
-                          max_tokens=760, temperature=0.3, fallback=fb)
+                          max_tokens=SETTINGS.tok(760), temperature=0.3, fallback=fb)
         if not isinstance(d, dict):
             d = fb
 

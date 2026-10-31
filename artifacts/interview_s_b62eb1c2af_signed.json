@@ -1,0 +1,4316 @@
+{
+  "session_id": "s_b62eb1c2af",
+  "generated_at": 1793423624.6016488,
+  "wall_clock_s": 215.6,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 47,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 30886,
+    "completion_tokens": 5621,
+    "total_latency_s": 215.36,
+    "mean_latency_s": 4.582,
+    "calls_by_label": {
+      "adjudicate_contradiction": 25,
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 2,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 1,
+    "distinct_tools": 1,
+    "success_rate": 1.0,
+    "handled_failures": 0,
+    "by_tool": {
+      "export_report": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 5.7
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 25,
+    "llm_confirmed": 25,
+    "llm_rejected": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 47,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 25
+    },
+    "tools": {
+      "satisfied": false,
+      "distinct_tools_used": 1,
+      "detail": {
+        "export_report": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 5.7
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 32,
+      "turns_persisted": 13,
+      "events_persisted": 91,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 0
+    }
+  },
+  "contradiction_summary": {
+    "total": 25,
+    "by_severity": {
+      "high": 25
+    },
+    "by_type": {
+      "numeric_conflict": 13,
+      "ownership_conflict": 12
+    },
+    "addressed_in_interview": 0,
+    "cross_round": 16
+  },
+  "session": {
+    "id": "s_b62eb1c2af",
+    "candidate_name": "Rahul Menon",
+    "role": "Senior Backend Engineer",
+    "seniority": "senior",
+    "status": "completed",
+    "created_at": 1793423408.968439,
+    "updated_at": 1793423624.599168,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Rahul Menon",
+      "headline": "Backend engineer, 6 years",
+      "total_years": 6,
+      "github": "torvalds",
+      "projects": [
+        {
+          "name": "Billing Migration",
+          "role": "Project Lead",
+          "team_size": 4,
+          "months": 6,
+          "stack": [
+            "Python",
+            "PostgreSQL",
+            "Kafka"
+          ],
+          "impact": "cut invoice errors 30%"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Python",
+          "years": 6,
+          "level": "advanced"
+        },
+        {
+          "name": "Kafka",
+          "years": 3,
+          "level": "intermediate"
+        }
+      ],
+      "roles": [
+        {
+          "company": "FinServe",
+          "title": "Senior Engineer",
+          "years": 3
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_82f5115b85",
+      "session_id": "s_b62eb1c2af",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Rahul Menon\", \"headline\": \"Backend engineer, 6 years\", \"total_years\": 6, \"github\": \"torvalds\", \"projects\": [{\"name\": \"Billing Migration\", \"role\": \"Project Lead\", \"team_size\": 4, \"months\": 6, \"stack\": [\"Python\", \"PostgreSQL\", \"Kafka\"], \"impact\": \"cut invoice errors 30%\"}], \"skills\": [{\"name\": \"Python\", \"years\": 6, \"level\": \"advanced\"}, {\"name\": \"Kafka\", \"years\": 3, \"level\": \"intermediate\"}], \"roles\": [{\"company\": \"FinServe\", \"title\": \"Senior Engineer\", \"years\": 3}]}",
+      "ts": 1793423408.973019,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_fe7326fd65",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide an example of a project where you were the lead and describe the challenges you faced?",
+      "ts": 1793423412.3294091,
+      "meta": {
+        "intent": "Collaboration and leadership in a team setting",
+        "action": "ask_new",
+        "reasoning": "",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_ae1e21d5fb",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793423412.332473,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_da03ebf4c1",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Can you describe the specific mechanisms or tools you used to own the architecture during the billing migration project?",
+      "ts": 1793423430.348646,
+      "meta": {
+        "intent": "Understand architecture ownership",
+        "action": "probe_prior",
+        "reasoning": "The candidate mentioned owning the architecture and driving the rollout plan, but needs clarification on these roles to ensure accuracy.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_441be2a219",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793423430.352594,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_01b1201dd4",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Can you provide more details on how you managed the team during the billing migration project, specifically regarding the roles and responsibilities of each team member?",
+      "ts": 1793423452.1337569,
+      "meta": {
+        "intent": "Clarify role and responsibilities in project",
+        "action": "probe_prior",
+        "reasoning": "The candidate's answer about architecture ownership seems inconsistent with their claim of driving the rollout plan and managing a team. I need to clarify which role they held in the project.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_6def63556c",
+      "session_id": "s_b62eb1c2af",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793423452.138162,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_b7c3040d52",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you elaborate on how you validated the reconciliation output during the billing migration project?",
+      "ts": 1793423474.570983,
+      "meta": {
+        "intent": "Describe tools used for architecture validation",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague about specific tools used for architecture ownership and roles within the team.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_80bdae6320",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793423474.5753868,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_c56724bdb7",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Can you provide an example of a specific task or responsibility you had as the lead during the billing migration project?",
+      "ts": 1793423501.48969,
+      "meta": {
+        "intent": "understand responsibilities",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague regarding their role and responsibilities during the billing migration project, requiring further clarification to understand their contributions.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_084d0dc880",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+      "ts": 1793423501.492943,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_624644fa2b",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Can you provide more details on how you specifically wrote tests during the billing migration project, including any test automation tools or frameworks you used?",
+      "ts": 1793423528.958567,
+      "meta": {
+        "intent": "Test automation and specific responsibilities",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer contradicts their earlier statement about the team size, which needs clarification.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_1c9d880b88",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "ts": 1793423528.962389,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Project Lead",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - Project Lead",
+      "source": "resume",
+      "id": "c_7c22271413",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - team of 4",
+      "source": "resume",
+      "id": "c_3a9e676d35",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Billing Migration - 6 months",
+      "source": "resume",
+      "id": "c_3cdbf815bb",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Python (6y, advanced)",
+      "source": "resume",
+      "id": "c_0e36ffe773",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 6 years of Python",
+      "source": "resume",
+      "id": "c_5dd6908bc2",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Kafka",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Kafka (3y, intermediate)",
+      "source": "resume",
+      "id": "c_10682ffab9",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Kafka",
+      "polarity": 1,
+      "value_num": 3.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 3 years of Kafka",
+      "source": "resume",
+      "id": "c_79a32bde39",
+      "turn_id": "t_82f5115b85",
+      "round": 0
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Collaboration and leadership in a team setting",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_54c705daed",
+      "turn_id": "t_ae1e21d5fb",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Collaboration and leadership in a team setting",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_43c397aa5f",
+      "turn_id": "t_ae1e21d5fb",
+      "round": 1
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Collaboration and leadership in a team setting",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_4c1c2a4783",
+      "turn_id": "t_ae1e21d5fb",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Collaboration and leadership in a team setting",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_86b173db35",
+      "turn_id": "t_ae1e21d5fb",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Collaboration and leadership in a team setting",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_c0bb92cbdc",
+      "turn_id": "t_ae1e21d5fb",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Understand architecture ownership",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_b79a4f5c4d",
+      "turn_id": "t_441be2a219",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Understand architecture ownership",
+      "confidence": 0.9,
+      "raw_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_62dce2d843",
+      "turn_id": "t_441be2a219",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Understand architecture ownership",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_e4a9206cc5",
+      "turn_id": "t_441be2a219",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Clarify role and responsibilities in project",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_c743df2d5f",
+      "turn_id": "t_6def63556c",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify role and responsibilities in project",
+      "confidence": 0.95,
+      "raw_span": "\"The team was around twelve people\",",
+      "source": "interview",
+      "id": "c_d86d37e17d",
+      "turn_id": "t_6def63556c",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "years_exp",
+      "object": "",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "Clarify role and responsibilities in project",
+      "confidence": 1.0,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_63c2d24f47",
+      "turn_id": "t_6def63556c",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Clarify role and responsibilities in project",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_9a4ec1971f",
+      "turn_id": "t_6def63556c",
+      "round": 1
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "Describe tools used for architecture validation",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_e275577926",
+      "turn_id": "t_80bdae6320",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Describe tools used for architecture validation",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_6611d7af1d",
+      "turn_id": "t_80bdae6320",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Describe tools used for architecture validation",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_a81c6a3402",
+      "turn_id": "t_80bdae6320",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Describe tools used for architecture validation",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_0178d9d90a",
+      "turn_id": "t_80bdae6320",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Describe tools used for architecture validation",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_475f4e033f",
+      "turn_id": "t_80bdae6320",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "Billing Migration Project Leader",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 4,
+      "topic": "understand responsibilities",
+      "confidence": 0.9,
+      "raw_span": "I led the billing migration end to end.",
+      "source": "interview",
+      "id": "c_39e28865fe",
+      "turn_id": "t_084d0dc880",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Architecture Knowledge",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "understand responsibilities",
+      "confidence": 0.85,
+      "raw_span": "I owned the architecture",
+      "source": "interview",
+      "id": "c_0c6a91e74b",
+      "turn_id": "t_084d0dc880",
+      "round": 2
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Rollout Plan Development",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "understand responsibilities",
+      "confidence": 0.9,
+      "raw_span": "drived the rollout plan",
+      "source": "interview",
+      "id": "c_5370fcd4a5",
+      "turn_id": "t_084d0dc880",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "Four Engineers",
+      "polarity": 1,
+      "value_num": 4.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "understand responsibilities",
+      "confidence": 0.9,
+      "raw_span": "a team of four engineers",
+      "source": "interview",
+      "id": "c_a6588aa646",
+      "turn_id": "t_084d0dc880",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "outcome",
+      "object": "Reduced Invoice Errors",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "understand responsibilities",
+      "confidence": 0.85,
+      "raw_span": "It cut invoice errors by roughly 30 percent.",
+      "source": "interview",
+      "id": "c_5ea4d95fd9",
+      "turn_id": "t_084d0dc880",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "used_tech",
+      "object": "test automation tools",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Test automation and specific responsibilities",
+      "confidence": 1.0,
+      "raw_span": "\"I mainly wrote tests and validated the reconciliation output\".",
+      "source": "interview",
+      "id": "c_cc2e8eba82",
+      "turn_id": "t_1c9d880b88",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "team_size",
+      "object": "twelve people",
+      "polarity": 1,
+      "value_num": 12.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Test automation and specific responsibilities",
+      "confidence": 0.9,
+      "raw_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "source": "interview",
+      "id": "c_3873d9e0d7",
+      "turn_id": "t_1c9d880b88",
+      "round": 2
+    },
+    {
+      "subject": "billing migration",
+      "predicate": "role_on",
+      "object": "wrote tests and validated the reconciliation",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 1,
+      "topic": "Test automation and specific responsibilities",
+      "confidence": 0.88,
+      "raw_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "source": "interview",
+      "id": "c_6ff9dbb0b4",
+      "turn_id": "t_1c9d880b88",
+      "round": 2
+    }
+  ],
+  "contradictions": [
+    {
+      "claim_a": "c_5dd6908bc2",
+      "claim_b": "c_79a32bde39",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 1.0,
+      "rationale": "The candidate claims 6 years of experience with Python and 3 years with Kafka, which cannot both be true based on the provided information.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "years_exp for 'self' stated as 6years and 3years (50% apart, tolerance 25%)",
+        "rule_score": 1.0,
+        "llm_confidence": 1.0,
+        "challenge_question": "Could you please clarify how your 6 years of experience in Python relates to your 3 years of experience with Kafka? Are these two different projects or time periods?",
+        "claim_a": {
+          "id": "c_5dd6908bc2",
+          "round": 0,
+          "text": "self / years_exp / Python / 6years",
+          "span": "Resume: 6 years of Python"
+        },
+        "claim_b": {
+          "id": "c_79a32bde39",
+          "round": 0,
+          "text": "self / years_exp / Kafka / 3years",
+          "span": "Resume: 3 years of Kafka"
+        }
+      },
+      "id": "x_e664c6fd3e",
+      "claim_a_text": "self / years_exp / Python / 6years",
+      "claim_b_text": "self / years_exp / Kafka / 3years",
+      "claim_a_span": "Resume: 6 years of Python",
+      "claim_b_span": "Resume: 3 years of Kafka",
+      "claim_a_round": 0,
+      "claim_b_round": 0
+    },
+    {
+      "claim_a": "c_7c22271413",
+      "claim_b": "c_e4a9206cc5",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed different roles in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). This is a clear contradiction.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you please clarify which role you held during the billing migration? Was it solely Project Lead or did you also write tests and validate outputs?",
+        "claim_a": {
+          "id": "c_7c22271413",
+          "round": 0,
+          "text": "billing migration / role_on / Project Lead",
+          "span": "Resume: Billing Migration - Project Lead"
+        },
+        "claim_b": {
+          "id": "c_e4a9206cc5",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_6c0f8654c2",
+      "claim_a_text": "billing migration / role_on / Project Lead",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "Resume: Billing Migration - Project Lead",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_3a9e676d35",
+      "claim_b": "c_62dce2d843",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "Candidate provided conflicting information about team size for 'billing migration' - claimed as 4 people in one round and 12 people in another.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which project or time period the team size of 4 refers to? And how many people were involved in the larger scale project mentioned?",
+        "claim_a": {
+          "id": "c_3a9e676d35",
+          "round": 0,
+          "text": "billing migration / team_size / 4people",
+          "span": "Resume: Billing Migration - team of 4"
+        },
+        "claim_b": {
+          "id": "c_62dce2d843",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_7996b58e44",
+      "claim_a_text": "billing migration / team_size / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "Resume: Billing Migration - team of 4",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_54c705daed",
+      "claim_b": "c_e4a9206cc5",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then stated they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify how your role on the billing migration project differed between leading it end-to-end versus primarily writing tests? ",
+        "claim_a": {
+          "id": "c_54c705daed",
+          "round": 1,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        },
+        "claim_b": {
+          "id": "c_e4a9206cc5",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_bc8b0db0ce",
+      "claim_a_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "I led the billing migration end to end.",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 1,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_86b173db35",
+      "claim_b": "c_62dce2d843",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B claims 'twelve people'. These numbers are contradictory.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls that happened above you?",
+        "claim_a": {
+          "id": "c_86b173db35",
+          "round": 1,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_62dce2d843",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_71e1d0bbbd",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 1,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_7c22271413",
+      "claim_b": "c_9a4ec1971f",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed different roles in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). This is a clear contradiction.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you please clarify which role you held during the billing migration? Was it solely Project Lead or did you also write tests and validate outputs?",
+        "claim_a": {
+          "id": "c_7c22271413",
+          "round": 0,
+          "text": "billing migration / role_on / Project Lead",
+          "span": "Resume: Billing Migration - Project Lead"
+        },
+        "claim_b": {
+          "id": "c_9a4ec1971f",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_2cbd7ca983",
+      "claim_a_text": "billing migration / role_on / Project Lead",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "Resume: Billing Migration - Project Lead",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_3a9e676d35",
+      "claim_b": "c_d86d37e17d",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "Conflicting claims about the size of the billing migration team: '4people' vs '12people'.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify which project and what the actual team size was for the billing migration?",
+        "claim_a": {
+          "id": "c_3a9e676d35",
+          "round": 0,
+          "text": "billing migration / team_size / 4people",
+          "span": "Resume: Billing Migration - team of 4"
+        },
+        "claim_b": {
+          "id": "c_d86d37e17d",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\","
+        }
+      },
+      "id": "x_b1e5e97b40",
+      "claim_a_text": "billing migration / team_size / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "Resume: Billing Migration - team of 4",
+      "claim_b_span": "\"The team was around twelve people\",",
+      "claim_a_round": 0,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_54c705daed",
+      "claim_b": "c_9a4ec1971f",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then stated they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify how your role on the billing migration project differed between leading it end-to-end versus primarily writing tests? ",
+        "claim_a": {
+          "id": "c_54c705daed",
+          "round": 1,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        },
+        "claim_b": {
+          "id": "c_9a4ec1971f",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_f60fc8b2c4",
+      "claim_a_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "I led the billing migration end to end.",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 1,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_86b173db35",
+      "claim_b": "c_d86d37e17d",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "CLAIM A states the team size as '4people', while CLAIM B claims it was '12people'. These numbers are contradictory.",
+      "detected_round": 1,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you please clarify which project and time period these team sizes refer to? Are they consistent with each other?",
+        "claim_a": {
+          "id": "c_86b173db35",
+          "round": 1,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_d86d37e17d",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\","
+        }
+      },
+      "id": "x_3085cfc630",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\",",
+      "claim_a_round": 1,
+      "claim_b_round": 1
+    },
+    {
+      "claim_a": "c_62dce2d843",
+      "claim_b": "c_0178d9d90a",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "\"Twelve people\" vs \"Four Engineers\", which could mean different teams or roles.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify if these statements refer to the same team and role during the billing migration project?",
+        "claim_a": {
+          "id": "c_62dce2d843",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        },
+        "claim_b": {
+          "id": "c_0178d9d90a",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        }
+      },
+      "id": "x_4b63812f58",
+      "claim_a_text": "billing migration / team_size / twelve people / 12people",
+      "claim_b_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_a_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_b_span": "a team of four engineers",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_e4a9206cc5",
+      "claim_b": "c_e275577926",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+        "claim_a": {
+          "id": "c_e4a9206cc5",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        },
+        "claim_b": {
+          "id": "c_e275577926",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        }
+      },
+      "id": "x_db0cad676e",
+      "claim_a_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_b_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_a_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_b_span": "I led the billing migration end to end.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_d86d37e17d",
+      "claim_b": "c_0178d9d90a",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "\"Twelve people\" vs \"Four Engineers\" cannot both be accurate for the same billing migration team size.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which specific project or time period these numbers refer to?",
+        "claim_a": {
+          "id": "c_d86d37e17d",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\","
+        },
+        "claim_b": {
+          "id": "c_0178d9d90a",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        }
+      },
+      "id": "x_9823a3d65a",
+      "claim_a_text": "billing migration / team_size / twelve people / 12people",
+      "claim_b_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_a_span": "\"The team was around twelve people\",",
+      "claim_b_span": "a team of four engineers",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_9a4ec1971f",
+      "claim_b": "c_e275577926",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+        "claim_a": {
+          "id": "c_9a4ec1971f",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        },
+        "claim_b": {
+          "id": "c_e275577926",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        }
+      },
+      "id": "x_a176006b3e",
+      "claim_a_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_b_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_a_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_b_span": "I led the billing migration end to end.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_62dce2d843",
+      "claim_b": "c_a6588aa646",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "\"Twelve people\" vs \"Four Engineers\", which could mean different teams or roles.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify if these statements refer to the same team and role during the billing migration project?",
+        "claim_a": {
+          "id": "c_62dce2d843",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        },
+        "claim_b": {
+          "id": "c_a6588aa646",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        }
+      },
+      "id": "x_8c66119b55",
+      "claim_a_text": "billing migration / team_size / twelve people / 12people",
+      "claim_b_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_a_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_b_span": "a team of four engineers",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_e4a9206cc5",
+      "claim_b": "c_39e28865fe",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+        "claim_a": {
+          "id": "c_e4a9206cc5",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        },
+        "claim_b": {
+          "id": "c_39e28865fe",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        }
+      },
+      "id": "x_6d4adb504d",
+      "claim_a_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_b_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_a_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_b_span": "I led the billing migration end to end.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_d86d37e17d",
+      "claim_b": "c_a6588aa646",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "\"Twelve people\" vs \"Four Engineers\" cannot both be accurate for the same billing migration team size.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which specific project or time period these numbers refer to?",
+        "claim_a": {
+          "id": "c_d86d37e17d",
+          "round": 1,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\","
+        },
+        "claim_b": {
+          "id": "c_a6588aa646",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        }
+      },
+      "id": "x_bf0471c320",
+      "claim_a_text": "billing migration / team_size / twelve people / 12people",
+      "claim_b_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_a_span": "\"The team was around twelve people\",",
+      "claim_b_span": "a team of four engineers",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_9a4ec1971f",
+      "claim_b": "c_39e28865fe",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+        "claim_a": {
+          "id": "c_9a4ec1971f",
+          "round": 1,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        },
+        "claim_b": {
+          "id": "c_39e28865fe",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        }
+      },
+      "id": "x_a6cf80a704",
+      "claim_a_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_b_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_a_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_b_span": "I led the billing migration end to end.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_7c22271413",
+      "claim_b": "c_6ff9dbb0b4",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "CLAIM A states 'Project Lead' while CLAIM B describes 'wrote tests and validated the reconciliation'. These roles are incompatible for the same project.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you clarify how your role on the billing migration project differed between being a Project Lead and primarily writing tests? ",
+        "claim_a": {
+          "id": "c_7c22271413",
+          "round": 0,
+          "text": "billing migration / role_on / Project Lead",
+          "span": "Resume: Billing Migration - Project Lead"
+        },
+        "claim_b": {
+          "id": "c_6ff9dbb0b4",
+          "round": 2,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_c0f528ade5",
+      "claim_a_text": "billing migration / role_on / Project Lead",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "Resume: Billing Migration - Project Lead",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 0,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_3a9e676d35",
+      "claim_b": "c_3873d9e0d7",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "Candidate provided conflicting information about team size for 'billing migration' - claimed as 4 people in one round and 12 people in another.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which project or time period the team size of 4 refers to, and how it differs from the 12 people mentioned later?",
+        "claim_a": {
+          "id": "c_3a9e676d35",
+          "round": 0,
+          "text": "billing migration / team_size / 4people",
+          "span": "Resume: Billing Migration - team of 4"
+        },
+        "claim_b": {
+          "id": "c_3873d9e0d7",
+          "round": 2,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_b73c207b5b",
+      "claim_a_text": "billing migration / team_size / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "Resume: Billing Migration - team of 4",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 0,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_54c705daed",
+      "claim_b": "c_6ff9dbb0b4",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one round, and then stated they were mainly responsible for writing tests and validating outputs (level 1) in another round. These roles are clearly contradictory.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Could you please clarify which part of the billing migration project you led? Did you oversee the entire process or just specific aspects?",
+        "claim_a": {
+          "id": "c_54c705daed",
+          "round": 1,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        },
+        "claim_b": {
+          "id": "c_6ff9dbb0b4",
+          "round": 2,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_b6d4ba6c37",
+      "claim_a_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "I led the billing migration end to end.",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_86b173db35",
+      "claim_b": "c_3873d9e0d7",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "CLAIM A states a team size of 4 people, while CLAIM B claims the team was around 12 people.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify if the billing migration project had a team size of four engineers or approximately twelve people? Please provide more details on your role and responsibilities.",
+        "claim_a": {
+          "id": "c_86b173db35",
+          "round": 1,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_3873d9e0d7",
+          "round": 2,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_bf897b80ac",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 1,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_e275577926",
+      "claim_b": "c_6ff9dbb0b4",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then said they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Can you explain how leading a project can also mean primarily writing tests? Was there any overlap or different aspects of your role during the billing migration?",
+        "claim_a": {
+          "id": "c_e275577926",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        },
+        "claim_b": {
+          "id": "c_6ff9dbb0b4",
+          "round": 2,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_60d37d7bc7",
+      "claim_a_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "I led the billing migration end to end.",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 2,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_0178d9d90a",
+      "claim_b": "c_3873d9e0d7",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B says 'twelve people'. These numbers are contradictory.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls made above your level?",
+        "claim_a": {
+          "id": "c_0178d9d90a",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_3873d9e0d7",
+          "round": 2,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_75b7931220",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 2,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_39e28865fe",
+      "claim_b": "c_6ff9dbb0b4",
+      "ctype": "ownership_conflict",
+      "severity": "high",
+      "score": 0.975,
+      "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then said they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.95,
+        "challenge_question": "Can you explain how leading a project can also mean primarily writing tests? Was there any overlap or different aspects of your role during the billing migration?",
+        "claim_a": {
+          "id": "c_39e28865fe",
+          "round": 2,
+          "text": "billing migration / role_on / Billing Migration Project Leader",
+          "span": "I led the billing migration end to end."
+        },
+        "claim_b": {
+          "id": "c_6ff9dbb0b4",
+          "round": 2,
+          "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+          "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+        }
+      },
+      "id": "x_ca0df386a4",
+      "claim_a_text": "billing migration / role_on / Billing Migration Project Leader",
+      "claim_b_text": "billing migration / role_on / wrote tests and validated the reconciliation",
+      "claim_a_span": "I led the billing migration end to end.",
+      "claim_b_span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+      "claim_a_round": 2,
+      "claim_b_round": 2
+    },
+    {
+      "claim_a": "c_a6588aa646",
+      "claim_b": "c_3873d9e0d7",
+      "ctype": "numeric_conflict",
+      "severity": "high",
+      "score": 0.925,
+      "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B says 'twelve people'. These numbers are contradictory.",
+      "detected_round": 2,
+      "detector": "rules+llm",
+      "status": "open",
+      "resolution": "",
+      "evidence": {
+        "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+        "rule_score": 1.0,
+        "llm_confidence": 0.85,
+        "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls made above your level?",
+        "claim_a": {
+          "id": "c_a6588aa646",
+          "round": 2,
+          "text": "billing migration / team_size / Four Engineers / 4people",
+          "span": "a team of four engineers"
+        },
+        "claim_b": {
+          "id": "c_3873d9e0d7",
+          "round": 2,
+          "text": "billing migration / team_size / twelve people / 12people",
+          "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+        }
+      },
+      "id": "x_340245bbe0",
+      "claim_a_text": "billing migration / team_size / Four Engineers / 4people",
+      "claim_b_text": "billing migration / team_size / twelve people / 12people",
+      "claim_a_span": "a team of four engineers",
+      "claim_b_span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+      "claim_a_round": 2,
+      "claim_b_round": 2
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "tc_a2271acf2e",
+      "session_id": "s_b62eb1c2af",
+      "round": 2,
+      "agent": "moderator",
+      "tool": "export_report",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 5.742788314819336,
+      "ts": 1793423624.596808,
+      "args": {
+        "name": ""
+      },
+      "result": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_b62eb1c2af.json",
+        "bytes": 163115
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_b651960bf7",
+    "session_id": "s_b62eb1c2af",
+    "decision": "no_hire",
+    "confidence": 0.92,
+    "rationale": "The candidate was unanimously rejected (NO_HIRE) by the panel due to multiple contradictions and inconsistencies in their responses regarding experience, roles, and responsibilities. Specifically, there is a high-severity numeric conflict where the candidate claims 6 years of Python experience but only 3 years of Kafka experience, which cannot both be true based on provided information. Additionally, there is a high-severity ownership conflict as the candidate contradicts themselves about their role in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). These contradictions are significant enough to disqualify the candidate from consideration.",
+    "approval_status": "approve",
+    "approved_by": "demo-operator",
+    "approval_note": "auto-approved via --approve",
+    "approved_at": 1793423624.5986078,
+    "ts": 1793423624.57986,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.48,
+        "recommendation": "no_hire",
+        "confidence": 0.98,
+        "strengths": [
+          "Candidate provided specific examples of their work.",
+          "They took ownership of the architecture and project management.",
+          "They demonstrated clear communication during the interview."
+        ],
+        "concerns": [
+          "The candidate contradicted themselves regarding roles in the same project.",
+          "There is a discrepancy between claimed years of experience with Python and Kafka.",
+          "Lack of specific details on test automation tools used."
+        ],
+        "evidence_claim_ids": [
+          "c_7c22271413",
+          "c_3a9e676d35",
+          "c_3cdbf815bb",
+          "c_0e36ffe773",
+          "c_5dd6908bc2"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples but contradicted themselves, indicating potential inconsistencies.",
+        "summary": "Candidate demonstrated ownership and communication skills but had contradictions in their responses and discrepancies in claimed experience."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_and_tradeoffs": 1.0,
+          "debugging_and_root_cause_depth": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 3.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Experienced in Python and Kafka, though contradictory claims cannot be verified.",
+          "Led a billing migration project with reduced invoice errors by 30%",
+          "Used test automation tools for validation during the project"
+        ],
+        "concerns": [
+          "Inconsistent self-reported experience (6 years of Python vs. 3 years of Kafka)",
+          "Contradictory claims about roles and responsibilities in the same project",
+          "Lack of depth on specific mechanisms or tools used to own architecture"
+        ],
+        "evidence_claim_ids": [
+          "c_5dd6908bc2",
+          "c_79a32bde39",
+          "c_c0bb92cbdc",
+          "c_d86d37e17d"
+        ],
+        "integrity_note": "Inconsistencies in self-reported experience and role claims raise concerns about the candidate's honesty and reliability.",
+        "summary": "The candidate lacks depth on specific mechanisms or tools used to own architecture, inconsistent self-reported experience, and contradictory role claims. These issues are concerning."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_integrity": 1.0,
+          "scope_and_impact_calibration": 1.0,
+          "ambiguity_handling": 1.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 2.85,
+        "recommendation": "no_hire",
+        "confidence": 0.97,
+        "strengths": [
+          "Detailed and consistent responses to technical questions.",
+          "Ability to provide specific examples of project leadership."
+        ],
+        "concerns": [
+          "Inconsistent claims regarding experience with Python and Kafka (6 years vs 3 years).",
+          "Contradictory statements about roles during the billing migration project (Project Lead vs wrote tests and validated reconciliation)."
+        ],
+        "evidence_claim_ids": [
+          "c_e4a9206cc5",
+          "c_7c22271413",
+          "c_c0bb92cbdc",
+          "c_62dce2d843",
+          "c_d86d37e17d"
+        ],
+        "integrity_note": "The candidate provided inconsistent and contradictory information, raising doubts about their honesty and reliability.",
+        "summary": "The candidate's responses show depth under pressure but are marred by inconsistencies in experience claims and role contradictions. This raises concerns about their integrity and reliability."
+      }
+    },
+    "evidence": [
+      "x_e664c6fd3e",
+      "x_6c0f8654c2"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 2.48
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 3.0
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.85
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_b2629f1903",
+      "session_id": "s_b62eb1c2af",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793423408.972723,
+      "payload": {
+        "session_id": "s_b62eb1c2af",
+        "candidate": "Rahul Menon",
+        "role": "Senior Backend Engineer",
+        "seniority": "senior",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_adbf73a693",
+      "session_id": "s_b62eb1c2af",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793423408.976436,
+      "payload": {
+        "claims_seeded": 7,
+        "projects": [
+          "billing migration"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_043998e148",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793423408.97678,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_c9286a93d5",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423410.378667,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "ask_new",
+        "reasoning": "",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 1.4
+      }
+    },
+    {
+      "id": "e_898e54cb71",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423412.331075,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide an example of a project where you were the lead and describe the challenges you faced?",
+        "intent": "Collaboration and leadership in a team setting",
+        "action": "ask_new",
+        "turn_id": "t_fe7326fd65",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_a3ecd3b3f1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423412.333267,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_ae1e21d5fb",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_17d0e7ca95",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423421.3751192,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_54c705daed",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_43c397aa5f",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_4c1c2a4783",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_86b173db35",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_c0bb92cbdc",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 12
+      }
+    },
+    {
+      "id": "e_64211a59c4",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423424.6811981,
+      "payload": {
+        "round": 1,
+        "id": "x_e664c6fd3e",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 1.0,
+        "rationale": "The candidate claims 6 years of experience with Python and 3 years with Kafka, which cannot both be true based on the provided information.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "years_exp for 'self' stated as 6years and 3years (50% apart, tolerance 25%)",
+          "rule_score": 1.0,
+          "llm_confidence": 1.0,
+          "challenge_question": "Could you please clarify how your 6 years of experience in Python relates to your 3 years of experience with Kafka? Are these two different projects or time periods?",
+          "claim_a": {
+            "id": "c_5dd6908bc2",
+            "round": 0,
+            "text": "self / years_exp / Python / 6years",
+            "span": "Resume: 6 years of Python"
+          },
+          "claim_b": {
+            "id": "c_79a32bde39",
+            "round": 0,
+            "text": "self / years_exp / Kafka / 3years",
+            "span": "Resume: 3 years of Kafka"
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_d873f3fe36",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423424.682587,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_e664c6fd3e"
+      }
+    },
+    {
+      "id": "e_cd6c2e84f3",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423428.0917351,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "probe_prior",
+        "reasoning": "The candidate mentioned owning the architecture and driving the rollout plan, but needs clarification on these roles to ensure accuracy.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 3.41
+      }
+    },
+    {
+      "id": "e_81659886bf",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423430.350564,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Can you describe the specific mechanisms or tools you used to own the architecture during the billing migration project?",
+        "intent": "Understand architecture ownership",
+        "action": "probe_prior",
+        "turn_id": "t_da03ebf4c1",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_18933bf515",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423430.353778,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_441be2a219",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_4fe32fce92",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423433.6474261,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_b79a4f5c4d",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_62dce2d843",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_e4a9206cc5",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 15
+      }
+    },
+    {
+      "id": "e_b2548bc24c",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423445.2299972,
+      "payload": {
+        "round": 1,
+        "id": "x_6c0f8654c2",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed different roles in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). This is a clear contradiction.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you please clarify which role you held during the billing migration? Was it solely Project Lead or did you also write tests and validate outputs?",
+          "claim_a": {
+            "id": "c_7c22271413",
+            "round": 0,
+            "text": "billing migration / role_on / Project Lead",
+            "span": "Resume: Billing Migration - Project Lead"
+          },
+          "claim_b": {
+            "id": "c_e4a9206cc5",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_9767277c8c",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423445.231381,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_6c0f8654c2"
+      }
+    },
+    {
+      "id": "e_d4411bdc9e",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423445.2330098,
+      "payload": {
+        "round": 1,
+        "id": "x_7996b58e44",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "Candidate provided conflicting information about team size for 'billing migration' - claimed as 4 people in one round and 12 people in another.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which project or time period the team size of 4 refers to? And how many people were involved in the larger scale project mentioned?",
+          "claim_a": {
+            "id": "c_3a9e676d35",
+            "round": 0,
+            "text": "billing migration / team_size / 4people",
+            "span": "Resume: Billing Migration - team of 4"
+          },
+          "claim_b": {
+            "id": "c_62dce2d843",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_9240126c91",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423445.2340322,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_7996b58e44"
+      }
+    },
+    {
+      "id": "e_4c1f768a9f",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423445.2363222,
+      "payload": {
+        "round": 1,
+        "id": "x_bc8b0db0ce",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then stated they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify how your role on the billing migration project differed between leading it end-to-end versus primarily writing tests? ",
+          "claim_a": {
+            "id": "c_54c705daed",
+            "round": 1,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          },
+          "claim_b": {
+            "id": "c_e4a9206cc5",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_af088c972d",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423445.237616,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_bc8b0db0ce"
+      }
+    },
+    {
+      "id": "e_5cf9c82934",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423445.239774,
+      "payload": {
+        "round": 1,
+        "id": "x_71e1d0bbbd",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B claims 'twelve people'. These numbers are contradictory.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls that happened above you?",
+          "claim_a": {
+            "id": "c_86b173db35",
+            "round": 1,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_62dce2d843",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_50631efcbf",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423445.240588,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_71e1d0bbbd"
+      }
+    },
+    {
+      "id": "e_9f6d060fc1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423449.2446132,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's answer about architecture ownership seems inconsistent with their claim of driving the rollout plan and managing a team. I need to clarify which role they held in the project.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.0
+      }
+    },
+    {
+      "id": "e_d14a5ce56b",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423452.136388,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Can you provide more details on how you managed the team during the billing migration project, specifically regarding the roles and responsibilities of each team member?",
+        "intent": "Clarify role and responsibilities in project",
+        "action": "probe_prior",
+        "turn_id": "t_01b1201dd4",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_10fd33a058",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423452.1391559,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_6def63556c",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_19f50d5aab",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423456.2491531,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 4,
+        "claims": [
+          {
+            "id": "c_c743df2d5f",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_d86d37e17d",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\",",
+            "predicate": "team_size",
+            "confidence": 0.95
+          },
+          {
+            "id": "c_63c2d24f47",
+            "text": "billing migration / years_exp / 12years",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lo",
+            "predicate": "years_exp",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_9a4ec1971f",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 19
+      }
+    },
+    {
+      "id": "e_50a6a055ac",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423467.294441,
+      "payload": {
+        "round": 1,
+        "id": "x_2cbd7ca983",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed different roles in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). This is a clear contradiction.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you please clarify which role you held during the billing migration? Was it solely Project Lead or did you also write tests and validate outputs?",
+          "claim_a": {
+            "id": "c_7c22271413",
+            "round": 0,
+            "text": "billing migration / role_on / Project Lead",
+            "span": "Resume: Billing Migration - Project Lead"
+          },
+          "claim_b": {
+            "id": "c_9a4ec1971f",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_2ff5f6a2bd",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423467.294902,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_2cbd7ca983"
+      }
+    },
+    {
+      "id": "e_01875b64bf",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423467.295748,
+      "payload": {
+        "round": 1,
+        "id": "x_b1e5e97b40",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "Conflicting claims about the size of the billing migration team: '4people' vs '12people'.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify which project and what the actual team size was for the billing migration?",
+          "claim_a": {
+            "id": "c_3a9e676d35",
+            "round": 0,
+            "text": "billing migration / team_size / 4people",
+            "span": "Resume: Billing Migration - team of 4"
+          },
+          "claim_b": {
+            "id": "c_d86d37e17d",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\","
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_882c067bba",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423467.296169,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_b1e5e97b40"
+      }
+    },
+    {
+      "id": "e_e316310c0d",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423467.3001852,
+      "payload": {
+        "round": 1,
+        "id": "x_f60fc8b2c4",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then stated they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify how your role on the billing migration project differed between leading it end-to-end versus primarily writing tests? ",
+          "claim_a": {
+            "id": "c_54c705daed",
+            "round": 1,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          },
+          "claim_b": {
+            "id": "c_9a4ec1971f",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_a3eca809f0",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423467.300537,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_f60fc8b2c4"
+      }
+    },
+    {
+      "id": "e_a98471a8bc",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423467.301224,
+      "payload": {
+        "round": 1,
+        "id": "x_3085cfc630",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "CLAIM A states the team size as '4people', while CLAIM B claims it was '12people'. These numbers are contradictory.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you please clarify which project and time period these team sizes refer to? Are they consistent with each other?",
+          "claim_a": {
+            "id": "c_86b173db35",
+            "round": 1,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_d86d37e17d",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\","
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_c261d71905",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423467.301535,
+      "payload": {
+        "round": 1,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_3085cfc630"
+      }
+    },
+    {
+      "id": "e_73b385acce",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793423467.302027,
+      "payload": {
+        "round": 1,
+        "claims": 19,
+        "contradictions": 9
+      }
+    },
+    {
+      "id": "e_8cd0599e38",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793423467.3023732,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_742cd738e5",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423472.27866,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague about specific tools used for architecture ownership and roles within the team.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.98
+      }
+    },
+    {
+      "id": "e_24d2124bbb",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423474.5735512,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you elaborate on how you validated the reconciliation output during the billing migration project?",
+        "intent": "Describe tools used for architecture validation",
+        "action": "probe_prior",
+        "turn_id": "t_b7c3040d52",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_1fa8fd7a2c",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423474.576735,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_80bdae6320",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_0e93510324",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423483.685059,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_e275577926",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_6611d7af1d",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_a81c6a3402",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_0178d9d90a",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_475f4e033f",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 24
+      }
+    },
+    {
+      "id": "e_b38624a2cd",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423493.877179,
+      "payload": {
+        "round": 2,
+        "id": "x_4b63812f58",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "\"Twelve people\" vs \"Four Engineers\", which could mean different teams or roles.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify if these statements refer to the same team and role during the billing migration project?",
+          "claim_a": {
+            "id": "c_62dce2d843",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          },
+          "claim_b": {
+            "id": "c_0178d9d90a",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_32cefd9ca4",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423493.8783,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_4b63812f58"
+      }
+    },
+    {
+      "id": "e_ab1fcf8961",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423493.880141,
+      "payload": {
+        "round": 2,
+        "id": "x_db0cad676e",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+          "claim_a": {
+            "id": "c_e4a9206cc5",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          },
+          "claim_b": {
+            "id": "c_e275577926",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_df45303ab9",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423493.881269,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_db0cad676e"
+      }
+    },
+    {
+      "id": "e_5199a440d7",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423493.883476,
+      "payload": {
+        "round": 2,
+        "id": "x_9823a3d65a",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "\"Twelve people\" vs \"Four Engineers\" cannot both be accurate for the same billing migration team size.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which specific project or time period these numbers refer to?",
+          "claim_a": {
+            "id": "c_d86d37e17d",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\","
+          },
+          "claim_b": {
+            "id": "c_0178d9d90a",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_1345ccc9bd",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423493.884492,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_9823a3d65a"
+      }
+    },
+    {
+      "id": "e_df4a6a2286",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423493.887685,
+      "payload": {
+        "round": 2,
+        "id": "x_a176006b3e",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+          "claim_a": {
+            "id": "c_9a4ec1971f",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          },
+          "claim_b": {
+            "id": "c_e275577926",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          }
+        },
+        "found_by": "hr",
+        "found_by_display": "HR Panelist"
+      }
+    },
+    {
+      "id": "e_30a5471372",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423493.888459,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_a176006b3e"
+      }
+    },
+    {
+      "id": "e_c6255f415e",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423498.9330418,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague regarding their role and responsibilities during the billing migration project, requiring further clarification to understand their contributions.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 5.04
+      }
+    },
+    {
+      "id": "e_9b7b39c9eb",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423501.4914298,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Can you provide an example of a specific task or responsibility you had as the lead during the billing migration project?",
+        "intent": "understand responsibilities",
+        "action": "probe_prior",
+        "turn_id": "t_c56724bdb7",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_541d8c2f85",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423501.494345,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "I led the billing migration end to end. I owned the architecture, drove the rollout plan, and ran the project with a team of four engineers over about six months. It cut invoice errors by roughly 30 percent.",
+        "turn_id": "t_084d0dc880",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_0da13ab0e9",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423510.5093749,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 5,
+        "claims": [
+          {
+            "id": "c_39e28865fe",
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end.",
+            "predicate": "role_on",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_0c6a91e74b",
+            "text": "self / used_tech / Architecture Knowledge",
+            "span": "I owned the architecture",
+            "predicate": "used_tech",
+            "confidence": 0.85
+          },
+          {
+            "id": "c_5370fcd4a5",
+            "text": "self / used_tech / Rollout Plan Development",
+            "span": "drived the rollout plan",
+            "predicate": "used_tech",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_a6588aa646",
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_5ea4d95fd9",
+            "text": "billing migration / outcome / Reduced Invoice Errors",
+            "span": "It cut invoice errors by roughly 30 percent.",
+            "predicate": "outcome",
+            "confidence": 0.85
+          }
+        ],
+        "ledger_size": 29
+      }
+    },
+    {
+      "id": "e_d85ba6eaf8",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423521.3573592,
+      "payload": {
+        "round": 2,
+        "id": "x_8c66119b55",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "\"Twelve people\" vs \"Four Engineers\", which could mean different teams or roles.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify if these statements refer to the same team and role during the billing migration project?",
+          "claim_a": {
+            "id": "c_62dce2d843",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          },
+          "claim_b": {
+            "id": "c_a6588aa646",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_77e6bd53ef",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423521.3584151,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_8c66119b55"
+      }
+    },
+    {
+      "id": "e_6e9bb567ce",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423521.360318,
+      "payload": {
+        "round": 2,
+        "id": "x_6d4adb504d",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+          "claim_a": {
+            "id": "c_e4a9206cc5",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          },
+          "claim_b": {
+            "id": "c_39e28865fe",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_1ded227dfe",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423521.361693,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_6d4adb504d"
+      }
+    },
+    {
+      "id": "e_9375721f9d",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423521.3636422,
+      "payload": {
+        "round": 2,
+        "id": "x_bf0471c320",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "\"Twelve people\" vs \"Four Engineers\" cannot both be accurate for the same billing migration team size.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 12people and 4people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which specific project or time period these numbers refer to?",
+          "claim_a": {
+            "id": "c_d86d37e17d",
+            "round": 1,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\","
+          },
+          "claim_b": {
+            "id": "c_a6588aa646",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_96f8b430d1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423521.364892,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_bf0471c320"
+      }
+    },
+    {
+      "id": "e_55162c4852",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423521.366785,
+      "payload": {
+        "round": 2,
+        "id": "x_a6cf80a704",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "The candidate claimed different roles on the same project ('Billing Migration Project Leader' vs 'wrote tests and validated the reconciliation'). These cannot both be true about the same thing.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('wrote tests and validated the reconciliation' = level 1 vs 'Billing Migration Project Leader' = level 4)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify how your role as a Billing Migration Project Leader allowed you to write tests and validate reconciliation outputs?",
+          "claim_a": {
+            "id": "c_9a4ec1971f",
+            "round": 1,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          },
+          "claim_b": {
+            "id": "c_39e28865fe",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          }
+        },
+        "found_by": "tech",
+        "found_by_display": "Technical Panelist"
+      }
+    },
+    {
+      "id": "e_221556d523",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423521.367711,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_a6cf80a704"
+      }
+    },
+    {
+      "id": "e_aa48763205",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793423526.016591,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer contradicts their earlier statement about the team size, which needs clarification.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.65
+      }
+    },
+    {
+      "id": "e_4338fae423",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793423528.9607942,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Can you provide more details on how you specifically wrote tests during the billing migration project, including any test automation tools or frameworks you used?",
+        "intent": "Test automation and specific responsibilities",
+        "action": "probe_prior",
+        "turn_id": "t_624644fa2b",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_595d9c104b",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793423528.963474,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output. The team was around twelve people, so a lot of the design calls happened above me.",
+        "turn_id": "t_1c9d880b88",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_c63c9b8267",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793423532.2798731,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_cc2e8eba82",
+            "text": "billing migration / used_tech / test automation tools",
+            "span": "\"I mainly wrote tests and validated the reconciliation output\".",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_3873d9e0d7",
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me.",
+            "predicate": "team_size",
+            "confidence": 0.9
+          },
+          {
+            "id": "c_6ff9dbb0b4",
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 32
+      }
+    },
+    {
+      "id": "e_a0296336b2",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.68733,
+      "payload": {
+        "round": 2,
+        "id": "x_c0f528ade5",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "CLAIM A states 'Project Lead' while CLAIM B describes 'wrote tests and validated the reconciliation'. These roles are incompatible for the same project.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Project Lead' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you clarify how your role on the billing migration project differed between being a Project Lead and primarily writing tests? ",
+          "claim_a": {
+            "id": "c_7c22271413",
+            "round": 0,
+            "text": "billing migration / role_on / Project Lead",
+            "span": "Resume: Billing Migration - Project Lead"
+          },
+          "claim_b": {
+            "id": "c_6ff9dbb0b4",
+            "round": 2,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_1f0fb824b2",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.68855,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_c0f528ade5"
+      }
+    },
+    {
+      "id": "e_ea08e6ccdf",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.690507,
+      "payload": {
+        "round": 2,
+        "id": "x_b73c207b5b",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "Candidate provided conflicting information about team size for 'billing migration' - claimed as 4 people in one round and 12 people in another.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which project or time period the team size of 4 refers to, and how it differs from the 12 people mentioned later?",
+          "claim_a": {
+            "id": "c_3a9e676d35",
+            "round": 0,
+            "text": "billing migration / team_size / 4people",
+            "span": "Resume: Billing Migration - team of 4"
+          },
+          "claim_b": {
+            "id": "c_3873d9e0d7",
+            "round": 2,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_e275c0e0db",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.691904,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_b73c207b5b"
+      }
+    },
+    {
+      "id": "e_9ef5e3435e",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.694239,
+      "payload": {
+        "round": 2,
+        "id": "x_b6d4ba6c37",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one round, and then stated they were mainly responsible for writing tests and validating outputs (level 1) in another round. These roles are clearly contradictory.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Could you please clarify which part of the billing migration project you led? Did you oversee the entire process or just specific aspects?",
+          "claim_a": {
+            "id": "c_54c705daed",
+            "round": 1,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          },
+          "claim_b": {
+            "id": "c_6ff9dbb0b4",
+            "round": 2,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_456eb159f8",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.6954172,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_b6d4ba6c37"
+      }
+    },
+    {
+      "id": "e_1abfeb713c",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.697129,
+      "payload": {
+        "round": 2,
+        "id": "x_bf897b80ac",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "CLAIM A states a team size of 4 people, while CLAIM B claims the team was around 12 people.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify if the billing migration project had a team size of four engineers or approximately twelve people? Please provide more details on your role and responsibilities.",
+          "claim_a": {
+            "id": "c_86b173db35",
+            "round": 1,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_3873d9e0d7",
+            "round": 2,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_c146f0ac69",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.697876,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_bf897b80ac"
+      }
+    },
+    {
+      "id": "e_e44aaea4a7",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.699486,
+      "payload": {
+        "round": 2,
+        "id": "x_60d37d7bc7",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then said they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Can you explain how leading a project can also mean primarily writing tests? Was there any overlap or different aspects of your role during the billing migration?",
+          "claim_a": {
+            "id": "c_e275577926",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          },
+          "claim_b": {
+            "id": "c_6ff9dbb0b4",
+            "round": 2,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_ce3026e5b5",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.700331,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_60d37d7bc7"
+      }
+    },
+    {
+      "id": "e_c48c0dd85e",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.702334,
+      "payload": {
+        "round": 2,
+        "id": "x_75b7931220",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B says 'twelve people'. These numbers are contradictory.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls made above your level?",
+          "claim_a": {
+            "id": "c_0178d9d90a",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_3873d9e0d7",
+            "round": 2,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_8fedd0f60d",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.703199,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_75b7931220"
+      }
+    },
+    {
+      "id": "e_afd4960789",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.705142,
+      "payload": {
+        "round": 2,
+        "id": "x_ca0df386a4",
+        "type": "ownership_conflict",
+        "severity": "high",
+        "score": 0.975,
+        "rationale": "The candidate claimed to have led the entire 'billing migration' project (level 4) in one statement, and then said they mainly wrote tests and validated outputs for that same project (level 1). These roles are incompatible.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "ownership ladder gap of 3 on project 'billing migration' ('Billing Migration Project Leader' = level 4 vs 'wrote tests and validated the reconciliation' = level 1)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.95,
+          "challenge_question": "Can you explain how leading a project can also mean primarily writing tests? Was there any overlap or different aspects of your role during the billing migration?",
+          "claim_a": {
+            "id": "c_39e28865fe",
+            "round": 2,
+            "text": "billing migration / role_on / Billing Migration Project Leader",
+            "span": "I led the billing migration end to end."
+          },
+          "claim_b": {
+            "id": "c_6ff9dbb0b4",
+            "round": 2,
+            "text": "billing migration / role_on / wrote tests and validated the reconciliation",
+            "span": "Day to day on the billing migration I mainly wrote tests and validated the reconciliation output."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_279bae30a5",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.706026,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity ownership_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_ca0df386a4"
+      }
+    },
+    {
+      "id": "e_44391ec1e1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "contradiction_detected",
+      "ts": 1793423555.707674,
+      "payload": {
+        "round": 2,
+        "id": "x_340245bbe0",
+        "type": "numeric_conflict",
+        "severity": "high",
+        "score": 0.925,
+        "rationale": "CLAIM A states 'Four Engineers / 4people', while CLAIM B says 'twelve people'. These numbers are contradictory.",
+        "detector": "rules+llm",
+        "evidence": {
+          "rule_detail": "team_size for 'billing migration' stated as 4people and 12people (67% apart, tolerance 34%)",
+          "rule_score": 1.0,
+          "llm_confidence": 0.85,
+          "challenge_question": "Could you clarify which team size is correct for the billing migration project? Were there any design calls made above your level?",
+          "claim_a": {
+            "id": "c_a6588aa646",
+            "round": 2,
+            "text": "billing migration / team_size / Four Engineers / 4people",
+            "span": "a team of four engineers"
+          },
+          "claim_b": {
+            "id": "c_3873d9e0d7",
+            "round": 2,
+            "text": "billing migration / team_size / twelve people / 12people",
+            "span": "\"The team was around twelve people\", so a lot of the design calls happened above me."
+          }
+        },
+        "found_by": "bar",
+        "found_by_display": "Bar-Raiser"
+      }
+    },
+    {
+      "id": "e_74e0a9e651",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "replan",
+      "ts": 1793423555.70846,
+      "payload": {
+        "round": 2,
+        "trigger": "new high-severity numeric_conflict",
+        "effect": "next panelist's planner is now primed to confront this before opening any new topic",
+        "contradiction_id": "x_340245bbe0"
+      }
+    },
+    {
+      "id": "e_c958e35ddc",
+      "session_id": "s_b62eb1c2af",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793423555.709849,
+      "payload": {
+        "round": 2,
+        "claims": 32,
+        "contradictions": 25
+      }
+    },
+    {
+      "id": "e_02c4e83d63",
+      "session_id": "s_b62eb1c2af",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793423555.711358,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_f8245f3d4f",
+      "session_id": "s_b62eb1c2af",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793423575.071213,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "collaboration & conflict": 2.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.48,
+        "recommendation": "no_hire",
+        "confidence": 0.98,
+        "strengths": [
+          "Candidate provided specific examples of their work.",
+          "They took ownership of the architecture and project management.",
+          "They demonstrated clear communication during the interview."
+        ],
+        "concerns": [
+          "The candidate contradicted themselves regarding roles in the same project.",
+          "There is a discrepancy between claimed years of experience with Python and Kafka.",
+          "Lack of specific details on test automation tools used."
+        ],
+        "evidence_claim_ids": [
+          "c_7c22271413",
+          "c_3a9e676d35",
+          "c_3cdbf815bb",
+          "c_0e36ffe773",
+          "c_5dd6908bc2"
+        ],
+        "integrity_note": "The candidate provided clear and specific examples but contradicted themselves, indicating potential inconsistencies.",
+        "summary": "Candidate demonstrated ownership and communication skills but had contradictions in their responses and discrepancies in claimed experience."
+      }
+    },
+    {
+      "id": "e_6d94000e34",
+      "session_id": "s_b62eb1c2af",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793423593.6938381,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_and_tradeoffs": 1.0,
+          "debugging_and_root_cause_depth": 2.0,
+          "data_modelling_correctness": 3.0,
+          "coding_ability": 4.0,
+          "operational_maturity_testing_monitoring_rollout": 3.0
+        },
+        "overall": 3.0,
+        "recommendation": "no_hire",
+        "confidence": 1.0,
+        "strengths": [
+          "Experienced in Python and Kafka, though contradictory claims cannot be verified.",
+          "Led a billing migration project with reduced invoice errors by 30%",
+          "Used test automation tools for validation during the project"
+        ],
+        "concerns": [
+          "Inconsistent self-reported experience (6 years of Python vs. 3 years of Kafka)",
+          "Contradictory claims about roles and responsibilities in the same project",
+          "Lack of depth on specific mechanisms or tools used to own architecture"
+        ],
+        "evidence_claim_ids": [
+          "c_5dd6908bc2",
+          "c_79a32bde39",
+          "c_c0bb92cbdc",
+          "c_d86d37e17d"
+        ],
+        "integrity_note": "Inconsistencies in self-reported experience and role claims raise concerns about the candidate's honesty and reliability.",
+        "summary": "The candidate lacks depth on specific mechanisms or tools used to own architecture, inconsistent self-reported experience, and contradictory role claims. These issues are concerning."
+      }
+    },
+    {
+      "id": "e_5ceb8f3335",
+      "session_id": "s_b62eb1c2af",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793423614.251455,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_integrity": 1.0,
+          "scope_and_impact_calibration": 1.0,
+          "ambiguity_handling": 1.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 2.85,
+        "recommendation": "no_hire",
+        "confidence": 0.97,
+        "strengths": [
+          "Detailed and consistent responses to technical questions.",
+          "Ability to provide specific examples of project leadership."
+        ],
+        "concerns": [
+          "Inconsistent claims regarding experience with Python and Kafka (6 years vs 3 years).",
+          "Contradictory statements about roles during the billing migration project (Project Lead vs wrote tests and validated reconciliation)."
+        ],
+        "evidence_claim_ids": [
+          "c_e4a9206cc5",
+          "c_7c22271413",
+          "c_c0bb92cbdc",
+          "c_62dce2d843",
+          "c_d86d37e17d"
+        ],
+        "integrity_note": "The candidate provided inconsistent and contradictory information, raising doubts about their honesty and reliability.",
+        "summary": "The candidate's responses show depth under pressure but are marred by inconsistencies in experience claims and role contradictions. This raises concerns about their integrity and reliability."
+      }
+    },
+    {
+      "id": "e_75715f8205",
+      "session_id": "s_b62eb1c2af",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793423614.2554398,
+      "payload": {
+        "initial_positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_65aba5b2a9",
+      "session_id": "s_b62eb1c2af",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793423614.256373,
+      "payload": {
+        "round": 1,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_0267a09ae3",
+      "session_id": "s_b62eb1c2af",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793423614.257466,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 0,
+        "weighted_score": 2.8,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 25 unresolved HIGH-severity contradiction(s). The Bar-Raiser's integrity objection is dispositive."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 0.52,
+        "panel_agreement": 0.87,
+        "confidence": 0.92,
+        "votes": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_c9806138b1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793423624.583107,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.92,
+        "rationale": "The candidate was unanimously rejected (NO_HIRE) by the panel due to multiple contradictions and inconsistencies in their responses regarding experience, roles, and responsibilities. Specifically, there is a high-severity numeric conflict where the candidate claims 6 years of Python experience but only 3 years of Kafka experience, which cannot both be true based on provided information. Additionally, there is a high-severity ownership conflict as the candidate contradicts themselves about their role in the same project ('Project Lead' vs 'wrote tests and validated the reconciliation'). These contradictions are significant enough to disqualify the candidate from consideration.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 1.0,
+              "collaboration & conflict": 2.0,
+              "communication clarity": 3.0,
+              "motivation & role fit": 2.0,
+              "handling failure and feedback": 1.0
+            },
+            "overall": 2.48,
+            "recommendation": "no_hire",
+            "confidence": 0.98,
+            "strengths": [
+              "Candidate provided specific examples of their work.",
+              "They took ownership of the architecture and project management.",
+              "They demonstrated clear communication during the interview."
+            ],
+            "concerns": [
+              "The candidate contradicted themselves regarding roles in the same project.",
+              "There is a discrepancy between claimed years of experience with Python and Kafka.",
+              "Lack of specific details on test automation tools used."
+            ],
+            "evidence_claim_ids": [
+              "c_7c22271413",
+              "c_3a9e676d35",
+              "c_3cdbf815bb",
+              "c_0e36ffe773",
+              "c_5dd6908bc2"
+            ],
+            "integrity_note": "The candidate provided clear and specific examples but contradicted themselves, indicating potential inconsistencies.",
+            "summary": "Candidate demonstrated ownership and communication skills but had contradictions in their responses and discrepancies in claimed experience."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_and_tradeoffs": 1.0,
+              "debugging_and_root_cause_depth": 2.0,
+              "data_modelling_correctness": 3.0,
+              "coding_ability": 4.0,
+              "operational_maturity_testing_monitoring_rollout": 3.0
+            },
+            "overall": 3.0,
+            "recommendation": "no_hire",
+            "confidence": 1.0,
+            "strengths": [
+              "Experienced in Python and Kafka, though contradictory claims cannot be verified.",
+              "Led a billing migration project with reduced invoice errors by 30%",
+              "Used test automation tools for validation during the project"
+            ],
+            "concerns": [
+              "Inconsistent self-reported experience (6 years of Python vs. 3 years of Kafka)",
+              "Contradictory claims about roles and responsibilities in the same project",
+              "Lack of depth on specific mechanisms or tools used to own architecture"
+            ],
+            "evidence_claim_ids": [
+              "c_5dd6908bc2",
+              "c_79a32bde39",
+              "c_c0bb92cbdc",
+              "c_d86d37e17d"
+            ],
+            "integrity_note": "Inconsistencies in self-reported experience and role claims raise concerns about the candidate's honesty and reliability.",
+            "summary": "The candidate lacks depth on specific mechanisms or tools used to own architecture, inconsistent self-reported experience, and contradictory role claims. These issues are concerning."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 1.0,
+              "claim_consistency_integrity": 1.0,
+              "scope_and_impact_calibration": 1.0,
+              "ambiguity_handling": 1.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 2.85,
+            "recommendation": "no_hire",
+            "confidence": 0.97,
+            "strengths": [
+              "Detailed and consistent responses to technical questions.",
+              "Ability to provide specific examples of project leadership."
+            ],
+            "concerns": [
+              "Inconsistent claims regarding experience with Python and Kafka (6 years vs 3 years).",
+              "Contradictory statements about roles during the billing migration project (Project Lead vs wrote tests and validated reconciliation)."
+            ],
+            "evidence_claim_ids": [
+              "c_e4a9206cc5",
+              "c_7c22271413",
+              "c_c0bb92cbdc",
+              "c_62dce2d843",
+              "c_d86d37e17d"
+            ],
+            "integrity_note": "The candidate provided inconsistent and contradictory information, raising doubts about their honesty and reliability.",
+            "summary": "The candidate's responses show depth under pressure but are marred by inconsistencies in experience claims and role contradictions. This raises concerns about their integrity and reliability."
+          }
+        },
+        "evidence": [
+          "x_e664c6fd3e",
+          "x_6c0f8654c2"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 2.48
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 3.0
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.85
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 0,
+          "weighted_score": 2.8,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R1 Bar-Raiser veto: Bar-Raiser voted no_hire with 25 unresolved HIGH-severity contradiction(s). The Bar-Raiser's integrity objection is dispositive."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 0.52,
+          "panel_agreement": 0.87,
+          "confidence": 0.92,
+          "votes": {
+            "hr": "no_hire",
+            "tech": "no_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "numeric_conflict",
+          "ownership_conflict"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_b651960bf7",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_f158fc438f",
+      "session_id": "s_b62eb1c2af",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793423624.585299,
+      "payload": {
+        "verdict_id": "v_b651960bf7",
+        "decision": "no_hire",
+        "confidence": 0.92,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "e_155f0e707e",
+      "session_id": "s_b62eb1c2af",
+      "phase": "export",
+      "kind": "report_written",
+      "ts": 1793423624.5978959,
+      "payload": {
+        "path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/interview_s_b62eb1c2af.json",
+        "ok": true,
+        "bytes": 163115
+      }
+    },
+    {
+      "id": "e_c07c5b6cc1",
+      "session_id": "s_b62eb1c2af",
+      "phase": "approval",
+      "kind": "approval_recorded",
+      "ts": 1793423624.599498,
+      "payload": {
+        "decision": "approve",
+        "by": "demo-operator",
+        "note": "auto-approved via --approve",
+        "saved": true
+      }
+    }
+  ],
+  "_pii_redaction": {
+    "categories_found": [],
+    "applied": false
+  }
+}

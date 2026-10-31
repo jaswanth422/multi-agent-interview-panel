@@ -1,0 +1,2082 @@
+{
+  "session_id": "s_05a6e0fd29",
+  "generated_at": 1793428358.553904,
+  "wall_clock_s": 149.6,
+  "llm": {
+    "provider": "ollama",
+    "model": "qwen2.5:3b",
+    "temperature": 0.35
+  },
+  "llm_usage": {
+    "calls": 21,
+    "failures": 0,
+    "json_repairs": 0,
+    "prompt_tokens": 18709,
+    "completion_tokens": 2766,
+    "total_latency_s": 148.85,
+    "mean_latency_s": 7.088,
+    "calls_by_label": {
+      "ask_bar": 2,
+      "ask_hr": 2,
+      "ask_tech": 1,
+      "extract_claims": 6,
+      "moderator_narrate": 1,
+      "plan_bar": 2,
+      "plan_hr": 2,
+      "plan_tech": 2,
+      "score_bar": 1,
+      "score_hr": 1,
+      "score_tech": 1
+    }
+  },
+  "tool_usage": {
+    "total_calls": 4,
+    "distinct_tools": 3,
+    "success_rate": 0.75,
+    "handled_failures": 1,
+    "by_tool": {
+      "resume_db": {
+        "calls": 2,
+        "ok": 2,
+        "mean_ms": 0.4
+      },
+      "web_fact_check": {
+        "calls": 1,
+        "ok": 0,
+        "mean_ms": 647.4
+      },
+      "code_exec": {
+        "calls": 1,
+        "ok": 1,
+        "mean_ms": 0.0
+      }
+    }
+  },
+  "detector_stats": {
+    "rule_hits": 0,
+    "llm_confirmed": 0,
+    "llm_rejected": 0,
+    "prefilter_rejected": 0,
+    "duplicate_suppressed": 0
+  },
+  "guardrails": {
+    "refusals": [],
+    "refusal_count": 0,
+    "injection_attempts": [],
+    "injection_count": 0,
+    "prohibited_categories_covered": [
+      "age",
+      "marital_family",
+      "religion",
+      "gender_orientation",
+      "nationality_race",
+      "health_disability",
+      "salary_history"
+    ],
+    "injection_patterns_covered": [
+      "instruction_override",
+      "persona_hijack",
+      "prompt_exfiltration",
+      "verdict_manipulation",
+      "privilege_escalation"
+    ]
+  },
+  "minimum_bar": {
+    "agentic_loop": {
+      "satisfied": true,
+      "llm_calls": 21,
+      "phases": [
+        "plan",
+        "act",
+        "observe",
+        "extract",
+        "detect",
+        "replan",
+        "score",
+        "debate",
+        "consensus",
+        "approval"
+      ],
+      "replans_triggered": 0
+    },
+    "tools": {
+      "satisfied": true,
+      "distinct_tools_used": 3,
+      "detail": {
+        "resume_db": {
+          "calls": 2,
+          "ok": 2,
+          "mean_ms": 0.4
+        },
+        "web_fact_check": {
+          "calls": 1,
+          "ok": 0,
+          "mean_ms": 647.4
+        },
+        "code_exec": {
+          "calls": 1,
+          "ok": 1,
+          "mean_ms": 0.0
+        }
+      }
+    },
+    "memory": {
+      "satisfied": true,
+      "backend": "sqlite",
+      "db_path": "/Users/katurijaswanth/Desktop/learning 's/hackthon/interview-panel/artifacts/panel.sqlite3",
+      "claims_persisted": 18,
+      "turns_persisted": 13,
+      "events_persisted": 47,
+      "resumable_across_sessions": true
+    },
+    "guardrails": {
+      "satisfied": true,
+      "human_approval_checkpoint": true,
+      "refusals_demonstrated": 0,
+      "injections_neutralized": 0,
+      "tool_failures_handled": 1
+    }
+  },
+  "contradiction_summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "addressed_in_interview": 0,
+    "cross_round": 0
+  },
+  "session": {
+    "id": "s_05a6e0fd29",
+    "candidate_name": "Nikhil Joshi",
+    "role": "Backend Engineer",
+    "seniority": "mid",
+    "status": "awaiting_approval",
+    "created_at": 1793428208.91285,
+    "updated_at": 1793428358.5474849,
+    "config": {
+      "rounds": 2,
+      "code_task_id": "two_sum",
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen2.5:3b",
+        "temperature": 0.35
+      },
+      "hire_threshold": 3.2
+    },
+    "resume": {
+      "name": "Nikhil Joshi",
+      "headline": "Backend engineer, 5 years",
+      "total_years": 5,
+      "github": "",
+      "projects": [
+        {
+          "name": "Onboarding Service",
+          "role": "Developer",
+          "team_size": 5,
+          "months": 10,
+          "stack": [
+            "Python",
+            "FastAPI"
+          ],
+          "impact": "drop-off down 30%"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Python",
+          "years": 5,
+          "level": "advanced"
+        }
+      ],
+      "roles": [
+        {
+          "company": "Growthly",
+          "title": "Engineer",
+          "years": 5
+        }
+      ]
+    }
+  },
+  "transcript": [
+    {
+      "id": "t_90535ece44",
+      "session_id": "s_05a6e0fd29",
+      "round": 0,
+      "seq": 1,
+      "agent": "system",
+      "kind": "resume",
+      "text": "{\"name\": \"Nikhil Joshi\", \"headline\": \"Backend engineer, 5 years\", \"total_years\": 5, \"github\": \"\", \"projects\": [{\"name\": \"Onboarding Service\", \"role\": \"Developer\", \"team_size\": 5, \"months\": 10, \"stack\": [\"Python\", \"FastAPI\"], \"impact\": \"drop-off down 30%\"}], \"skills\": [{\"name\": \"Python\", \"years\": 5, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Growthly\", \"title\": \"Engineer\", \"years\": 5}]}",
+      "ts": 1793428208.9210382,
+      "meta": {
+        "source": "resume"
+      }
+    },
+    {
+      "id": "t_fa79eb6041",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 2,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Can you provide an example of a specific Python project you worked on at Growthly that reduced drop-off by 30% within the first 10 months?",
+      "ts": 1793428213.262149,
+      "meta": {
+        "intent": "Motivation through impact assessment",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_3b0cfdc40b",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 3,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "I built most of the onboarding service with a team of five. We cut signup drop-off by about 30 percent.",
+      "ts": 1793428213.263915,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_1b04e2bfaf",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 4,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Could you elaborate on the specific Python mechanisms and optimizations used in the onboarding service to achieve a 30% drop-off reduction?",
+      "ts": 1793428224.849668,
+      "meta": {
+        "intent": "Examine technical implementation details",
+        "action": "verify_with_tool",
+        "reasoning": "To verify the candidate's claim, we need to probe further into their specific contributions and results. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_b811328e1a",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 5,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+      "ts": 1793428224.8520901,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_74098fc0b0",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 6,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide more detail on how the specific Python mechanisms and optimizations used in the onboarding service contributed to reducing the drop-off rate by approximately thirty-five percent within the first 10 months?",
+      "ts": 1793428238.434096,
+      "meta": {
+        "intent": "Verify specific details of project impact",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer about a 30% drop-off reduction seems vague and inconsistent with their current response. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_d86ba6c1b9",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "seq": 7,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+      "ts": 1793428238.436262,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_6e40b7d89f",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 8,
+      "agent": "hr",
+      "kind": "question",
+      "text": "Could you provide the exact percentage reduction in drop-off rate and the number of team members involved at the time of implementation?",
+      "ts": 1793428249.436817,
+      "meta": {
+        "intent": "Clarify contribution to project outcome",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague and inconsistent with their previous statement about a 30% drop-off reduction.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_d648705a33",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 9,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+      "ts": 1793428249.440143,
+      "meta": {
+        "to_agent": "hr",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_26a273d68b",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 10,
+      "agent": "tech",
+      "kind": "question",
+      "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+      "ts": 1793428257.036424,
+      "meta": {
+        "intent": "live coding ability",
+        "action": "request_code",
+        "reasoning": "The candidate's recent answer is vague and does not provide specific details about the drop-off reduction or team size, indicating a need for clarification. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_23403a0d93",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 11,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+      "ts": 1793428257.038922,
+      "meta": {
+        "to_agent": "tech",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "t_dff09ab636",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 12,
+      "agent": "bar",
+      "kind": "question",
+      "text": "Could you provide the exact percentage reduction in drop-off rate and the number of team members involved at the time of implementation, including any changes or additions during the process?",
+      "ts": 1793428269.209028,
+      "meta": {
+        "intent": "Clarify specific numbers related to drop-off reduction",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague about specific numbers related to drop-off reduction and team size, so probing for clarification will help validate the claim.",
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "t_1671870506",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "seq": 13,
+      "agent": "candidate",
+      "kind": "answer",
+      "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+      "ts": 1793428269.213629,
+      "meta": {
+        "to_agent": "bar",
+        "injection_flagged": false
+      }
+    }
+  ],
+  "claims": [
+    {
+      "subject": "onboarding",
+      "predicate": "role_on",
+      "object": "Developer",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Onboarding Service - Developer",
+      "source": "resume",
+      "id": "c_46a4df1189",
+      "turn_id": "t_90535ece44",
+      "round": 0
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Onboarding Service - team of 5",
+      "source": "resume",
+      "id": "c_46244ad67b",
+      "turn_id": "t_90535ece44",
+      "round": 0
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "timeline",
+      "object": "",
+      "polarity": 1,
+      "value_num": 10.0,
+      "unit": "months",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.95,
+      "raw_span": "Resume: Onboarding Service - 10 months",
+      "source": "resume",
+      "id": "c_fed79934ec",
+      "turn_id": "t_90535ece44",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "used_tech",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume skill: Python (5y, advanced)",
+      "source": "resume",
+      "id": "c_0086ea6a03",
+      "turn_id": "t_90535ece44",
+      "round": 0
+    },
+    {
+      "subject": "self",
+      "predicate": "years_exp",
+      "object": "Python",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "years",
+      "ownership": null,
+      "topic": "",
+      "confidence": 0.9,
+      "raw_span": "Resume: 5 years of Python",
+      "source": "resume",
+      "id": "c_7c281cb2e4",
+      "turn_id": "t_90535ece44",
+      "round": 0
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "used_tech",
+      "object": "web technologies",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": null,
+      "topic": "Motivation through impact assessment",
+      "confidence": 1.0,
+      "raw_span": "I built most of the onboarding service with a team of five. We cut signup drop-off by about 30 percent.",
+      "source": "interview",
+      "id": "c_c18cc823a6",
+      "turn_id": "t_3b0cfdc40b",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "five",
+      "polarity": 1,
+      "value_num": 5.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Motivation through impact assessment",
+      "confidence": 1.0,
+      "raw_span": "I built most of the onboarding service with a team of five.",
+      "source": "interview",
+      "id": "c_556fd4f02f",
+      "turn_id": "t_3b0cfdc40b",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "role_on",
+      "object": "built most of the onboarding",
+      "polarity": 1,
+      "value_num": null,
+      "unit": "",
+      "ownership": 3,
+      "topic": "Motivation through impact assessment",
+      "confidence": 0.88,
+      "raw_span": "I built most of the onboarding service with a team of five.",
+      "source": "interview",
+      "id": "c_a7ec8a9df3",
+      "turn_id": "t_3b0cfdc40b",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "outcome",
+      "object": "drop-off reduction",
+      "polarity": 1,
+      "value_num": 35.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "Examine technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "roughly thirty five percent drop-off reduction in the end",
+      "source": "interview",
+      "id": "c_185c3a03e2",
+      "turn_id": "t_b811328e1a",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "number of people",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Examine technical implementation details",
+      "confidence": 0.8,
+      "raw_span": "there were six of us by the time we arrived since someone joined late.",
+      "source": "interview",
+      "id": "c_d2ac544fab",
+      "turn_id": "t_b811328e1a",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "outcome",
+      "object": "drop-off reduction",
+      "polarity": 1,
+      "value_num": 35.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "Verify specific details of project impact",
+      "confidence": 0.8,
+      "raw_span": "roughly thirty five percent drop-off reduction in the end",
+      "source": "interview",
+      "id": "c_b99bdb7b55",
+      "turn_id": "t_d86ba6c1b9",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "number of people",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Verify specific details of project impact",
+      "confidence": 0.8,
+      "raw_span": "there were six of us by the time we arrived since someone joined late.",
+      "source": "interview",
+      "id": "c_26d46a5162",
+      "turn_id": "t_d86ba6c1b9",
+      "round": 1
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "outcome",
+      "object": "drop-off reduction",
+      "polarity": 1,
+      "value_num": 35.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "Clarify contribution to project outcome",
+      "confidence": 0.8,
+      "raw_span": "roughly thirty five percent drop-off reduction in the end",
+      "source": "interview",
+      "id": "c_dbacb4a00d",
+      "turn_id": "t_d648705a33",
+      "round": 2
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "number of people",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify contribution to project outcome",
+      "confidence": 0.8,
+      "raw_span": "there were six of us by the time we arrived since someone joined late.",
+      "source": "interview",
+      "id": "c_5cfe62ee07",
+      "turn_id": "t_d648705a33",
+      "round": 2
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "outcome",
+      "object": "drop-off reduction",
+      "polarity": 1,
+      "value_num": 35.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.8,
+      "raw_span": "roughly thirty five percent drop-off reduction in the end",
+      "source": "interview",
+      "id": "c_e95d7d0185",
+      "turn_id": "t_23403a0d93",
+      "round": 2
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "number of people",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "live coding ability",
+      "confidence": 0.8,
+      "raw_span": "there were six of us by the time we arrived since someone joined late.",
+      "source": "interview",
+      "id": "c_17a18f1d50",
+      "turn_id": "t_23403a0d93",
+      "round": 2
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "outcome",
+      "object": "drop-off reduction",
+      "polarity": 1,
+      "value_num": 35.0,
+      "unit": "%",
+      "ownership": null,
+      "topic": "Clarify specific numbers related to drop-off reduction",
+      "confidence": 0.8,
+      "raw_span": "roughly thirty five percent drop-off reduction in the end",
+      "source": "interview",
+      "id": "c_68d9ef8ec8",
+      "turn_id": "t_1671870506",
+      "round": 2
+    },
+    {
+      "subject": "onboarding",
+      "predicate": "team_size",
+      "object": "number of people",
+      "polarity": 1,
+      "value_num": 6.0,
+      "unit": "people",
+      "ownership": null,
+      "topic": "Clarify specific numbers related to drop-off reduction",
+      "confidence": 0.8,
+      "raw_span": "there were six of us by the time we arrived since someone joined late.",
+      "source": "interview",
+      "id": "c_77ef6447be",
+      "turn_id": "t_1671870506",
+      "round": 2
+    }
+  ],
+  "contradictions": [],
+  "tool_calls": [
+    {
+      "id": "tc_6b53b98d1b",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "agent": "hr",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.29277801513671875,
+      "ts": 1793428210.049581,
+      "args": {
+        "field": "all"
+      },
+      "result": {
+        "projects": [
+          {
+            "name": "Onboarding Service",
+            "role": "Developer",
+            "team_size": 5,
+            "stack": "Python, FastAPI",
+            "impact": "drop-off down 30%",
+            "months": 10
+          }
+        ],
+        "skills": [
+          {
+            "name": "Python",
+            "years": 5.0,
+            "level": "advanced"
+          }
+        ],
+        "roles": [
+          {
+            "company": "Growthly",
+            "title": "Engineer",
+            "years": 5.0
+          }
+        ],
+        "profile": [
+          {
+            "k": "name",
+            "v": "Nikhil Joshi"
+          },
+          {
+            "k": "headline",
+            "v": "Backend engineer, 5 years"
+          },
+          {
+            "k": "total_years",
+            "v": "5"
+          }
+        ],
+        "_sql_executed": "all four tables"
+      }
+    },
+    {
+      "id": "tc_d8fcec2592",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "agent": "tech",
+      "tool": "resume_db",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.5638599395751953,
+      "ts": 1793428221.881463,
+      "args": {
+        "field": "skills"
+      },
+      "result": {
+        "skills": [
+          {
+            "name": "Python",
+            "years": 5.0,
+            "level": "advanced"
+          }
+        ],
+        "_sql_executed": "SELECT name,years,level FROM skills"
+      }
+    },
+    {
+      "id": "tc_51e5143754",
+      "session_id": "s_05a6e0fd29",
+      "round": 1,
+      "agent": "bar",
+      "tool": "web_fact_check",
+      "ok": 0,
+      "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "latency_ms": 647.4149227142334,
+      "ts": 1793428233.4218712,
+      "args": {
+        "query": "software engineering"
+      },
+      "result": null
+    },
+    {
+      "id": "tc_4f71942f17",
+      "session_id": "s_05a6e0fd29",
+      "round": 2,
+      "agent": "tech",
+      "tool": "code_exec",
+      "ok": 1,
+      "error": "",
+      "latency_ms": 0.007867813110351562,
+      "ts": 1793428257.0417202,
+      "args": {
+        "task_id": "two_sum",
+        "code_len": 0
+      },
+      "result": {
+        "passed": 0,
+        "total": 4,
+        "verdict": "no_code_submitted",
+        "cases": [],
+        "static_check": "empty"
+      }
+    }
+  ],
+  "guardrail_events": [],
+  "verdict": {
+    "id": "v_e9097fbdc4",
+    "session_id": "s_05a6e0fd29",
+    "decision": "no_hire",
+    "confidence": 0.84,
+    "rationale": "The panel unanimously decided against hiring based on a weighted score of 2.4 (out of 3.2) from both HR and Technical Panelists who recommended 'no_hire'. The HR Panelist scored with strengths in communication clarity and ownership & accountability, but concerns included inconsistent information about the percentage reduction in drop-off rate and team size involved. The Technical Panelist also saw a recommendation for 'no_hire' due to inconsistencies in provided numbers and failure to address contradictions.",
+    "approval_status": "pending",
+    "approved_by": "",
+    "approval_note": "",
+    "approved_at": null,
+    "ts": 1793428358.543117,
+    "per_agent": {
+      "hr": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.75,
+        "strengths": [
+          "Candidate provided specific details about the onboarding service.",
+          "Used STAR method to describe their role in reducing drop-off rate."
+        ],
+        "concerns": [
+          "Failed to provide a clear and specific percentage reduction in drop-off rate.",
+          "Repeatedly used 'we' instead of personal actions, indicating lack of ownership.",
+          "Inconsistent answers regarding the number of team members involved at different stages."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed793f0ec",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate provided inconsistent and vague information, raising concerns about their honesty and reliability.",
+        "summary": "The candidate failed to provide clear and specific details regarding the percentage reduction in drop-off rate and team size involved. Their answers were inconsistent across different rounds of questioning."
+      },
+      "tech": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 1.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 3.0,
+          "operational_maturity_testing_monitoring_rollout": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.67,
+        "strengths": [
+          "Candidate provided a clear example of reducing drop-off rate in an onboarding service.",
+          "Used Python for the project, demonstrating experience with the language."
+        ],
+        "concerns": [
+          "Failed to provide specific mechanisms and optimizations used in the onboarding service.",
+          "Repeatedly stated incorrect numbers (35% instead of 30%) without addressing contradictions.",
+          "Unable to reason about trade-offs or failure modes related to the project.",
+          "Code execution failed, indicating issues with their implementation."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed79934ec",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate provided multiple inconsistent numbers and failed to address contradictions.",
+        "summary": "The candidate demonstrated basic understanding of the project but lacked depth in explaining mechanisms, trade-offs, and code execution. Their responses were vague and contradictory."
+      },
+      "bar": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 1.0,
+          "ambiguity_handling": 1.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 2.0,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Candidate provided specific details about the onboarding service and its impact.",
+          "Used Python for the project, demonstrating technical depth."
+        ],
+        "concerns": [
+          "Consistent contradictions in the number of team members involved (5 vs 6).",
+          "Inconsistent claims regarding the drop-off reduction percentage (30% vs 35%)."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed793ecf4",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate inconsistently reported team size and drop-off reduction percentage, raising doubts about their honesty.",
+        "summary": "The candidate provided specific details but exhibited inconsistent claims and contradictions. Their technical depth is commendable, but the lack of consistency in key metrics raises concerns."
+      }
+    },
+    "evidence": [
+      "c_46a4df1189",
+      "c_46244ad67b",
+      "c_fed793f0ec",
+      "c_0086ea6a03",
+      "c_7c281cb2e4"
+    ],
+    "dissent": [],
+    "debate": [
+      {
+        "round": 1,
+        "note": "panel already unanimous; debate closed early",
+        "positions": {
+          "hr": {
+            "position": "no_hire",
+            "overall": 2.4
+          },
+          "tech": {
+            "position": "no_hire",
+            "overall": 2.4
+          },
+          "bar": {
+            "position": "no_hire",
+            "overall": 2.0
+          }
+        },
+        "turns": []
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "e_5330086ece",
+      "session_id": "s_05a6e0fd29",
+      "phase": "setup",
+      "kind": "session_created",
+      "ts": 1793428208.920067,
+      "payload": {
+        "session_id": "s_05a6e0fd29",
+        "candidate": "Nikhil Joshi",
+        "role": "Backend Engineer",
+        "seniority": "mid",
+        "rounds": 2,
+        "llm": {
+          "provider": "ollama",
+          "model": "qwen2.5:3b",
+          "temperature": 0.35
+        },
+        "panel": [
+          {
+            "key": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "mandate": "You are a senior HR interviewer. You assess collaboration, ownership, communication, conflict handling and motivation using the STAR method (Situation, Task, Action, Result). You listen for WHO did WHAT: candidates often",
+            "weight": 0.9
+          },
+          {
+            "key": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "mandate": "You are a staff-level engineer running the technical screen. You verify depth, not vocabulary. Ask for mechanisms, trade-offs and failure modes: 'what happens when', 'why that and not X', 'how did you measure it'. If an ",
+            "weight": 1.2
+          },
+          {
+            "key": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "mandate": "You are the Bar-Raiser: an independent senior interviewer whose job is to protect the hiring bar, NOT to be agreeable. You deliberately seek DISCONFIRMING evidence for the emerging consensus. You target the weakest or le",
+            "weight": 1.3
+          }
+        ],
+        "tools_available": [
+          "code_exec",
+          "resume_db",
+          "github_verify",
+          "web_fact_check"
+        ]
+      }
+    },
+    {
+      "id": "e_606102667b",
+      "session_id": "s_05a6e0fd29",
+      "phase": "setup",
+      "kind": "resume_ingested",
+      "ts": 1793428208.923578,
+      "payload": {
+        "claims_seeded": 5,
+        "projects": [
+          "onboarding"
+        ],
+        "sql_backed": true
+      }
+    },
+    {
+      "id": "e_b59894af92",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793428208.925924,
+      "payload": {
+        "round": 1,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_90b62a73d9",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793428210.047028,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "from_action": "ask_new",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: HR Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_3b06006964",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428210.0487309,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "verify_with_tool",
+        "reasoning": "[P2 protocol: HR Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "resume_db",
+        "target_contradiction_id": "",
+        "latency_s": 1.12
+      }
+    },
+    {
+      "id": "e_7d33db3a63",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793428213.260992,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "all"
+        },
+        "latency_ms": 0.3,
+        "error": "",
+        "result_preview": "{\"projects\": [{\"name\": \"Onboarding Service\", \"role\": \"Developer\", \"team_size\": 5, \"stack\": \"Python, FastAPI\", \"impact\": \"drop-off down 30%\", \"months\": 10}], \"skills\": [{\"name\": \"Python\", \"years\": 5.0, \"level\": \"advanced\"}], \"roles\": [{\"company\": \"Growthly\", \"title\": \"Engineer\", \"years\": 5.0}], \"profile\": [{\"k\": \"name\", \"v\": \"Nikhil Joshi\"}, {\"k\": \"headline\", \"v\": \"Backend engineer, 5 years\"}, {\"k\": \"total_years\", \"v\": \"5\"}], \"_sql_executed\": \"all four tables\"}"
+      }
+    },
+    {
+      "id": "e_ab847dda6b",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428213.26293,
+      "payload": {
+        "round": 1,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Can you provide an example of a specific Python project you worked on at Growthly that reduced drop-off by 30% within the first 10 months?",
+        "intent": "Motivation through impact assessment",
+        "action": "verify_with_tool",
+        "turn_id": "t_fa79eb6041",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_385ce09a7b",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428213.264624,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "I built most of the onboarding service with a team of five. We cut signup drop-off by about 30 percent.",
+        "turn_id": "t_3b0cfdc40b",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_12db94f254",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428219.122983,
+      "payload": {
+        "round": 1,
+        "from_agent": "hr",
+        "count": 3,
+        "claims": [
+          {
+            "id": "c_c18cc823a6",
+            "text": "onboarding / used_tech / web technologies",
+            "span": "I built most of the onboarding service with a team of five. We cut signup drop-off by about 30 percent.",
+            "predicate": "used_tech",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_556fd4f02f",
+            "text": "onboarding / team_size / five / 5people",
+            "span": "I built most of the onboarding service with a team of five.",
+            "predicate": "team_size",
+            "confidence": 1.0
+          },
+          {
+            "id": "c_a7ec8a9df3",
+            "text": "onboarding / role_on / built most of the onboarding",
+            "span": "I built most of the onboarding service with a team of five.",
+            "predicate": "role_on",
+            "confidence": 0.88
+          }
+        ],
+        "ledger_size": 8
+      }
+    },
+    {
+      "id": "e_6b1c0179c5",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793428221.878447,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Technical Panelist has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_5ba0f11828",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428221.88002,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "verify_with_tool",
+        "reasoning": "To verify the candidate's claim, we need to probe further into their specific contributions and results. [P2 protocol: Technical Panelist has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "github_verify",
+        "target_contradiction_id": "",
+        "latency_s": 2.76
+      }
+    },
+    {
+      "id": "e_0668ffe16c",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793428224.847831,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "tool": "resume_db",
+        "ok": true,
+        "args": {
+          "field": "skills"
+        },
+        "latency_ms": 0.6,
+        "error": "",
+        "result_preview": "{\"skills\": [{\"name\": \"Python\", \"years\": 5.0, \"level\": \"advanced\"}], \"_sql_executed\": \"SELECT name,years,level FROM skills\"}"
+      }
+    },
+    {
+      "id": "e_151b54eaa3",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428224.8506722,
+      "payload": {
+        "round": 1,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Could you elaborate on the specific Python mechanisms and optimizations used in the onboarding service to achieve a 30% drop-off reduction?",
+        "intent": "Examine technical implementation details",
+        "action": "verify_with_tool",
+        "turn_id": "t_1b04e2bfaf",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_7f325e0ae5",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428224.8531919,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+        "turn_id": "t_b811328e1a",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_fce3b3bd30",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428229.0312698,
+      "payload": {
+        "round": 1,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_185c3a03e2",
+            "text": "onboarding / outcome / drop-off reduction / 35%",
+            "span": "roughly thirty five percent drop-off reduction in the end",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_d2ac544fab",
+            "text": "onboarding / team_size / number of people / 6people",
+            "span": "there were six of us by the time we arrived since someone joined late.",
+            "predicate": "team_size",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 10
+      }
+    },
+    {
+      "id": "e_e4db3b56d3",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793428232.771747,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "from_action": "probe_prior",
+        "to_action": "verify_with_tool",
+        "reason": "P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence"
+      }
+    },
+    {
+      "id": "e_014537bf19",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428232.773333,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "verify_with_tool",
+        "reasoning": "The candidate's prior answer about a 30% drop-off reduction seems vague and inconsistent with their current response. [P2 protocol: Bar-Raiser has not yet grounded a question in tool evidence]",
+        "target_competency": "",
+        "tool": "web_fact_check",
+        "target_contradiction_id": "",
+        "latency_s": 3.74
+      }
+    },
+    {
+      "id": "e_57b3df1150",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "tool_call",
+      "ts": 1793428238.431772,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "tool": "web_fact_check",
+        "ok": false,
+        "args": {
+          "query": "software engineering"
+        },
+        "latency_ms": 647.4,
+        "error": "HTTPStatusError: Client error '403 Please respect our robot policy https://w.wiki/4wJS. If you think you are incorrectly blocked, please contact noc@wikimedia.org (768589d)' for url 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=software+engineering&format=json&srlimit=3'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+        "result_preview": "null"
+      }
+    },
+    {
+      "id": "e_75a0f83b63",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428238.435093,
+      "payload": {
+        "round": 1,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide more detail on how the specific Python mechanisms and optimizations used in the onboarding service contributed to reducing the drop-off rate by approximately thirty-five percent within the first 10 months?",
+        "intent": "Verify specific details of project impact",
+        "action": "verify_with_tool",
+        "turn_id": "t_74098fc0b0",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_40eb2185bb",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428238.4371,
+      "payload": {
+        "round": 1,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+        "turn_id": "t_d86ba6c1b9",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_efae49ce9d",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428242.1413188,
+      "payload": {
+        "round": 1,
+        "from_agent": "bar",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_b99bdb7b55",
+            "text": "onboarding / outcome / drop-off reduction / 35%",
+            "span": "roughly thirty five percent drop-off reduction in the end",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_26d46a5162",
+            "text": "onboarding / team_size / number of people / 6people",
+            "span": "there were six of us by the time we arrived since someone joined late.",
+            "predicate": "team_size",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 12
+      }
+    },
+    {
+      "id": "e_893c4e3c64",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793428242.143113,
+      "payload": {
+        "round": 1,
+        "claims": 12,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_064d6e5891",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "round_start",
+      "ts": 1793428242.144338,
+      "payload": {
+        "round": 2,
+        "of": 2
+      }
+    },
+    {
+      "id": "e_1d413cd728",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428246.070546,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague and inconsistent with their previous statement about a 30% drop-off reduction.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 3.92
+      }
+    },
+    {
+      "id": "e_00b7d0e6fc",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428249.4387,
+      "payload": {
+        "round": 2,
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "text": "Could you provide the exact percentage reduction in drop-off rate and the number of team members involved at the time of implementation?",
+        "intent": "Clarify contribution to project outcome",
+        "action": "probe_prior",
+        "turn_id": "t_6e40b7d89f",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_c2a4c721aa",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428249.4411259,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "hr",
+        "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+        "turn_id": "t_d648705a33",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_6e5728ab05",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428252.899113,
+      "payload": {
+        "round": 2,
+        "from_agent": "hr",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_dbacb4a00d",
+            "text": "onboarding / outcome / drop-off reduction / 35%",
+            "span": "roughly thirty five percent drop-off reduction in the end",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_5cfe62ee07",
+            "text": "onboarding / team_size / number of people / 6people",
+            "span": "there were six of us by the time we arrived since someone joined late.",
+            "predicate": "team_size",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 14
+      }
+    },
+    {
+      "id": "e_5217ea7aed",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "policy_override",
+      "ts": 1793428257.03217,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "from_action": "probe_prior",
+        "to_action": "request_code",
+        "reason": "P3 protocol: technical screen requires a live coding task by round 2"
+      }
+    },
+    {
+      "id": "e_772c8a46ad",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428257.035058,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "action": "request_code",
+        "reasoning": "The candidate's recent answer is vague and does not provide specific details about the drop-off reduction or team size, indicating a need for clarification. [P3 protocol: technical screen requires a live coding task by round 2]",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.13
+      }
+    },
+    {
+      "id": "e_bc656a0d22",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428257.037534,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "text": "Let's write some code. Write `def two_sum(nums: list[int], target: int) -> list[int]` returning the indices of the two numbers adding to target. Assume exactly one solution. Aim for O(n). Share your implementation when ready.",
+        "intent": "live coding ability",
+        "action": "request_code",
+        "turn_id": "t_26a273d68b",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_95b026f456",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428257.040282,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "tech",
+        "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+        "turn_id": "t_23403a0d93",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_ab1e27aff4",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "code_execution",
+      "ts": 1793428257.043574,
+      "payload": {
+        "round": 2,
+        "agent": "tech",
+        "ok": true,
+        "latency_ms": 0.0,
+        "result": {
+          "passed": 0,
+          "total": 4,
+          "verdict": "no_code_submitted",
+          "cases": [],
+          "static_check": "empty"
+        },
+        "code_excerpt": ""
+      }
+    },
+    {
+      "id": "e_cf3ef5d668",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428260.719815,
+      "payload": {
+        "round": 2,
+        "from_agent": "tech",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_e95d7d0185",
+            "text": "onboarding / outcome / drop-off reduction / 35%",
+            "span": "roughly thirty five percent drop-off reduction in the end",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_17a18f1d50",
+            "text": "onboarding / team_size / number of people / 6people",
+            "span": "there were six of us by the time we arrived since someone joined late.",
+            "predicate": "team_size",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 16
+      }
+    },
+    {
+      "id": "e_8e83e02221",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "agent_plan",
+      "ts": 1793428265.0479958,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "action": "probe_prior",
+        "reasoning": "The candidate's recent answer is vague about specific numbers related to drop-off reduction and team size, so probing for clarification will help validate the claim.",
+        "target_competency": "",
+        "tool": "",
+        "target_contradiction_id": "",
+        "latency_s": 4.33
+      }
+    },
+    {
+      "id": "e_5f97c54174",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "question",
+      "ts": 1793428269.2114382,
+      "payload": {
+        "round": 2,
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "text": "Could you provide the exact percentage reduction in drop-off rate and the number of team members involved at the time of implementation, including any changes or additions during the process?",
+        "intent": "Clarify specific numbers related to drop-off reduction",
+        "action": "probe_prior",
+        "turn_id": "t_dff09ab636",
+        "is_challenge": false,
+        "contradiction_id": ""
+      }
+    },
+    {
+      "id": "e_a27026d88f",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "answer",
+      "ts": 1793428269.2145479,
+      "payload": {
+        "round": 2,
+        "agent": "candidate",
+        "to_agent": "bar",
+        "text": "It was roughly thirty five percent drop-off reduction in the end, and there were six of us by the time we shipped since someone joined late.",
+        "turn_id": "t_1671870506",
+        "injection_flagged": false
+      }
+    },
+    {
+      "id": "e_8f04cddf50",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "claims_extracted",
+      "ts": 1793428272.6916428,
+      "payload": {
+        "round": 2,
+        "from_agent": "bar",
+        "count": 2,
+        "claims": [
+          {
+            "id": "c_68d9ef8ec8",
+            "text": "onboarding / outcome / drop-off reduction / 35%",
+            "span": "roughly thirty five percent drop-off reduction in the end",
+            "predicate": "outcome",
+            "confidence": 0.8
+          },
+          {
+            "id": "c_77ef6447be",
+            "text": "onboarding / team_size / number of people / 6people",
+            "span": "there were six of us by the time we arrived since someone joined late.",
+            "predicate": "team_size",
+            "confidence": 0.8
+          }
+        ],
+        "ledger_size": 18
+      }
+    },
+    {
+      "id": "e_707cd9540b",
+      "session_id": "s_05a6e0fd29",
+      "phase": "interview",
+      "kind": "round_end",
+      "ts": 1793428272.693324,
+      "payload": {
+        "round": 2,
+        "claims": 18,
+        "contradictions": 0
+      }
+    },
+    {
+      "id": "e_3a298b14cb",
+      "session_id": "s_05a6e0fd29",
+      "phase": "score",
+      "kind": "scoring_start",
+      "ts": 1793428272.695198,
+      "payload": {
+        "panelists": [
+          "hr",
+          "tech",
+          "bar"
+        ]
+      }
+    },
+    {
+      "id": "e_94d9ef2b4e",
+      "session_id": "s_05a6e0fd29",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428298.304922,
+      "payload": {
+        "agent": "hr",
+        "display": "HR Panelist",
+        "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+        "weight": 0.9,
+        "scores": {
+          "ownership & accountability": 1.0,
+          "communication clarity": 3.0,
+          "motivation & role fit": 2.0,
+          "handling failure and feedback": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.75,
+        "strengths": [
+          "Candidate provided specific details about the onboarding service.",
+          "Used STAR method to describe their role in reducing drop-off rate."
+        ],
+        "concerns": [
+          "Failed to provide a clear and specific percentage reduction in drop-off rate.",
+          "Repeatedly used 'we' instead of personal actions, indicating lack of ownership.",
+          "Inconsistent answers regarding the number of team members involved at different stages."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed793f0ec",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate provided inconsistent and vague information, raising concerns about their honesty and reliability.",
+        "summary": "The candidate failed to provide clear and specific details regarding the percentage reduction in drop-off rate and team size involved. Their answers were inconsistent across different rounds of questioning."
+      }
+    },
+    {
+      "id": "e_6f85b744f1",
+      "session_id": "s_05a6e0fd29",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428325.296109,
+      "payload": {
+        "agent": "tech",
+        "display": "Technical Panelist",
+        "emoji": "\ud83d\udee0\ufe0f",
+        "weight": 1.2,
+        "scores": {
+          "system_design_tradeoffs": 1.0,
+          "debugging_root_cause_depth": 2.0,
+          "data_modelling_correctness": 1.0,
+          "coding_ability": 3.0,
+          "operational_maturity_testing_monitoring_rollout": 1.0
+        },
+        "overall": 2.4,
+        "recommendation": "no_hire",
+        "confidence": 0.67,
+        "strengths": [
+          "Candidate provided a clear example of reducing drop-off rate in an onboarding service.",
+          "Used Python for the project, demonstrating experience with the language."
+        ],
+        "concerns": [
+          "Failed to provide specific mechanisms and optimizations used in the onboarding service.",
+          "Repeatedly stated incorrect numbers (35% instead of 30%) without addressing contradictions.",
+          "Unable to reason about trade-offs or failure modes related to the project.",
+          "Code execution failed, indicating issues with their implementation."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed79934ec",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate provided multiple inconsistent numbers and failed to address contradictions.",
+        "summary": "The candidate demonstrated basic understanding of the project but lacked depth in explaining mechanisms, trade-offs, and code execution. Their responses were vague and contradictory."
+      }
+    },
+    {
+      "id": "e_8a6f0b4e65",
+      "session_id": "s_05a6e0fd29",
+      "phase": "score",
+      "kind": "scorecard",
+      "ts": 1793428346.678208,
+      "payload": {
+        "agent": "bar",
+        "display": "Bar-Raiser",
+        "emoji": "\ud83c\udfaf",
+        "weight": 1.3,
+        "scores": {
+          "depth_under_pressure": 1.0,
+          "claim_consistency_and_integrity": 2.0,
+          "scope_and_impact_calibration": 1.0,
+          "ambiguity_handling": 1.0,
+          "raising_the_hiring_bar": 1.0
+        },
+        "overall": 2.0,
+        "recommendation": "no_hire",
+        "confidence": 0.85,
+        "strengths": [
+          "Candidate provided specific details about the onboarding service and its impact.",
+          "Used Python for the project, demonstrating technical depth."
+        ],
+        "concerns": [
+          "Consistent contradictions in the number of team members involved (5 vs 6).",
+          "Inconsistent claims regarding the drop-off reduction percentage (30% vs 35%)."
+        ],
+        "evidence_claim_ids": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed793ecf4",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "integrity_note": "Candidate inconsistently reported team size and drop-off reduction percentage, raising doubts about their honesty.",
+        "summary": "The candidate provided specific details but exhibited inconsistent claims and contradictions. Their technical depth is commendable, but the lack of consistency in key metrics raises concerns."
+      }
+    },
+    {
+      "id": "e_fd53031024",
+      "session_id": "s_05a6e0fd29",
+      "phase": "debate",
+      "kind": "debate_start",
+      "ts": 1793428346.682176,
+      "payload": {
+        "initial_positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        },
+        "rounds": 2
+      }
+    },
+    {
+      "id": "e_ff7f58000a",
+      "session_id": "s_05a6e0fd29",
+      "phase": "debate",
+      "kind": "debate_skipped",
+      "ts": 1793428346.68333,
+      "payload": {
+        "round": 1,
+        "reason": "unanimous",
+        "positions": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_eaadf83a53",
+      "session_id": "s_05a6e0fd29",
+      "phase": "consensus",
+      "kind": "consensus_computed",
+      "ts": 1793428346.684323,
+      "payload": {
+        "decision": "no_hire",
+        "hire_votes": 0,
+        "weighted_score": 2.25,
+        "threshold": 3.2,
+        "rules_fired": [
+          "R4 Unanimous: no panelist recommended hire."
+        ],
+        "dissent": [],
+        "unanimous": true,
+        "score_spread": 0.4,
+        "panel_agreement": 0.9,
+        "confidence": 0.84,
+        "votes": {
+          "hr": "no_hire",
+          "tech": "no_hire",
+          "bar": "no_hire"
+        }
+      }
+    },
+    {
+      "id": "e_8b989884b0",
+      "session_id": "s_05a6e0fd29",
+      "phase": "consensus",
+      "kind": "verdict",
+      "ts": 1793428358.545961,
+      "payload": {
+        "decision": "no_hire",
+        "confidence": 0.84,
+        "rationale": "The panel unanimously decided against hiring based on a weighted score of 2.4 (out of 3.2) from both HR and Technical Panelists who recommended 'no_hire'. The HR Panelist scored with strengths in communication clarity and ownership & accountability, but concerns included inconsistent information about the percentage reduction in drop-off rate and team size involved. The Technical Panelist also saw a recommendation for 'no_hire' due to inconsistencies in provided numbers and failure to address contradictions.",
+        "per_agent": {
+          "hr": {
+            "agent": "hr",
+            "display": "HR Panelist",
+            "emoji": "\ud83e\uddd1\u200d\ud83d\udcbc",
+            "weight": 0.9,
+            "scores": {
+              "ownership & accountability": 1.0,
+              "communication clarity": 3.0,
+              "motivation & role fit": 2.0,
+              "handling failure and feedback": 1.0
+            },
+            "overall": 2.4,
+            "recommendation": "no_hire",
+            "confidence": 0.75,
+            "strengths": [
+              "Candidate provided specific details about the onboarding service.",
+              "Used STAR method to describe their role in reducing drop-off rate."
+            ],
+            "concerns": [
+              "Failed to provide a clear and specific percentage reduction in drop-off rate.",
+              "Repeatedly used 'we' instead of personal actions, indicating lack of ownership.",
+              "Inconsistent answers regarding the number of team members involved at different stages."
+            ],
+            "evidence_claim_ids": [
+              "c_46a4df1189",
+              "c_46244ad67b",
+              "c_fed793f0ec",
+              "c_0086ea6a03",
+              "c_7c281cb2e4"
+            ],
+            "integrity_note": "Candidate provided inconsistent and vague information, raising concerns about their honesty and reliability.",
+            "summary": "The candidate failed to provide clear and specific details regarding the percentage reduction in drop-off rate and team size involved. Their answers were inconsistent across different rounds of questioning."
+          },
+          "tech": {
+            "agent": "tech",
+            "display": "Technical Panelist",
+            "emoji": "\ud83d\udee0\ufe0f",
+            "weight": 1.2,
+            "scores": {
+              "system_design_tradeoffs": 1.0,
+              "debugging_root_cause_depth": 2.0,
+              "data_modelling_correctness": 1.0,
+              "coding_ability": 3.0,
+              "operational_maturity_testing_monitoring_rollout": 1.0
+            },
+            "overall": 2.4,
+            "recommendation": "no_hire",
+            "confidence": 0.67,
+            "strengths": [
+              "Candidate provided a clear example of reducing drop-off rate in an onboarding service.",
+              "Used Python for the project, demonstrating experience with the language."
+            ],
+            "concerns": [
+              "Failed to provide specific mechanisms and optimizations used in the onboarding service.",
+              "Repeatedly stated incorrect numbers (35% instead of 30%) without addressing contradictions.",
+              "Unable to reason about trade-offs or failure modes related to the project.",
+              "Code execution failed, indicating issues with their implementation."
+            ],
+            "evidence_claim_ids": [
+              "c_46a4df1189",
+              "c_46244ad67b",
+              "c_fed79934ec",
+              "c_0086ea6a03",
+              "c_7c281cb2e4"
+            ],
+            "integrity_note": "Candidate provided multiple inconsistent numbers and failed to address contradictions.",
+            "summary": "The candidate demonstrated basic understanding of the project but lacked depth in explaining mechanisms, trade-offs, and code execution. Their responses were vague and contradictory."
+          },
+          "bar": {
+            "agent": "bar",
+            "display": "Bar-Raiser",
+            "emoji": "\ud83c\udfaf",
+            "weight": 1.3,
+            "scores": {
+              "depth_under_pressure": 1.0,
+              "claim_consistency_and_integrity": 2.0,
+              "scope_and_impact_calibration": 1.0,
+              "ambiguity_handling": 1.0,
+              "raising_the_hiring_bar": 1.0
+            },
+            "overall": 2.0,
+            "recommendation": "no_hire",
+            "confidence": 0.85,
+            "strengths": [
+              "Candidate provided specific details about the onboarding service and its impact.",
+              "Used Python for the project, demonstrating technical depth."
+            ],
+            "concerns": [
+              "Consistent contradictions in the number of team members involved (5 vs 6).",
+              "Inconsistent claims regarding the drop-off reduction percentage (30% vs 35%)."
+            ],
+            "evidence_claim_ids": [
+              "c_46a4df1189",
+              "c_46244ad67b",
+              "c_fed793ecf4",
+              "c_0086ea6a03",
+              "c_7c281cb2e4"
+            ],
+            "integrity_note": "Candidate inconsistently reported team size and drop-off reduction percentage, raising doubts about their honesty.",
+            "summary": "The candidate provided specific details but exhibited inconsistent claims and contradictions. Their technical depth is commendable, but the lack of consistency in key metrics raises concerns."
+          }
+        },
+        "evidence": [
+          "c_46a4df1189",
+          "c_46244ad67b",
+          "c_fed793f0ec",
+          "c_0086ea6a03",
+          "c_7c281cb2e4"
+        ],
+        "dissent": [],
+        "debate": [
+          {
+            "round": 1,
+            "note": "panel already unanimous; debate closed early",
+            "positions": {
+              "hr": {
+                "position": "no_hire",
+                "overall": 2.4
+              },
+              "tech": {
+                "position": "no_hire",
+                "overall": 2.4
+              },
+              "bar": {
+                "position": "no_hire",
+                "overall": 2.0
+              }
+            },
+            "turns": []
+          }
+        ],
+        "consensus_detail": {
+          "decision": "no_hire",
+          "hire_votes": 0,
+          "weighted_score": 2.25,
+          "threshold": 3.2,
+          "rules_fired": [
+            "R4 Unanimous: no panelist recommended hire."
+          ],
+          "dissent": [],
+          "unanimous": true,
+          "score_spread": 0.4,
+          "panel_agreement": 0.9,
+          "confidence": 0.84,
+          "votes": {
+            "hr": "no_hire",
+            "tech": "no_hire",
+            "bar": "no_hire"
+          }
+        },
+        "decision_drivers": [
+          "communication clarity",
+          "ownership & accountability",
+          "specificity of information provided",
+          "consistency in data and claims"
+        ],
+        "risk_if_hired": "",
+        "recommended_next_step": "",
+        "verdict_id": "v_e9097fbdc4",
+        "approval_required": true
+      }
+    },
+    {
+      "id": "e_f6ce489688",
+      "session_id": "s_05a6e0fd29",
+      "phase": "approval",
+      "kind": "approval_required",
+      "ts": 1793428358.548532,
+      "payload": {
+        "verdict_id": "v_e9097fbdc4",
+        "decision": "no_hire",
+        "confidence": 0.84,
+        "message": "This hire/no-hire recommendation is NOT final. A human reviewer must approve, override, or reject it before it is released to the hiring team.",
+        "options": [
+          "approve",
+          "override",
+          "reject"
+        ]
+      }
+    }
+  ]
+}
