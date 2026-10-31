@@ -21,11 +21,11 @@ from panel.candidate import ScriptedAnswer as A
 
 
 def _case(cid, name, persona, role, seniority, resume, bank, expected,
-          truth, code_answer="", notes="") -> dict[str, Any]:
+          truth, code_answer="", notes="", track="core") -> dict[str, Any]:
     return {"id": cid, "name": name, "persona": persona, "role": role,
             "seniority": seniority, "resume": resume, "bank": bank,
             "expected_decision": expected, "ground_truth": truth,
-            "code_answer": code_answer, "notes": notes}
+            "code_answer": code_answer, "notes": notes, "track": track}
 
 
 GOOD_CODE = """def two_sum(nums, target):
@@ -492,8 +492,16 @@ def get_case(cid: str) -> dict[str, Any]:
 
 def stats() -> dict[str, Any]:
     planted = sum(len(c["ground_truth"]) for c in CASES)
+    tracks: dict[str, dict[str, Any]] = {}
+    for c in CASES:
+        t = tracks.setdefault(c.get("track", "core"),
+                              {"cases": 0, "planted": 0, "clean": 0})
+        t["cases"] += 1
+        t["planted"] += len(c["ground_truth"])
+        t["clean"] += 0 if c["ground_truth"] else 1
     return {
         "total_cases": len(CASES),
+        "by_track": tracks,
         "cases_with_contradictions": len([c for c in CASES if c["ground_truth"]]),
         "clean_cases": len([c for c in CASES if not c["ground_truth"]]),
         "total_planted_contradictions": planted,
@@ -502,3 +510,269 @@ def stats() -> dict[str, Any]:
         "contradiction_types_covered": sorted({g["type"] for c in CASES
                                                for g in c["ground_truth"]}),
     }
+
+
+# ===================================================================== #
+#  STARTUP / EARLY-STAGE TRACK                                          #
+# ===================================================================== #
+#
+# The core 12 cases above are mid-to-senior ICs at established companies.
+# They cover the detection mechanics but miss the hiring context that
+# early-stage companies actually operate in, where:
+#
+#   * titles are self-assigned and decoupled from scope ("CTO" of four people)
+#   * one person legitimately does hold five roles at once
+#   * attribution between co-founders is genuinely murky
+#   * growth and timeline numbers get compressed in the retelling
+#
+# The precision cases here are deliberately harder than anything in the core
+# set. An honest employee #3 who says "I owned the backend, ran deploys and
+# answered support tickets" produces an ownership-ladder spread of 4 on one
+# project — the exact signature of inflation — and must NOT be flagged.
+# Getting that wrong would make the tool useless for the companies most
+# likely to use it.
+
+STARTUP_CASES: list[dict[str, Any]] = [
+
+    # ---------------------------------------------------------------- 13
+    _case(
+        "C13-title-inflation", "Aditya Varma",
+        "Was 'CTO' of a four-person seed startup. Leads with the title, and the "
+        "scope behind it collapses under specifics. Not malicious, genuinely "
+        "believes the title reflects the work, but the numbers move.",
+        "Engineering Lead", "senior",
+        {"name": "Aditya Varma", "headline": "CTO at seed-stage fintech, 6 years",
+         "total_years": 6, "github": "",
+         "projects": [{"name": "Payments Integration", "role": "CTO",
+                       "team_size": 4, "months": 9,
+                       "stack": ["Node.js", "Stripe", "PostgreSQL"],
+                       "impact": "launched payments for 200 merchants"}],
+         "skills": [{"name": "Node.js", "years": 6, "level": "advanced"},
+                    {"name": "PostgreSQL", "years": 4, "level": "intermediate"}],
+         "roles": [{"company": "PayNest", "title": "CTO", "years": 2}]},
+        [
+            A(["tell me", "yourself", "cto", "lead", "experience", "project",
+               "payments", "proud"],
+              "As CTO I owned the technical direction for the payments integration "
+              "and led a team of four engineers through the launch. We got payments "
+              "live for about 200 merchants.",
+              tag="cto-claim", plant_round=1, priority=2),
+            A(["day to day", "specific", "actually did", "detail", "your role",
+               "hands on", "contribution"],
+              "Day to day on the payments integration I was mostly implementing "
+              "tickets my co-founder had already designed, and I wrote the tests for "
+              "the payment flows. In reality we were two engineers in total.",
+              tag="scope-collapse", plant_round=2, priority=2),
+            A(["reconcile", "earlier", "square", "inconsisten", "both be true"],
+              "Well, CTO was the title on the cap table. At a seed company titles are "
+              "mostly for customers and investors. I was accountable for the tech even "
+              "if my co-founder was the one making the architecture calls.",
+              tag="deflect"),
+        ],
+        "no_hire",
+        [{"type": "ownership_conflict", "about": "payments integration",
+          "desc": "claims to have owned technical direction as CTO, later says he "
+                  "implemented tickets others designed and wrote tests"},
+         {"type": "numeric_conflict", "about": "payments integration",
+          "desc": "team stated as four engineers, later as two in total"}],
+        notes="Startup title inflation. The title is real; the scope behind it is not. "
+              "Tests that the ownership ladder reads WORK described, not job titles.",
+        track="startup",
+    ),
+
+    # ---------------------------------------------------------------- 14
+    _case(
+        "C14-solo-founder-attribution", "Nisha Agarwal",
+        "Technical co-founder who describes joint work as solo work. Takes credit "
+        "for her co-founder's contributions in round 1, corrects only when pushed "
+        "on implementation detail.",
+        "Senior Full-Stack Engineer", "senior",
+        {"name": "Nisha Agarwal", "headline": "Technical co-founder, 5 years",
+         "total_years": 5, "github": "",
+         "projects": [{"name": "Mobile App", "role": "Founding Engineer",
+                       "team_size": 2, "months": 12,
+                       "stack": ["React Native", "Firebase", "Kubernetes"],
+                       "impact": "15k downloads"}],
+         "skills": [{"name": "React Native", "years": 4, "level": "advanced"},
+                    {"name": "Kubernetes", "years": 3, "level": "intermediate"}],
+         "roles": [{"company": "Shopkart", "title": "Co-founder", "years": 2}]},
+        [
+            A(["tell me", "yourself", "built", "founder", "experience", "project",
+               "mobile", "proud"],
+              "I single-handedly built and owned the entire mobile app, end to end. "
+              "The API, the React Native client, the release pipeline, all of it. We "
+              "got to 15,000 downloads.",
+              tag="solo-claim", plant_round=1, priority=2),
+            A(["specific", "api", "backend", "detail", "how did you", "implement",
+               "architecture"],
+              "On the mobile app I mainly did the UI screens and QA'd the release "
+              "builds. My co-founder wrote the backend API and set up Firebase.",
+              tag="attribution-reveal", plant_round=2, priority=2),
+            A(["kubernetes", "infra", "deploy", "cluster", "scale", "ops"],
+              "I have never touched Kubernetes, honestly. A contractor set all of that "
+              "up for us and I never had to go near it.",
+              tag="k8s-deny", plant_round=3, priority=2),
+        ],
+        "no_hire",
+        [{"type": "ownership_conflict", "about": "mobile",
+          "desc": "claims to have single-handedly built and owned the whole app, "
+                  "later says she did UI and QA while her co-founder wrote the API"},
+         {"type": "polarity_conflict", "about": "kubernetes",
+          "desc": "resume lists 3 years of Kubernetes; candidate says she never touched it"}],
+        notes="Co-founder attribution. Startup work is genuinely collaborative, which "
+              "makes 'I built it' ambiguous. Tests that the panel separates the "
+              "company's achievement from the individual's contribution.",
+        track="startup",
+    ),
+
+    # ---------------------------------------------------------------- 15
+    _case(
+        "C15-clean-employee-three", "Harsh Bhatia",
+        "Employee #3 at a seed startup who genuinely did wear every hat, and is "
+        "precise about it. Scrappy, honest, quantified. Never overclaims.",
+        "Senior Backend Engineer", "senior",
+        {"name": "Harsh Bhatia", "headline": "Employee #3, seed-stage SaaS, 7 years",
+         "total_years": 7, "github": "",
+         "projects": [{"name": "Core Backend", "role": "Owner",
+                       "team_size": 3, "months": 20,
+                       "stack": ["Python", "Django", "PostgreSQL", "Heroku"],
+                       "impact": "0 to 400 paying customers"}],
+         "skills": [{"name": "Python", "years": 7, "level": "advanced"},
+                    {"name": "PostgreSQL", "years": 6, "level": "advanced"}],
+         "roles": [{"company": "Flowdesk", "title": "Senior Engineer", "years": 3}]},
+        [
+            A(["tell me", "yourself", "experience", "startup", "project", "backend",
+               "proud", "role"],
+              "I was employee number three, so I owned the core backend outright. I "
+              "also ran our deploys and I personally answered support tickets on "
+              "weekends myself because there was nobody else to do it. Three of us "
+              "took it from zero to 400 paying customers.",
+              tag="many-hats", plant_round=1, priority=2),
+            A(["specific", "detail", "mechanism", "how", "design", "database",
+               "hardest"],
+              "The hardest part of the core backend was multi-tenancy. I put tenant "
+              "scoping in a Django middleware with a row-level filter, because doing "
+              "it per-query was already leaking across tenants in two endpoints. I "
+              "also wrote all the tests for that myself since we had no QA.",
+              tag="depth", plant_round=2, priority=2),
+            A(["failure", "mistake", "wrong", "learn", "incident"],
+              "I ran a migration on the core backend during business hours and locked "
+              "the customers table for about six minutes. Three customers emailed us. "
+              "I added a migration checklist and we only ship them at 6am now.",
+              tag="failure", plant_round=3, priority=2),
+            A(["scale", "load", "distributed", "shard", "kubernetes"],
+              "We never got to that scale, so I would be speculating. We stayed on "
+              "Heroku on purpose with three engineers. I know where it would have "
+              "broken first, which is the reporting queries.",
+              tag="honest-gap"),
+        ],
+        "hire",
+        [],
+        code_answer="```python\n" + GOOD_CODE + "\n```",
+        notes="HARDEST PRECISION TEST IN THE SUITE. 'Owned the core backend outright' "
+              "(level 4) plus 'answered support tickets' and 'wrote all the tests "
+              "myself' (level 1) is an ownership spread of 3-4 on ONE project — the "
+              "exact signature of inflation. Here it is TRUE: that is what employee #3 "
+              "does. The coexistence filter must hold, or this tool is unusable for "
+              "every early-stage company.",
+        track="startup",
+    ),
+
+    # ---------------------------------------------------------------- 16
+    _case(
+        "C16-clean-cofounder-scoped", "Tanvi Desai",
+        "Technical co-founder with real breadth who scopes her limits precisely and "
+        "attributes her co-founder's work correctly. Consistent throughout.",
+        "Staff Engineer", "senior",
+        {"name": "Tanvi Desai", "headline": "Technical co-founder, 9 years",
+         "total_years": 9, "github": "",
+         "projects": [{"name": "Seller Dashboard", "role": "Co-founder / Lead",
+                       "team_size": 4, "months": 22,
+                       "stack": ["Python", "React", "PostgreSQL", "Heroku"],
+                       "impact": "1.8k sellers, 40% less support load"}],
+         "skills": [{"name": "Python", "years": 9, "level": "expert"},
+                    {"name": "React", "years": 5, "level": "intermediate"}],
+         "roles": [{"company": "Stocklane", "title": "Co-founder", "years": 4}]},
+        [
+            A(["tell me", "yourself", "founder", "experience", "project", "dashboard",
+               "proud", "role"],
+              "I designed the data model and built the ingestion for the seller "
+              "dashboard. Early on I was also writing the tests myself. My co-founder "
+              "handled the React front end, I would not claim that work. Four of us, "
+              "about 1,800 sellers, support load down 40 percent.",
+              tag="scoped-intro", plant_round=1, priority=2),
+            A(["specific", "detail", "data model", "mechanism", "how", "ingestion"],
+              "Sellers upload inconsistent CSVs, so I modelled a staging table with a "
+              "per-row error column instead of failing the whole import. That one "
+              "decision cut our support tickets more than anything else we shipped.",
+              tag="depth", plant_round=2, priority=2),
+            A(["kubernetes", "scale", "infra", "mesh", "cluster", "ops", "deploy"],
+              "I have never run Kubernetes in production. We deliberately stayed on "
+              "Heroku because with four people the operational cost was not worth it. "
+              "I wrote that decision up for our investors.",
+              tag="scoped-denial", plant_round=3, priority=2),
+            A(["failure", "mistake", "wrong", "learn", "disagree", "conflict"],
+              "I pushed us to build our own auth instead of using Auth0, and it cost "
+              "us about five weeks for no real benefit. My co-founder was right and I "
+              "said so. We migrated to Auth0 the following quarter.",
+              tag="failure"),
+        ],
+        "hire",
+        [],
+        notes="PRECISION TEST. Two separate traps: an ownership spread softened by "
+              "'also' and 'early on' (coexistence + progression), and a scoped "
+              "technology denial ('never run Kubernetes in production') with nothing "
+              "on the resume to contradict it. Neither is a contradiction.",
+        track="startup",
+    ),
+
+    # ---------------------------------------------------------------- 17
+    _case(
+        "C17-growth-compression", "Rohan Malhotra",
+        "Compresses timelines and team sizes to make delivery look faster and "
+        "leaner than it was. Confident, vague on dates, numbers drift.",
+        "Senior Product Engineer", "senior",
+        {"name": "Rohan Malhotra", "headline": "Product engineer, 6 years",
+         "total_years": 6, "github": "",
+         "projects": [{"name": "Merchant Portal", "role": "Developer",
+                       "team_size": 9, "months": 16,
+                       "stack": ["TypeScript", "Next.js", "PostgreSQL"],
+                       "impact": "onboarded 1,200 merchants"}],
+         "skills": [{"name": "TypeScript", "years": 6, "level": "advanced"}],
+         "roles": [{"company": "Bazaarly", "title": "Product Engineer", "years": 3}]},
+        [
+            A(["tell me", "yourself", "experience", "project", "merchant", "shipped",
+               "proud", "fast"],
+              "We shipped the merchant portal with three engineers in about 4 months. "
+              "Classic startup speed, very lean team, and we onboarded 1,200 merchants "
+              "off the back of it.",
+              tag="lean-fast", plant_round=1, priority=2),
+            A(["timeline", "how long", "when", "specific", "team", "detail", "who else"],
+              "Realistically the merchant portal was closer to 18 months from kickoff "
+              "to launch, and by the end we were twelve engineers on it. It grew a lot "
+              "once leadership saw the traction.",
+              tag="real-numbers", plant_round=2, priority=2),
+            A(["typescript", "next", "render", "performance", "mechanism"],
+              "We moved the merchant list to server-side rendering because the client "
+              "bundle was blocking first paint on the cheap Android devices most of our "
+              "merchants actually use.",
+              tag="depth"),
+        ],
+        "no_hire",
+        [{"type": "numeric_conflict", "about": "merchant portal",
+          "desc": "team stated as three engineers, later as twelve"},
+         {"type": "timeline_conflict", "about": "merchant portal",
+          "desc": "delivery stated as 4 months, later as closer to 18 months"}],
+        notes="Startup 'we moved fast and lean' inflation. Tests numeric and timeline "
+              "tolerance bands at the same time, and that 'by the end' (a progression "
+              "marker) does NOT excuse a numeric conflict the way it excuses an "
+              "ownership one.",
+        track="startup",
+    ),
+]
+
+CASES.extend(STARTUP_CASES)
+
+
+def by_track(track: str) -> list[dict[str, Any]]:
+    return [c for c in CASES if c.get("track", "core") == track]

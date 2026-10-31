@@ -449,10 +449,20 @@ Write your scorecard."""
         except (TypeError, ValueError):
             overall = sum(clean_scores.values()) / len(clean_scores)
         overall = max(1.0, min(5.0, overall))
-        rec = str(d.get("recommendation", "")).lower().replace("-", "_").replace(" ", "_")
-        if rec not in ("strong_hire", "hire", "no_hire", "strong_no_hire"):
-            rec = ("strong_hire" if overall >= 4.5 else "hire" if overall >= 3.2
-                   else "no_hire" if overall >= 2.0 else "strong_no_hire")
+        # The recommendation is DERIVED from the panelist's own rubric-anchored
+        # scores, not taken from its prose label.
+        #
+        # Measured reason: a panelist would score a candidate 3.5/5 — above its
+        # own stated bar of 3 = "meets the bar" — and then write
+        # "strong_no_hire". Three such labels sank a candidate whose weighted
+        # score was 3.57. The label is the least reliable field a small model
+        # emits; the per-competency scores are the considered judgement. So the
+        # rubric defines the mapping and the label is kept only for audit.
+        llm_rec = str(d.get("recommendation", "")).lower().replace("-", "_").replace(" ", "_")
+        if llm_rec not in ("strong_hire", "hire", "no_hire", "strong_no_hire"):
+            llm_rec = ""
+        rec = ("strong_hire" if overall >= 4.5 else "hire" if overall >= 3.0
+               else "no_hire" if overall >= 2.0 else "strong_no_hire")
         try:
             conf = max(0.0, min(1.0, float(d.get("confidence", 0.6))))
         except (TypeError, ValueError):
@@ -466,6 +476,8 @@ Write your scorecard."""
                 "emoji": self.spec.emoji, "weight": self.spec.weight,
                 "scores": clean_scores, "overall": round(overall, 2),
                 "recommendation": rec, "confidence": round(conf, 2),
+                "llm_stated_recommendation": llm_rec,
+                "label_overridden": bool(llm_rec and llm_rec != rec),
                 "strengths": strlist("strengths"), "concerns": strlist("concerns"),
                 "evidence_claim_ids": strlist("evidence_claim_ids"),
                 "integrity_note": str(d.get("integrity_note", ""))[:300],

@@ -18,6 +18,7 @@ import itertools
 import re
 from typing import Any, Iterable
 
+from .claims import ATTRIBUTION, DENIAL
 from .llm import LLM
 from .memory import Claim, Contradiction
 
@@ -58,7 +59,9 @@ class RuleHit:
 PROGRESSION = re.compile(
     r"\b(started (as|out)|began as|initially|at first|early on|then (i |took|moved)|"
     r"later (i )?(took|became|moved)|took over|moved into|by the end|eventually|"
-    r"promoted|stepped up|grew into|for the (first|second) year|at the time)\b", re.I)
+    r"promoted|stepped up|grew into|for the (first|second) year|at the time|"
+    r"the (following|next) (quarter|year|month)|migrated to|switched to|"
+    r"moved (us )?to|we later|afterwards|since then)\b", re.I)
 
 COEXISTENCE = re.compile(
     r"\b(also|as well|in addition|on top of that|besides that|myself because|"
@@ -81,12 +84,22 @@ def benign_explanation(hit: RuleHit) -> str:
     m = PROGRESSION.search(both)
     if m:
         return f"explained progression over time ({m.group(0)!r})"
+
+    # Work credited to someone else is not a claim about the candidate's own
+    # experience, so it cannot contradict one.
+    if hit.ctype in ("polarity_conflict", "exclusivity_conflict"):
+        if ATTRIBUTION.search(both) and not DENIAL.search(both):
+            return "work attributed to a colleague, not a denial of experience"
+        return ""
     if hit.ctype != "ownership_conflict":
         return ""
-    # A lower-ownership statement framed as an addition to the higher one
-    # ("I owned the design and I also wrote the tests") is coexisting scope.
-    lower = hit.a if (hit.a.ownership or 0) < (hit.b.ownership or 0) else hit.b
-    m2 = COEXISTENCE.search(lower.raw_span)
+
+    # A lower-ownership statement framed as an ADDITION to the higher one
+    # ("I owned the design and I also wrote the tests myself") is coexisting
+    # scope. Checked across BOTH spans: the marker frequently sits in a
+    # different sentence from the one the claim was anchored to, which is how
+    # an honest many-hats startup engineer previously got flagged.
+    m2 = COEXISTENCE.search(both)
     if m2:
         return f"coexisting scope, not a replacement ({m2.group(0)!r})"
     return ""

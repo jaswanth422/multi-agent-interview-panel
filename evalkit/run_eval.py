@@ -150,6 +150,7 @@ def eval_detector_case(case: dict[str, Any], llm: LLM) -> dict[str, Any]:
 
     m = match_findings(detected, case["ground_truth"])
     return {"case": case["id"], "name": case["name"],
+            "track": case.get("track", "core"),
             "clean": not case["ground_truth"],
             "planted": len(case["ground_truth"]),
             "detected": len(detected),
@@ -180,6 +181,7 @@ def eval_full_case(case: dict[str, Any], rounds: int) -> dict[str, Any]:
     guards = report["guardrails"]
     tool = report["tool_usage"]
     return {"case": case["id"], "name": case["name"],
+            "track": case.get("track", "core"),
             "clean": not case["ground_truth"],
             "planted": len(case["ground_truth"]), "detected": len(detected),
             "expected_decision": case["expected_decision"],
@@ -239,6 +241,23 @@ def aggregate(rows: list[dict[str, Any]], mode: str) -> dict[str, Any]:
             "mean_per_case_s": round(sum(r["elapsed_s"] for r in rows) / max(len(rows), 1), 1),
         },
     }
+    # Per-track breakdown so the original 12 cases and the startup track are
+    # never silently averaged into one headline number.
+    by_track: dict[str, dict[str, Any]] = {}
+    for r in rows:
+        t = by_track.setdefault(r.get("track", "core"),
+                                {"cases": 0, "tp": 0, "fp": 0, "fn": 0, "planted": 0})
+        t["cases"] += 1
+        for k in ("tp", "fp", "fn", "planted"):
+            t[k] += r[k]
+    for t in by_track.values():
+        p = t["tp"] / (t["tp"] + t["fp"]) if (t["tp"] + t["fp"]) else 0.0
+        rc = t["tp"] / (t["tp"] + t["fn"]) if (t["tp"] + t["fn"]) else 0.0
+        t["precision"] = round(p, 3)
+        t["recall"] = round(rc, 3)
+        t["f1"] = round(2 * p * rc / (p + rc), 3) if (p + rc) else 0.0
+    out["by_track"] = by_track
+
     if mode == "full":
         correct = len([r for r in rows if r.get("decision_correct")])
         out["decision_accuracy"] = {
@@ -299,6 +318,7 @@ def main():
                         r = f.result()
                     except Exception as e:  # noqa: BLE001
                         r = {"case": c["id"], "name": c["name"],
+                             "track": c.get("track","core"),
                              "clean": not c["ground_truth"],
                              "planted": len(c["ground_truth"]), "detected": 0,
                              "claims_extracted": 0, "tp": 0, "fp": 0,
@@ -319,6 +339,7 @@ def main():
                 r = eval_full_case(c, args.rounds)
             except Exception as e:  # noqa: BLE001
                 r = {"case": c["id"], "name": c["name"],
+                     "track": c.get("track","core"),
                      "clean": not c["ground_truth"],
                      "planted": len(c["ground_truth"]), "detected": 0,
                      "expected_decision": c["expected_decision"], "decided": "ERROR",

@@ -179,44 +179,73 @@ Debate round {rnd}. Respond."""
         integrity = state.get("integrity_flags", {})
 
         decision: str | None = None
+        code = state.get("code_result") or {}
+        code_verdict = str(code.get("verdict", "")) if code else ""
 
-        # R1 - Bar-Raiser integrity veto.
-        bar = cards.get("bar")
-        if bar and not _is_hire(bar["recommendation"]) and high_sev:
+        # Rule ordering rationale, measured not assumed:
+        #
+        # A small model's *scores* are weakly discriminative — in our eval a
+        # candidate with three proven contradictions scored 3.05 while a
+        # flawless one scored 3.28. Deciding from scores alone therefore fails
+        # in both directions. What IS reliable is the evidence record: proven
+        # inconsistencies, injection attempts and code results are objective.
+        #
+        # So integrity gates decide first and are disqualifying at screening
+        # stage; panel scores only arbitrate candidates whose record is clean.
+
+        # G1 - attempted manipulation of the evaluators.
+        if integrity.get("injection_count", 0) > 0:
+            decision = "no_hire"
+            rules_fired.append(
+                f"G1 Integrity gate: {integrity['injection_count']} attempt(s) to manipulate "
+                "the evaluators were detected in the candidate's own answers. Disqualifying "
+                "regardless of panel scores.")
+
+        # G2 - unresolved high-severity contradiction.
+        if decision is None and high_sev:
             decision = "no_hire"
             types = ", ".join(sorted({x.get("type", "?") for x in high_sev}))
+            bar = cards.get("bar")
+            bar_note = ""
+            if bar and not _is_hire(bar["recommendation"]):
+                bar_note = (f" The Bar-Raiser independently reached "
+                            f"{bar['recommendation']} ({bar['overall']}/5).")
             rules_fired.append(
-                f"R1 Bar-Raiser veto: Bar-Raiser voted {bar['recommendation']} with "
-                f"{len(high_sev)} unresolved high-severity contradiction(s) ({types}). "
-                "The Bar-Raiser's integrity objection is dispositive.")
+                f"G2 Integrity gate: {len(high_sev)} unresolved high-severity "
+                f"contradiction(s) ({types}) remained unreconciled after being put to the "
+                f"candidate. A screen cannot pass an unexplained inconsistency in the "
+                f"candidate's own account.{bar_note}")
 
-        # R2 - prompt injection is an automatic integrity failure.
-        if decision is None and integrity.get("injection_count", 0) > 0:
+        # G3 - the live coding task was refused or failed.
+        if decision is None and code_verdict in ("refused_unsafe_code", "fail"):
             decision = "no_hire"
-            rules_fired.append(
-                f"R2 Integrity failure: {integrity['injection_count']} attempt(s) to manipulate "
-                "the evaluators were detected in the candidate's answers.")
+            detail = ("submitted code was refused by the sandbox as unsafe"
+                      if code_verdict == "refused_unsafe_code"
+                      else "submitted code failed every hidden test")
+            rules_fired.append(f"G3 Integrity gate: {detail}.")
 
-        # R3 - majority of hire votes AND weighted score clears the bar.
+        # S1 - clean record: the panel's scores decide.
         if decision is None and hire_votes >= 2 and weighted >= self.threshold:
             decision = "hire"
             rules_fired.append(
-                f"R3 Majority + bar: {hire_votes}/3 hire votes and weighted score "
-                f"{weighted:.2f} >= threshold {self.threshold}.")
+                f"S1 Clean record + bar cleared: no unresolved contradictions, "
+                f"{hire_votes}/3 panelists at or above the bar, weighted score "
+                f"{weighted:.2f} >= {self.threshold} (rubric: 3 = meets the bar).")
 
-        # R4 - unanimous no-hire.
-        if decision is None and hire_votes == 0:
-            decision = "no_hire"
-            rules_fired.append("R4 Unanimous: no panelist recommended hire.")
-
-        # R5 - split panel: the specific objection wins over the general impression.
+        # S2 - clean record but the panel is not convinced.
         if decision is None:
             decision = "no_hire"
+            why = []
+            if hire_votes < 2:
+                why.append(f"only {hire_votes}/3 panelists placed the candidate at the bar")
+            if weighted < self.threshold:
+                why.append(f"weighted score {weighted:.2f} is below the bar {self.threshold}")
+            if unresolved:
+                why.append(f"{len(unresolved)} contradiction(s) still open")
             rules_fired.append(
-                f"R5 Split panel ({hire_votes}/3 hire, weighted {weighted:.2f} vs threshold "
-                f"{self.threshold}): with {len(unresolved)} unresolved contradiction(s), a "
-                "specific unanswered objection outweighs a positive general impression. "
-                "Defaulting to no_hire is the reversible choice.")
+                "S2 Below bar: " + "; ".join(why) +
+                ". No integrity failure was found, so this is a depth/seniority "
+                "judgement rather than a trust problem.")
 
         dissent = [{"agent": k, "display": cards[k]["display"],
                     "position": cards[k]["recommendation"],

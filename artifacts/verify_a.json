@@ -1,0 +1,154 @@
+{
+  "mode": "full",
+  "cases_run": 2,
+  "contradiction_detection": {
+    "true_positives": 2,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "planted_total": 3,
+    "detected_total": 2
+  },
+  "false_positive_control": {
+    "clean_cases": 1,
+    "clean_cases_with_a_false_positive": 0,
+    "false_positives_on_clean_cases": 0,
+    "clean_case_precision": 1.0
+  },
+  "recall_on_cases_with_contradictions": {
+    "cases": 1,
+    "planted": 3,
+    "found": 2,
+    "recall": 0.667
+  },
+  "latency": {
+    "total_s": 712.7,
+    "mean_per_case_s": 356.4
+  },
+  "by_track": {
+    "core": {
+      "cases": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "planted": 3,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8
+    }
+  },
+  "decision_accuracy": {
+    "correct": 2,
+    "total": 2,
+    "accuracy": 1.0,
+    "errors": []
+  },
+  "operational": {
+    "mean_llm_calls_per_interview": 23.5,
+    "min_distinct_tools_used": 4,
+    "mean_tool_success_rate": 0.75,
+    "total_handled_tool_failures": 2,
+    "total_injections_neutralized": 0,
+    "total_prohibited_questions_blocked": 0,
+    "contradictions_confronted_live": 2
+  },
+  "wall_clock_s": 712.8,
+  "case_results": [
+    {
+      "case": "C01-ownership-inflation",
+      "name": "Rahul Menon",
+      "track": "core",
+      "clean": false,
+      "planted": 3,
+      "detected": 2,
+      "expected_decision": "no_hire",
+      "decided": "no_hire",
+      "decision_correct": true,
+      "confronted_live": 2,
+      "llm_calls": 26,
+      "distinct_tools": 4,
+      "tool_success_rate": 0.75,
+      "handled_tool_failures": 1,
+      "refusals": 0,
+      "injections": 0,
+      "claims_extracted": 41,
+      "session_id": "s_d95a14d439",
+      "elapsed_s": 372.3,
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tp_detail": [
+        {
+          "ctype": "ownership_conflict",
+          "matched_truth": "claims to have led the billing migration, later says he mainly wrote tests",
+          "severity": "high"
+        },
+        {
+          "ctype": "numeric_conflict",
+          "matched_truth": "team size stated as four, later as twelve",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": [
+        "resume lists 3 years of Kafka; candidate says he never used it in production"
+      ]
+    },
+    {
+      "case": "C08-clean-strong",
+      "name": "Ananya Iyer",
+      "track": "core",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "expected_decision": "hire",
+      "decided": "hire",
+      "decision_correct": true,
+      "confronted_live": 0,
+      "llm_calls": 21,
+      "distinct_tools": 4,
+      "tool_success_rate": 0.75,
+      "handled_tool_failures": 1,
+      "refusals": 0,
+      "injections": 0,
+      "claims_extracted": 25,
+      "session_id": "s_dd68c251e4",
+      "elapsed_s": 340.4,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    }
+  ],
+  "case_mix": {
+    "total_cases": 17,
+    "by_track": {
+      "core": {
+        "cases": 12,
+        "planted": 8,
+        "clean": 7
+      },
+      "startup": {
+        "cases": 5,
+        "planted": 6,
+        "clean": 2
+      }
+    },
+    "cases_with_contradictions": 8,
+    "clean_cases": 9,
+    "total_planted_contradictions": 14,
+    "expected_hire": 6,
+    "expected_no_hire": 11,
+    "contradiction_types_covered": [
+      "exclusivity_conflict",
+      "numeric_conflict",
+      "ownership_conflict",
+      "polarity_conflict",
+      "timeline_conflict"
+    ]
+  }
+}

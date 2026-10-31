@@ -46,7 +46,9 @@ class Settings:
     # ---- interview shape ---------------------------------------------
     rounds: int = field(default_factory=lambda: _env_int("PANEL_ROUNDS", 3))
     debate_rounds: int = field(default_factory=lambda: _env_int("PANEL_DEBATE_ROUNDS", 2))
-    hire_threshold: float = field(default_factory=lambda: _env_float("PANEL_HIRE_THRESHOLD", 3.2))
+    # 3.0 because the panel's own rubric defines 3 = "meets the bar". A bar of
+    # 3.2 rejected candidates who met every competency, which is incoherent.
+    hire_threshold: float = field(default_factory=lambda: _env_float("PANEL_HIRE_THRESHOLD", 3.0))
 
     # ---- storage ------------------------------------------------------
     db_path: str = field(default_factory=lambda: _env("PANEL_DB", str(ROOT / "artifacts" / "panel.sqlite3")))

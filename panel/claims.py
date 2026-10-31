@@ -32,12 +32,23 @@ OWNERSHIP_LADDER: list[tuple[int, tuple[str, ...]]] = [
     (4, ("led", "lead", "owned", "own", "headed", "drove", "drove the", "spearheaded",
          "managed", "was responsible for the whole", "architected end-to-end",
          "ran the project", "project lead", "tech lead")),
+    # NOTE: no bare "wrote the" here. It greedily swallows "wrote the tests",
+    # which is level 1, and scoring that as 3 collapses the ladder gap so a
+    # real "I led it / I only tested it" conflict stops firing.
     (3, ("designed", "architected", "built", "created", "developed", "implemented",
-         "authored", "wrote the", "rewrote", "migrated")),
-    (2, ("contributed", "helped", "worked on", "part of", "collaborated",
-         "assisted", "supported", "pair", "involved in")),
-    (1, ("tested", "qa", "wrote tests", "validated", "verified", "reviewed",
-         "triaged", "documented", "monitored")),
+         "authored", "rewrote", "migrated", "wrote the code", "wrote the service",
+         "wrote the api", "wrote the backend", "wrote most of")),
+    # "part of" must stay bound to a first-person being-verb. Bare "part of"
+    # matches "the hardest PART OF the core backend", turning a statement about
+    # difficulty into a level-2 ownership claim — which then manufactures a
+    # bogus ladder gap against a genuine "I owned it".
+    (2, ("contributed", "helped", "worked on", "collaborated", "assisted",
+         "supported", "involved in", "was part of", "were part of",
+         "been part of", "pair programmed")),
+    (1, ("tested", "qa", "qa'd", "wrote tests", "wrote the tests",
+         "wrote all the tests", "writing the tests", "validated", "verified",
+         "reviewed", "triaged", "documented", "monitored", "answered support",
+         "handled support", "fixing bugs", "implementing tickets")),
     (0, ("observed", "shadowed", "watched", "sat in", "was told", "learned about",
          "no involvement", "not involved")),
 ]
@@ -45,6 +56,20 @@ OWNERSHIP_LADDER: list[tuple[int, tuple[str, ...]]] = [
 NEGATION = re.compile(
     r"\b(never|not|no|didn'?t|did not|haven'?t|have not|wasn'?t|was not|"
     r"don'?t|do not|none|nor|without)\b", re.I)
+
+# A genuine denial of personal experience: a negation bound to a usage verb.
+DENIAL = re.compile(
+    r"\b(never|not|n't|no)\b[^.?!]{0,30}?"
+    r"\b(used|using|use|touched|worked\s+with|configured|ran|run|running|"
+    r"written|wrote|built|build|deployed|operated|managed|shipped|"
+    r"had\s+(?:any\s+)?experience|hands[- ]on)\b", re.I)
+
+# Work explicitly credited to someone else. Not a statement about the
+# candidate's own experience either way.
+ATTRIBUTION = re.compile(
+    r"\b(my|our|the)\s+(co[- ]?founder|cofounder|colleague|teammate|lead|"
+    r"manager|contractor|vendor|infra team|platform team|team)\b|"
+    r"\b(someone else|somebody else|another engineer|the agency)\b", re.I)
 
 # Spelled-out numbers appear constantly in speech ("a team of four", "six months").
 WORD_NUM = {
@@ -97,8 +122,21 @@ STOP_SUBJECTS = {
     "time", "lot", "whole", "end", "everything", "one",
 }
 
-_NUM = re.compile(r"(\d+(?:\.\d+)?)\s*(%|percent|ms|s|sec|seconds|k|m|rps|qps|x|"
-                  r"people|engineers|members|years?|yrs?|months?|mos?)?", re.I)
+# The trailing \b is load-bearing. Without it the bare "m" alternative matches
+# the m of "merchants" and "about 200 merchants" becomes 200,000,000.
+_NUM = re.compile(r"(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?)\s*"
+                  r"(%|percent|ms|sec|seconds|k|m|rps|qps|"
+                  r"people|engineers|members|years|yrs|year|yr|months|mos|month|mo)?\b",
+                  re.I)
+
+# A headcount claim has to mention people somewhere in its own evidence span.
+PEOPLE_WORD = re.compile(
+    r"\b(engineers?|people|devs?|developers?|members?|folks|of us|headcount|"
+    r"team|teammates?|staff|employees?|contributors?)\b", re.I)
+
+# A team is people, not downloads or revenue. Anything outside this is a
+# mis-typed claim, not a real headcount.
+TEAM_SIZE_MAX = 2000
 
 UNIT_CANON = {
     "percent": "%", "sec": "s", "seconds": "s", "yrs": "years", "yr": "years",
@@ -137,7 +175,7 @@ def parse_number(text: str, *, unit_hint: str = "") -> tuple[float | None, str]:
     candidates: list[tuple[float, str]] = []
     for m in _NUM.finditer(t):
         try:
-            val = float(m.group(1))
+            val = float(m.group(1).replace(",", ""))
         except (TypeError, ValueError):
             continue
         unit = canon_unit(m.group(2))
@@ -414,9 +452,17 @@ class ClaimExtractor:
             polarity = 1 if int(polarity) >= 0 else -1
         except (TypeError, ValueError):
             polarity = 1
-        # Deterministic negation override on the actual span.
-        if NEGATION.search(span) and pred == "used_tech":
-            polarity = -1
+
+        # For used_tech, polarity is decided DETERMINISTICALLY, overriding the
+        # model. A denial requires a first-person negation attached to a usage
+        # verb ("I have never touched Kafka"). Three things that are NOT denials
+        # and were previously misread as such:
+        #   "my co-founder handled the React front end"   -> attribution
+        #   "I would not claim that work"                 -> modesty
+        #   "we built our own auth instead of Auth0 ...    -> a decision, and
+        #    we migrated to Auth0 the next quarter"           later reversed
+        if pred == "used_tech":
+            polarity = -1 if DENIAL.search(span) else 1
 
         # Numbers: trust the model's digits, but fall back to parsing the span,
         # and force a canonical unit per predicate so values are comparable.
@@ -439,11 +485,32 @@ class ClaimExtractor:
                 val, unit = _to_months(val, unit, "months")
             unit = hint
 
+        # A team size of 15,000 is a mis-typed claim (downloads, users, revenue),
+        # not a headcount. Drop it rather than let it reach the rule engine.
+        if pred == "team_size":
+            if val is None or not (1 <= val <= TEAM_SIZE_MAX):
+                return None
+            # "We got to 15,000 downloads" is not a team size. If the span does
+            # not mention people at all, this is a mis-typed metric claim.
+            if not PEOPLE_WORD.search(span):
+                return None
+
         own = None
         if pred == "role_on":
             own = ownership_of(obj)
             if own is None:
                 own = ownership_of(span)
+            # The span is our evidence quote AND what the benign-pattern filter
+            # reads. If the model handed back a span with no ownership language
+            # in it, the quote is wrong and the filter is blind. Re-anchor it on
+            # the sentence that actually contains the ownership claim.
+            if own is not None and ownership_of(span) is None:
+                mined = extract_ownership_phrases(answer, lex)
+                match = next((m for m in mined if m[1] == own), None) or \
+                    (mined[0] if mined else None)
+                if match:
+                    span = _sentence_around(answer, match[2])
+                    own = match[1]
 
         # Project-scoped claims must be keyed by the project, not the person,
         # otherwise two statements about the same project never get compared.

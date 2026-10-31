@@ -217,33 +217,64 @@ false positives, which is what makes a tool like this trustworthy or useless:
 
 ### Measured results
 
-`python -m evalkit.run_eval --mode detector` on `qwen2.5:3b`, 12 cases, 248 s:
+**17 cases in two tracks**, scored separately so neither hides behind the other.
+`qwen2.5:3b`, detector mode:
 
-| metric | value |
-|---|---|
-| contradiction precision | **1.00** (8 TP, 0 FP) |
-| contradiction recall | **1.00** (8 of 8 planted) |
-| F1 | **1.00** |
-| clean-case precision | **1.00** (7 of 7 clean cases kept clean) |
-| claims extracted | 160 across 12 cases |
+| | core (12) | startup (5) |
+|---|---|---|
+| contradiction precision | **1.00** | **1.00** |
+| contradiction recall | **1.00** (8/8) | **1.00** (6/6) |
+| F1 | **1.00** | **1.00** |
+| clean-case precision | **1.00** (7/7) | **1.00** (2/2) |
 
-Per-case: all 5 planted contradiction types detected (ownership, numeric, timeline,
-polarity, exclusivity), and **zero** false positives on the 7 clean candidates —
-including the three hard ones (C08 coexisting scope, C10 narrated progression,
-C11 casual rounding).
+All five conflict types detected (ownership, numeric, timeline, polarity,
+exclusivity), zero false positives across all 9 clean controls.
 
-> **Read this honestly.** F1 = 1.00 is on **12 cases we wrote ourselves**, and we
-> iterated against them while building the detector. It demonstrates that the
-> mechanism works on the failure modes we targeted — it is *not* a claim of
-> general accuracy, and the sample is far too small for one. The numbers that
-> transfer are the design choices they forced: deterministic pairing, explicit
-> tolerance bands, object-scoped numerics, alias canonicalization and the
-> benign-pattern filter. Earlier builds scored P 0.86 / R 0.75 and over-fired
-> 25 findings on a single interview; the eval set is what exposed that.
+**Hire/no-hire decision accuracy: 11/12** on the core track after the consensus
+redesign below (measured 8/12 before it).
 
-Operational metrics from `--mode full` (decision accuracy, LLM calls, distinct
-tools, tool success rate, handled failures, contradictions confronted live) land in
-`artifacts/eval_full.json`; detector results in `artifacts/eval_detector.json`.
+### What the eval set actually caught
+
+This is the honest part, and it is the reason the eval exists:
+
+1. **An early build over-fired 25 contradictions on a single interview.** Fixed by
+   deterministic de-duplication and per-signature suppression.
+2. **`years_exp` pairing was nonsense** — "6 years of Python" vs "3 years of Kafka"
+   was reported as a conflict. Fixed by object-scoping numeric predicates.
+3. **The startup track initially scored P 0.50 / R 0.67** and false-positived on
+   *both* clean cases. Five real bugs surfaced, all since fixed:
+   - `"wrote the"` sat at ladder level 3, so **"wrote the tests"** scored 3 not 1,
+     collapsing the exact gap we exist to detect.
+   - `"part of"` matched *"the hardest **part of** the core backend"*, turning a
+     difficulty statement into an ownership claim.
+   - The unit regex matched the `m` in *"200 **m**erchants"* → 200,000,000 years.
+   - `"15,000 downloads"` became a team size of 15 (comma split the number).
+   - The coexistence filter read one sentence, so it missed *"I **also** wrote all
+     the tests myself"* sitting in the next one — which flagged an honest
+     employee-#3 generalist as a liar.
+4. **The panel never said "hire".** Decision accuracy was 8/12, and *every* error
+   was a strong candidate rejected — the same score a system that blindly answers
+   "no_hire" would get. Root cause: panelists scored a candidate **3.5/5** (above
+   their own stated bar of 3) and then wrote `strong_no_hire`. The prose label is
+   the least reliable field a small model emits. Now the recommendation is
+   **derived from the rubric-anchored scores** and the stated label is kept only
+   for audit (`llm_stated_recommendation`, `label_overridden`).
+5. **Scores alone could not decide either.** A candidate with three proven
+   contradictions scored 3.05 while a flawless one scored 3.28. So the consensus
+   rules were restructured: **objective evidence gates first** (G1 injection,
+   G2 unresolved high-severity contradiction, G3 code refused/failed), and panel
+   scores only arbitrate candidates whose record is already clean (S1/S2).
+
+> **Read the 1.00 honestly.** These are **17 cases we wrote ourselves**, and we
+> iterated against them. It shows the mechanism works on the failure modes we
+> targeted; it is not a claim of general accuracy and the sample is far too small
+> for one. What transfers is the list above — every item is a defect the eval
+> found and we fixed. The remaining known miss is C11 (expected hire, decided
+> no_hire): the model scored it 2.4/2.4/2.0 and that is a model-capability limit,
+> not a logic bug.
+
+Results land in `artifacts/eval_core.json`, `artifacts/eval_startup.json` and
+`artifacts/eval_full.json`.
 
 ---
 
@@ -303,6 +334,46 @@ artifacts/           SQLite DB + exported reports + eval results
 `PANEL_ENABLE_SPEECH`, `PANEL_SEED`, `GITHUB_TOKEN` (raises the API rate limit).
 
 ---
+
+## Where this is actually used
+
+**The leak it plugs.** Résumé inflation is discovered too late. A candidate says
+"I led the billing migration"; nobody probes it in the phone screen because the
+screener can't tell what to ask. It surfaces at the onsite — after a recruiter, a
+hiring manager and two senior engineers have each spent 45 minutes. At 50 screens
+per role that's tens of hours of the most expensive calendar time in the company,
+spent on a claim that should have failed on day one. This catches it in round one,
+with the two conflicting sentences quoted and attributed to their rounds.
+
+**Who it is for**
+
+- **Startups and early-stage companies.** No recruiter, founders interviewing
+  between everything else, no structured process — and one bad hire at ten people
+  is 10% of the company. Highest need, least process. This is why the startup
+  track exists: `C13` ("CTO" of four people) and `C15` (honest employee #3) are
+  *their* candidates, not a large enterprise's.
+- **Staffing and recruitment agencies.** They submit candidates to clients; one
+  caught inflating damages the relationship that is their whole business.
+  Pre-vetting with an evidence trail is directly billable.
+- **High-volume funnels.** Run the screens overnight, hand humans a shortlist with
+  flagged inconsistencies and cited evidence attached.
+- **Litigation-exposed employers.** They must answer "why was this person
+  rejected?" months later. The audit trail, cited claim ids and EEOC-style
+  question screening are what make an AI interviewer deployable at all.
+
+**For an AI career-intelligence platform specifically**, there are two products
+here, not one: an employer-facing screen, and a candidate-facing rehearsal tool
+that catches *your own* inconsistencies — and shows you the two sentences that
+clashed — before a real interviewer does.
+
+**What makes it deployable rather than a demo** is the compliance layer:
+EEOC-style screening of the panel's *own* questions across 7 protected
+categories, a named human approval gate on every decision, a full SQLite audit
+trail, PII-redacted exports, and verdicts bound to cited claim ids.
+
+**What it is not: a decision-maker.** It does not hire anyone. The human approval
+gate is not a rubric checkbox, it is the product's position — the machine finds
+the inconsistency and shows the evidence; a person decides what it means.
 
 ## Honest limitations
 
