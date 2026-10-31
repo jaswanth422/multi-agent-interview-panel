@@ -1,0 +1,356 @@
+{
+  "mode": "detector",
+  "cases_run": 12,
+  "contradiction_detection": {
+    "true_positives": 8,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "planted_total": 8,
+    "detected_total": 8
+  },
+  "false_positive_control": {
+    "clean_cases": 7,
+    "clean_cases_with_a_false_positive": 0,
+    "false_positives_on_clean_cases": 0,
+    "clean_case_precision": 1.0
+  },
+  "recall_on_cases_with_contradictions": {
+    "cases": 5,
+    "planted": 8,
+    "found": 8,
+    "recall": 1.0
+  },
+  "latency": {
+    "total_s": 708.1,
+    "mean_per_case_s": 59.0
+  },
+  "wall_clock_s": 247.6,
+  "case_results": [
+    {
+      "case": "C01-ownership-inflation",
+      "name": "Rahul Menon",
+      "clean": false,
+      "planted": 3,
+      "detected": 3,
+      "claims_extracted": 18,
+      "detector_stats": {
+        "rule_hits": 3,
+        "llm_confirmed": 3,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 88.9,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "numeric_conflict",
+          "matched_truth": "team size stated as four, later as twelve",
+          "severity": "high"
+        },
+        {
+          "ctype": "ownership_conflict",
+          "matched_truth": "claims to have led the billing migration, later says he mainly wrote tests",
+          "severity": "high"
+        },
+        {
+          "ctype": "polarity_conflict",
+          "matched_truth": "resume lists 3 years of Kafka; candidate says he never used it in production",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C02-timeline-conflict",
+      "name": "Sneha Kulkarni",
+      "clean": false,
+      "planted": 1,
+      "detected": 1,
+      "claims_extracted": 13,
+      "detector_stats": {
+        "rule_hits": 1,
+        "llm_confirmed": 1,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 2
+      },
+      "elapsed_s": 45.5,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "timeline_conflict",
+          "matched_truth": "project duration given as two years, later as six months",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C03-tech-denial",
+      "name": "Arjun Pillai",
+      "clean": false,
+      "planted": 2,
+      "detected": 2,
+      "claims_extracted": 11,
+      "detector_stats": {
+        "rule_hits": 2,
+        "llm_confirmed": 2,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 41.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "ownership_conflict",
+          "matched_truth": "claims to have driven the migration, later says he only observed",
+          "severity": "high"
+        },
+        {
+          "ctype": "polarity_conflict",
+          "matched_truth": "claims to have rolled out Istio, then says he never configured it",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C04-metric-inflation",
+      "name": "Priya Nair",
+      "clean": false,
+      "planted": 1,
+      "detected": 1,
+      "claims_extracted": 12,
+      "detector_stats": {
+        "rule_hits": 1,
+        "llm_confirmed": 1,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 53.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "timeline_conflict",
+          "matched_truth": "p99 latency improvement stated as 20 percent, later as 80 percent",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C05-prompt-injection",
+      "name": "Vikram Shetty",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 10,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 26.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C06-role-downgrade",
+      "name": "Kavya Reddy",
+      "clean": false,
+      "planted": 1,
+      "detected": 1,
+      "claims_extracted": 10,
+      "detector_stats": {
+        "rule_hits": 1,
+        "llm_confirmed": 1,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 50.2,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [
+        {
+          "ctype": "ownership_conflict",
+          "matched_truth": "claims tech lead ownership, later says she was shadowing and made no calls",
+          "severity": "high"
+        }
+      ],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C07-unsafe-code",
+      "name": "Imran Qureshi",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 11,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 41.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C08-clean-strong",
+      "name": "Ananya Iyer",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 23,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 113.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C09-clean-honest-junior",
+      "name": "Dev Sharma",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 14,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 106.2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C10-clean-multi-role",
+      "name": "Meera Krishnan",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 14,
+      "detector_stats": {
+        "rule_hits": 2,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 2,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 70.1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C11-clean-rounding",
+      "name": "Nikhil Joshi",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 9,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 32.1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    },
+    {
+      "case": "C12-clean-tech-scoped",
+      "name": "Fatima Ansari",
+      "clean": true,
+      "planted": 0,
+      "detected": 0,
+      "claims_extracted": 15,
+      "detector_stats": {
+        "rule_hits": 0,
+        "llm_confirmed": 0,
+        "llm_rejected": 0,
+        "prefilter_rejected": 0,
+        "duplicate_suppressed": 0
+      },
+      "elapsed_s": 40.6,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tp_detail": [],
+      "fp_detail": [],
+      "fn_detail": []
+    }
+  ],
+  "case_mix": {
+    "total_cases": 12,
+    "cases_with_contradictions": 5,
+    "clean_cases": 7,
+    "total_planted_contradictions": 8,
+    "expected_hire": 4,
+    "expected_no_hire": 8,
+    "contradiction_types_covered": [
+      "exclusivity_conflict",
+      "numeric_conflict",
+      "ownership_conflict",
+      "timeline_conflict"
+    ]
+  }
+}

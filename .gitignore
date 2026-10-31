@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+artifacts/*.sqlite3
+artifacts/*.aiff
+artifacts/*.log
